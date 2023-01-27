@@ -1,0 +1,248 @@
+html{
+    font-size: 16px;
+}
+
+body{
+    /*background-color: #fcfcfc;
+    color: #db6363;*/
+    text-align: center;
+}
+
+.grid{
+    display: grid;
+    grid-template: 80px 10fr 80px / repeat(9, 1fr);
+    /*grid-gap: 20px;*/
+}
+
+.section{
+    font-family: 'Roboto Slab', serif;
+    font-size: 2.5rem;
+    grid-row: 1 / span 1;
+    grid-column: 3 / span 1;
+}
+/*font-family: 'Lato', sans-serif;*/
+
+header{
+    background-color: aquamarine;
+    grid-column: 1 / span 9;
+    display: grid;
+}
+
+.content{
+    display: grid;
+}
+
+.logo{
+    grid-column: 1 / span 1;
+}
+
+.greet{
+    grid-column: 2 / span 1;
+}   
+
+.service{
+    grid-column: 3 / span 1;
+}
+
+.brand{
+    grid-column: 4 / span 1;
+}
+
+.language{
+    grid-column: 5 / span 1;
+}
+
+.project{
+    grid-column: 6 / span 1;
+}
+
+.client{
+    grid-column: 7 / span 1;
+}
+
+.media{
+    grid-column: 8 / span 1;
+}
+
+.contact{
+    grid-column: 9 / span 1;
+}
+
+.main-content{
+    grid-column: 1 / span 9;
+}
+
+p, a{
+    margin: auto;
+}
+
+.saludo{
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5rem;
+    grid-row: 1 / span 1;
+    grid-column: 3 / span 1;
+    margin-top: 50px;
+}
+
+.saludo2{
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5rem;
+    grid-row: 3 / span 1;
+    grid-column: 3 / span 1;
+    margin-top: 20px;
+}
+
+.buildweb{
+    grid-row: 2 / span 1;
+    grid-column: 3 / span 1;
+    margin-top: -130px;
+}
+
+.subtitulo{
+    font-family: 'Lato', sans-serif;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.cuerpo{
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+}
+
+.greetings-section{
+    background-color: cornflowerblue;
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(5, 1fr);
+}
+
+.services-section{
+    background-color: whitesmoke;
+    margin-top: -200px;
+    /*display: grid;
+    grid-template: repeat(8, 1fr) / repeat(5, 1fr);*/
+}
+
+.ingenierias-electricas{
+    /*grid-row: 1 / span 1;
+    grid-column: 1 / span 2;*/   
+    margin-top: 50px; 
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(6, 1fr);
+    margin-bottom: 30px;
+    /*gap: 10px;*/
+}
+
+.ingenierias-electricas img{
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+
+.nema-image{
+    grid-row: 1 / span 2;
+    grid-column: 1 / span 3;
+    margin-left: 50px;
+}
+
+.nema-logo{
+    grid-row: 1 / span 1;
+    grid-column: 4 / span 2;
+    margin-left: 175px;
+}
+
+.iec-logo{
+    grid-row: 2 / span 1;
+    grid-column: 4 / span 2;
+    margin-left: 175px;
+}
+
+#servicio1{
+    grid-row: 1 / span 1;
+    grid-column: 3 / span 2;
+    margin-top: -40px;
+}
+
+.construccion-gabinetes{
+    /*grid-row: 1 / span 1;
+    grid-column: 1 / span 2;*/   
+    margin-top: 50px; 
+    display: grid;
+    grid-template: repeat(1, 1fr) / repeat(5, 1fr);
+    /*gap: 10px;*/
+    margin-top: 70px;
+}
+
+.construccion-gabinetes img{
+    width: 100%;
+    height: 600px;
+    margin-bottom: 50px;
+}
+
+.cabinet-dwg{
+    grid-row: 1 / span 1;
+    grid-column: 4 / span 2;
+    margin-left: -100px;
+}
+
+.cabinet-image{
+    grid-row: 1 / span 1;
+    grid-column: 1 / span 2;
+    margin-left: 100px;
+}
+
+#servicio2{
+    grid-row: 1 / span 1;
+    grid-column: 2 / span 3;
+    margin-top: -40px;
+}
+
+#servicio3{
+    grid-row: 1 / span 1;
+    grid-column: 2 / span 3;
+    margin-top: -40px;
+}
+
+.brands-section{
+    background-color: chartreuse;
+}
+
+.languages-section{
+    background-color: chocolate;
+}
+
+.projects-section{
+    background-color: darkcyan;
+}
+
+.media-section{
+    background-color: violet;
+}
+
+.clients-section{
+    background-color: darkseagreen;
+}
+
+.contact-section{
+    background-color: dodgerblue;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+footer{
+    background-color: greenyellow;
+    grid-column: 1 / span 9;
+    display: grid;
+}
+
+.copyright{
+    grid-column: 1 / span 1;
+}
+
+.location{
+    grid-column: 2 / span 1;
+}
+
+.designer{
+    grid-column: 3 / span 1;
+    font-weight: bold;
+}
