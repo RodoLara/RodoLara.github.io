@@ -595,6 +595,17 @@ nav ul li a {
   font-size: 0.9em;
   font-weight: bold;
 }
+.contact-section a {
+  font-weight: black;
+  color: red;
+}
+.contact-section #boldcont {
+  color: red;
+}
+
+#boldcont {
+  color: red;
+}
 
 footer {
   width: 100vw;
@@ -617,4 +628,4 @@ footer {
 /*siemens-logo2
 ab-logo2
 proface-logo
-se-logo2*//*# sourceMappingURL=style.css.map */
+se-logo2*/

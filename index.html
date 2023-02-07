@@ -15,17 +15,16 @@
     <div class="grid">
         <!-- Header -->
         <header>
-        <nav class="content">
-            <a href="index.html" class="logo">Rodolfo Lara</a>
-            <a href="#one" class="greet">Saludo</a></li>
-            <a href="#two" class="service">Servicios</a></li>
-            <a href="#three" class="brand">Marcas</a></li>
-            <a href="#four" class="language">Otros Lenguajes</a></li>
-            <a href="#five" class="project">Últimos Proyectos</a></li>
-            <a href="#six" class="client">Clientes</a></li>
-            <a href="#seven" class="media">Media</a></li>
-            <a href="#eight" class="contact">Contacto</a></li>       
-        </nav>
+            <nav class="content" id="whitecont">
+                <ul>
+                    <li><a href="index.html" class="logo">Rodolfo Lara</a></li>
+                    <li><a href="#two" class="service">Servicios</a></li>
+                    <li><a href="#four" class="language">Lenguajes</a></li>
+                    <li><a href="#five" class="project">Proyectos</a></li>
+                    <li><a href="#six" class="client">Clientes</a></li>
+                    <li><a href="#eight" class="contact">Contacto</a></li>
+                </ul>             
+            </nav>
         </header>
    
         <!-- Main Content -->
@@ -38,7 +37,7 @@
             <br>
             <br>Aquí te presento mi portafolio de servicios que consiste en el desarrollo de ingenierías a la medida del cliente.</p>
             <img src="./resources/images/website-under-construction.png" alt="página en construcción" class="buildweb">
-            <p class="saludo2">Me gusta programar por diversión y actualmente me encuentro aprendiendo HTML y CSS, ya que quiero construir mi página de internet desde cero
+            <p class="saludo2">Me gusta programar por diversión y actualmente me encuentro aprendiendo HTML y CSS con el fin de construir mi página de internet
             <br>
             <br>Fase actual de la página: 1 / 6</p>
         </div>
@@ -49,83 +48,99 @@
             <!--Ingenierías eléctricas-->
             <div class="ingenierias-electricas">
                 <p class="subtitulo" id="servicio1">Desarrollo de ingenierías eléctricas</p>
-                <img src="./resources/images/nema-schematic.png" alt="diagramas nema" class="nema-image">
-                <img src="./resources/images/nema-logo.png" alt="NEMA logo" class="nema-logo">
-                <img src="./resources/images/iec-logo.png" alt="IEC logo" class="iec-logo">
+                <div class="container1">
+                    <img src="./resources/images/nema-schematic.png" alt="diagramas nema" class="nema-image">
+                    <img src="./resources/images/nema-logo.png" alt="NEMA logo" class="nema-logo">
+                    <img src="./resources/images/iec-logo.png" alt="IEC logo" class="iec-logo">
+                </div>
                 <!--p class="cuerpo"></p-->
             </div>
             
             <!--Construccion gabinetes-->
             <div class="construccion-gabinetes">
                 <p class="subtitulo" id="servicio2">Construcción e instalación de gabinetes y circuitos eléctricos</p>
-                <img src="./resources/images/cabinet-drawing.png" alt="Dibujo Gabinete" class="cabinet-dwg">
-                <img src="./resources/images/gabinete-foto.JPG" alt="Foto Gabinete" class="cabinet-image">
+                <div class="container2">
+                    <img src="./resources/images/gabinete-foto.JPG" alt="Foto Gabinete" class="cabinet-image">
+                    <img src="./resources/images/cabinet-drawing.png" alt="Dibujo Gabinete" class="cabinet-dwg">
+                </div>    
             </div>
 
             <!--Programación PLC-->
             <div class="programacion-plc">
                 <p class="subtitulo" id="servicio3">Programación de PLC/PAC</p>
-                <img src="./resources/images/s5-awl.JPG" alt="S5 stl" class="stl-image">
-                <img src="./resources/images/tia-code.png" alt="TIA portal" class="scl-image">
-                <img src="./resources/images/allen-bradley-logo.png" alt="Allen bradley" class="ab-logo">
-                <img src="./resources/images/Siemens-logo.png" alt="Siemens" class="siemens-logo">
-                <img src="./resources/images/omron-logo.png" alt="Omron" class="omron-logo">
-                <img src="./resources/images/Mitsubishi-logo.png" alt="Mitsubishi" class="mitsubishi-logo">
-                <img src="./resources/images/General-electric-logo.png" alt="General Electric" class="ge-logo">
-                <img src="./resources/images/Schneider-electric-Logo.png" alt="Schneider Electric" class="se-logo">
-                <img src="./resources/images/automation-direct-logo.png" alt="Automation Direct" class="ad-logo">
+                <div class="container3">
+                    <img src="./resources/images/s5-awl.JPG" alt="S5 stl" class="stl-image">
+                    <img src="./resources/images/tia-code.png" alt="TIA portal" class="scl-image">
+                    <img src="./resources/images/allen-bradley-logo.png" alt="Allen bradley" class="ab-logo">
+                    <img src="./resources/images/Siemens-logo.png" alt="Siemens" class="siemens-logo">
+                    <img src="./resources/images/omron-logo.png" alt="Omron" class="omron-logo">
+                    <img src="./resources/images/Mitsubishi-logo.png" alt="Mitsubishi" class="mitsubishi-logo">
+                    <img src="./resources/images/General-electric-logo.png" alt="General Electric" class="ge-logo">
+                    <img src="./resources/images/Schneider-electric-Logo.png" alt="Schneider Electric" class="se-logo">
+                    <img src="./resources/images/automation-direct-logo.png" alt="Automation Direct" class="ad-logo">
+                </div>
             </div>
 
             <!--Programación Robots-->
             <div class="programacion-robots">
                 <p class="subtitulo" id="servicio4">Programación e instalación de robots industriales</p>
-                <img src="./resources/images/yaskawa-robot.JPG" alt="Yaskawa robot" class="yaskawa-image">
-                <img src="./resources/images/abb-robot.jpg" alt="ABB robot" class="abb-image">
-                <img src="./resources/images/Staubli-logo.png" alt="Stäubli" class="staubli-logo">
-                <img src="./resources/images/abb-logo.png" alt="ABB" class="abb-logo">
-                <img src="./resources/images/kuka-logo.png" alt="Kuka" class="kuka-logo">
-                <img src="./resources/images/fanuc-logo.png" alt="Fanuc" class="fanuc-logo">
-                <img src="./resources/images/epson-logo.png" alt="Epson" class="epson-logo">
-                <img src="./resources/images/yaskawa-logo.png" alt="Yaskawa Motoman" class="yaskawa-logo">
+                <div class="container4">
+                    <img src="./resources/images/yaskawa-robot.JPG" alt="Yaskawa robot" class="yaskawa-image">
+                    <img src="./resources/images/abb-robot.jpg" alt="ABB robot" class="abb-image">
+                    <img src="./resources/images/Staubli-logo.png" alt="Stäubli" class="staubli-logo">
+                    <img src="./resources/images/abb-logo.png" alt="ABB" class="abb-logo">
+                    <img src="./resources/images/kuka-logo.png" alt="Kuka" class="kuka-logo">
+                    <img src="./resources/images/fanuc-logo.png" alt="Fanuc" class="fanuc-logo">
+                    <img src="./resources/images/epson-logo.png" alt="Epson" class="epson-logo">
+                    <img src="./resources/images/yaskawa-logo.png" alt="Yaskawa Motoman" class="yaskawa-logo">
+                </div>
             </div>
 
             <!--Programación HMI-->
             <div class="programacion-hmi">
                 <p class="subtitulo" id="servicio5">Programación de HMI/SCADA</p>
-                <img src="./resources/images/Siemens-logo.png" alt="Siemens" class="siemens-logo2">
-                <img src="./resources/images/allen-bradley-logo.png" alt="Allen Bradley" class="ab-logo2">
-                <img src="./resources/images/proface-logo.jpg" alt="ProFace" class="proface-logo">
-                <img src="./resources/images/Schneider-electric-Logo.png" alt="Schneider Electric" class="se-logo2">
+                <div class="container5">
+                    <img src="./resources/images/Siemens-logo.png" alt="Siemens" class="siemens-logo2">
+                    <img src="./resources/images/allen-bradley-logo.png" alt="Allen Bradley" class="ab-logo2">
+                    <img src="./resources/images/proface-logo.jpg" alt="ProFace" class="proface-logo">
+                    <img src="./resources/images/Schneider-electric-Logo.png" alt="Schneider Electric" class="se-logo2">
+                </div>
             </div>
 
             <!--Sistemas de Vision-->
             <div class="programacion-vision">
                 <p class="subtitulo" id="servicio6">Integración de sistemas de visión 2D/3D</p>
-                <img src="./resources/images/lj-v-image.png" alt="Perfilometro LJ-V / CV-X" class="lj-v-image">
-                <img src="./resources/images/cognex-image.jpg" alt="Cámara Cognex" class="cognex-image">
-                <img src="./resources/images/keyence-logo.png" alt="Keyence" class="keyence-logo">
-                <img src="./resources/images/cognex-logo.png" alt="Cognex" class="cognex-logo">
-                <img src="./resources/images/lmi-logo.png" alt="LMI Technologies" class="lmi-logo">
-                <img src="./resources/images/micro-epsilon-logo.png" alt="Micro-Epsilon" class="micro-epsilon-logo">
-                <img src="./resources/images/infaimon-logo.png" alt="Infaimon" class="infaimon-logo">
-                <img src="./resources/images/teledyne-logo.png" alt="Teledyne Dalsa" class="teledyne-logo">
+                <div class="container6">
+                    <img src="./resources/images/lj-v-image.png" alt="Perfilometro LJ-V / CV-X" class="lj-v-image">
+                    <img src="./resources/images/cognex-image.jpg" alt="Cámara Cognex" class="cognex-image">
+                    <img src="./resources/images/keyence-logo.png" alt="Keyence" class="keyence-logo">
+                    <img src="./resources/images/cognex-logo.png" alt="Cognex" class="cognex-logo">
+                    <img src="./resources/images/lmi-logo.png" alt="LMI Technologies" class="lmi-logo">
+                    <img src="./resources/images/micro-epsilon-logo.png" alt="Micro-Epsilon" class="micro-epsilon-logo">
+                    <img src="./resources/images/infaimon-logo.png" alt="Infaimon" class="infaimon-logo">
+                    <img src="./resources/images/teledyne-logo.png" alt="Teledyne Dalsa" class="teledyne-logo">
+                </div>
             </div>
 
             <!--Marcadoras Laser-->
             <div class="programacion-marcadoras">
                 <p class="subtitulo" id="servicio7">Integración de marcadoras láser - Trazabilidad</p>
-                <img src="./resources/images/lasermarking-image.jpg" alt="Marcado Láser" class="lasermarking-image">
-                <img src="./resources/images/keyence-logo.png" alt="Keyence" class="keyence-logo2">
-                <img src="./resources/images/telesis-logo.jpg" alt="Telesis" class="telesis-logo">
-                <img src="./resources/images/rofin-logo.png" alt="Rofin" class="rofin-logo">
-                <img src="./resources/images/sic-marking-logo.png" alt="Sic Marking" class="sic-logo">
+                <div class="container7">    
+                    <img src="./resources/images/lasermarking-image.jpg" alt="Marcado Láser" class="lasermarking-image">
+                    <img src="./resources/images/keyence-logo.png" alt="Keyence" class="keyence-logo2">
+                    <img src="./resources/images/telesis-logo.jpg" alt="Telesis" class="telesis-logo">
+                    <img src="./resources/images/rofin-logo.png" alt="Rofin" class="rofin-logo">
+                    <img src="./resources/images/sic-marking-logo.png" alt="Sic Marking" class="sic-logo">
+                </div>
             </div>
 
             <!--Celdas y Líneas-->
             <div class="programacion-celdas">
                 <p class="subtitulo" id="servicio8">Desarrollo/Integración de celdas y lineas de producción</p>
-                <video controls src="./resources/videos/tupy-video.mp4" type="video/mp4" class="tupy-video">Failed to load video</video>
-                <video controls src="./resources/videos/mabe-video.mp4" type="video/mp4" class="mabe-video">Failed to load video</video>            
+                <div class="container8">
+                    <video controls src="./resources/videos/tupy-video.mp4" type="video/mp4" class="tupy-video">Failed to load video</video>
+                    <video controls src="./resources/videos/mabe-video.mp4" type="video/mp4" class="mabe-video">Failed to load video</video>            
+                </div>
             </div>
         </div>
     
@@ -193,41 +208,35 @@
         <!-- Languages Section -->
         <div class="languages-section" id="four">
             <p class="section" id="languages">Otros lenguajes que hablo</p>
-            <img src="./resources/images/python-logo.png" alt="Python" class="python-logo">
-            <img src="./resources/images/lua-logo.png" alt="Lua" class="lua-logo">
-            <img src="./resources/images/sql-logo.png" alt="SQL" class="sql-logo">
-            <img src="./resources/images/arduino-logo.png" alt="Arduino" class="arduino-logo">
-            <img src="./resources/images/micropython-logo.jpg" alt="MicroPython" class="micropython-logo">
+            <div class="container10">
+                <img src="./resources/images/python-logo.png" alt="Python" class="python-logo">
+                <img src="./resources/images/lua-logo.png" alt="Lua" class="lua-logo">
+                <img src="./resources/images/sql-logo.png" alt="SQL" class="sql-logo">
+                <img src="./resources/images/arduino-logo.png" alt="Arduino" class="arduino-logo">
+                <img src="./resources/images/micropython-logo.jpg" alt="MicroPython" class="micropython-logo">
+            </div>
         </div>   
         
         <!-- Projects Section -->
         <div class="projects-section" id="five">
-            <h1 class="section" id="projects">Casos Seleccionados</h1>
+            <h1 class="section" id="projects">Proyectos - Casos Seleccionados</h1>
             
             <!--Último Proyecto-->
             <div class="last-project">
                 <p class="subtitulo" id="last">Programación, debug, puesta en marcha de celda tester para <a href="https://siecrobotics.com/" target="_blank" id="sieclink">SIEC Robotics</a> y Aptiv</p>
                 <div class="last-proj-box">
                     <p class="cuerpo boxunouno">PLC
-                    <br>
                     <br>2 HMIs
-                    <br>
-                    <br>Robot</p>
-                    <p class="cuerpo boxunodos">Servomotores
-                    <br>
+                    <br>Robot
+                    <br>Servomotores
                     <br>Probadora Eléctrica
-                    <br>
                     <br>Perfilómetro</p>
                     <video controls src="./resources/videos/tester-video.mp4" type="video/mp4" class="tester-video">Failed to load video</video>
-                    <p class="cuerpo boxunotres">Highlights</p>
-                    <p class="cuerpo boxunocinco">Segregación de piezas OK/NOK conforme al plano   
-                    <br>
+                    <p class="cuerpo hightlights highuno">Highlights</p>
+                    <p class="cuerpo boxunocuatro">Segregación de piezas OK/NOK conforme al plano   
                     <br>Prueba y jucio de más de 250 variables por cada pieza
-                    <br>
                     <br>Repetibilidad de lecturas: 30&microm +/- 10%
-                    <br>
                     <br>Historial de lecturas
-                    <br>
                     <br>Aumento de la calidad de piezas enviadas al cliente</p>
                 </div>
             </div>
@@ -238,27 +247,18 @@
                 <div class="second-proj-box">
                     <video controls src="./resources/videos/fim01-video.mp4" type="video/mp4" class="fim01-video">Failed to load video</video>
                     <p class="cuerpo boxdosuno">2 PLCs
-                    <br>
                     <br>2 HMIs
-                    <br>
-                    <br>2 Robots</p>
-                    <p class="cuerpo boxdosdos">Servomotores
-                    <br>
+                    <br>2 Robots
+                    <br>Servomotores
                     <br>Probadora Eléctrica
-                    <br>
-                    <br>Cámara</p>
-                    <p class="cuerpo boxdostres">Perfilómetro
-                    <br>
+                    <br>Cámara
+                    <br>Perfilómetro
                     <br>Marcadora Laser
-                    <br>
                     <br>Escaner 2D</p>
-                    <p class="cuerpo boxdoscuatro">Highlights</p>
+                    <p class="cuerpo hightlights highdos">Highlights</p>
                     <p class="cuerpo boxdoscinco">Reducción de tiempos de ciclo de 12s a 6s
-                    <br>
                     <br>Reducción de scrap del 40% al 5%
-                    <br>
                     <br>Erradicación de tiempos muertos (causados por bugs de programación original)
-                    <br>
                     <br>Aumento de la producción en más del 200%</p>
                 </div>
             </div>
@@ -267,7 +267,7 @@
         <!-- Clients Section -->
         <div class="clients-section" id="six">
             <h1 class="section">Clientes</h1>
-            <p class="subtitulo" id="clients">He hecho ingeniería para:</p>
+            <p class="subtitulo" id="clients">He realizado ingeniería para:</p>
             <div class="clients-box">
                 <img src="./resources/images/aptiv-logo.png" alt="Aptiv" class="cboxuno">
                 <img src="./resources/images/stellantis-logo.png" alt="Stellantis" class="cboxdos">
@@ -295,6 +295,7 @@
         <!-- Contact Info Section -->
         <div class="contact-section" id="eight">
             <h1 class="section">Contacto</h1>
+            <p>Aprender es una de mis pasiones, y siempre estoy buscando resolver <a id="boldcont">problemas nuevos y complejos</a>. Cuéntame de tu proyecto, problema o mejora, y <a>colaboremos</a>.</p>
             <div class="contact-box">
                 <p class="contactuno">Ing. Rodolfo Lara Valdés</p>
                 <p class="contactdos"><a href="tel:8441321378" id="telephone">8441321378</a></p>
@@ -305,9 +306,9 @@
 
         <!-- Footer -->
         <footer>
-        <p class="copyright">© 2023  Focos & Más, All Rights Reserved</p>
-        <p class="location">Designed in <s>NYC</s> SaltiYork</p>
-        <p class="designer">&lt; &gt; with &#10084</p>
+            <p class="copyright">© 2023  Focos & Más, All Rights Reserved</p>
+            <p class="location">Designed in <s>NYC</s> SaltiYork</p>
+            <p class="designer">&lt; &gt; with &#10084</p>
         </footer>
     </div>
 </body>

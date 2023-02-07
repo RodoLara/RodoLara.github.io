@@ -1,0 +1,730 @@
+*{
+    box-sizing: border-box;
+    box-style: border-box;
+}
+
+:root{
+    /*--clr-background: #9d72ff;
+    --clr-white: #ffffff;
+    --clr-primary: #01ffff;
+    --clr-green: #01ffc3;
+    --clr-fondo: #ffb3fd;
+    --clr-black: #000000;*/
+
+    --clr-background: #363636;
+    --clr-white: #ffffff;
+    --clr-primary: #00218a;
+    --clr-green: #474747;
+    --clr-fondo: #e8175d;
+    --clr-black: #474747;
+
+    --font-size: 16px;
+    --border-radius:0.2em;
+}
+
+body{
+    margin: 0;
+    font-family: 'Roboto Slab', serif;
+    font-size: var(--font-size);
+    letter-spacing: 0.05em;
+    color: var(--clr-black);
+    background-color: var(--clr-fondo);
+}
+
+.main-content{
+  color: var(--clr-black);
+}
+
+header{
+  color: var(--clr-white);
+}
+
+nav{
+  width: 100vw;
+  border-radius: var(--border-radius);
+  background-color: var(--clr-background);
+  margin: 0;
+  
+  ul{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+    height: 3em;
+    padding: 0;
+    color: var(--clr-white);
+  }
+
+  ul li a{
+    padding: 0.5em;
+    font-weight: bold;
+    color: var(--clr-white);
+  }
+}
+
+.main-content{
+  margin: 2em;
+}
+
+.greetings-section{
+  align-items: center;
+  text-align: center;
+  border-radius: var(--border-radius);
+  background-color: var(--clr-white);
+  padding: 1em;
+
+  img{
+    min-width: 40%;
+    max-width: 80%;
+  }
+
+  border-top: 4px solid var(--clr-background);
+
+}
+
+.section{
+  font-size: 1.3em;
+  font-weight: bold;
+  margin-bottom: 1em;
+  margin-top: -0.3em;
+  text-transform: uppercase;
+  color: black;
+}
+
+.saludo{
+  margin-top: -0.8em;
+  margin-bottom: 0.5em;
+}
+
+.saludo2{
+  padding-top: 1em;
+}
+
+.services-section{
+  margin-top: 1em;
+  margin-bottom: 1em;
+  align-items: center;
+  text-align: center;
+  border-radius: var(--border-radius);
+  background-color: var(--clr-white);
+  padding-top:1em;
+  padding-bottom:0.5em;
+  border-top: 4px solid var(--clr-background);
+}
+
+#servicio1{
+  margin-top: -1em;
+  margin-bottom: 1em;
+}
+
+.ingenierias-electricas{
+  img{
+    min-width: 40%;
+    max-width: 90%;
+  }
+
+  .container1{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+
+    .nema-image{
+      grid-row: 1 / span 2;
+      grid-column: 1 / span 1;
+      height: 100%;
+    }
+    
+    .nema-logo{
+      grid-row: 1 / span 1;
+      grid-column: 2 / span 1;
+    }
+
+    .iec-logo{
+      grid-row: 2 / span 1;
+      grid-column: 2 / span 1;
+    }
+  }
+}
+
+.construccion-gabinetes{
+  img{
+    min-width: 40%;
+    max-width: 90%;
+  }
+
+  .container2{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /*grid-template-rows: repeat(2, 1fr);*/
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+  }
+  
+  .cabinet-dwg{
+    height: 100%;
+  }
+}
+
+.programacion-plc{
+  img{
+    min-width: 40%;
+    max-width: 90%;
+    margin: 0.1em;
+    height: 99%;
+  }
+
+  .container3{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /*grid-template-rows: repeat(4, 1fr);*/
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+    grid-gap:1em;
+  }
+
+  .stl-image{
+    grid-row: 1 / span 2;
+    grid-column: 1 / span 2;
+  }
+  
+  .scl-image{
+    grid-row: 3 / span 2;
+    grid-column: 3 / span 2;
+  }
+  
+  .ab-logo{
+    grid-row: 1 / span 1;
+    grid-column: 3 / span 1;
+  }
+  
+  .siemens-logo{
+    grid-row: 1 / span 1;
+    grid-column: 4 / span 1;
+  }
+  
+  .omron-logo{
+    grid-row: 2 / span 1;
+    grid-column: 3 / span 1;
+  }
+  
+  .mitsubishi-logo{
+    grid-row: 2 / span 1;
+    grid-column: 4 / span 1;
+  }
+  
+  .ge-logo{
+    grid-row: 3 / span 1;
+    grid-column: 1 / span 1;
+  }
+  
+  .se-logo{
+    grid-row: 3 / span 1;
+    grid-column: 2 / span 1;
+  }
+  
+  .ad-logo{
+    grid-row: 4 / span 1;
+    grid-column: 2 / span 1;
+  }
+}
+
+.programacion-robots{
+  img{
+    min-width: 40%;
+    max-width: 90%;
+    margin: 0.1em;
+    height: 99%;
+  }
+
+  .container4{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /*grid-template-rows: repeat(4, 1fr);*/
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+    grid-gap:1em;
+  }
+
+  .yaskawa-image{
+    grid-row: 1 / span 2;
+    grid-column: 1 / span 2;
+  }
+  
+  .abb-logo{
+    grid-row: 1 / span 1;
+    grid-column: 3 / span 1;
+  }
+  
+  .staubli-logo{
+    grid-row: 1 / span 1;
+    grid-column: 4 / span 1;
+  }
+  
+  .kuka-logo{
+    grid-row: 2 / span 1;
+    grid-column: 3 / span 1;
+  }
+  
+  .fanuc-logo{
+    grid-row: 3 / span 1;
+    grid-column: 1 / span 1;
+  }
+  
+  .yaskawa-logo{
+    grid-row: 3 / span 1;
+    grid-column: 2 / span 1;
+  }
+  
+  .epson-logo{
+    grid-row: 4 / span 1;
+    grid-column: 1 / span 1;
+  }
+  
+  .abb-image{
+    grid-row: 3 / span 2;
+    grid-column: 3 / span 2;
+  }
+}
+
+.programacion-hmi{
+  img{
+    min-width: 40%;
+    max-width: 90%;
+    margin: 1em;
+    height: 99%;
+  }
+
+  .container5{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /*grid-template-rows: repeat(4, 1fr);*/
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+    grid-gap:1em;
+  }
+}
+
+.programacion-vision{
+  img{
+    min-width: 40%;
+    max-width: 90%;
+    height: 99%;
+  }
+
+  .container6{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /*grid-template-rows: repeat(4, 1fr);*/
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+    grid-gap:1em;
+  }
+
+  .lj-v-image{
+    grid-row: 1 / span 2;
+    grid-column: 1 / span 2;
+  }
+  
+  .cognex-image{
+    grid-row: 3 / span 2;
+    grid-column: 3 / span 2;
+  }
+  
+  .keyence-logo{
+    grid-row: 1 / span 1;
+    grid-column: 3 / span 1;
+  }
+  
+  .cognex-logo{
+    grid-row: 1 / span 1;
+    grid-column: 4 / span 1;
+  }
+  
+  .lmi-logo{
+    grid-row: 3 / span 1;
+    grid-column: 2 / span 1;
+  }
+  
+  .micro-epsilon-logo{
+    grid-row: 2 / span 1;
+    grid-column: 3 / span 1;
+  }
+  
+  .infaimon-logo{
+    grid-row: 4 / span 1;
+    grid-column: 2 / span 1;
+  }
+  
+  .teledyne-logo{
+    grid-row: 3 / span 1;
+    grid-column: 1 / span 1;
+  }
+}
+
+.programacion-marcadoras{
+  img{
+    min-width: 40%;
+    max-width: 90%;
+    height: 99%;
+  }
+
+  .container7{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /*grid-template-rows: repeat(4, 1fr);*/
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+    grid-gap:1em;
+  }
+
+  .lasermarking-image{
+    grid-row: 1 / span 2;
+    grid-column: 1 / span 2;
+  }
+  
+  .keyence-logo2{
+    grid-row: 1 / span 1;
+    grid-column: 3 / span 1;
+  }
+  
+  .telesis-logo{
+    grid-row: 1 / span 1;
+    grid-column: 4 / span 1;
+  }
+  
+  .rofin-logo{
+    grid-row: 2 / span 1;
+    grid-column: 3 / span 1;
+  }
+  
+  .sic-logo{
+    grid-row: 2 / span 1;
+    grid-column: 4 / span 1;
+  }
+}
+
+.programacion-celdas{
+  video{
+    min-width: 40%;
+    max-width: 90%;
+    width: 100%;
+  }
+
+  .container8{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /*grid-template-rows: repeat(4, 1fr);*/
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+  }
+}
+
+.languages-section{
+  margin-top: 1em;
+  margin-bottom: 1em;
+  align-items: center;
+  text-align: center;
+  border-radius: var(--border-radius);
+  background-color: var(--clr-white);
+  padding-top:1em;
+  padding-bottom:0.1em;
+  border-top: 4px solid var(--clr-background);
+
+  .container10{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    /*grid-template-rows: repeat(4, 1fr);*/
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+  }
+
+  img{
+    min-width: 40%;
+    max-width: 90%;
+    width: 100%;
+  }
+}
+
+.projects-section{
+  margin-top: 1em;
+  margin-bottom: 1em;
+  align-items: center;
+  text-align: center;
+  border-radius: var(--border-radius);
+  background-color: var(--clr-white);
+  padding:1em;
+  border-top: 4px solid var(--clr-background);
+
+  .last-proj-box{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    /*grid-template-rows: repeat(4, 1fr);*/
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+    border-bottom: 4px solid var(--clr-green);
+    grid-gap: 1em;
+    border-radius: var(--border-radius);
+  }
+
+  .boxunouno{
+    grid-row: 1 / span 2;
+    grid-column: 1 / span 1;
+    line-height: 1.4em;
+  }
+
+  .tester-video{
+    grid-row: 1 / span 2;
+    grid-column: 2 / span 1;
+    height: 100%;
+    width: 100%;
+  }
+
+  .highuno{
+    grid-row: 3 / span 1;
+    grid-column: 1 / span 2;
+  }
+
+  .boxunocuatro{
+    grid-row: 3 / span 2;
+    grid-column: 1 / span 2;
+    padding: 1em;
+    margin-top: 0.5em;
+    line-height: 1.4em;
+  }
+  
+  video{
+    min-width: 40%;
+    max-width: 90%;
+    width: 100%;
+  }
+
+  .hightlights{
+    font-weight: bold;
+  }
+
+  .second-proj-box{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    /*grid-template-rows: repeat(4, 1fr);*/
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+    grid-gap: 1em;
+  }
+
+  .boxdosuno{
+    grid-row: 1 / span 2;
+    grid-column: 2 / span 1;
+    line-height: 1.4em;
+  }
+
+  .fim01-video{
+    grid-row: 1 / span 2;
+    grid-column: 1 / span 1;
+    height: 100%;
+    width: 100%;
+  }
+
+  .highdos{
+    grid-row: 3 / span 1;
+    grid-column: 1 / span 2;
+  }
+
+  .boxdoscinco{
+    grid-row: 4 / span 1;
+    grid-column: 1 / span 2;
+    line-height: 1.4em;
+    margin-top: -0.7em;
+    margin-bottom:-1em;
+  }
+}
+
+
+.clients-section{
+  margin-top: 1em;
+  margin-bottom: 1em;
+  align-items: center;
+  text-align: center;
+  border-radius: var(--border-radius);
+  background-color: var(--clr-white);
+  padding:1em;
+  border-top: 4px solid var(--clr-background);
+
+  #clients{
+    margin-top: -1em;
+  }
+
+  .clients-box{
+    display: grid;
+    grid-template-columns: 2fr;
+    /*grid-template-rows: repeat(4, 1fr);*/
+    justify-content: center;
+    align-items: center;
+    align-text: center;
+    margin: 1em 1em 0 1em;
+    grid-gap: 0.2em;
+
+    img{
+      min-width: 40%;
+      max-width: 90%;
+      width: 70%;
+      height: 60%;
+    }
+  
+    .cboxuno{
+      grid-row: 1 / span 1;
+      grid-column: 1 / span 1;
+      margin-left: 4.7em;
+    }
+
+    .cboxdos{
+      grid-row: 1 / span 1;
+      grid-column: 2 / span 1;
+      margin-left: 2em;
+    }
+
+    .cboxtres{
+      grid-row: 2 / span 1;
+      grid-column: 1 / span 1;
+      margin-left: 4.7em;
+    }
+
+    .cboxcuatro{
+      grid-row: 2 / span 1;
+      grid-column: 2 / span 1;
+      margin-left: 2em;
+    }
+
+    .cboxcinco{
+      grid-row: 3 / span 1;
+      grid-column: 1 / span 1;
+      margin-left: 4.7em;
+    }
+
+    .cboxseis{
+      grid-row: 3 / span 1;
+      grid-column: 2 / span 1;
+      margin-left: 2em;
+    }
+
+    .cboxsiete{
+      grid-row: 4 / span 1;
+      grid-column: 1 / span 1;
+      margin-left: 4.7em;
+    }
+
+    .cboxocho{
+      grid-row: 4 / span 1;
+      grid-column: 2 / span 1;
+      margin-left: 2em;
+    }
+
+    .cboxnueve{
+      grid-row: 5 / span 1;
+      grid-column: 1 / span 1;
+      margin-left: 4.7em;
+    }
+
+    .cboxdiez{
+      grid-row: 5 / span 1;
+      grid-column: 2 / span 1;
+      margin-left: 2em;
+    }
+
+    .cboxonce{
+      grid-row: 6 / span 1;
+      grid-column: 1 / span 1;
+      margin-left: 4.7em;
+    }
+
+    .cboxdoce{
+      grid-row: 6 / span 1;
+      grid-column: 2 / span 1;
+      margin-left: 2em;
+    }
+
+    .cboxtrece{
+      grid-row: 7 / span 1;
+      grid-column: 1 / span 1;
+      margin-left: 4.7em;
+    }
+
+    .cboxcatorce{
+      grid-row: 7 / span 1;
+      grid-column: 2 / span 1;
+      margin-left: 2em;
+    }
+  }
+}
+
+
+.contact-section{
+  margin-top: 1em;
+  margin-bottom: 1em;
+  align-items: center;
+  text-align: center;
+  border-radius: var(--border-radius);
+  background-color: var(--clr-white);
+  padding:1em;
+  border-top: 4px solid var(--clr-background);
+
+  .section{
+    margin-bottom: 0.5em;
+  }
+
+  .contact-box{
+    margin-top: 1em;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    p{
+      font-size: 0.9em;
+      font-weight: bold;
+    }
+  }
+
+  a{
+    font-weight: black;
+  }
+}
+
+footer{
+  width: 100vw;
+  border-radius: var(--border-radius);
+  background-color: var(--clr-background);
+  color: var(--clr-white);
+  margin: 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0;
+  height: 3em;
+  padding: 0;
+}
+
+#sieclink{
+  color: var(--clr-fondo);
+}
+
+#boldcont{
+  color: var(--clr-fondo);
+}
+
+/*siemens-logo2
+ab-logo2
+proface-logo
+se-logo2*/
+
