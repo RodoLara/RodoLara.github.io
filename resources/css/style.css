@@ -682,6 +682,9 @@ se-logo2*/
     line-height: 1.8em;
     margin-top: 0.2em;
   }
+  .main-content {
+    margin-top: 1.1em;
+  }
   footer {
     width: 100vw;
     border-radius: var(--border-radius);

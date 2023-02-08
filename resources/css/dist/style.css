@@ -669,8 +669,8 @@ se-logo2*/
     width: 100vw;
     border-radius: var(--border-radius);
     background-color: var(--clr-background);
-    padding-bottom: 2.2em;
-    padding-top: 1em;
+    padding-bottom: 3em;
+    padding-top: 1.5em;
   }
   nav ul {
     display: flex;
@@ -679,7 +679,12 @@ se-logo2*/
     text-align: center;
     justify-content: center;
     padding-top: 1em;
-    line-height: 1.4em;
+    line-height: 1.8em;
+    margin-top: 0.2em;
+  }
+
+  .main-content {
+    margin-top: 1.1em;
   }
 
   footer {
