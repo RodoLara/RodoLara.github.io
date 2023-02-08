@@ -110,6 +110,9 @@ nav ul li a {
   margin-bottom: 1em;
 }
 
+.ingenierias-electricas {
+  border-bottom: 4px solid var(--clr-green);
+}
 .ingenierias-electricas img {
   min-width: 40%;
   max-width: 90%;
@@ -136,6 +139,10 @@ nav ul li a {
   grid-column: 2/span 1;
 }
 
+.construccion-gabinetes {
+  border-bottom: 4px solid var(--clr-green);
+  margin-top: 0.5em;
+}
 .construccion-gabinetes img {
   min-width: 40%;
   max-width: 90%;
@@ -152,6 +159,10 @@ nav ul li a {
   height: 100%;
 }
 
+.programacion-plc {
+  border-bottom: 4px solid var(--clr-green);
+  margin-top: 0.5em;
+}
 .programacion-plc img {
   min-width: 40%;
   max-width: 90%;
@@ -204,6 +215,10 @@ nav ul li a {
   grid-column: 2/span 1;
 }
 
+.programacion-robots {
+  border-bottom: 4px solid var(--clr-green);
+  margin-top: 0.5em;
+}
 .programacion-robots img {
   min-width: 40%;
   max-width: 90%;
@@ -252,6 +267,10 @@ nav ul li a {
   grid-column: 3/span 2;
 }
 
+.programacion-hmi {
+  border-bottom: 4px solid var(--clr-green);
+  margin-top: 0.5em;
+}
 .programacion-hmi img {
   min-width: 40%;
   max-width: 90%;
@@ -268,6 +287,10 @@ nav ul li a {
   grid-gap: 1em;
 }
 
+.programacion-vision {
+  border-bottom: 4px solid var(--clr-green);
+  margin-top: 0.5em;
+}
 .programacion-vision img {
   min-width: 40%;
   max-width: 90%;
@@ -315,6 +338,10 @@ nav ul li a {
   grid-column: 1/span 1;
 }
 
+.programacion-marcadoras {
+  border-bottom: 4px solid var(--clr-green);
+  margin-top: 0.5em;
+}
 .programacion-marcadoras img {
   min-width: 40%;
   max-width: 90%;
@@ -350,6 +377,9 @@ nav ul li a {
   grid-column: 4/span 1;
 }
 
+.programacion-celdas {
+  margin-top: 0.5em;
+}
 .programacion-celdas video {
   min-width: 40%;
   max-width: 90%;
@@ -491,7 +521,7 @@ nav ul li a {
   /*grid-template-rows: repeat(4, 1fr);*/
   justify-content: center;
   align-items: center;
-  align-text: center;
+  text-align: center;
   margin: 1em 1em 0 1em;
   grid-gap: 0.2em;
 }
@@ -500,76 +530,79 @@ nav ul li a {
   max-width: 90%;
   width: 70%;
   height: 60%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 .clients-section .clients-box .cboxuno {
   grid-row: 1/span 1;
   grid-column: 1/span 1;
-  margin-left: 4.7em;
+  margin: 0;
 }
 .clients-section .clients-box .cboxdos {
   grid-row: 1/span 1;
   grid-column: 2/span 1;
-  margin-left: 2em;
+  margin: 0;
 }
 .clients-section .clients-box .cboxtres {
   grid-row: 2/span 1;
   grid-column: 1/span 1;
-  margin-left: 4.7em;
+  margin-left: 3.45em;
 }
 .clients-section .clients-box .cboxcuatro {
   grid-row: 2/span 1;
   grid-column: 2/span 1;
-  margin-left: 2em;
+  margin: 0;
 }
 .clients-section .clients-box .cboxcinco {
   grid-row: 3/span 1;
   grid-column: 1/span 1;
-  margin-left: 4.7em;
+  margin-left: 3.45em;
 }
 .clients-section .clients-box .cboxseis {
   grid-row: 3/span 1;
   grid-column: 2/span 1;
-  margin-left: 2em;
+  margin: 0;
 }
 .clients-section .clients-box .cboxsiete {
   grid-row: 4/span 1;
   grid-column: 1/span 1;
-  margin-left: 4.7em;
+  margin-left: 3.45em;
 }
 .clients-section .clients-box .cboxocho {
   grid-row: 4/span 1;
   grid-column: 2/span 1;
-  margin-left: 2em;
+  margin: 0;
 }
 .clients-section .clients-box .cboxnueve {
   grid-row: 5/span 1;
   grid-column: 1/span 1;
-  margin-left: 4.7em;
+  margin-left: 3.45em;
 }
 .clients-section .clients-box .cboxdiez {
   grid-row: 5/span 1;
   grid-column: 2/span 1;
-  margin-left: 2em;
+  margin: 0;
 }
 .clients-section .clients-box .cboxonce {
   grid-row: 6/span 1;
   grid-column: 1/span 1;
-  margin-left: 4.7em;
+  margin-left: 3.45em;
 }
 .clients-section .clients-box .cboxdoce {
   grid-row: 6/span 1;
   grid-column: 2/span 1;
-  margin-left: 2em;
+  margin: 0;
 }
 .clients-section .clients-box .cboxtrece {
   grid-row: 7/span 1;
   grid-column: 1/span 1;
-  margin-left: 4.7em;
+  margin-left: 3.45em;
 }
 .clients-section .clients-box .cboxcatorce {
   grid-row: 7/span 1;
   grid-column: 2/span 1;
-  margin-left: 2em;
+  margin: 0;
 }
 
 .contact-section {
@@ -595,6 +628,9 @@ nav ul li a {
   font-size: 0.9em;
   font-weight: bold;
 }
+.contact-section a {
+  font-weight: black;
+}
 
 footer {
   width: 100vw;
@@ -610,11 +646,125 @@ footer {
   padding: 0;
 }
 
-#sieclink {
+#boldred {
+  color: var(--clr-fondo);
+  font-weight: bold;
+}
+
+#boldblack {
+  color: var(--clr-black);
+  font-weight: bold;
+}
+
+#telephone {
   color: var(--clr-fondo);
 }
 
 /*siemens-logo2
 ab-logo2
 proface-logo
-se-logo2*//*# sourceMappingURL=style.css.map */
+se-logo2*/
+@media screen and (max-width: 550px) {
+  nav {
+    width: 100vw;
+    border-radius: var(--border-radius);
+    background-color: var(--clr-background);
+    padding-bottom: 2.2em;
+    padding-top: 1em;
+  }
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding-top: 1em;
+    line-height: 1.4em;
+  }
+  footer {
+    width: 100vw;
+    border-radius: var(--border-radius);
+    background-color: var(--clr-background);
+    color: var(--clr-white);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+    height: 5em;
+    padding: 0;
+  }
+  .contact-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    line-height: 1.3em;
+  }
+  .programacion-celdas video {
+    min-width: 40%;
+    max-width: 90%;
+    width: 100%;
+    padding: 0.5em;
+  }
+  .programacion-celdas .container8 {
+    display: flex;
+    flex-direction: column;
+    /*grid-template-rows: repeat(4, 1fr);*/
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+  }
+  .projects-section .last-proj-box {
+    display: flex;
+    flex-direction: column;
+    /*grid-template-rows: repeat(4, 1fr);*/
+    justify-content: center;
+    align-items: center;
+  }
+  .projects-section .last-proj-box .boxunouno {
+    margin-top: -0.5em;
+  }
+  .projects-section .last-proj-box .boxunocuatro {
+    margin-top: -1.5em;
+  }
+  .projects-section .second-proj-box {
+    display: flex;
+    flex-direction: column;
+    /*grid-template-rows: repeat(4, 1fr);*/
+    justify-content: center;
+    align-items: center;
+  }
+  .projects-section .second-proj-box .boxdosuno {
+    margin-top: -0.5em;
+  }
+  .projects-section .second-proj-box .boxdoscinco {
+    margin-top: -0.5em;
+  }
+  .clients-section .clients-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1em;
+  }
+  .clients-section .clients-box .cboxuno,
+  .clients-section .clients-box .cboxdos,
+  .clients-section .clients-box .cboxtres,
+  .clients-section .clients-box .cboxcuatro,
+  .clients-section .clients-box .cboxcinco,
+  .clients-section .clients-box .cboxseis,
+  .clients-section .clients-box .cboxsiete,
+  .clients-section .clients-box .cboxocho,
+  .clients-section .clients-box .cboxnueve,
+  .clients-section .clients-box .cboxdiez,
+  .clients-section .clients-box .cboxonce,
+  .clients-section .clients-box .cboxdoce,
+  .clients-section .clients-box .cboxtrece,
+  .clients-section .clients-box .cboxcatorce {
+    margin: 0;
+    margin: 0.9em 0 0.9em 0;
+  }
+}/*# sourceMappingURL=style.css.map */
