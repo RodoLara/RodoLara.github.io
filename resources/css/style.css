@@ -660,6 +660,15 @@ footer {
   color: var(--clr-fondo);
 }
 
+#lightp {
+  font-size: 0.7em;
+  margin-top: -1em;
+}
+
+#lightp1 {
+  font-size: 0.8em;
+}
+
 /*siemens-logo2
 ab-logo2
 proface-logo
