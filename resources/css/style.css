@@ -109,7 +109,7 @@ nav ul li a {
 
 .greetings-section {
   align-items: center;
-  text-align: justify;
+  text-align: left;
   border-radius: var(--border-radius);
   background-color: var(--clr-background);
   color: whitesmoke;
@@ -541,7 +541,8 @@ nav ul li a {
   border-top: 4px solid var(--clr-background);
 }
 .clients-section #clients {
-  margin-top: -1em;
+  margin-top: 0;
+  font-size: 0.95em;
 }
 .clients-section .clients-box {
   display: grid;
@@ -645,6 +646,9 @@ nav ul li a {
 }
 .contact-section .section {
   margin-bottom: 0.5em;
+}
+.contact-section .goodbye {
+  text-align: left;
 }
 .contact-section .contact-box {
   margin-top: 1em;
