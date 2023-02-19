@@ -937,6 +937,67 @@ se-logo2*/
   }
 }
 
+.programacion-robots{
+  img{
+    min-width: 40%;
+    max-width: 90%;
+    margin: 0.1em;
+    height: 99%;
+  }
+
+  margin-top: 0.5em;
+
+  .container4{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /*grid-template-rows: repeat(4, 1fr);*/
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+    grid-gap:1em;
+  }
+
+  .yaskawa-image{
+    grid-row: 1 / span 2;
+    grid-column: 1 / span 2;
+  }
+  
+  .abb-logo{
+    grid-row: 3 / span 1;
+    grid-column: 1 / span 1;
+  }
+  
+  .staubli-logo{
+    grid-row: 3 / span 1;
+    grid-column: 2 / span 1;
+  }
+  
+  .kuka-logo{
+    grid-row: 4 / span 1;
+    grid-column: 1 / span 1;
+  }
+  
+  .fanuc-logo{
+    grid-row: 4 / span 1;
+    grid-column: 2 / span 1;
+  }
+  
+  .yaskawa-logo{
+    grid-row: 5 / span 1;
+    grid-column: 1 / span 1;
+  }
+  
+  .epson-logo{
+    grid-row: 5 / span 1;
+    grid-column: 2 / span 1;
+  }
+  
+  .abb-image{
+    grid-row: 6 / span 2;
+    grid-column: 1 / span 2;
+  }
+}
+
   .projects-section{
   
     .last-proj-box{

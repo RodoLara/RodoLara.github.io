@@ -817,6 +817,57 @@ se-logo2*/
     grid-column: 2/span 1;
   }
 
+  .programacion-robots {
+    margin-top: 0.5em;
+  }
+  .programacion-robots img {
+    min-width: 40%;
+    max-width: 90%;
+    margin: 0.1em;
+    height: 99%;
+  }
+  .programacion-robots .container4 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /*grid-template-rows: repeat(4, 1fr);*/
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+    grid-gap: 1em;
+  }
+  .programacion-robots .yaskawa-image {
+    grid-row: 1/span 2;
+    grid-column: 1/span 2;
+  }
+  .programacion-robots .abb-logo {
+    grid-row: 3/span 1;
+    grid-column: 1/span 1;
+  }
+  .programacion-robots .staubli-logo {
+    grid-row: 3/span 1;
+    grid-column: 2/span 1;
+  }
+  .programacion-robots .kuka-logo {
+    grid-row: 4/span 1;
+    grid-column: 1/span 1;
+  }
+  .programacion-robots .fanuc-logo {
+    grid-row: 4/span 1;
+    grid-column: 2/span 1;
+  }
+  .programacion-robots .yaskawa-logo {
+    grid-row: 5/span 1;
+    grid-column: 1/span 1;
+  }
+  .programacion-robots .epson-logo {
+    grid-row: 5/span 1;
+    grid-column: 2/span 1;
+  }
+  .programacion-robots .abb-image {
+    grid-row: 6/span 2;
+    grid-column: 1/span 2;
+  }
+
   .projects-section .last-proj-box {
     display: flex;
     flex-direction: column;
