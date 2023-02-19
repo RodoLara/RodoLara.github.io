@@ -13,8 +13,8 @@
   --clr-background: #363636;
   --clr-white: #ffffff;
   --clr-primary: #00218a;
-  --clr-green: #474747;
-  --clr-fondo: #e8175d;
+  --clr-green: #47ff31;
+  --clr-fondo: #47ff31;
   --clr-black: #474747;
   --font-size: 16px;
   --border-radius:0.2em;
@@ -26,7 +26,46 @@ body {
   font-size: var(--font-size);
   letter-spacing: 0.05em;
   color: var(--clr-black);
-  background-color: var(--clr-fondo);
+  background-color: var(--clr-black);
+}
+
+.line {
+  width: 35px;
+  height: 5px;
+  background-color: var(--clr-green);
+  margin: 6px 0;
+}
+
+.c:hover #drop-down {
+  display: flex;
+}
+.c:focus-within #drop-down {
+  display: flex;
+}
+.c #drop-down {
+  position: absolute;
+  width: fit-content;
+  display: none;
+  flex-direction: column;
+  top: 60px;
+  background-color: var(--clr-background);
+  padding: 30px 0;
+  border-radius: 5px;
+  text-align: left;
+  box-shadow: 0 0 10px var(--clr-black);
+  transform: translateX(-10%);
+  margin-left: -50px;
+  margin-top: -10px;
+}
+.c #drop-down .clinks {
+  display: block;
+  padding: 5px 0;
+  text-decoration: none;
+  padding: 10px 50px 10px 20px;
+}
+.c #drop-down .clinks:hover {
+  background-color: var(--clr-green);
+  color: #000;
 }
 
 .main-content {
@@ -110,9 +149,6 @@ nav ul li a {
   margin-bottom: 1em;
 }
 
-.ingenierias-electricas {
-  border-bottom: 4px solid var(--clr-green);
-}
 .ingenierias-electricas img {
   min-width: 40%;
   max-width: 90%;
@@ -140,7 +176,6 @@ nav ul li a {
 }
 
 .construccion-gabinetes {
-  border-bottom: 4px solid var(--clr-green);
   margin-top: 0.5em;
 }
 .construccion-gabinetes img {
@@ -160,7 +195,6 @@ nav ul li a {
 }
 
 .programacion-plc {
-  border-bottom: 4px solid var(--clr-green);
   margin-top: 0.5em;
 }
 .programacion-plc img {
@@ -216,7 +250,6 @@ nav ul li a {
 }
 
 .programacion-robots {
-  border-bottom: 4px solid var(--clr-green);
   margin-top: 0.5em;
 }
 .programacion-robots img {
@@ -268,7 +301,6 @@ nav ul li a {
 }
 
 .programacion-hmi {
-  border-bottom: 4px solid var(--clr-green);
   margin-top: 0.5em;
 }
 .programacion-hmi img {
@@ -288,7 +320,6 @@ nav ul li a {
 }
 
 .programacion-vision {
-  border-bottom: 4px solid var(--clr-green);
   margin-top: 0.5em;
 }
 .programacion-vision img {
@@ -339,7 +370,6 @@ nav ul li a {
 }
 
 .programacion-marcadoras {
-  border-bottom: 4px solid var(--clr-green);
   margin-top: 0.5em;
 }
 .programacion-marcadoras img {
@@ -632,6 +662,20 @@ nav ul li a {
   font-weight: black;
 }
 
+.beyond-section {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  align-items: center;
+  text-align: center;
+  border-radius: var(--border-radius);
+  background-color: var(--clr-white);
+  padding: 1em;
+  border-top: 4px solid var(--clr-background);
+}
+.beyond-section .section {
+  margin-bottom: 0.5em;
+}
+
 footer {
   width: 100vw;
   border-radius: var(--border-radius);
@@ -678,18 +722,19 @@ se-logo2*/
     width: 100vw;
     border-radius: var(--border-radius);
     background-color: var(--clr-background);
-    padding-bottom: 3em;
-    padding-top: 1.5em;
-  }
-  nav ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    padding-top: 1em;
-    line-height: 1.8em;
-    margin-top: 0.2em;
+    height: 3em;
+    /*padding-bottom: 3.0em;
+    padding-top: 1.5em;*/
+    /*ul{
+      display: flex;
+      flex-direction: column;
+      align-items:center;
+      text-align: center;
+      justify-content: center;
+      padding-top: 1em;
+      line-height: 1.8em;
+      margin-top: 0.2em;
+    }*/
   }
 
   .main-content {

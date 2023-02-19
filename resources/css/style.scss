@@ -14,8 +14,8 @@
     --clr-background: #363636;
     --clr-white: #ffffff;
     --clr-primary: #00218a;
-    --clr-green: #474747;
-    --clr-fondo: #e8175d;
+    --clr-green: #47ff31;
+    --clr-fondo: #47ff31;
     --clr-black: #474747;
 
     --font-size: 16px;
@@ -28,7 +28,53 @@ body{
     font-size: var(--font-size);
     letter-spacing: 0.05em;
     color: var(--clr-black);
-    background-color: var(--clr-fondo);
+    background-color: var(--clr-black);
+}
+
+.line {
+  width: 35px;
+  height: 5px;
+  background-color: var(--clr-green);
+  margin: 6px 0;
+}
+
+.c{
+  &:hover #drop-down{
+    display: flex;
+  }
+
+  &:focus-within #drop-down{
+    display: flex;
+  }
+
+  #drop-down{
+    position: absolute;
+    width: fit-content;
+    display: none;
+    flex-direction: column;
+    top: 60px;
+    background-color: var(--clr-background);
+    padding: 30px 0;
+    border-radius: 5px;
+    text-align: left;
+    box-shadow: 0 0 10px var(--clr-black);
+    transform: translateX(-10%);
+
+    margin-left: -50px;
+    margin-top: -10px;
+    
+    .clinks{
+      display: block;
+      padding: 5px 0;
+      text-decoration: none;
+      padding: 10px 50px 10px 20px;
+
+      &:hover{
+        background-color: var(--clr-green);
+        color: #000;
+      }
+    }
+  }
 }
 
 .main-content{
@@ -53,6 +99,7 @@ nav{
     height: 3em;
     padding: 0;
     color: var(--clr-white);
+
   }
 
   ul li a{
@@ -60,6 +107,7 @@ nav{
     font-weight: bold;
     color: var(--clr-white);
   }
+
 }
 
 .main-content{
@@ -123,8 +171,6 @@ nav{
     max-width: 90%;
   }
 
-  border-bottom: 4px solid var(--clr-green);
-
   .container1{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -157,7 +203,6 @@ nav{
     max-width: 90%;
   }
 
-  border-bottom: 4px solid var(--clr-green);
   margin-top: 0.5em;
 
   .container2{
@@ -182,7 +227,6 @@ nav{
     height: 99%;
   }
 
-  border-bottom: 4px solid var(--clr-green);
   margin-top: 0.5em;
 
   .container3{
@@ -249,7 +293,6 @@ nav{
     height: 99%;
   }
 
-  border-bottom: 4px solid var(--clr-green);
   margin-top: 0.5em;
 
   .container4{
@@ -311,7 +354,6 @@ nav{
     height: 99%;
   }
 
-  border-bottom: 4px solid var(--clr-green);
   margin-top: 0.5em;
 
   .container5{
@@ -332,7 +374,6 @@ nav{
     height: 99%;
   }
 
-  border-bottom: 4px solid var(--clr-green);
   margin-top: 0.5em;
 
   .container6{
@@ -393,7 +434,6 @@ nav{
     height: 99%;
   }
 
-  border-bottom: 4px solid var(--clr-green);
   margin-top: 0.5em;
 
   .container7{
@@ -788,10 +828,11 @@ se-logo2*/
     width: 100vw;
     border-radius: var(--border-radius);
     background-color: var(--clr-background);
-    padding-bottom: 3.0em;
-    padding-top: 1.5em;
+    height: 3em;
+    /*padding-bottom: 3.0em;
+    padding-top: 1.5em;*/
 
-    ul{
+    /*ul{
       display: flex;
       flex-direction: column;
       align-items:center;
@@ -800,7 +841,7 @@ se-logo2*/
       padding-top: 1em;
       line-height: 1.8em;
       margin-top: 0.2em;
-    }
+    }*/
   }
 
   .main-content{
