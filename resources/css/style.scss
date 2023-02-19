@@ -116,18 +116,12 @@ nav{
 
 .greetings-section{
   align-items: center;
-  text-align: center;
+  text-align: justify;
   border-radius: var(--border-radius);
-  background-color: var(--clr-white);
-  padding: 1em;
-
-  img{
-    min-width: 40%;
-    max-width: 80%;
-  }
-
-  border-top: 4px solid var(--clr-background);
-
+  /*background-color: var(--clr-white);*/
+  color: whitesmoke;
+  font-size: 0.9em;
+  padding: 0.5em;
 }
 
 .section{
