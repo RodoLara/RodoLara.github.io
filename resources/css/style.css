@@ -880,6 +880,57 @@ se-logo2*/
     margin: 1em;
     grid-gap: 1em;
   }
+  .programacion-vision {
+    margin-top: 0.5em;
+  }
+  .programacion-vision img {
+    min-width: 40%;
+    max-width: 90%;
+    height: 99%;
+  }
+  .programacion-vision .container6 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /*grid-template-rows: repeat(4, 1fr);*/
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+    grid-gap: 1em;
+  }
+  .programacion-vision .lj-v-image {
+    grid-row: 6/span 2;
+    grid-column: 1/span 2;
+    margin: auto;
+  }
+  .programacion-vision .cognex-image {
+    grid-row: 1/span 2;
+    grid-column: 1/span 2;
+    margin: auto;
+  }
+  .programacion-vision .keyence-logo {
+    grid-row: 3/span 1;
+    grid-column: 1/span 1;
+  }
+  .programacion-vision .cognex-logo {
+    grid-row: 3/span 1;
+    grid-column: 2/span 1;
+  }
+  .programacion-vision .lmi-logo {
+    grid-row: 4/span 1;
+    grid-column: 1/span 1;
+  }
+  .programacion-vision .micro-epsilon-logo {
+    grid-row: 4/span 1;
+    grid-column: 2/span 1;
+  }
+  .programacion-vision .infaimon-logo {
+    grid-row: 5/span 1;
+    grid-column: 1/span 1;
+  }
+  .programacion-vision .teledyne-logo {
+    grid-row: 5/span 1;
+    grid-column: 2/span 1;
+  }
   .projects-section .last-proj-box {
     display: flex;
     flex-direction: column;
