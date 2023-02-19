@@ -499,7 +499,7 @@ nav{
 
   .container10{
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     /*grid-template-rows: repeat(4, 1fr);*/
     justify-content: center;
     align-items: center;
@@ -508,7 +508,7 @@ nav{
 
   img{
     min-width: 40%;
-    max-width: 90%;
+    max-width: 50%;
     width: 100%;
   }
 }
@@ -1125,6 +1125,35 @@ se-logo2*/
       .boxdoscinco{
         margin-top: -0.5em;
       }
+    }
+  }
+
+  .languages-section{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    align-items: center;
+    text-align: center;
+    border-radius: var(--border-radius);
+    background-color: var(--clr-white);
+    padding-top:1em;
+    padding-bottom:0.1em;
+    border-top: 4px solid var(--clr-background);
+  
+    .container10{
+      display: grid;
+      grid-template-columns: 1fr;
+      /*grid-template-rows: repeat(4, 1fr);*/
+      justify-content: center;
+      align-items: center;
+      margin: 1em;
+    }
+  
+    img{
+      min-width: 30%;
+      max-width: 45%;
+      width: 100%;
+      margin-top: 1em;
+      margin-bottom: 1em;
     }
   }
 
