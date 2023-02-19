@@ -998,6 +998,27 @@ se-logo2*/
   }
 }
 
+.programacion-hmi{
+  img{
+    min-width: 40%;
+    max-width: 90%;
+    margin: 1em;
+    height: 99%;
+  }
+
+  margin-top: 0.5em;
+
+  .container5{
+    display: grid;
+    grid-template-columns: 1fr;
+    /*grid-template-rows: repeat(4, 1fr);*/
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+    grid-gap:1em;
+  }
+}
+
   .projects-section{
   
     .last-proj-box{

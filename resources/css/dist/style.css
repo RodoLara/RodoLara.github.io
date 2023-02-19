@@ -868,6 +868,25 @@ se-logo2*/
     grid-column: 1/span 2;
   }
 
+  .programacion-hmi {
+    margin-top: 0.5em;
+  }
+  .programacion-hmi img {
+    min-width: 40%;
+    max-width: 90%;
+    margin: 1em;
+    height: 99%;
+  }
+  .programacion-hmi .container5 {
+    display: grid;
+    grid-template-columns: 1fr;
+    /*grid-template-rows: repeat(4, 1fr);*/
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+    grid-gap: 1em;
+  }
+
   .projects-section .last-proj-box {
     display: flex;
     flex-direction: column;
