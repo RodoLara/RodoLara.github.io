@@ -77,6 +77,7 @@ body{
       padding: 5px 0;
       text-decoration: none;
       padding: 10px 50px 10px 20px;
+      text-transform: uppercase;
 
       &:hover{
         background-color: var(--clr-green);
@@ -541,10 +542,10 @@ nav{
     /*grid-template-rows: repeat(4, 1fr);*/
     justify-content: center;
     align-items: center;
-    margin: 1em;
     border-bottom: 4px solid var(--clr-green);
-    grid-gap: 1em;
     border-radius: var(--border-radius);
+    margin: 0.4em;
+    grid-gap: 1em;
   }
 
   .boxunouno{
@@ -571,6 +572,10 @@ nav{
     padding: 1em;
     margin-top: 0.5em;
     line-height: 1.4em;
+    font-size: 0.8em;
+    text-align: left;
+    justify-content: left;
+    align-items: left;
   }
   
   video{
@@ -589,7 +594,7 @@ nav{
     /*grid-template-rows: repeat(4, 1fr);*/
     justify-content: center;
     align-items: center;
-    margin: 1em;
+    margin: 0.4em;
     grid-gap: 1em;
   }
 
@@ -617,9 +622,16 @@ nav{
     line-height: 1.4em;
     margin-top: -0.7em;
     margin-bottom:-1em;
+    font-size: 0.8em;
+    text-align: left;
+    justify-content: left;
+    align-items: left;
   }
 }
 
+#secondlast{
+  margin-top: 1em;
+}
 
 .clients-section{
   margin-top: 1em;
