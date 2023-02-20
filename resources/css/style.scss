@@ -55,6 +55,9 @@ body{
     display: flex;
   }
 
+  z-index: 2;
+
+
   #drop-down{
     position: absolute;
     width: fit-content;
@@ -68,6 +71,7 @@ body{
     box-shadow: 0 0 10px var(--clr-black);
     transform: translateX(-10%);
     font-size: 0.85em;
+    z-index: 2;
 
     margin-left: -110px;
     margin-top: -10px;
@@ -78,6 +82,7 @@ body{
       text-decoration: none;
       padding: 10px 50px 10px 20px;
       text-transform: uppercase;
+      z-index: 2;
 
       &:hover{
         background-color: var(--clr-green);
@@ -104,6 +109,8 @@ nav{
   margin: 0;
   position: fixed;
   top: 0;
+  z-index: 2;
+
   
   ul{
     display: flex;
@@ -485,6 +492,7 @@ nav{
     min-width: 40%;
     max-width: 90%;
     width: 100%;
+    z-index: 1;
   }
 
   margin-top: 0.5em;
@@ -535,6 +543,7 @@ nav{
   background-color: var(--clr-white);
   padding:1em;
   border-top: 4px solid var(--clr-background);
+  z-index: 1;
 
   .last-proj-box{
     display: grid;
@@ -582,6 +591,8 @@ nav{
     min-width: 40%;
     max-width: 90%;
     width: 100%;
+    z-index: 1;
+
   }
 
   .hightlights{

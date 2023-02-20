@@ -43,6 +43,9 @@ body {
   font-size: 1em;
 }
 
+.c {
+  z-index: 2;
+}
 .c:hover #drop-down {
   display: flex;
 }
@@ -62,6 +65,7 @@ body {
   box-shadow: 0 0 10px var(--clr-black);
   transform: translateX(-10%);
   font-size: 0.85em;
+  z-index: 2;
   margin-left: -110px;
   margin-top: -10px;
 }
@@ -71,6 +75,7 @@ body {
   text-decoration: none;
   padding: 10px 50px 10px 20px;
   text-transform: uppercase;
+  z-index: 2;
 }
 .c #drop-down .clinks:hover {
   background-color: var(--clr-green);
@@ -94,6 +99,7 @@ nav {
   margin: 0;
   position: fixed;
   top: 0;
+  z-index: 2;
 }
 nav ul {
   display: flex;
@@ -423,6 +429,7 @@ nav ul li a {
   min-width: 40%;
   max-width: 90%;
   width: 100%;
+  z-index: 1;
 }
 .programacion-celdas .container8 {
   display: grid;
@@ -467,6 +474,7 @@ nav ul li a {
   background-color: var(--clr-white);
   padding: 1em;
   border-top: 4px solid var(--clr-background);
+  z-index: 1;
 }
 .projects-section .last-proj-box {
   display: grid;
@@ -509,6 +517,7 @@ nav ul li a {
   min-width: 40%;
   max-width: 90%;
   width: 100%;
+  z-index: 1;
 }
 .projects-section .hightlights {
   font-weight: bold;
