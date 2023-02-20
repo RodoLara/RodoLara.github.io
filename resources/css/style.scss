@@ -31,7 +31,7 @@ body{
     background-color: var(--clr-black);
     position: relative;
     min-height: 100vh;
-}
+  }
 
 .line {
   width: 35px;
@@ -140,6 +140,9 @@ nav{
   font-size: 0.9em;
   padding: 0.2em;
   margin-top: 1em;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .section, .subtitulo{
@@ -165,6 +168,9 @@ nav{
   padding-top:1em;
   padding-bottom:0.5em;
   border-top: 4px solid var(--clr-background);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #servicio1{
@@ -517,6 +523,9 @@ nav{
   padding-top:1em;
   padding-bottom:0.1em;
   border-top: 4px solid var(--clr-background);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 
   .container10{
     display: grid;
@@ -544,6 +553,9 @@ nav{
   padding:1em;
   border-top: 4px solid var(--clr-background);
   z-index: 1;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 
   .last-proj-box{
     display: grid;
@@ -653,6 +665,10 @@ nav{
   background-color: var(--clr-white);
   padding:1em;
   border-top: 4px solid var(--clr-background);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  
 
   #clients{
     margin-top: 0;
@@ -775,6 +791,9 @@ nav{
   background-color: var(--clr-white);
   padding:1em;
   border-top: 4px solid var(--clr-background);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 
   .section{
     margin-bottom: 0.5em;

@@ -126,6 +126,9 @@ nav ul li a {
   font-size: 0.9em;
   padding: 0.2em;
   margin-top: 1em;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .section, .subtitulo {
@@ -151,6 +154,9 @@ nav ul li a {
   padding-top: 1em;
   padding-bottom: 0.5em;
   border-top: 4px solid var(--clr-background);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #servicio1 {
@@ -451,6 +457,9 @@ nav ul li a {
   padding-top: 1em;
   padding-bottom: 0.1em;
   border-top: 4px solid var(--clr-background);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .languages-section .container10 {
   display: grid;
@@ -476,6 +485,9 @@ nav ul li a {
   padding: 1em;
   border-top: 4px solid var(--clr-background);
   z-index: 1;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .projects-section .last-proj-box {
   display: grid;
@@ -572,6 +584,9 @@ nav ul li a {
   background-color: var(--clr-white);
   padding: 1em;
   border-top: 4px solid var(--clr-background);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .clients-section #clients {
   margin-top: 0;
@@ -676,6 +691,9 @@ nav ul li a {
   background-color: var(--clr-white);
   padding: 1em;
   border-top: 4px solid var(--clr-background);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .contact-section .section {
   margin-bottom: 0.5em;
