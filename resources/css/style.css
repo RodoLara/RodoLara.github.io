@@ -27,6 +27,8 @@ body {
   letter-spacing: 0.05em;
   color: var(--clr-black);
   background-color: var(--clr-black);
+  position: relative;
+  min-height: 100vh;
 }
 
 .line {
@@ -77,6 +79,8 @@ body {
 
 .main-content {
   color: var(--clr-black);
+  margin: 2em;
+  padding-top: 2.5em;
 }
 
 header {
@@ -88,6 +92,8 @@ nav {
   border-radius: var(--border-radius);
   background-color: var(--clr-background);
   margin: 0;
+  position: fixed;
+  top: 0;
 }
 nav ul {
   display: flex;
@@ -104,10 +110,6 @@ nav ul li a {
   color: var(--clr-white);
 }
 
-.main-content {
-  margin: 2em;
-}
-
 .greetings-section {
   align-items: center;
   text-align: left;
@@ -116,6 +118,7 @@ nav ul li a {
   color: whitesmoke;
   font-size: 0.9em;
   padding: 0.2em;
+  margin-top: 1em;
 }
 
 .section, .subtitulo {
@@ -686,16 +689,21 @@ nav ul li a {
 
 footer {
   width: 100vw;
+  position: static;
   border-radius: var(--border-radius);
   background-color: var(--clr-background);
   color: var(--clr-white);
   margin: 0;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
+  text-align: left;
   margin: 0;
+  margin-bottom: -4em;
   height: 3em;
   padding: 0;
+  position: absolute;
+  bottom: 0;
 }
 
 #boldred {
@@ -747,6 +755,10 @@ se-logo2*/
   .main-content {
     margin-top: 1.1em;
   }
+  body {
+    position: relative;
+    min-height: 100vh;
+  }
   footer {
     width: 100vw;
     border-radius: var(--border-radius);
@@ -757,9 +769,13 @@ se-logo2*/
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    text-align: center;
     margin: 0;
+    margin-bottom: -6.5em;
     height: 5em;
     padding: 0;
+    position: absolute;
+    bottom: 0;
   }
   .contact-box {
     display: flex;
