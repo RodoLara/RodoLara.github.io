@@ -328,6 +328,7 @@ nav ul li a {
 .programacion-vision {
   margin-top: 0.5em;
   padding-top: 1em;
+  border-bottom: 3px solid var(--clr-green);
 }
 .programacion-vision img {
   min-width: 40%;
@@ -378,6 +379,7 @@ nav ul li a {
 
 .programacion-marcadoras {
   margin-top: 0.5em;
+  padding-top: 1em;
 }
 .programacion-marcadoras img {
   min-width: 40%;
@@ -960,6 +962,43 @@ se-logo2*/
   }
   .programacion-vision .teledyne-logo {
     grid-row: 5/span 1;
+    grid-column: 2/span 1;
+  }
+  .programacion-marcadoras {
+    margin-top: 0.5em;
+  }
+  .programacion-marcadoras img {
+    min-width: 40%;
+    max-width: 90%;
+    height: 99%;
+  }
+  .programacion-marcadoras .container7 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /*grid-template-rows: repeat(4, 1fr);*/
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+    grid-gap: 1em;
+  }
+  .programacion-marcadoras .lasermarking-image {
+    grid-row: 1/span 2;
+    grid-column: 1/span 2;
+  }
+  .programacion-marcadoras .keyence-logo2 {
+    grid-row: 3/span 1;
+    grid-column: 1/span 1;
+  }
+  .programacion-marcadoras .telesis-logo {
+    grid-row: 3/span 1;
+    grid-column: 2/span 1;
+  }
+  .programacion-marcadoras .rofin-logo {
+    grid-row: 4/span 1;
+    grid-column: 1/span 1;
+  }
+  .programacion-marcadoras .sic-logo {
+    grid-row: 4/span 1;
     grid-column: 2/span 1;
   }
   .projects-section .last-proj-box {
