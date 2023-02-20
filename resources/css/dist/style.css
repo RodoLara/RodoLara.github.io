@@ -59,6 +59,7 @@ body {
   text-align: left;
   box-shadow: 0 0 10px var(--clr-black);
   transform: translateX(-10%);
+  font-size: 0.85em;
   margin-left: -110px;
   margin-top: -10px;
 }
@@ -193,6 +194,7 @@ nav ul li a {
 
 .programacion-plc {
   margin-top: 0.5em;
+  border-bottom: 3px solid var(--clr-green);
 }
 .programacion-plc img {
   min-width: 40%;
@@ -247,6 +249,8 @@ nav ul li a {
 }
 
 .programacion-robots {
+  border-bottom: 3px solid var(--clr-green);
+  padding-top: 1em;
   margin-top: 0.5em;
 }
 .programacion-robots img {
@@ -298,7 +302,8 @@ nav ul li a {
 }
 
 .programacion-hmi {
-  margin-top: 0.5em;
+  padding-top: 1em;
+  border-bottom: 3px solid var(--clr-green);
 }
 .programacion-hmi img {
   min-width: 40%;
@@ -318,6 +323,7 @@ nav ul li a {
 
 .programacion-vision {
   margin-top: 0.5em;
+  padding-top: 1em;
 }
 .programacion-vision img {
   min-width: 40%;

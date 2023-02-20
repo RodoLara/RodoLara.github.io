@@ -65,6 +65,7 @@ body{
     text-align: left;
     box-shadow: 0 0 10px var(--clr-black);
     transform: translateX(-10%);
+    font-size: 0.85em;
 
     margin-left: -110px;
     margin-top: -10px;
@@ -223,6 +224,7 @@ nav{
   }
 
   margin-top: 0.5em;
+  border-bottom: 3px solid var(--clr-green);
 
   .container3{
     display: grid;
@@ -288,6 +290,8 @@ nav{
     height: 99%;
   }
 
+  border-bottom: 3px solid var(--clr-green);
+  padding-top: 1em;
   margin-top: 0.5em;
 
   .container4{
@@ -349,7 +353,8 @@ nav{
     height: 99%;
   }
 
-  margin-top: 0.5em;
+  padding-top: 1em;
+  border-bottom: 3px solid var(--clr-green);
 
   .container5{
     display: grid;
@@ -370,6 +375,7 @@ nav{
   }
 
   margin-top: 0.5em;
+  padding-top: 1em;
 
   .container6{
     display: grid;
