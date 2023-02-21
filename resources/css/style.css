@@ -164,9 +164,16 @@ nav ul li a {
   margin-bottom: 1em;
 }
 
+.ingenierias-electricas {
+  margin: 1em;
+  padding-top: 1em;
+  border-bottom: 3px solid var(--clr-green);
+}
 .ingenierias-electricas img {
   min-width: 40%;
   max-width: 90%;
+  margin: 0.1em;
+  height: 99%;
 }
 .ingenierias-electricas .container1 {
   display: grid;
@@ -196,6 +203,8 @@ nav ul li a {
 .construccion-gabinetes img {
   min-width: 40%;
   max-width: 90%;
+  margin: 0.1em;
+  height: 99%;
 }
 .construccion-gabinetes .container2 {
   display: grid;
@@ -431,6 +440,8 @@ nav ul li a {
 
 .programacion-celdas {
   margin-top: 0.5em;
+  padding-top: 1em;
+  border-bottom: 3px solid var(--clr-green);
 }
 .programacion-celdas video {
   min-width: 40%;
@@ -839,6 +850,46 @@ se-logo2*/
     justify-content: center;
     align-items: center;
     margin: 1em;
+  }
+  .ingenierias-electricas {
+    margin: 1em;
+    padding-top: 1em;
+    border-bottom: 3px solid var(--clr-green);
+  }
+  .ingenierias-electricas img {
+    min-width: 40%;
+    max-width: 90%;
+    margin: 0.1em;
+    height: 99%;
+    margin: 0.5em;
+  }
+  .ingenierias-electricas .container1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+  }
+  .construccion-gabinetes {
+    margin-top: 0.5em;
+  }
+  .construccion-gabinetes img {
+    min-width: 40%;
+    max-width: 90%;
+    margin: 0.1em;
+    height: 99%;
+    margin: 0.5em;
+  }
+  .construccion-gabinetes .container2 {
+    display: flex;
+    flex-direction: column;
+    /*grid-template-rows: repeat(2, 1fr);*/
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+  }
+  .construccion-gabinetes .cabinet-dwg {
+    height: 100%;
   }
   .programacion-plc .container3 {
     display: grid;

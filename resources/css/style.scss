@@ -182,7 +182,14 @@ nav{
   img{
     min-width: 40%;
     max-width: 90%;
+    margin: 0.1em;
+    height: 99%;
   }
+
+  margin: 1em;
+  padding-top: 1em;
+  border-bottom: 3px solid var(--clr-green);
+
 
   .container1{
     display: grid;
@@ -214,6 +221,8 @@ nav{
   img{
     min-width: 40%;
     max-width: 90%;
+    margin: 0.1em;
+    height: 99%;
   }
 
   margin-top: 0.5em;
@@ -502,6 +511,9 @@ nav{
   }
 
   margin-top: 0.5em;
+  padding-top: 1em;
+  border-bottom: 3px solid var(--clr-green);
+
 
   .container8{
     display: grid;
@@ -954,6 +966,54 @@ se-logo2*/
       justify-content: center;
       align-items: center;
       margin: 1em;
+    }
+  }
+
+  .ingenierias-electricas{
+    img{
+      min-width: 40%;
+      max-width: 90%;
+      margin: 0.1em;
+      height: 99%;
+      margin: 0.5em;
+    }
+  
+    margin: 1em;
+    padding-top: 1em;
+    border-bottom: 3px solid var(--clr-green);
+  
+  
+    .container1{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 1em;
+    }
+  }
+
+  .construccion-gabinetes{
+    img{
+      min-width: 40%;
+      max-width: 90%;
+      margin: 0.1em;
+      height: 99%;
+      margin: 0.5em;
+    }
+  
+    margin-top: 0.5em;
+  
+    .container2{
+      display: flex;
+      flex-direction: column;
+      /*grid-template-rows: repeat(2, 1fr);*/
+      justify-content: center;
+      align-items: center;
+      margin: 1em;
+    }
+    
+    .cabinet-dwg{
+      height: 100%;
     }
   }
 
