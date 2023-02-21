@@ -121,7 +121,7 @@ nav ul li a {
   align-items: center;
   text-align: left;
   border-radius: var(--border-radius);
-  background-color: var(--clr-background);
+  /*background-color: var(--clr-background);*/
   color: whitesmoke;
   font-size: 0.9em;
   padding: 0.2em;
