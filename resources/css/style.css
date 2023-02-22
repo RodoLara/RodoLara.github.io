@@ -722,6 +722,10 @@ nav ul li a {
   font-size: 0.9em;
   font-weight: bold;
 }
+.contact-section .contact-box .contactcuatro,
+.contact-section .contact-box .contactcinco {
+  font-weight: lighter;
+}
 .contact-section a {
   font-weight: black;
 }
