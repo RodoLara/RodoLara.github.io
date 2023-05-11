@@ -34,7 +34,6 @@ body {
 .line {
   width: 35px;
   height: 5px;
-  background-color: var(--clr-green);
   margin: 6px 0;
 }
 
@@ -125,7 +124,7 @@ nav ul li a {
   color: whitesmoke;
   font-size: 0.9em;
   padding: 0.2em;
-  margin-top: 1em;
+  margin-top: 0.1em;
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
@@ -141,7 +140,7 @@ nav ul li a {
 }
 
 .saludo {
-  margin: 0.5em;
+  margin: 0em;
 }
 
 .services-section {
@@ -167,7 +166,6 @@ nav ul li a {
 .ingenierias-electricas {
   margin: 1em;
   padding-top: 1em;
-  border-bottom: 3px solid var(--clr-green);
 }
 .ingenierias-electricas img {
   min-width: 40%;
@@ -328,8 +326,7 @@ nav ul li a {
 }
 
 .programacion-hmi {
-  padding-top: 1em;
-  border-bottom: 3px solid var(--clr-green);
+  padding-top: 0em;
 }
 .programacion-hmi img {
   min-width: 40%;

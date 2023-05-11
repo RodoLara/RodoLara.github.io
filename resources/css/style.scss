@@ -36,7 +36,7 @@ body{
 .line {
   width: 35px;
   height: 5px;
-  background-color: var(--clr-green);
+  //background-color: var(--clr-green);
   margin: 6px 0;
 }
 
@@ -139,7 +139,7 @@ nav{
   color: whitesmoke;
   font-size: 0.9em;
   padding: 0.2em;
-  margin-top: 1em;
+  margin-top: 0.1em;
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
@@ -155,7 +155,7 @@ nav{
 }
 
 .saludo{
-  margin: 0.5em;
+  margin: 0em;
 }
 
 .services-section{
@@ -188,7 +188,7 @@ nav{
 
   margin: 1em;
   padding-top: 1em;
-  border-bottom: 3px solid var(--clr-green);
+  //border-bottom: 3px solid var(--clr-green);
 
 
   .container1{
@@ -379,8 +379,8 @@ nav{
     height: 99%;
   }
 
-  padding-top: 1em;
-  border-bottom: 3px solid var(--clr-green);
+  padding-top: 0em;
+  //border-bottom: 3px solid var(--clr-green);
 
   .container5{
     display: grid;
