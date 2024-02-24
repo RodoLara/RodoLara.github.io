@@ -26,12 +26,24 @@ function withinRows(j){
 }
 
 function setup() {
-    createCanvas(600, 800);
+    createCanvas(windowWidth, windowHeight);
     colorMode(HSB, 360, 255, 255);
-    cols = width / w;
-    rows = height / w;
+    cols = floor(width / w);
+    rows = floor(height / w);
+    console.log(width, height);
+    console.log(windowWidth, windowHeight);
+    console.log(cols, rows);
     grid = make2DArray(cols, rows);
-    velocityGrid = make2DArray(cols, rows, 1);
+    velocityGrid = make2DArray(cols, rows);
+    // Obtener el tamaño del array grid
+    let tamanoGrid = grid.length;
+    
+    // Obtener el tamaño total del array bidimensional velocityGrid
+    let tamanoTotalVelocityGrid = 0;
+    for (let i = 0; i < velocityGrid.length; i++) {
+        tamanoTotalVelocityGrid += velocityGrid[i].length;
+    }
+    console.log("El tamaño total del array bidimensional velocityGrid es: " + tamanoTotalVelocityGrid);
 }
 
 function mouseDragged(){}
