@@ -10,9 +10,19 @@ function make2DArray(cols, rows){
 }
 
 let grid;
-let w = 10;
+let velocityGrid;
+let w = 5;
 let cols, rows;
-let hueValue = 0;
+let hueValue = 200;
+let gravity = 0.1;
+
+function withinCols(i){
+    return i >= 0 && i <= cols - 1;
+}
+
+function withinRows(j){
+    return j >= 0 && j <= rows - 1;
+}
 
 function setup() {
     createCanvas(600, 800);
@@ -20,83 +30,100 @@ function setup() {
     cols = width / w;
     rows = height / w;
     grid = make2DArray(cols, rows);
-    
-    for (let i = 0; i < cols; i++){
-        for (let j = 0; j < rows; j++){
-            grid[i][j] = 0;
-        }
-    }
+    velocityGrid = make2DArray(cols, rows, 1);
 }
 
-function mouseDragged(){
-    let mouseCol = floor(mouseX / w);
-    let mouseRow = floor(mouseY / w);
-    let matrix = 3;
-    let extent = floor(matrix / 2);
-    for (let i = -extent; i <= extent; i++){
-        for (let j = -extent; j <= extent; j++){
-            if (random(1) < 0.75){
-                let col = mouseCol + i;
-                let row = mouseRow + j;
-                if (col >= 0 &&  col <= cols - 1 && row >= 0 && row <= rows-1){
-                    grid[col][row] = hueValue;
-                }
-            }
-        }
-    }
-
-    
-}
+function mouseDragged(){}
 
 function draw() {
     background(0);
+  
+    if (mouseIsPressed) {
+        let mouseCol = floor(mouseX / w);
+        let mouseRow = floor(mouseY / w);
 
-    for (let i = 0; i < cols; i++){
-        for (let j = 0; j < rows; j++){
+        let matrix = 5;
+        let extent = floor(matrix / 2);
+        for (let i = -extent; i <= extent; i++) {
+            for (let j = -extent; j <= extent; j++) {
+                if (random(1) < 0.75) {
+                    let col = mouseCol + i;
+                    let row = mouseRow + j;
+                    if (withinCols(col) && withinRows(row)) {
+                        grid[col][row] = hueValue;
+                        velocityGrid[col][row] = 1;
+                    }
+                }   
+            }
+        }
+    
+        hueValue += 0.5;
+        if (hueValue > 360) {
+            hueValue = 1;
+        }
+    }
+  
+
+    for (let i = 0; i < cols; i++) {
+        for (let j = 0; j < rows; j++) {
             noStroke();
-            if (grid[i][j] > 0){
+            if (grid[i][j] > 0) {
                 fill(grid[i][j], 255, 255);
                 let x = i * w;
                 let y = j * w;
-                square(x,y,w);
+                square(x, y, w);
             }
         }
     }
-
-    let nextGrid = make2DArray(cols,rows);
-    for (let i = 0; i < cols; i++){
-        for (let j = 0; j < rows; j++){
+  
+    let nextGrid = make2DArray(cols, rows);
+    let nextVelocityGrid = make2DArray(cols, rows);
+  
+    
+    for (let i = 0; i < cols; i++) {
+        for (let j = 0; j < rows; j++) {
+        
             let state = grid[i][j];
-            if (state > 0){
-                let below = grid[i][j+1];
-                let dir = 1;
-                if (random(1) < 0.5){
-                    dir *= -1;
+            let velocity = velocityGrid[i][j];
+            let moved = false;
+            if (state > 0) {
+                let newPos = int(j + velocity);
+                for (let y = newPos; y > j; y--) {
+                    let below = grid[i][y];
+                    let dir = 1;
+                    if (random(1) < 0.5) {
+                        dir *= -1;
+                    }
+                    let belowA = -1;
+                    let belowB = -1;
+                    if (withinCols(i + dir)) belowA = grid[i + dir][y];
+                    if (withinCols(i - dir)) belowB = grid[i - dir][y];
+  
+                    if (below === 0) {
+                        nextGrid[i][y] = state;
+                        nextVelocityGrid[i][y] = velocity + gravity;
+                        moved = true;
+                        break;
+                    } else if (belowA === 0) {
+                        nextGrid[i + dir][y] = state;
+                        nextVelocityGrid[i + dir][y] = velocity + gravity;
+                        moved = true;
+                        break;
+                    } else if (belowB === 0) {
+                        nextGrid[i - dir][y] = state;
+                        nextVelocityGrid[i - dir][y] = velocity + gravity;
+                        moved = true;
+                        break;
+                    }
                 }
-
-                let belowA, belowB;
-                if (i + dir >= 0 && i + dir <= cols - 1){
-                    belowA = grid[i+dir][j + 1];
-                }
-                if (i - dir >= 0 && i - dir <= cols - 1){
-                    belowB = grid[i-dir][j + 1];
-                }
-                
-                if (below == 0){
-                    nextGrid[i][j+1] = grid[i][j];
-                }
-                else if (belowA == 0){
-                    nextGrid[i+dir][j+1] = grid[i][j];
-                }
-                else if (belowB == 0){
-                    nextGrid[i-dir][j+1] = grid[i][j];
-                }
-                else{
-                    nextGrid[i][j] = grid[i][j];
-                }
+            }
+  
+            if (state > 0 && !moved) {
+            nextGrid[i][j] = grid[i][j];
+            nextVelocityGrid[i][j] = velocityGrid[i][j] + gravity;
             }
         }
     }
-
     grid = nextGrid;
+    velocityGrid = nextVelocityGrid;
 }
