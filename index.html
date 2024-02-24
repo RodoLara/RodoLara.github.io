@@ -2,6 +2,22 @@
 <html>
  
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas sin barras de desplazamiento</title>
+    <style>
+        /* Eliminar márgenes y rellenos predeterminados del body */
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Esto evitará las barras de desplazamiento, pero ten en cuenta que también ocultará cualquier contenido que se desborde del tamaño de la ventana del navegador */
+        }
+        /* Estilo opcional para el canvas */
+        canvas {
+            display: block; /* Asegura que el canvas ocupe todo el ancho disponible */
+            background-color: #f0f0f0; /* Color de fondo opcional */
+        }
+    </style>
     <script src="https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.js"></script>
     <script src="sketch.js"></script>
 </head>
