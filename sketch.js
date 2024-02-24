@@ -9,6 +9,7 @@ function make2DArray(cols, rows){
     return arr;
 }
 
+let test;
 let grid;
 let velocityGrid;
 let w = 5;
@@ -78,8 +79,7 @@ function draw() {
   
     let nextGrid = make2DArray(cols, rows);
     let nextVelocityGrid = make2DArray(cols, rows);
-  
-    
+
     for (let i = 0; i < cols; i++) {
         for (let j = 0; j < rows; j++) {
         
