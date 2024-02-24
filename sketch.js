@@ -70,7 +70,7 @@ function draw() {
             }
         }
     
-        hueValue += 0.5;
+        hueValue += 0.8;
         if (hueValue > 360) {
             hueValue = 1;
         }
