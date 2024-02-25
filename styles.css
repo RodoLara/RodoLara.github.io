@@ -6,8 +6,11 @@ body {
 header {
     background-color: #333;
     color: #fff;
-    padding: 10px;
+    padding: 0.5em 0; /* Ajusta el relleno del encabezado (10px arriba y abajo, 0 a los lados) */
     text-align: center;
+    height: 3em; /* Ajusta la altura del encabezado */
+    font-size: 10px;
+    line-height: 0.8em;
 }
 
 #canvasContainer {
