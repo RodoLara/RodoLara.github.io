@@ -1,4 +1,4 @@
-/*function make2DArray(cols, rows){
+function make2DArray(cols, rows){
     let arr = new Array(cols);
     for (let i = 0; i < arr.length; i++){
         arr[i] = new Array(rows);
@@ -26,7 +26,10 @@ function withinRows(j){
 }
 
 function setup() {
-    createCanvas(windowWidth, windowHeight);
+    let canvasWidth = windowWidth;
+    let canvasHeight = windowHeight - document.querySelector('header').offsetHeight;
+    let canvas = createCanvas(canvasWidth, canvasHeight);
+    canvas.parent('canvasContainer')
     colorMode(HSB, 360, 255, 255);
     cols = floor(width / w);
     rows = floor(height / w);
@@ -35,15 +38,6 @@ function setup() {
     console.log(cols, rows);
     grid = make2DArray(cols, rows);
     velocityGrid = make2DArray(cols, rows);
-    // Obtener el tamaño del array grid
-    let tamanoGrid = grid.length;
-    
-    // Obtener el tamaño total del array bidimensional velocityGrid
-    let tamanoTotalVelocityGrid = 0;
-    for (let i = 0; i < velocityGrid.length; i++) {
-        tamanoTotalVelocityGrid += velocityGrid[i].length;
-    }
-    console.log("El tamaño total del array bidimensional velocityGrid es: " + tamanoTotalVelocityGrid);
 }
 
 function mouseDragged(){}
@@ -138,4 +132,4 @@ function draw() {
     }
     grid = nextGrid;
     velocityGrid = nextVelocityGrid;
-}*/
+}

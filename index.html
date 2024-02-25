@@ -4,27 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Canvas sin barras de desplazamiento</title>
     <style>
-        /* Eliminar márgenes y rellenos predeterminados del body */
         body {
             margin: 0;
             padding: 0;
-            overflow: hidden; /* Esto evitará las barras de desplazamiento, pero ten en cuenta que también ocultará cualquier contenido que se desborde del tamaño de la ventana del navegador */
+            overflow: hidden;
         }
-        /* Estilo opcional para el canvas */
+       
         canvas {
-            display: block; /* Asegura que el canvas ocupe todo el ancho disponible */
-            background-color: #f0f0f0; /* Color de fondo opcional */
+            display: block; 
+            background-color: #f0f0f0; 
         }
     </style>
     <script src="https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.js"></script>
-    <script src="sketch.js"></script>
 </head>
  
 <body>
-    <main>
-    </main>
+    <header>
+        <!--h1>Rodolfo Lara, Automation Engineer</h1-->
+        <h1>Testing Something</h1>
+    </header>
+    <div id="canvasContainer">
+    </div>
+    <script src="sketch.js"></script>
 </body>
  
 </html>
