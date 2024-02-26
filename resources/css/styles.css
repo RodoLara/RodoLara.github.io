@@ -63,7 +63,7 @@ body {
   letter-spacing: 0.05em;
   color: var(--clr-font);
   background-color: var(--clr-background);
-  /*position: relative;*/
+  position: relative;
   min-height: 100vh;
   overflow: hidden;
 }
