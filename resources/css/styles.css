@@ -78,7 +78,7 @@ body {
   background-color: var(--clr-background);
   position: relative;
   min-height: 100vh;
-  overflow: hidden auto;
+  overflow: hidden;
 }
 
 .plc {
@@ -91,6 +91,7 @@ body {
   /*position: relative;*/
   min-height: 100vh;
   padding-bottom: 5em;
+  overflow: hidden auto;
 }
 
 .design {
