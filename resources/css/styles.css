@@ -68,6 +68,19 @@ body {
   min-height: 100vh;
   overflow: hidden;
 }
+
+.exptertisebody, .servicesbody, .clientsbody, .contactbody{
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  font-family: "Roboto Slab", serif;
+  font-size: var(--font-size);
+  letter-spacing: 0.05em;
+  color: var(--clr-font);
+  /*position: relative;*/
+  min-height: 100vh;
+  overflow: hidden auto;
+}
   
 .index {
   margin: 0;
@@ -144,18 +157,7 @@ body {
   padding-bottom: 5em;
 }
 
-.exptertisebody, .servicesbody, .clientsbody, .contactbody{
-  margin: 0;
-  font-family: "Roboto Slab", serif;
-  font-size: var(--font-size);
-  letter-spacing: 0.05em;
-  color: var(--clr-font);
-  background-color: var(--clr-expertise);
-  /*position: relative;*/
-  min-height: 100vh;
-  padding-bottom: 5em;
-  overflow: hidden auto;
-}
+
 
 /*.servicesbody{
   argin: 0;
