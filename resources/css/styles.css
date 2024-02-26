@@ -82,6 +82,15 @@ body {
   overflow: hidden auto;
 }
   
+.subtitulo{
+  font-family: "Roboto", sans-serif;
+  font-size: var(--font-size);
+  font-weight: bold;
+  font-style: italic;
+  letter-spacing: 0.05em;
+  color: var(--clr-font);
+}
+
 .index {
   margin: 0;
   font-family: "Roboto", sans-serif;
