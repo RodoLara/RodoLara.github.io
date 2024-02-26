@@ -157,47 +157,6 @@ body {
   padding-bottom: 5em;
 }
 
-
-
-/*.servicesbody{
-  argin: 0;
-  font-family: "Roboto Slab", serif;
-  font-size: var(--font-size);
-  letter-spacing: 0.05em;
-  color: var(--clr-font);
-  background-color: var(--clr-expertise);
-  /*position: relative;
-  min-height: 100vh;
-  padding-bottom: 5em;
-  overflow: hidden auto;
-}
-
-.contactbody{
-  argin: 0;
-  font-family: "Roboto Slab", serif;
-  font-size: var(--font-size);
-  letter-spacing: 0.05em;
-  color: var(--clr-font);
-  background-color: var(--clr-expertise);
-  /*position: relative;
-  min-height: 100vh;
-  padding-bottom: 5em;
-  overflow: hidden auto;
-}
-
-.clientsbody{
-  argin: 0;
-  font-family: "Roboto Slab", serif;
-  font-size: var(--font-size);
-  letter-spacing: 0.05em;
-  color: var(--clr-font);
-  background-color: var(--clr-expertise);
-  /*position: relative;
-  min-height: 100vh;
-  padding-bottom: 5em;
-  overflow: hidden auto;
-}*/
-
 header {
   background-color: #333;
   color: #fff;
