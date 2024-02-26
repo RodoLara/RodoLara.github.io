@@ -264,23 +264,18 @@ header {
   
 .c #drop-down{
   .mExpertise:hover{
-    background-color: var(--clr-black);
     color: var(--clr-expertise);
   }
   .mServices:hover{
-    background-color: var(--clr-black);
     color: var(--clr-services);
   }
   .mClients:hover{
-    background-color: var(--clr-black);
     color: var(--clr-clients);
   }
   .mContact:hover{
-    background-color: var(--clr-black);
     color: var(--clr-contact);
   }
   .mEspañol:hover{
-    background-color: var(--clr-black);
     color: var(--clr-español);
   }
 }
