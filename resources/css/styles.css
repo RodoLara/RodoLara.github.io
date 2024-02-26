@@ -55,6 +55,19 @@ body {
   min-height: 100vh;
   overflow: hidden auto;
 }
+
+.indexbody{
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  font-family: "Roboto Slab", serif;
+  font-size: var(--font-size);
+  letter-spacing: 0.05em;
+  color: var(--clr-font);
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
   
 .index {
   margin: 0;
