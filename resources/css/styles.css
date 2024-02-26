@@ -305,7 +305,7 @@ nav ul li a {
   width: 100vw;
   border-radius: var(--border-radius);
   background-color: var(--clr-background);
-  padding: 0.5em 0;
+  padding: 0.5em 1em;
   margin: 0;
   position: fixed;
   top: 0;
@@ -317,6 +317,7 @@ nav ul li a {
   width: 100vw;
   border-radius: var(--border-radius);
   background-color: var(--clr-expertise);
+  padding: 0.5em 1em;
   margin: 0;
   position: fixed;
   top: 0;
@@ -327,6 +328,7 @@ nav ul li a {
   width: 100vw;
   border-radius: var(--border-radius);
   background-color: var(--clr-services);
+  padding: 0.5em 1em;
   margin: 0;
   position: fixed;
   top: 0;
@@ -337,6 +339,7 @@ nav ul li a {
   width: 100vw;
   border-radius: var(--border-radius);
   background-color: var(--clr-clients);
+  padding: 0.5em 1em;
   margin: 0;
   position: fixed;
   top: 0;
@@ -347,6 +350,7 @@ nav ul li a {
   width: 100vw;
   border-radius: var(--border-radius);
   background-color: var(--clr-contact);
+  padding: 0.5em 1em;
   margin: 0;
   position: fixed;
   top: 0;
