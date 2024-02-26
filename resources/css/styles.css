@@ -103,7 +103,7 @@ body {
   background-color: var(--clr-expertise);
   /*position: relative;*/
   min-height: 100vh;
-  padding-bottom: 5em;
+  padding-bottom: 4em;
   overflow: hidden auto;
 }
 
@@ -201,11 +201,12 @@ body {
 header {
   background-color: #333;
   color: #fff;
-  padding: 0;
   text-align: center;
-  height: 3em;
+  height: 1em;
   font-size: 1em;
   line-height: 0.8em;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 #canvasContainer {
