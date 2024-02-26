@@ -53,7 +53,7 @@ body {
   color: var(--clr-font);
   position: relative;
   min-height: 100vh;
-  overflow: hidden auto;
+  overflow: hidden;
 }
 
 .indexbody{
