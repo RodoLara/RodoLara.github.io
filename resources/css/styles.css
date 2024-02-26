@@ -77,6 +77,7 @@ body {
   background-color: var(--clr-expertise);
   /*position: relative;*/
   min-height: 100vh;
+  padding-bottom: 5em;
 }
 
 .design {
@@ -88,6 +89,7 @@ body {
   background-color: var(--clr-contact);
   /*position: relative;*/
   min-height: 100vh;
+  padding-bottom: 5em;
 }
 
 .machines {
@@ -99,6 +101,7 @@ body {
   background-color: var(--clr-services);
   /*position: relative;*/
   min-height: 100vh;
+  padding-bottom: 5em;
 }
 
 .contact {
@@ -110,6 +113,7 @@ body {
   background-color: var(--clr-contact);
   /*position: relative;*/
   min-height: 100vh;
+  padding-bottom: 5em;
 }
 
 .clients {
@@ -121,6 +125,7 @@ body {
   background-color: var(--clr-clients);
   /*position: relative;*/
   min-height: 100vh;
+  padding-bottom: 5em;
 }
 
 header {
