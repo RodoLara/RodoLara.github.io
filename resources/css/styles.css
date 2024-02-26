@@ -35,8 +35,8 @@ canvas {
 
 #textContainer {
   position: absolute;
-  top: 50px;
-  left: 50px;
+  margin: 2.5em 2em;
+  left: 0;
   color: white;
   font-size: 24px;
   font-family: Arial, sans-serif;
