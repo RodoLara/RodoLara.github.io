@@ -33,9 +33,6 @@ function setup() {
     colorMode(HSB, 360, 255, 255);
     cols = floor(width / w);
     rows = floor(height / w);
-    console.log(width, height);
-    console.log(windowWidth, windowHeight);
-    console.log(cols, rows);
     grid = make2DArray(cols, rows);
     velocityGrid = make2DArray(cols, rows);
 }

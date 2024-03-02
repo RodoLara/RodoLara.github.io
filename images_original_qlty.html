@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ejemplo</title>
+</head>
+<body>
+
+<!-- La imagen de services -->
+<img class="imagen-services" src="./resources/images/services/image1.jpg" alt="Descripción de la imagen 1">
+
+<!-- Enlace de descarga oculto para la imagen original -->
+<a id="enlace-descarga" href="./resources/images/original/image1.jpg" download style="display: none;">Descargar imagen original</a>
+
+<!-- Script para manejar el clic derecho en la imagen de services -->
+<script>
+document.addEventListener('mousedown', function(event) {
+    // Verificar si el clic fue en la imagen de services
+    if (event.button === 2 && event.target.classList.contains('imagen-services')) {
+        // Mostrar el enlace de descarga oculto
+        document.getElementById('enlace-descarga').click();
+    }
+});
+</script>
+
+</body>
+</html>

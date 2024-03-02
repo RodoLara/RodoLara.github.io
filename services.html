@@ -12,6 +12,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <title>Rodolfo's Portfolio</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+
 </head>
 <body class="servicesbody">
     <div class="machines">
@@ -19,18 +21,18 @@
         <header>
             <nav class="content3" id="whitecont">        
                 <ul class="navbar-nav">
-                    <li><a href="index.html" class="logo">Rodolfo Lara,<span id="boldred"> Automation Engineer</span></a></li>
+                    <li><a data-translate="tName" href="index.html">Rodolfo Lara, Automation Engineer</a></li>
                     <li class="nav-item c"><a href="#" class="item-link">
                         <div class="line"></div>
                         <div class="line"></div>
                         <div class="line"></div>
                         </a>
                         <div id="drop-down">
-                            <a href="expertise.html" class="mExpertise clinks">Expertise</a>
-                            <a href="services.html" class="mServices clinks">Services</a>
-                            <a href="clients.html" class="mClients clinks">Clients</a>
-                            <a href="contact.html" class="mContact clinks">Contact</a>
-                            <a href="index.html" class="mEspañol clinks">Español</a>
+                            <a data-translate="tExpertise" href="expertise.html" class="mExpertise clinks">Expertise</a>
+                            <a data-translate="tServices" href="services.html" class="mServices clinks">Services</a>
+                            <a data-translate="tClients" href="clients.html" class="mClients clinks">Clients</a>
+                            <a data-translate="tContact" href="contact.html" class="mContact clinks">Contact</a>
+                            <a data-translate="tLanguage" href="" class="mLanguage clinks">Español</a>
                         </div>
                     </li>
                 </ul>             
@@ -45,26 +47,358 @@
                 <!--Programación HMI-->
                 <div class="programacion-hmi">
                     <br>
-                    <h1 class="subtitulo" id="">Stations, Cells and Lines</h1>
+                    <h1 data-translate="tServices1" class="subtitulo" id="">Stations, Cells and Lines</h1>
                     <br>
-                    <h1 class="" id="">More than a decade doing integrations and turn-key projects across a variety of industries and applications.</h1>
+                    <h1 data-translate="tServices2" class="" id="">More than a decade doing integrations and turn-key projects across a variety of industries and applications.</h1>
                     <br>
-                    <h3>-ASSEMBLY/MANUFACTURING</h3>
-                    <h3>-HANDLING & PACKAGING</h3>
-                    <h3>-AUTOMOTIVE</h3>
-                    <h3>-FOUNDRY</h3>
-                    <h3>-ELECTRICAL CONNECTORS</h3>
-                    <h3>-INSPECTION & METROLOGY</h3>
-                    <h3>-WHITE GOODS</h3>
+                    <h3 data-translate="tServices3">-ASSEMBLY/MANUFACTURING</h3>
+                    <h3 data-translate="tServices4">-HANDLING & PACKAGING</h3>
+                    <h3 data-translate="tServices5">-AUTOMOTIVE</h3>
+                    <h3 data-translate="tServices6">-FOUNDRY</h3>
+                    <h3 data-translate="tServices7">-ELECTRICAL CONNECTORS</h3>
+                    <h3 data-translate="tServices8">-INSPECTION & METROLOGY</h3>
+                    <h3 data-translate="tServices9">-WHITE GOODS</h3>
                 </div>
             </div>
+            <!--div class="collage">
+                <div class="image-container">
+                    <img src="./resources/images/services/image1.jpg" alt="Image 1">
+                </div>
+                <div class="image-container">
+                    <img src="./resources/images/services/image2.jpg" alt="Image 2">
+                </div>
+                <div class="image-container">
+                    <img src="./resources/images/services/image3.jpg" alt="Image 3">
+                </div>
+                <div class="image-container">
+                    <img src="./resources/images/services/image4.jpg" alt="Image 4">
+                </div>
+                <div class="image-container">
+                    <img src="./resources/images/services/image5.jpg" alt="Image 5">
+                </div>
+                <div class="image-container">
+                    <img src="./resources/images/services/image6.jpg" alt="Image 6">
+                </div>
+                <div class="image-container">
+                    <img src="./resources/images/services/image7.jpg" alt="Image 7">
+                </div>
+                <div class="image-container">
+                    <img src="./resources/images/services/image8.jpg" alt="Image 8">
+                </div>
+                <div class="image-container">
+                    <img src="./resources/images/services/image9.jpg" alt="Image 9">
+                </div>
+                <div class="image-container">
+                    <img src="./resources/images/services/image10.jpg" alt="Image 10">
+                </div>
+                <div class="image-container">
+                    <img src="./resources/images/services/image11.jpg" alt="Image 11">
+                </div>
+                <div class="image-container">
+                    <img src="./resources/images/services/image12.jpg" alt="Image 12">
+                </div>
+                <div class="image-container">
+                    <img src="./resources/images/services/image13.jpg" alt="Image 13">
+                </div>
+                <div class="image-container">
+                    <img src="./resources/images/services/image14.jpg" alt="Image 14">
+                </div>
+                <div class="image-container">
+                    <img src="./resources/images/services/image15.jpg" alt="Image 15">
+                </div>
+                <div class="image-container">
+                    <img src="./resources/images/services/image16.jpg" alt="Image 16">
+                </div>
+                <div class="image-container">
+                    <img src="./resources/images/services/image17.jpg" alt="Image 17">
+                </div>
+                <div class="image-container">
+                    <img src="./resources/images/services/image18.jpg" alt="Image 18">
+                </div>
+                <div class="image-container">
+                    <img src="./resources/images/services/image19.jpg" alt="Image 19">
+                </div>
+                <div class="image-container">
+                    <img src="./resources/images/services/image20.jpg" alt="Image 20">
+                </div>
+                <div class="image-container">
+                    <img src="./resources/images/services/image21.jpg" alt="Image 21">
+                </div>
+                <div class="image-container">
+                    <img src="./resources/images/services/image22.jpg" alt="Image 22">
+                </div>
+                <div class="image-container">
+                    <img src="./resources/images/services/image23.jpg" alt="Image 23">
+                </div>
+                <div class="image-container">
+                    <img src="./resources/images/services/image24.jpg" alt="Image 24">
+                </div>
+                <div class="image-container">
+                    <img src="./resources/images/services/image25.jpg" alt="Image 25">
+                </div>
+                <div class="image-container">
+                    <img src="./resources/images/services/image26.jpg" alt="Image 26">
+                </div>
+                <div class="image-container">
+                    <img src="./resources/images/services/image27.jpg" alt="Image 27">
+                </div>
+                <div class="image-container">
+                    <img src="./resources/images/services/image28.jpg" alt="Image 28">
+                </div>
+                <div class="image-container">
+                    <img src="./resources/images/services/image29.jpg" alt="Image 29">
+                </div>
+                <div class="image-container">
+                    <img src="./resources/images/services/image30.jpg" alt="Image 30">
+                </div>
+                <div class="image-container">
+                    <img src="./resources/images/services/image31.jpg" alt="Image 31">
+                </div>
+                <div class="image-container">
+                    <img src="./resources/images/services/image32.jpg" alt="Image 32">
+                </div>
+                <div class="image-container">
+                    <img src="./resources/images/services/image33.jpg" alt="Image 33">
+                </div>
+                <div class="image-container">
+                    <img src="./resources/images/services/image34.jpg" alt="Image 34">
+                </div>
+                <div class="image-container">
+                    <img src="./resources/images/services/image35.jpg" alt="Image 35">
+                </div>
+                <div class="image-container">
+                    <img src="./resources/images/services/image36.jpg" alt="Image 36">
+                </div>
+                <div class="image-container">
+                    <img src="./resources/images/services/image37.jpg" alt="Image 37">
+                </div>
+                <div class="image-container">
+                    <img src="./resources/images/services/image38.jpg" alt="Image 38">
+                </div>
+                <div class="image-container">
+                    <img src="./resources/images/services/image39.jpg" alt="Image 39">
+                </div>
+                <div class="image-container">
+                    <img src="./resources/images/services/image40.jpg" alt="Image 40">
+                </div>
+            </div-->   
+            <!-- Capa 1 -->
+            <div id="parallax-container">
+                <div class="parallax-layer" id="layer1" data-image-url="./resources/images/services/image1.jpg" data-parallax-speed="0.3">
+                    <img src="./resources/images/services/image1.jpg" />
+                </div>
+            
+                <!-- Capa 2 -->
+                <div class="parallax-layer" id="layer2" data-image-url="./resources/images/services/image2.jpg" data-parallax-speed="1.1">
+                    <img src="./resources/images/services/image2.jpg" />
+                </div>
+            
+                <!-- Capa 3 -->
+                <div class="parallax-layer" id="layer3" data-image-url="./resources/images/services/image3.jpg" data-parallax-speed="2.2">
+                    <img src="./resources/images/services/image3.jpg" />
+                </div>
+            
+                <!-- Capa 4 -->
+                <div class="parallax-layer" id="layer4" data-image-url="./resources/images/services/image4.jpg" data-parallax-speed="0.3">
+                    <img src="./resources/images/services/image4.jpg" />
+                </div>
+            
+                <!-- Capa 5 -->
+                <div class="parallax-layer" id="layer5" data-image-url="./resources/images/services/image5.jpg" data-parallax-speed="1.1">
+                    <img src="./resources/images/services/image5.jpg" />
+                </div>
+            
+                <!-- Capa 6 -->
+                <div class="parallax-layer" id="layer6" data-image-url="./resources/images/services/image6.jpg" data-parallax-speed="2.2">
+                    <img src="./resources/images/services/image6.jpg" />
+                </div>
+            
+                <!-- Capa 7 -->
+                <div class="parallax-layer" id="layer7" data-image-url="./resources/images/services/image7.jpg" data-parallax-speed="0.3">
+                    <img src="./resources/images/services/image7.jpg" />
+                </div>
+            
+                <!-- Capa 8 -->
+                <div class="parallax-layer" id="layer8" data-image-url="./resources/images/services/image8.jpg" data-parallax-speed="1.1">
+                    <img src="./resources/images/services/image8.jpg" />
+                </div>
+            
+                <!-- Capa 9 -->
+                <div class="parallax-layer" id="layer9" data-image-url="./resources/images/services/image9.jpg" data-parallax-speed="2.2">
+                    <img src="./resources/images/services/image9.jpg" />
+                </div>
+            
+                <!-- Capa 10 -->
+                <div class="parallax-layer" id="layer10" data-image-url="./resources/images/services/image10.jpg" data-parallax-speed="0.3">
+                    <img src="./resources/images/services/image10.jpg" />
+                </div>
+            
+                <!-- Continuar con el patrón hasta la Capa 40 -->
+            
+                <!-- Capa 11 -->
+                <div class="parallax-layer" id="layer11" data-image-url="./resources/images/services/image11.jpg" data-parallax-speed="1.1">
+                    <img src="./resources/images/services/image11.jpg" />
+                </div>
+            
+                <!-- Capa 12 -->
+                <div class="parallax-layer" id="layer12" data-image-url="./resources/images/services/image12.jpg" data-parallax-speed="2.2">
+                    <img src="./resources/images/services/image12.jpg" />
+                </div>
+            
+                <!-- Capa 13 -->
+                <div class="parallax-layer" id="layer13" data-image-url="./resources/images/services/image13.jpg" data-parallax-speed="0.3">
+                    <img src="./resources/images/services/image13.jpg" />
+                </div>
+            
+                <!-- Capa 14 -->
+                <div class="parallax-layer" id="layer14" data-image-url="./resources/images/services/image14.jpg" data-parallax-speed="1.1">
+                    <img src="./resources/images/services/image14.jpg" />
+                </div>
+            
+                <!-- Capa 15 -->
+                <div class="parallax-layer" id="layer15" data-image-url="./resources/images/services/image15.jpg" data-parallax-speed="2.2">
+                    <img src="./resources/images/services/image15.jpg" />
+                </div>
+            
+                <!-- Capa 16 -->
+                <div class="parallax-layer" id="layer16" data-image-url="./resources/images/services/image16.jpg" data-parallax-speed="0.3">
+                    <img src="./resources/images/services/image16.jpg" />
+                </div>
+            
+                <!-- Capa 17 -->
+                <div class="parallax-layer" id="layer17" data-image-url="./resources/images/services/image17.jpg" data-parallax-speed="1.1">
+                    <img src="./resources/images/services/image17.jpg" />
+                </div>
+            
+                <!-- Capa 18 -->
+                <div class="parallax-layer" id="layer18" data-image-url="./resources/images/services/image18.jpg" data-parallax-speed="2.2">
+                    <img src="./resources/images/services/image18.jpg" />
+                </div>
+            
+                <!-- Capa 19 -->
+                <div class="parallax-layer" id="layer19" data-image-url="./resources/images/services/image19.jpg" data-parallax-speed="0.3">
+                    <img src="./resources/images/services/image19.jpg" />
+                </div>
+            
+                <!-- Capa 20 -->
+                <div class="parallax-layer" id="layer20" data-image-url="./resources/images/services/image20.jpg" data-parallax-speed="1.1">
+                    <img src="./resources/images/services/image20.jpg" />
+                </div>
+            
+                <!-- Continuar con el patrón hasta la Capa 40 -->
+                <!-- Capa 21 -->
+                <div class="parallax-layer" id="layer21" data-image-url="./resources/images/services/image21.jpg" data-parallax-speed="2.2">
+                    <img src="./resources/images/services/image21.jpg" />
+                </div>
+            
+                <!-- Capa 22 -->
+                <div class="parallax-layer" id="layer22" data-image-url="./resources/images/services/image22.jpg" data-parallax-speed="0.3">
+                    <img src="./resources/images/services/image22.jpg" />
+                </div>
+            
+                <!-- Capa 23 -->
+                <div class="parallax-layer" id="layer23" data-image-url="./resources/images/services/image23.jpg" data-parallax-speed="1.1">
+                    <img src="./resources/images/services/image23.jpg" />
+                </div>
+            
+                <!-- Capa 24 -->
+                <div class="parallax-layer" id="layer24" data-image-url="./resources/images/services/image24.jpg" data-parallax-speed="2.2">
+                    <img src="./resources/images/services/image24.jpg" />
+                </div>
+            
+                <!-- Capa 25 -->
+                <div class="parallax-layer" id="layer25" data-image-url="./resources/images/services/image25.jpg" data-parallax-speed="0.3">
+                    <img src="./resources/images/services/image25.jpg" />
+                </div>
+            
+                <!-- Capa 26 -->
+                <div class="parallax-layer" id="layer26" data-image-url="./resources/images/services/image26.jpg" data-parallax-speed="1.1">
+                    <img src="./resources/images/services/image26.jpg" />
+                </div>
+            
+                <!-- Capa 27 -->
+                <div class="parallax-layer" id="layer27" data-image-url="./resources/images/services/image27.jpg" data-parallax-speed="2.2">
+                    <img src="./resources/images/services/image27.jpg" />
+                </div>
+            
+                <!-- Capa 28 -->
+                <div class="parallax-layer" id="layer28" data-image-url="./resources/images/services/image28.jpg" data-parallax-speed="0.3">
+                    <img src="./resources/images/services/image28.jpg" />
+                </div>
+            
+                <!-- Capa 29 -->
+                <div class="parallax-layer" id="layer29" data-image-url="./resources/images/services/image29.jpg" data-parallax-speed="1.1">
+                    <img src="./resources/images/services/image29.jpg" />
+                </div>
+            
+                <!-- Capa 30 -->
+                <div class="parallax-layer" id="layer30" data-image-url="./resources/images/services/image30.jpg" data-parallax-speed="2.2">
+                    <img src="./resources/images/services/image30.jpg" />
+                </div>
+            
+                <!-- Capa 31 -->
+                <div class="parallax-layer" id="layer31" data-image-url="./resources/images/services/image31.jpg" data-parallax-speed="0.3">
+                    <img src="./resources/images/services/image31.jpg" />
+                </div>
+            
+                <!-- Capa 32 -->
+                <div class="parallax-layer" id="layer32" data-image-url="./resources/images/services/image32.jpg" data-parallax-speed="1.1">
+                    <img src="./resources/images/services/image32.jpg" />
+                </div>
+            
+                <!-- Capa 33 -->
+                <div class="parallax-layer" id="layer33" data-image-url="./resources/images/services/image33.jpg" data-parallax-speed="2.2">
+                    <img src="./resources/images/services/image33.jpg" />
+                </div>
+            
+                <!-- Capa 34 -->
+                <div class="parallax-layer" id="layer34" data-image-url="./resources/images/services/image34.jpg" data-parallax-speed="0.3">
+                    <img src="./resources/images/services/image34.jpg" />
+                </div>
+            
+                <!-- Capa 35 -->
+                <div class="parallax-layer" id="layer35" data-image-url="./resources/images/services/image35.jpg" data-parallax-speed="1.1">
+                    <img src="./resources/images/services/image35.jpg" />
+                </div>
+            
+                <!-- Capa 36 -->
+                <div class="parallax-layer" id="layer36" data-image-url="./resources/images/services/image36.jpg" data-parallax-speed="2.2">
+                    <img src="./resources/images/services/image36.jpg" />
+                </div>
+            
+                <!-- Capa 37 -->
+                <div class="parallax-layer" id="layer37" data-image-url="./resources/images/services/image37.jpg" data-parallax-speed="0.3">
+                    <img src="./resources/images/services/image37.jpg" />
+                </div>
+            
+                <!-- Capa 38 -->
+                <div class="parallax-layer" id="layer38" data-image-url="./resources/images/services/image38.jpg" data-parallax-speed="1.1">
+                    <img src="./resources/images/services/image38.jpg" />
+                </div>
+            
+                <!-- Capa 39 -->
+                <div class="parallax-layer" id="layer39" data-image-url="./resources/images/services/image39.jpg" data-parallax-speed="2.2">
+                    <img src="./resources/images/services/image39.jpg" />
+                </div>
+            
+                <!-- Capa 40 -->
+                <div class="parallax-layer" id="layer40" data-image-url="./resources/images/services/image40.jpg" data-parallax-speed="0.3">
+                    <img src="./resources/images/services/image40.jpg" />
+                </div>
+            </div>
+            
+            
         </main>
     </div>
     <!-- Footer -->
     <footer class="footer3">
-        <p class="copyright">© 2024 , All Rights Reserved</p>
-        <p class="location">Designed in My House</p>
-        <p class="designer">&lt; &gt; with &#10084</p>
+        <p data-translate="tFooter1" class="copyright">© 2024 , All Rights Reserved</p>
+        <p data-translate="tFooter2" class="location">Designed in My House</p>
+        <p data-translate="tFooter3" class="designer">&lt; &gt; with &#10084</p>
     </footer>
+    <script src="./resources/js/script.js"></script>
+    <!--script src="./resources/js/collage.js"></script-->
+    <script src="./resources/js/parallax.js"></script>
+
 </body>
 </html>
