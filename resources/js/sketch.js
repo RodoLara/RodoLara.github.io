@@ -12,7 +12,7 @@ function make2DArray(cols, rows){
 let test;
 let grid;
 let velocityGrid;
-let w = 5;
+let w = 10;
 let cols, rows;
 let hueValue = 200;
 let gravity = 0.1;
