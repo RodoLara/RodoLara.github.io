@@ -442,7 +442,7 @@ nav ul li a {
 #parallax-container {
   position: relative;
   width: 100vw;
-  height: 235vh; /* Altura suficiente para el efecto */
+  height: 265vh; /* Altura suficiente para el efecto */
   overflow: hidden;
 }
 
@@ -466,171 +466,173 @@ nav ul li a {
 }
 
 
-/* Incrementos de 40vh */
+/* Grupo 1 */
 #layer1 {
   top: 10vh;
-  left: 6vw; /* Restado 2vw */
+  left: 6vw;
 }
 #layer4 {
-  top: 21vh; /* Incremento de 25vh */
-  left: 6vw; /* Restado 2vw */
+  top: calc(21vh + 3 * 1vh); /* Incremento de 25vh */
+  left: 6vw;
 }
 #layer7 {
-  top: 35vh; /* Incremento de 25vh */
-  left: 6vw; /* Restado 2vw */
+  top: calc(35vh + 3 * 2vh); /* Incremento de 25vh */
+  left: 6vw;
 }
 #layer10 {
-  top: 57vh; /* Incremento de 25vh */
-  left: 6vw; /* Restado 2vw */
+  top: calc(57vh + 3 * 3vh); /* Incremento de 25vh */
+  left: 6vw;
 }
 #layer13 {
-  top: 80vh; /* Incremento de 25vh */
-  left: 6vw; /* Restado 2vw */
+  top: calc(80vh + 3 * 4vh); /* Incremento de 25vh */
+  left: 6vw;
 }
 #layer16 {
-  top: 103vh; /* Incremento de 25vh */
-  left: 6vw; /* Restado 2vw */
+  top: calc(103vh + 3 * 5vh); /* Incremento de 25vh */
+  left: 6vw;
 }
 #layer19 {
-  top: 126vh; /* Incremento de 25vh */
-  left: 6vw; /* Restado 2vw */
+  top: calc(126vh + 3 * 6vh); /* Incremento de 25vh */
+  left: 6vw;
 }
 #layer22 {
-  top: 141vh; /* Incremento de 25vh */
-  left: 6vw; /* Restado 2vw */
+  top: calc(141vh + 3 * 7vh); /* Incremento de 25vh */
+  left: 6vw;
 }
 #layer25 {
-  top: 155vh; /* Incremento de 25vh */
-  left: 6vw; /* Restado 2vw */
+  top: calc(155vh + 3 * 8vh); /* Incremento de 25vh */
+  left: 6vw;
 }
 #layer28 {
-  top: 170vh; /* Incremento de 25vh */
-  left: 6vw; /* Restado 2vw */
+  top: calc(170vh + 3 * 9vh); /* Incremento de 25vh */
+  left: 6vw;
 }
 #layer31 {
-  top: 185vh; /* Incremento de 25vh */
-  left: 6vw; /* Restado 2vw */
+  top: calc(185vh + 3 * 10vh); /* Incremento de 25vh */
+  left: 6vw;
 }
 #layer34 {
-  top: 208vh; /* Incremento de 25vh */
-  left: 6vw; /* Restado 2vw */
+  top: calc(208vh + 3 * 11vh); /* Incremento de 25vh */
+  left: 6vw;
 }
 #layer37 {
-  top: 223vh; /* Incremento de 25vh */
-  left: 6vw; /* Restado 2vw */
+  top: calc(223vh + 3 * 12vh); /* Incremento de 25vh */
+  left: 6vw;
 }
 #layer40 {
-  top: 246vh; /* Incremento de 25vh */
-  left: 6vw; /* Restado 2vw */
+  top: calc(246vh + 3 * 13vh); /* Incremento de 25vh */
+  left: 6vw;
 }
 
-/* Incrementos de 60vh */
+/* Grupo 2 */
 #layer3 {
-  top: 15vh; /* Incremento de 15vh */
-  left: 35vw; /* Restado 2vw */
+  top: 15vh;
+  left: 35vw;
 }
 #layer6 {
-  top: 37vh; /* Incremento de 40vh */
-  left: 35vw; /* Restado 2vw */
+  top: calc(37vh + 3 * 1vh); /* Incremento de 40vh */
+  left: 35vw;
 }
 #layer9 {
-  top: 51vh; /* Incremento de 40vh */
-  left: 35vw; /* Restado 2vw */
+  top: calc(51vh + 3 * 2vh); /* Incremento de 40vh */
+  left: 35vw;
 }
 #layer12 {
-  top: 65vh; /* Incremento de 40vh */
-  left: 35vw; /* Restado 2vw */
+  top: calc(65vh + 3 * 3vh); /* Incremento de 40vh */
+  left: 35vw;
 }
 #layer15 {
-  top: 79vh; /* Incremento de 40vh */
-  left: 35vw; /* Restado 2vw */
+  top: calc(79vh + 3 * 4vh); /* Incremento de 40vh */
+  left: 35vw;
 }
 #layer18 {
-  top: 101vh; /* Incremento de 40vh */
-  left: 35vw; /* Restado 2vw */
+  top: calc(101vh + 3 * 5vh); /* Incremento de 40vh */
+  left: 35vw;
 }
 #layer21 {
-  top: 116vh; /* Incremento de 40vh */
-  left: 35vw; /* Restado 2vw */
+  top: calc(116vh + 3 * 6vh); /* Incremento de 40vh */
+  left: 35vw;
 }
 #layer24 {
-  top: 131vh; /* Incremento de 40vh */
-  left: 35vw; /* Restado 2vw */
+  top: calc(131vh + 3 * 7vh); /* Incremento de 40vh */
+  left: 35vw;
 }
 #layer27 {
-  top: 146vh; /* Incremento de 40vh */
-  left: 35vw; /* Restado 2vw */
+  top: calc(146vh + 3 * 8vh); /* Incremento de 40vh */
+  left: 35vw;
 }
 #layer30 {
-  top: 169vh; /* Incremento de 40vh */
-  left: 35vw; /* Restado 2vw */
+  top: calc(169vh + 3 * 9vh); /* Incremento de 40vh */
+  left: 35vw;
 }
 #layer33 {
-  top: 184vh; /* Incremento de 40vh */
-  left: 35vw; /* Restado 2vw */
+  top: calc(184vh + 3 * 10vh); /* Incremento de 40vh */
+  left: 35vw;
 }
 #layer36 {
-  top: 199vh; /* Incremento de 40vh */
-  left: 35vw; /* Restado 2vw */
+  top: calc(199vh + 3 * 11vh); /* Incremento de 40vh */
+  left: 35vw;
 }
 #layer39 {
-  top: 214vh; /* Incremento de 40vh */
-  left: 35vw; /* Restado 2vw */
+  top: calc(214vh + 3 * 12vh); /* Incremento de 40vh */
+  left: 35vw;
 }
 
-/* Incrementos de 50vh */
+/* Grupo 3 */
 #layer2 {
-  top: 5vh; /* Incremento de 5vh */
-  left: 64vw; /* Restado 2vw */
+  top: 5vh;
+  left: 64vw;
 }
 #layer5 {
-  top: 16vh; /* Incremento de 30vh */
-  left: 64vw; /* Restado 2vw */
+  top: calc(16vh + 3 * 1vh); /* Incremento de 30vh */
+  left: 64vw;
 }
 #layer8 {
-  top: 30vh; /* Incremento de 30vh */
-  left: 64vw; /* Restado 2vw */
+  top: calc(30vh + 3 * 2vh); /* Incremento de 30vh */
+  left: 64vw;
 }
 #layer11 {
-  top: 52vh; /* Incremento de 30vh */
-  left: 64vw; /* Restado 2vw */
+  top: calc(52vh + 3 * 3vh); /* Incremento de 30vh */
+  left: 64vw;
 }
 #layer14 {
-  top: 74vh; /* Incremento de 30vh */
-  left: 64vw; /* Restado 2vw */
+  top: calc(74vh + 3 * 4vh); /* Incremento de 30vh */
+  left: 64vw;
 }
 #layer17 {
-  top: 97vh; /* Incremento de 30vh */
-  left: 64vw; /* Restado 2vw */
+  top: calc(97vh + 3 * 5vh); /* Incremento de 30vh */
+  left: 64vw;
 }
 #layer20 {
-  top: 109vh; /* Incremento de 30vh */
-  left: 64vw; /* Restado 2vw */
+  top: calc(109vh + 3 * 6vh); /* Incremento de 30vh */
+  left: 64vw;
 }
 #layer23 {
-  top: 132vh; /* Incremento de 30vh */
-  left: 64vw; /* Restado 2vw */
+  top: calc(132vh + 3 * 7vh); /* Incremento de 30vh */
+  left: 64vw;
 }
 #layer26 {
-  top: 147vh; /* Incremento de 30vh */
-  left: 64vw; /* Restado 2vw */
+  top: calc(147vh + 3 * 8vh); /* Incremento de 30vh */
+  left: 64vw;
 }
 #layer29 {
-  top: 162vh; /* Incremento de 30vh */
-  left: 64vw; /* Restado 2vw */
+  top: calc(162vh + 3 * 9vh); /* Incremento de 30vh */
+  left: 64vw;
 }
 #layer32 {
-  top: 174vh; /* Incremento de 30vh */
-  left: 64vw; /* Restado 2vw */
+  top: calc(174vh + 3 * 10vh); /* Incremento de 30vh */
+  left: 64vw;
 }
 #layer35 {
-  top: 184vh; /* Incremento de 30vh */
-  left: 64vw; /* Restado 2vw */
+  top: calc(184vh + 3 * 11vh); /* Incremento de 30vh */
+  left: 64vw;
 }
 #layer38 {
-  top: 206vh; /* Incremento de 30vh */
-  left: 64vw; /* Restado 2vw */
+  top: calc(206vh + 3 * 12vh); /* Incremento de 30vh */
+  left: 64vw;
 }
+
+
 
 @media screen and (min-width: 500px) {
   .logos-grid {
