@@ -8,7 +8,7 @@ function lazyLoadImagesAndParallax() {
         var layerHeight = layer.offsetHeight;
 
         // Verificar si la capa está dentro de la ventana de visualización
-        //if (layerTop < scrollTop + windowHeight && layerTop + layerHeight > scrollTop) {
+        if (layerTop < scrollTop + windowHeight && layerTop + layerHeight > scrollTop) {
             // Si la capa está dentro de la ventana de visualización, cargar la imagen
             var imageUrl = layer.style.backgroundImage.replace('url("', '').replace('")', '');
             if (imageUrl === '' || imageUrl === 'none') {
@@ -22,7 +22,7 @@ function lazyLoadImagesAndParallax() {
             
             // Aplicar transformación CSS para el efecto de parallax
             layer.style.transform = 'translateY(' + yPos + 'px)';
-        //}
+        }
     });
 
     // Llamar a la función de nuevo en el próximo cuadro de animación
