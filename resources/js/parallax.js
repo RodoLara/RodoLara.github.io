@@ -6,9 +6,14 @@ function lazyLoadImagesAndParallax() {
     parallaxLayers.forEach(function(layer) {
         var layerTop = layer.offsetTop;
         var layerHeight = layer.offsetHeight;
-
+        //console.log('Layer:', layer);
+        ///console.log('layerTop:', layerTop);
+        //console.log('scrollTop:', scrollTop);
+        //console.log('windowHeight:', windowHeight);
+        //console.log('layerHeight:', layerHeight);
         // Verificar si la capa está dentro de la ventana de visualización
-        if (layerTop < scrollTop + windowHeight && layerTop + layerHeight > scrollTop) {
+        if (layerTop < scrollTop + windowHeight + 300 && layerTop + layerHeight > scrollTop) {
+            
             // Si la capa está dentro de la ventana de visualización, cargar la imagen
             var imageUrl = layer.style.backgroundImage.replace('url("', '').replace('")', '');
             if (imageUrl === '' || imageUrl === 'none') {
@@ -24,13 +29,10 @@ function lazyLoadImagesAndParallax() {
             layer.style.transform = 'translateY(' + yPos + 'px)';
         }
     });
-
-    // Llamar a la función de nuevo en el próximo cuadro de animación
-    requestAnimationFrame(lazyLoadImagesAndParallax);
 }
 
 // Llamar a la función por primera vez al cargar la página
 window.addEventListener('load', lazyLoadImagesAndParallax);
 
-// Llamar a la función de nuevo en el próximo cuadro de animación
-requestAnimationFrame(lazyLoadImagesAndParallax);
+// Llamar a la función cada vez que se haga scroll en la página
+window.addEventListener('scroll', lazyLoadImagesAndParallax);
