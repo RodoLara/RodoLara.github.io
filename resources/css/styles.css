@@ -442,7 +442,7 @@ nav ul li a {
 #parallax-container {
   position: relative;
   width: 100vw;
-  height: 340vh; /* Altura suficiente para el efecto */
+  height: 235vh; /* Altura suficiente para el efecto */
   overflow: hidden;
 }
 
@@ -472,55 +472,55 @@ nav ul li a {
   left: 6vw; /* Restado 2vw */
 }
 #layer4 {
-  top: 28vh; /* Incremento de 25vh */
+  top: 21vh; /* Incremento de 25vh */
   left: 6vw; /* Restado 2vw */
 }
 #layer7 {
-  top: 49vh; /* Incremento de 25vh */
+  top: 35vh; /* Incremento de 25vh */
   left: 6vw; /* Restado 2vw */
 }
 #layer10 {
-  top: 82vh; /* Incremento de 25vh */
+  top: 57vh; /* Incremento de 25vh */
   left: 6vw; /* Restado 2vw */
 }
 #layer13 {
-  top: 115vh; /* Incremento de 25vh */
+  top: 80vh; /* Incremento de 25vh */
   left: 6vw; /* Restado 2vw */
 }
 #layer16 {
-  top: 149vh; /* Incremento de 25vh */
+  top: 103vh; /* Incremento de 25vh */
   left: 6vw; /* Restado 2vw */
 }
 #layer19 {
-  top: 183vh; /* Incremento de 25vh */
+  top: 126vh; /* Incremento de 25vh */
   left: 6vw; /* Restado 2vw */
 }
 #layer22 {
-  top: 205vh; /* Incremento de 25vh */
+  top: 141vh; /* Incremento de 25vh */
   left: 6vw; /* Restado 2vw */
 }
 #layer25 {
-  top: 228vh; /* Incremento de 25vh */
+  top: 155vh; /* Incremento de 25vh */
   left: 6vw; /* Restado 2vw */
 }
 #layer28 {
-  top: 250vh; /* Incremento de 25vh */
+  top: 170vh; /* Incremento de 25vh */
   left: 6vw; /* Restado 2vw */
 }
 #layer31 {
-  top: 272vh; /* Incremento de 25vh */
+  top: 185vh; /* Incremento de 25vh */
   left: 6vw; /* Restado 2vw */
 }
 #layer34 {
-  top: 306vh; /* Incremento de 25vh */
+  top: 208vh; /* Incremento de 25vh */
   left: 6vw; /* Restado 2vw */
 }
 #layer37 {
-  top: 328vh; /* Incremento de 25vh */
+  top: 223vh; /* Incremento de 25vh */
   left: 6vw; /* Restado 2vw */
 }
 #layer40 {
-  top: 361vh; /* Incremento de 25vh */
+  top: 246vh; /* Incremento de 25vh */
   left: 6vw; /* Restado 2vw */
 }
 
@@ -530,51 +530,51 @@ nav ul li a {
   left: 35vw; /* Restado 2vw */
 }
 #layer6 {
-  top: 49vh; /* Incremento de 40vh */
+  top: 37vh; /* Incremento de 40vh */
   left: 35vw; /* Restado 2vw */
 }
 #layer9 {
-  top: 71vh; /* Incremento de 40vh */
+  top: 51vh; /* Incremento de 40vh */
   left: 35vw; /* Restado 2vw */
 }
 #layer12 {
-  top: 93vh; /* Incremento de 40vh */
+  top: 65vh; /* Incremento de 40vh */
   left: 35vw; /* Restado 2vw */
 }
 #layer15 {
-  top: 115vh; /* Incremento de 40vh */
+  top: 79vh; /* Incremento de 40vh */
   left: 35vw; /* Restado 2vw */
 }
 #layer18 {
-  top: 149vh; /* Incremento de 40vh */
+  top: 101vh; /* Incremento de 40vh */
   left: 35vw; /* Restado 2vw */
 }
 #layer21 {
-  top: 172vh; /* Incremento de 40vh */
+  top: 116vh; /* Incremento de 40vh */
   left: 35vw; /* Restado 2vw */
 }
 #layer24 {
-  top: 194vh; /* Incremento de 40vh */
+  top: 131vh; /* Incremento de 40vh */
   left: 35vw; /* Restado 2vw */
 }
 #layer27 {
-  top: 217vh; /* Incremento de 40vh */
+  top: 146vh; /* Incremento de 40vh */
   left: 35vw; /* Restado 2vw */
 }
 #layer30 {
-  top: 251vh; /* Incremento de 40vh */
+  top: 169vh; /* Incremento de 40vh */
   left: 35vw; /* Restado 2vw */
 }
 #layer33 {
-  top: 274vh; /* Incremento de 40vh */
+  top: 184vh; /* Incremento de 40vh */
   left: 35vw; /* Restado 2vw */
 }
 #layer36 {
-  top: 297vh; /* Incremento de 40vh */
+  top: 199vh; /* Incremento de 40vh */
   left: 35vw; /* Restado 2vw */
 }
 #layer39 {
-  top: 320vh; /* Incremento de 40vh */
+  top: 214vh; /* Incremento de 40vh */
   left: 35vw; /* Restado 2vw */
 }
 
@@ -584,51 +584,51 @@ nav ul li a {
   left: 64vw; /* Restado 2vw */
 }
 #layer5 {
-  top: 23vh; /* Incremento de 30vh */
+  top: 16vh; /* Incremento de 30vh */
   left: 64vw; /* Restado 2vw */
 }
 #layer8 {
-  top: 45vh; /* Incremento de 30vh */
+  top: 30vh; /* Incremento de 30vh */
   left: 64vw; /* Restado 2vw */
 }
 #layer11 {
-  top: 79vh; /* Incremento de 30vh */
+  top: 52vh; /* Incremento de 30vh */
   left: 64vw; /* Restado 2vw */
 }
 #layer14 {
-  top: 112vh; /* Incremento de 30vh */
+  top: 74vh; /* Incremento de 30vh */
   left: 64vw; /* Restado 2vw */
 }
 #layer17 {
-  top: 146vh; /* Incremento de 30vh */
+  top: 97vh; /* Incremento de 30vh */
   left: 64vw; /* Restado 2vw */
 }
 #layer20 {
-  top: 164vh; /* Incremento de 30vh */
+  top: 109vh; /* Incremento de 30vh */
   left: 64vw; /* Restado 2vw */
 }
 #layer23 {
-  top: 198vh; /* Incremento de 30vh */
+  top: 132vh; /* Incremento de 30vh */
   left: 64vw; /* Restado 2vw */
 }
 #layer26 {
-  top: 220vh; /* Incremento de 30vh */
+  top: 147vh; /* Incremento de 30vh */
   left: 64vw; /* Restado 2vw */
 }
 #layer29 {
-  top: 243vh; /* Incremento de 30vh */
+  top: 162vh; /* Incremento de 30vh */
   left: 64vw; /* Restado 2vw */
 }
 #layer32 {
-  top: 262vh; /* Incremento de 30vh */
+  top: 174vh; /* Incremento de 30vh */
   left: 64vw; /* Restado 2vw */
 }
 #layer35 {
-  top: 279vh; /* Incremento de 30vh */
+  top: 184vh; /* Incremento de 30vh */
   left: 64vw; /* Restado 2vw */
 }
 #layer38 {
-  top: 314vh; /* Incremento de 30vh */
+  top: 206vh; /* Incremento de 30vh */
   left: 64vw; /* Restado 2vw */
 }
 
