@@ -152,6 +152,17 @@ document.addEventListener("DOMContentLoaded", function() {
       greetings3.style.opacity = "1";
       greetings3.style.top = "0";
     }, 3500);
-
+    setTimeout(function() {
+        greetings3.style.opacity = "0";
+        greetings3.style.top = "-50px";
+      }, 12000);
+    setTimeout(function() {
+        greetings2.style.opacity = "0";
+        greetings2.style.top = "-50px";
+    }, 11000);
+    setTimeout(function() {
+        greetings1.style.opacity = "0";
+        greetings1.style.top = "-50px";
+    }, 10000);
     
   });
