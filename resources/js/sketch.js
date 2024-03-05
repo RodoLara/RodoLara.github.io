@@ -155,14 +155,14 @@ document.addEventListener("DOMContentLoaded", function() {
     setTimeout(function() {
         greetings3.style.opacity = "0";
         greetings3.style.top = "-50px";
-      }, 10000);
+      }, 8500);
     setTimeout(function() {
         greetings2.style.opacity = "0";
         greetings2.style.top = "-50px";
-    }, 9000);
+    }, 7500);
     setTimeout(function() {
         greetings1.style.opacity = "0";
         greetings1.style.top = "-50px";
-    }, 8000);
+    }, 6500);
     
   });
