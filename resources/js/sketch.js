@@ -1,3 +1,5 @@
+document.getElementById("cleansand").style.display = "none";
+
 function make2DArray(cols, rows){
     let arr = new Array(cols);
     for (let i = 0; i < arr.length; i++){
@@ -12,7 +14,7 @@ function make2DArray(cols, rows){
 let test;
 let grid;
 let velocityGrid;
-let w = 10;
+let w = 5;
 let cols, rows;
 let hueValue = 200;
 let gravity = 0.1;
@@ -41,7 +43,8 @@ function mouseDragged(){}
 
 function draw() {
     background(0);
-  
+    
+
     if (mouseIsPressed) {
         let mouseCol = floor(mouseX / w);
         let mouseRow = floor(mouseY / w);
@@ -55,6 +58,7 @@ function draw() {
                     let row = mouseRow + j;
                     if (withinCols(col) && withinRows(row)) {
                         grid[col][row] = hueValue;
+                        
                         velocityGrid[col][row] = 1;
                     }
                 }   
@@ -72,7 +76,7 @@ function draw() {
         for (let j = 0; j < rows; j++) {
             noStroke();
             if (grid[i][j] > 0) {
-                fill(grid[i][j], 255, 255);
+                fill(grid[i][j], 140, 255);
                 let x = i * w;
                 let y = j * w;
                 square(x, y, w);
@@ -122,11 +126,32 @@ function draw() {
             }
   
             if (state > 0 && !moved) {
-            nextGrid[i][j] = grid[i][j];
-            nextVelocityGrid[i][j] = velocityGrid[i][j] + gravity;
+                document.getElementById("cleansand").style.display = "inline";
+                nextGrid[i][j] = grid[i][j];
+                nextVelocityGrid[i][j] = velocityGrid[i][j] + gravity;
             }
         }
     }
     grid = nextGrid;
     velocityGrid = nextVelocityGrid;
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+    setTimeout(function() {
+      var greetings1 = document.getElementById("greetings1");
+      greetings1.style.opacity = "1";
+      greetings1.style.top = "0";
+    }, 1500);
+    setTimeout(function() {
+        var greetings2 = document.getElementById("greetings2");
+        greetings2.style.opacity = "1";
+        greetings2.style.top = "0";
+      }, 2500);
+    setTimeout(function() {
+      var greetings3 = document.getElementById("greetings3");
+      greetings3.style.opacity = "1";
+      greetings3.style.top = "0";
+    }, 3500);
+
+    
+  });

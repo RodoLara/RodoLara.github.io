@@ -37,14 +37,36 @@ canvas {
 
 #textContainer {
   position: absolute;
-  margin: 3em 2em;
+  margin: 1em 1em;
   left: 0;
   top: 0vh;
-  color: black;
-  font-size: 18px;
+  color: var(--clr-font);
+  font-size: 2em;
+  letter-spacing: 0.1em;
   font-family: "Roboto", sans-serif;
   -webkit-user-select: none;
   user-select: none;
+}
+
+#greetings1 {
+  opacity: 0;
+  position: relative;
+  top: 50px; /* Mueve el elemento hacia abajo inicialmente */
+  transition: opacity 1s ease, top 2s ease; /* Animaciones de transición */
+}
+
+#greetings2 {
+  opacity: 0;
+  position: relative;
+  top: 50px; /* Mueve el elemento hacia abajo inicialmente */
+  transition: opacity 1s ease, top 2s ease; /* Animaciones de transición */
+}
+
+#greetings3 {
+  opacity: 0;
+  position: relative;
+  top: 50px; /* Mueve el elemento hacia abajo inicialmente */
+  transition: opacity 1s ease, top 2s ease; /* Animaciones de transición */
 }
 
 body {
@@ -442,7 +464,7 @@ nav ul li a {
 #parallax-container {
   position: relative;
   width: 100vw;
-  height: 265vh; /* Altura suficiente para el efecto */
+  height: 290vh; /* Altura suficiente para el efecto */
   overflow: hidden;
 }
 
@@ -641,177 +663,182 @@ nav ul li a {
   }
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 700px) {
   .logos-grid {
     grid-template-columns: repeat(7, 1fr); /* 6 columnas en pantallas anchas */
     margin: 2vh 5vw; /* Margen más grande en pantallas anchas */
   }
+  #parallax-container {
+    position: relative;
+    width: 100vw;
+    height: 340vh; /* Altura suficiente para el efecto */
+    overflow: hidden;
+  }
+  /* Grupo 1 */
+  #layer1 {
+    top: calc(10vh - 20 * 0vh);
+    left: 8vw;
+  }
+  #layer4 {
+    top: calc(48vh - 20 * 1vh);
+    left: 8vw;
+  }
+  #layer7 {
+    top: calc(90vh - 20 * 2vh);
+    left: 8vw;
+  }
+  #layer10 {
+    top: calc(144vh - 20 * 3vh);
+    left: 8vw;
+  }
+  #layer13 {
+    top: calc(198vh - 20 * 4vh);
+    left: 8vw;
+  }
+  #layer16 {
+    top: calc(252vh - 20 * 5vh);
+    left: 8vw;
+  }
+  #layer19 {
+    top: calc(305vh - 20 * 6vh);
+    left: 8vw;
+  }
+  #layer22 {
+    top: calc(346vh - 20 * 7vh);
+    left: 8vw;
+  }
+  #layer25 {
+    top: calc(387vh - 20 * 8vh);
+    left: 8vw;
+  }
+  #layer28 {
+    top: calc(428vh - 20 * 9vh);
+    left: 8vw;
+  }
+  #layer31 {
+    top: calc(470vh - 20 * 10vh);
+    left: 8vw;
+  }
+  #layer34 {
+    top: calc(523vh - 20 * 11vh);
+    left: 8vw;
+  }
+  #layer37 {
+    top: calc(564vh - 20 * 12vh);
+    left: 8vw;
+  }
+  #layer40 {
+    top: calc(616vh - 20 * 13vh);
+    left: 8vw;
+  } 
 
-  /* Incrementos de 40vh */
-#layer1 {
-  top: 10vh;
-  left: 8vw;
-}
-#layer4 {
-  top: 50vh;
-  left: 8vw;
-}
-#layer7 {
-  top: 90vh;
-  left: 8vw;
-}
-#layer10 {
-  top: 130vh;
-  left: 8vw;
-}
-#layer13 {
-  top: 170vh;
-  left: 8vw;
-}
-#layer16 {
-  top: 210vh;
-  left: 8vw;
-}
-#layer19 {
-  top: 250vh;
-  left: 8vw;
-}
-#layer22 {
-  top: 290vh;
-  left: 8vw;
-}
-#layer25 {
-  top: 330vh;
-  left: 8vw;
-}
-#layer28 {
-  top: 370vh;
-  left: 8vw;
-}
-#layer31 {
-  top: 410vh;
-  left: 8vw;
-}
-#layer34 {
-  top: 450vh;
-  left: 8vw;
-}
-#layer37 {
-  top: 490vh;
-  left: 8vw;
-}
-#layer40 {
-  top: 530vh;
-  left: 8vw;
-}
+  /* Grupo 2 */
+  #layer3 {
+    top: calc(15vh - 20 * 0vh);
+    left: 37vw;
+  }
+  #layer6 {
+    top: calc(68vh - 20 * 1vh);
+    left: 37vw;
+  }
+  #layer9 {
+    top: calc(110vh - 20 * 2vh);
+    left: 37vw;
+  }
+  #layer12 {
+    top: calc(152vh - 20 * 3vh);
+    left: 37vw;
+  }
+  #layer15 {
+    top: calc(194vh - 20 * 4vh);
+    left: 37vw;
+  }
+  #layer18 {
+    top: calc(248vh - 20 * 5vh);
+    left: 37vw;
+  }
+  #layer21 {
+    top: calc(290vh - 20 * 6vh);
+    left: 37vw;
+  }
+  #layer24 {
+    top: calc(332vh - 20 * 7vh);
+    left: 37vw;
+  }
+  #layer27 {
+    top: calc(374vh - 20 * 8vh);
+    left: 37vw;
+  }
+  #layer30 {
+    top: calc(428vh - 20 * 9vh);
+    left: 37vw;
+  }
+  #layer33 {
+    top: calc(469vh - 20 * 10vh);
+    left: 37vw;
+  }
+  #layer36 {
+    top: calc(511vh - 20 * 11vh);
+    left: 37vw;
+  }
+  #layer39 {
+    top: calc(552vh - 20 * 12vh);
+    left: 37vw;
+  } 
 
-/* Incrementos de 60vh */
-#layer3 {
-  top: 15vh;
-  left: 37vw;
-}
-#layer6 {
-  top: 75vh;
-  left: 37vw;
-}
-#layer9 {
-  top: 135vh;
-  left: 37vw;
-}
-#layer12 {
-  top: 195vh;
-  left: 37vw;
-}
-#layer15 {
-  top: 255vh;
-  left: 37vw;
-}
-#layer18 {
-  top: 315vh;
-  left: 37vw;
-}
-#layer21 {
-  top: 375vh;
-  left: 37vw;
-}
-#layer24 {
-  top: 435vh;
-  left: 37vw;
-}
-#layer27 {
-  top: 495vh;
-  left: 37vw;
-}
-#layer30 {
-  top: 555vh;
-  left: 37vw;
-}
-#layer33 {
-  top: 615vh;
-  left: 37vw;
-}
-#layer36 {
-  top: 675vh;
-  left: 37vw;
-}
-#layer39 {
-  top: 735vh;
-  left: 37vw;
-}
-
-/* Incrementos de 50vh */
-#layer2 {
-  top: 10vh;
-  left: 66vw;
-}
-#layer5 {
-  top: 60vh;
-  left: 66vw;
-}
-#layer8 {
-  top: 110vh;
-  left: 66vw;
-}
-#layer11 {
-  top: 160vh;
-  left: 66vw;
-}
-#layer14 {
-  top: 210vh;
-  left: 66vw;
-}
-#layer17 {
-  top: 260vh;
-  left: 66vw;
-}
-#layer20 {
-  top: 310vh;
-  left: 66vw;
-}
-#layer23 {
-  top: 360vh;
-  left: 66vw;
-}
-#layer26 {
-  top: 410vh;
-  left: 66vw;
-}
-#layer29 {
-  top: 460vh;
-  left: 66vw;
-}
-#layer32 {
-  top: 510vh;
-  left: 66vw;
-}
-#layer35 {
-  top: 560vh;
-  left: 66vw;
-}
-#layer38 {
-  top: 610vh;
-  left: 66vw;
-}
+  /* Grupo 3 */
+  #layer2 {
+    top: calc(10vh - 20 * 0vh);
+    left: 66vw;
+  }
+  #layer5 {
+    top: calc(48vh - 20 * 1vh);
+    left: 66vw;
+  }
+  #layer8 {
+    top: calc(89vh - 20 * 2vh);
+    left: 66vw;
+  }
+  #layer11 {
+    top: calc(143vh - 20 * 3vh);
+    left: 66vw;
+  }
+  #layer14 {
+    top: calc(196vh - 20 * 4vh);
+    left: 66vw;
+  }
+  #layer17 {
+    top: calc(250vh - 20 * 5vh);
+    left: 66vw;
+  }
+  #layer20 {
+    top: calc(288vh - 20 * 6vh);
+    left: 66vw;
+  }
+  #layer23 {
+    top: calc(341vh - 20 * 7vh);
+    left: 66vw;
+  }
+  #layer26 {
+    top: calc(382vh - 20 * 8vh);
+    left: 66vw;
+  }
+  #layer29 {
+    top: calc(424vh - 20 * 9vh);
+    left: 66vw;
+  }
+  #layer32 {
+    top: calc(462vh - 20 * 10vh);
+    left: 66vw;
+  }
+  #layer35 {
+    top: calc(498vh - 20 * 11vh);
+    left: 66vw;
+  }
+  #layer38 {
+    top: calc(551vh - 20 * 12vh);
+    left: 66vw;
+  }
 }
 
 @media screen and (min-width: 1200px) {
