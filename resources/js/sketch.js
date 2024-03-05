@@ -141,28 +141,28 @@ document.addEventListener("DOMContentLoaded", function() {
       var greetings1 = document.getElementById("greetings1");
       greetings1.style.opacity = "1";
       greetings1.style.top = "0";
-    }, 1500);
+    }, 1000);
     setTimeout(function() {
         var greetings2 = document.getElementById("greetings2");
         greetings2.style.opacity = "1";
         greetings2.style.top = "0";
-      }, 2500);
+      }, 2000);
     setTimeout(function() {
       var greetings3 = document.getElementById("greetings3");
       greetings3.style.opacity = "1";
       greetings3.style.top = "0";
-    }, 3500);
+    }, 3000);
     setTimeout(function() {
         greetings3.style.opacity = "0";
         greetings3.style.top = "-50px";
-      }, 12000);
+      }, 10000);
     setTimeout(function() {
         greetings2.style.opacity = "0";
         greetings2.style.top = "-50px";
-    }, 11000);
+    }, 9000);
     setTimeout(function() {
         greetings1.style.opacity = "0";
         greetings1.style.top = "-50px";
-    }, 10000);
+    }, 8000);
     
   });
