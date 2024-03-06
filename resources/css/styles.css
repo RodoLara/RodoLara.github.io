@@ -37,7 +37,8 @@ canvas {
 
 #textContainer {
   position: absolute;
-  margin: 1em 1em;
+  margin: 2vh 4vw;
+  width: 93vw;
   left: 0;
   top: 0vh;
   color: var(--clr-font);
@@ -46,6 +47,9 @@ canvas {
   font-family: "Roboto", sans-serif;
   -webkit-user-select: none;
   user-select: none;
+  overflow: hidden;
+  word-wrap: break-word;
+  white-space: normal;
 }
 
 #greetings1 {
@@ -67,6 +71,9 @@ canvas {
   position: relative;
   top: 50px; /* Mueve el elemento hacia abajo inicialmente */
   transition: opacity 1s ease, top 2s ease; /* Animaciones de transición */
+  overflow: hidden;
+  word-wrap: break-word;
+  white-space: normal;
 }
 
 body {
@@ -80,6 +87,8 @@ body {
   position: relative;
   min-height: 100vh;
   overflow: hidden;
+  word-wrap: break-word;
+  white-space: normal;
 }
 
 .indexbody{

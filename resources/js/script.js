@@ -1,5 +1,6 @@
 let currentLanguage = "en";
 currentLanguage = sessionStorage.getItem('currentLanguage') || 'en';
+const textContainer = document.getElementById('textContainer'); // Acceder al contenedor de texto globalmente
 
 function changeLanguage(lang) {
     fetch('./resources/json/lang.json')
@@ -34,6 +35,9 @@ function changeLanguage(lang) {
                 const text = data[lang][key];
                 // Asignar el texto al elemento
                 element.textContent = text;
+                textContainer.style.overflow = 'hidden';
+                textContainer.style.overflowWrap = 'break-word';
+                textContainer.style.whiteSpace = 'normal';
             });
         })
         .catch(error => console.error('Error fetching or parsing JSON:', error));
