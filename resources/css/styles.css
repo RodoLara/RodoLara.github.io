@@ -12,15 +12,15 @@
   --clr-black: #000000;
   --clr-background: #232323;*/
   --clr-background: #000;
-  --clr-white: #ffffff;
+  --clr-white: #fff;
   --clr-primary: #00218a;
-  --clr-expertise: #4bc35c;
-  --clr-contact: #FF853B;
   /*--clr-español: #e34545;*/
-  --clr-español: #51e6e1;
-  --clr-services: #629be7;
-  --clr-clients: #a262e7;
-  --clr-pink: #e762c1;
+  --clr-expertise: #38ac49;
+  --clr-contact: #d17a44;
+  --clr-español: #2aa39f;
+  --clr-services: #5385c7;
+  --clr-clients: #8c55c6;
+  --clr-pink: #cb51a8;
   
   --clr-mint: #51e6e1;
   --clr-fondo: #47ff31;
