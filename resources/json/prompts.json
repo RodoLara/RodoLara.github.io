@@ -1,0 +1,13 @@
+{
+  "prompt1": "Platícame de tus servicios",
+  "prompt2": "Genera un código simple de Robot ABB",
+  "prompt3": "Genera un código simple de Robot Fanuc",
+  "prompt4": "Platicame cómo puedo mejorar mis procesos utilizando cámaras",
+  "prompt5": "El futuro de los PLCs en la industria y su relación con las IAs",
+  "prompt6": "Genera código, cómo centro un div?",
+  "prompt7": "Hazme un ejemplo de matplotlib en Python, y dime para qué es",
+  "prompt8": "¿Cómo puedo reducir el scrap en mi fábrica utilizando analisis de datos?",
+  "prompt9": "Plan de mantenimiento para mejorar el OEE de mis máquinas",
+  "prompt10": "Explica la función IF en Excel",
+  "prompt11": "Dame factorial de n en Arduino usando recursión"
+}

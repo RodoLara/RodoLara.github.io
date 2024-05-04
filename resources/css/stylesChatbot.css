@@ -1,0 +1,835 @@
+pre {
+    white-space: pre-wrap;
+    overflow-x: auto;
+}
+
+a {
+    text-decoration-color: greenyellow; /* Cambiar el color del subrayado a rojo */
+}
+
+/*#main-wrapper {
+    display: flex;
+    flex-direction: column; 
+    height: calc(86vh - env(safe-area-inset-bottom));
+    margin: 0 auto;
+}*/
+
+
+
+#wrapper{
+    /*margin: 1vh 1vw;*/
+    padding: 1px;
+    flex: 1;
+    margin: 0 auto;
+    /*border: 1px solid #5e13a5;*/
+    width: 100%;
+    max-width: 100%;
+    height: 97vh;
+    /*height: 97vh; /* Igualar la altura del wrapper al 100% de la ventana */
+    box-sizing: border-box; /* Incluir el padding y borde en el tamaño total */
+    border: 0px solid #ccc;
+    border-radius: 0px;
+    overflow: hidden; /* Ocultar el contenido que desborda */
+    display: flex; /* Utilizar flexbox para ajustar el contenido */
+    flex-direction: column; /* Alinear el contenido verticalmente */
+    justify-content: center;
+    /*transform: translateY(2%);*/
+}
+
+#type {
+    /* Estilos para el div type */
+    /*position: absolute; /* Para superponerlo al historial */
+    /*bottom: 0; /* Alineación en la parte inferior del contenedor padre */
+    display: flex;
+    align-items: center; /* Alinear verticalmente */
+    justify-content: space-between; 
+    width: 100%;
+    max-width: 100%;
+    height: 15%; /* Altura inicial del type */
+    background-color: #131313; /* Color de fondo */
+    border: 0px solid #2417db; /* Borde */ 
+    margin: 0 auto;
+    /*border: 1px solid #39dacf;*/
+    /*overflow: hidden;*/
+    /*overflow-y: hidden;*/
+    /*resize: vertical; /* Permitir redimensionamiento vertical */
+     /* Barra de desplazamiento vertical */
+}
+
+#pregunta {
+    flex: 0 0 69%;
+    /*position: absolute;*/
+    resize: none;
+    background-color: #232323;
+    color: whitesmoke;
+    width: 40%;
+    padding: 2%;
+    height: 30%;
+    /*min-height: 10vh;*/
+    max-height: 100px;
+    margin-top: -2vh;
+    /*margin-left: 1vw;*/
+    overflow-y: auto;
+    border: 1px solid whitesmoke;
+    border-radius: 15px;
+    scrollbar-width: thin;
+    scrollbar-color: #171717 #232323;
+    outline: none;
+    z-index: 50;
+    
+    text-align: left;
+    overflow-x: hidden;
+}
+
+#boton{
+    flex: 0 0 24%;
+    background-color: #131313;
+    padding: 1px;
+    width: 5vw;
+    height: 5vh;
+    margin-right: 1vw;
+    margin-bottom: 3vh;
+    /*position: absolute;
+    /*right: 25%; /* Ajusta la posición horizontalmente */
+    /*bottom: 6.5em; /* Ajusta la posición verticalmente */
+    cursor: pointer;
+}
+
+#hist {
+    /* Estilos para el historial */
+    position: relative; /* Importante para que el div type se pueda superponer */
+    height: 77%;/*74vh; /* Altura inicial del historial */
+    overflow-y: hidden; /* Barra de desplazamiento vertical */
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    /*border: 1px solid #ccc;*/
+    /*border: 1px solid #da3974;*/
+    /*margin-top: -45vh;*/
+}
+
+#htmlContent{
+    position: absolute;
+    background-color: #131313;
+    color: whitesmoke;
+    font-size: 1em;
+    letter-spacing: 0.1em;
+    /*line-height: 1.1em;*/
+    font-family: "Roboto", sans-serif;
+    width: 100%;
+    height: 100%;
+    padding: 3%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 0;
+    /*border: 1px solid #39dacf;
+     /* Altura máxima deseada para el contenedor */
+    /*overflow-y: auto;*/
+}
+
+.code-wrapper {
+    background-color: #000;
+    color: whitesmoke;
+    border: 1px solid #131313;
+    border-radius: 10px;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+pre {
+    background-color: #000;
+    color: whitesmoke;
+    margin: 0;
+    padding: 10px;
+    box-sizing: border-box;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333333;
+    padding: 0 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.language-name {
+    margin: 0;
+    line-height: 30px;
+    padding: 0 10px; /* Este padding ya está definido en .header, podría ser innecesario aquí */
+    text-align: left;
+    /* Elimina los estilos de border-radius y width ya que .header los maneja */
+}
+
+.hljs {
+    background-color: inherit !important; /* `!important` para forzar la prioridad sobre otros estilos */
+    color: whitesmoke !important;
+}
+
+/* Comentarios */
+.hljs-comment,
+.hljs-quote {
+    color: #a1f99c !important;/* Gris claro */
+}
+
+/* Variables */
+.hljs-variable,
+.hljs-template-variable {
+    color: #e06c75; /* Rojo claro */
+}
+
+/* Etiquetas HTML/XML y CSS ID */
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-attribute {
+    color: #ff86ff !important; /* Naranja */
+}
+
+/* Expresiones regulares */
+.hljs-regexp {
+    color: #98c379; /* Verde claro */
+}
+
+/* Expresiones regulares */
+.hljs-attr {
+    color: #ff6161 !important;/* Verde claro */
+}
+
+/* Números */
+.hljs-number {
+    color: #DF3079; /* Marrón claro */
+}
+
+/* Funciones incorporadas o librerías */
+.hljs-built_in,
+.hljs-builtin-name {
+    color: #E9950C !important; /* Azul claro */
+}
+
+/* Literales */
+.hljs-literal {
+    color: #56b6c2; /* Cian */
+}
+
+/* Tipos y clases */
+.hljs-type,
+.hljs-class .hljs-title {
+    color: #2E95D3; /* Púrpura */
+}
+
+/* Parámetros de funciones */
+.hljs-params {
+    color: #dcdfe4; /* Blanco grisáceo */
+}
+
+/* Meta datos */
+.hljs-meta {
+    color: #ced5e1 !important; /* Blanco grisáceo con un poco de transparencia */
+    opacity: 0.85;
+}
+
+/* Cadenas de texto */
+.hljs-string {
+    color: #00A67D !important; /* Verde claro */
+}
+
+/* Símbolos y viñetas */
+.hljs-symbol,
+.hljs-bullet {
+    color: #d19a66; /* Marrón claro */
+}
+
+/* Adiciones y texto en negrita */
+.hljs-addition,
+.hljs-strong {
+    color: #98c379; /* Verde claro */
+    font-weight: bold;
+}
+
+/* Palabras clave */
+.hljs-keyword {
+    color: #2E95D3; /* Púrpura */
+}
+
+/* Selectores de etiquetas en CSS */
+.hljs-selector-tag {
+    color: #e06c75; /* Rojo claro */
+}
+
+/* Texto enfatizado */
+.hljs-emphasis {
+    color: #dcdfe4; /* Blanco grisáceo */
+    font-style: italic;
+}
+
+#copy-code {
+    background: none;
+    border: none;
+    color: whitesmoke;
+    cursor: pointer;
+    /* Puedes agregar estilos adicionales aquí para hacerlo parecer un botón */
+}
+
+#tit{
+    background-color: #131313;
+    color: whitesmoke;
+    min-height: 7%;
+    padding: 3%;
+    /*border: 1px solid #e7e74e;*/
+     /* Altura máxima deseada para el contenedor */
+    /*overflow-y: auto;*/
+}
+
+#sub{
+    background-color: #131313;
+    color: whitesmoke;
+    height: 100%;
+    padding: 3%;
+    overflow-y: auto;
+     /* Altura máxima deseada para el contenedor */
+    /*overflow-y: auto;*/
+}
+
+/*.autosize {
+  bottom: 0;
+  position: absolute;
+}*/
+
+
+/* Personalización para navegadores WebKit como Chrome y Safari */
+#pregunta::-webkit-scrollbar {
+  width: 6px; /* Ancho de la barra de desplazamiento */
+  position: absolute;
+  z-index: 20;
+  left: 15%;
+}
+
+#pregunta::-webkit-scrollbar-thumb {
+  background-color: #333; /* Color de la barra de desplazamiento */
+  border-radius: 15px; /* Borde redondeado para la barra de desplazamiento */
+  position: absolute;
+  z-index: 20;
+}
+
+#pregunta::-webkit-scrollbar-track {
+  background-color: #232323; /* Color de fondo de la barra de desplazamiento */
+  border-radius: 15px;
+  position: absolute;
+  z-index: 20;
+}
+
+#htmlContent::-webkit-scrollbar {
+    width: 6px; /* Ancho de la barra de desplazamiento vertical */
+    height: 6px; /* Altura de la barra de desplazamiento horizontal */
+    position: absolute;
+    z-index: 20;
+    left: 15%;
+    bottom: 15px; /* Posición de la barra de desplazamiento horizontal */
+    overflow-y: auto;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+#htmlContent::-webkit-scrollbar-thumb {
+    background-color: #333; /* Color de la barra de desplazamiento vertical y horizontal */
+    border-radius: 15px; /* Borde redondeado para la barra de desplazamiento vertical y horizontal */
+    position: absolute;
+    z-index: 20;
+    overflow-y: auto;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+#htmlContent::-webkit-scrollbar-track {
+    background-color: #232323; /* Color de fondo de la barra de desplazamiento vertical y horizontal */
+    border-radius: 15px;
+    position: absolute;
+    z-index: 20;
+    overflow-y: auto;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+#logo{
+    position: relative;
+    background-color: #131313;
+    margin-top: 10px;
+    padding-right: 0vw;
+    padding-left: 0vw;
+    height: auto;
+    display: flex;
+    justify-content: space-between; /* Centrar horizontalmente */
+    align-items:center; 
+}
+
+#About{
+    cursor: pointer;
+    border: 1px solid whitesmoke;
+    border-radius: 4px;
+    padding: 1px;
+    font-size: 13px;
+}
+
+#infoBox {
+    display: none;
+    position: absolute;
+    top: 11%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    border: 0px solid #ccc;
+    border-radius: 4px;
+    padding: 5px;
+    background-color: #232323;
+    font-size: 13px;
+}
+
+#power{
+    min-height: 64px;
+    width: 40%;
+    height: 70%;
+}
+
+#openai{
+    /*background-color: #00A67D;*/
+    position: absolute;
+    right: 41%;
+    top: 40%;
+    min-height: 40px;
+    width: 18%;
+    height: 18%;
+    visibility: visible;
+}
+
+.prompt{
+    min-height: 32px;
+    width: 40%;
+    height: 15%;
+    visibility: visible;
+    border: 1px solid whitesmoke;
+    border-radius: 15px;
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    text-align: center;
+    font-size: 0.7em;
+    letter-spacing: 0.1em;
+    /*line-height: 1.1em;*/
+    font-family: "Roboto", sans-serif;
+    cursor: pointer;
+}
+
+#pone{
+    position: absolute;
+    right: 55%;
+    top: 60%;
+    border: 1px solid rgb(50, 220, 75);
+}
+
+#ptwo{
+    position: absolute;
+    right: 5%;
+    top: 60%;
+}
+
+#pthree{
+    position: absolute;
+    right: 55%;
+    top: 78%;
+}
+
+#pfour{
+    position: absolute;
+    right: 5%;
+    top: 78%;
+}
+
+/* Móviles - Vertical */
+@media only screen and (max-width: 369px) {
+    #pregunta {
+        z-index: 9999;
+        margin-top: -9vh;
+        /*margin-left: 1vw;*/
+    }
+
+    #boton {
+        flex: 0 0 10%;
+        z-index: 9999;
+        width: 5vw;
+        height: 5vh;
+        margin-right: 19vw;
+        margin-bottom: 9vh;
+    }
+
+    #infoBox {
+        top: 13%;
+        left: 72%;
+        transform: translate(-50%, -50%);
+        z-index: 9999;
+    }
+}
+
+/* Tablets - Vertical */
+@media only screen and (min-width: 369px) and (max-width: 568px) {
+    #pregunta {
+        flex: 0 0 70%;
+        z-index: 9999;
+        margin-top: -16vh;
+        /*margin-left: 1vw;*/
+    }
+
+    #boton {
+        flex: 0 0 10%;
+        z-index: 9999;
+        width: 1vw;
+        height: 4vh;
+        margin-right: 19vw;
+        margin-bottom: 15.8vh;
+    }
+
+    #power{
+        min-height: 64px;
+        width: 40%;
+        height: 55%;
+    }
+
+    #About{
+        font-size: 15px;
+    }
+    
+    #infoBox {
+        top: 13%;
+        left: 83%;
+        transform: translate(-50%, -50%);
+        z-index: 9999;
+    }
+
+    #openai{
+        /*background-color: #00A67D;*/
+        position: absolute;
+        right: 42%;
+        top: 28%;
+        min-height: 40px;
+        width: 17%;
+        height: 17%;
+        visibility: visible;
+    }
+
+    #pone{
+        position: absolute;
+        right: 55%;
+        top: 50%;
+    }
+    
+    #ptwo{
+        position: absolute;
+        right: 5%;
+        top: 50%;
+    }
+    
+    #pthree{
+        position: absolute;
+        right: 55%;
+        top: 70%;
+    }
+    
+    #pfour{
+        position: absolute;
+        right: 5%;
+        top: 70%;
+    }
+}
+
+/* Entre tablets y PC 1*/
+@media only screen and (min-width: 568px) and (max-width: 799px) {
+    #pregunta {
+        flex: 0 0 70%;
+        z-index: 9999;
+        margin-top: -16.5vh;
+        /*margin-left: 1vw;*/
+    }
+
+    #boton {
+        flex: 0 0 10%;
+        z-index: 9999;
+        width: 1vw;
+        height: 4vh;
+        margin-right: 18.5vw;
+        margin-bottom: 15.5vh;
+    }
+
+    #power{
+        min-height: 64px;
+        width: 40%;
+        height: 55%;
+    }
+
+    #About{
+        font-size: 15px;
+    }
+    
+    #infoBox {
+        top: 13%;
+        left: 83%;
+        transform: translate(-50%, -50%);
+        z-index: 9999;
+    }
+
+    #openai{
+        /*background-color: #00A67D;*/
+        position: absolute;
+        right: 42%;
+        top: 28%;
+        min-height: 40px;
+        width: 17%;
+        height: 17%;
+        visibility: visible;
+    }
+
+    #pone{
+        position: absolute;
+        right: 55%;
+        top: 50%;
+    }
+    
+    #ptwo{
+        position: absolute;
+        right: 5%;
+        top: 50%;
+    }
+    
+    #pthree{
+        position: absolute;
+        right: 55%;
+        top: 70%;
+    }
+    
+    #pfour{
+        position: absolute;
+        right: 5%;
+        top: 70%;
+    }
+}
+
+/* Entre tablets y PC 1*/
+@media only screen and (min-width: 799px) and (max-width: 963px) {
+    #pregunta {
+        flex: 0 0 70%;
+        z-index: 9999;
+        margin-top: -20.5vh;
+        /*margin-left: 1vw;*/
+    }
+
+    #boton {
+        flex: 0 0 10%;
+        z-index: 9999;
+        width: 1vw;
+        height: 4vh;
+        margin-right: 19vw;
+        margin-bottom: 19.5vh;
+    }
+
+    #power{
+        min-height: 64px;
+        width: 40%;
+        height: 55%;
+    }
+
+    #About{
+        font-size: 15px;
+    }
+    
+    #infoBox {
+        top: 13%;
+        left: 83%;
+        transform: translate(-50%, -50%);
+        z-index: 9999;
+    }
+
+    #openai{
+        /*background-color: #00A67D;*/
+        position: absolute;
+        right: 42%;
+        top: 28%;
+        min-height: 40px;
+        width: 17%;
+        height: 17%;
+        visibility: visible;
+    }
+
+    #pone{
+        position: absolute;
+        right: 55%;
+        top: 50%;
+    }
+    
+    #ptwo{
+        position: absolute;
+        right: 5%;
+        top: 50%;
+    }
+    
+    #pthree{
+        position: absolute;
+        right: 55%;
+        top: 70%;
+    }
+    
+    #pfour{
+        position: absolute;
+        right: 5%;
+        top: 70%;
+    }
+}
+
+/* Pantallas de escritorio chicas */
+@media only screen and (min-width: 963px) and (max-width: 1250px) {
+    #pregunta {
+        flex: 0 0 50%;
+        z-index: 9999;
+        margin-top: -29vh;
+        margin-left: 15vw;
+    }
+
+    #boton {
+        flex: 0 0 5%;
+        z-index: 9999;
+        width: 3px;
+        height: 35px;
+        margin-right: 29vw;
+        margin-bottom: 27.5vh;
+    }
+
+    #About{
+        font-size: 18px;
+        top: 10%;
+    }
+    
+    #infoBox {
+        top: 10%;
+        left: 90%;
+        transform: translate(-50%, -50%);
+        z-index: 9999;
+    }
+
+    #power{
+        min-height: 64px;
+        width: 40%;
+        height: 55%;
+        top: 10%;
+    }
+    
+    #openai{
+        /*background-color: #00A67D;*/
+        position: absolute;
+        right: 44%;
+        top: 24%;
+        min-height: 40px;
+        width: 12%;
+        height: 12%;
+        visibility: visible;
+    }
+
+    #pone{
+        position: absolute;
+        right: 55%;
+        top: 40%;
+    }
+    
+    #ptwo{
+        position: absolute;
+        right: 5%;
+        top: 40%;
+    }
+    
+    #pthree{
+        position: absolute;
+        right: 55%;
+        top: 60%;
+    }
+    
+    #pfour{
+        position: absolute;
+        right: 5%;
+        top: 60%;
+    }
+}
+
+
+/* Pantallas de escritorio medianas */
+@media only screen and (min-width: 1250px) {
+    #pregunta {
+        flex: 0 0 50%;
+        z-index: 9999;
+        margin-top: -29vh;
+        margin-left: 15vw;
+    }
+
+    #boton {
+        flex: 0 0 5%;
+        z-index: 9999;
+        width: 3px;
+        height: 35px;
+        margin-right: 29vw;
+        margin-bottom: 26.5vh;
+    }
+
+    #About{
+        font-size: 18px;
+        top: 10%;
+    }
+    
+    #infoBox {
+        top: 10%;
+        left: 90%;
+        transform: translate(-50%, -50%);
+        z-index: 9999;
+    }
+
+    #power{
+        min-height: 64px;
+        width: 40%;
+        height: 55%;
+        top: 10%;
+    }
+    
+    #openai{
+        /*background-color: #00A67D;*/
+        position: absolute;
+        right: 44%;
+        top: 24%;
+        min-height: 40px;
+        width: 12%;
+        height: 12%;
+        visibility: visible;
+    }
+
+    #pone{
+        position: absolute;
+        right: 55%;
+        top: 40%;
+    }
+    
+    #ptwo{
+        position: absolute;
+        right: 5%;
+        top: 40%;
+    }
+    
+    #pthree{
+        position: absolute;
+        right: 55%;
+        top: 60%;
+    }
+    
+    #pfour{
+        position: absolute;
+        right: 5%;
+        top: 60%;
+    }
+}
