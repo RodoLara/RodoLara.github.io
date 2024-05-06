@@ -273,6 +273,7 @@ textarea.addEventListener('blur', function() {
     console.log("TextArea:", textarea.style.height);
     textarea.style.height = (parseInt(originalHeight) - 100) + "px";
     textarea.style.top = (parseInt(originalTop) - 15) + "px";
+    window.scrollTo(0, 0);
 });
 
 document.getElementById('pregunta').addEventListener('input', function() {

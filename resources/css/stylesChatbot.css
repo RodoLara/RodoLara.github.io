@@ -472,6 +472,8 @@ pre {
         transform: translate(-50%, -50%);
         z-index: 9999;
     }
+
+    
 }
 
 /* Tablets - Vertical */
@@ -479,7 +481,7 @@ pre {
     #pregunta {
         flex: 0 0 70%;
         z-index: 9999;
-        margin-top: -16vh;
+        margin-top: -22vh;
         /*margin-left: 1vw;*/
     }
 
@@ -489,7 +491,7 @@ pre {
         width: 1vw;
         height: 4vh;
         margin-right: 19vw;
-        margin-bottom: 15.8vh;
+        margin-bottom: 21.8vh;
     }
 
     #power{
@@ -831,5 +833,20 @@ pre {
         position: absolute;
         right: 5%;
         top: 60%;
+    }
+}
+
+@media not all and (min-resolution: .001dpcm) {
+    /* Necesitas especificar un selector para aplicar el estilo */
+    #type {
+        background-color: red;
+    }
+
+    #pregunta {
+        flex: 0 0 70%;
+        z-index: 9999;
+        margin-top: -16vh;
+        /*margin-left: 1vw;*/
+        background-color: blue;
     }
 }
