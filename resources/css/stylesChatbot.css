@@ -397,6 +397,7 @@ pre {
     min-height: 64px;
     width: 40%;
     height: 70%;
+    cursor: pointer;
 }
 
 #openai{

@@ -48,6 +48,14 @@ function changeLanguage(lang) {
 changeLanguage(currentLanguage);
 
 document.addEventListener('DOMContentLoaded', function() {
+    var imgPower = document.getElementById('power');
+
+    // Agregar un evento de click a la imagen
+    imgPower.addEventListener('click', function() {
+        // Redirigir al index.html al hacer clic en la imagen
+        console.log("Power Clicked!");
+        window.location.href = 'index.html';
+    });
     const enlaces = document.querySelectorAll('.mLanguage'); // Selecciona los enlaces con la clase mLanguage
 
     enlaces.forEach(function(enlace) {
