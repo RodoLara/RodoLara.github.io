@@ -313,6 +313,7 @@ function typeText(newText) {
         if (!typewriter) {
             console.log("Stopped");
         }
+        mantenerPantallaEncendida();
         let duration = newText.length * 15; // 15 es el delay en milisegundos
 
         // Iniciar la vibración en intervalos de 50 ms durante la duración del texto
@@ -320,7 +321,7 @@ function typeText(newText) {
         let intervalId = setInterval(() => {
             navigator.vibrate(50);
         }, 50);
-
+          
         // Detener la vibración cuando el texto termine de escribirse
         setTimeout(() => {
             clearInterval(intervalId);
@@ -408,6 +409,7 @@ document.addEventListener('highlightDone', (event) => {
 
     typeText(contenidoFormateado);
     chatAnswering = false;
+    quitarBloqueoPantalla();
 });
 
 var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
@@ -425,4 +427,34 @@ function unescapeHTML(str) {
     const div = document.createElement('div');
     div.innerHTML = str;
     return div.textContent || div.innerText || "";
+}
+
+// Mantener la pantalla encendida
+function mantenerPantallaEncendida() {
+  if ('wakeLock' in navigator) {
+    navigator.wakeLock.request('screen')
+      .then((wakeLockObj) => {
+        console.log('Pantalla mantenida encendida');
+      })
+      .catch((err) => {
+        console.error('No se pudo mantener la pantalla encendida:', err);
+      });
+  } else {
+    console.warn('La API de bloqueo de pantalla no está disponible en este navegador.');
+  }
+}
+  
+// Quitar el bloqueo de pantalla
+function quitarBloqueoPantalla() {
+  if ('wakeLock' in navigator && navigator.wakeLock.wakeLockObj) {
+    navigator.wakeLock.wakeLockObj.release()
+      .then(() => {
+        console.log('Bloqueo de pantalla quitado');
+      })
+      .catch((err) => {
+        console.error('No se pudo quitar el bloqueo de pantalla:', err);
+      });
+  } else {
+    console.warn('No se encontró un bloqueo de pantalla activo.');
+  }
 }

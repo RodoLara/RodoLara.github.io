@@ -136,6 +136,10 @@ a {
     overflow: hidden;
 }
 
+code {
+    font-size: 14px;
+}
+
 pre {
     background-color: #000;
     color: whitesmoke;
