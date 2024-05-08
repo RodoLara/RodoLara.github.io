@@ -108,7 +108,7 @@ function enviarPregunta() {
 
     historial = JSON.parse(localStorage.getItem('historial')) || [];
     historial.push({ "role": "user", "content": query });
-
+    console.log("Formato en PLC:", historial);
 
     fetch(url, {
         method: 'POST',
