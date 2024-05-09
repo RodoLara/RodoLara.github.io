@@ -5,7 +5,10 @@ var typewriter;
 var htmlContent;
 let originalHeight;
 let originalTop;
+let newTop;
+var heightDifference;
 let typebox;
+var textarea;
 let originalBottom;
 let historial = [];
 var openailogo;
@@ -103,6 +106,7 @@ function enviarPregunta() {
     //contenidoFormateado = contenidoFormateado.replace(/&quot;/g, '"').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&#39;/g,"'");
     pasteText(contenidoFormateado);
     document.getElementById("pregunta").value = "";
+    textarea.style.height = (parseInt(originalHeight) - 0) + "px";
     verificarContenido();
     htmlContent.scrollTop = htmlContent.scrollHeight;
 
@@ -135,15 +139,17 @@ function enviarPregunta() {
         contenidoFormateado = contenidoFormateado.replace(/(<a href="mailto:.*?">)([^<]+)(<\/a>)/g, '$1<span style="color: greenyellow;">$2</span>$3');
         console.log("Contenido Formateado después del reemplazo:", contenidoFormateado);
         var langDetected = "";
+        var counter = 1;
         contenidoFormateado = contenidoFormateado.replace(
             /<pre><code class="language-(\w+)">([\s\S]*?)<\/code><\/pre>/g,
             function (match, claseLenguaje, codigo) {
                 langDetected = claseLenguaje;
-                
+                var botonId = 'copy-code-' + counter; // Genera un identificador único para cada botón
+                counter++;
               return (
                 `<div class="code-wrapper" data-language="${claseLenguaje}">` +
                 `<div class="header"><p class="language-name">${claseLenguaje}</p>` +
-                `<button id="copy-code">Copy Code</button></div>` +
+                `<button id="${botonId}" onclick="copiarCodigo(this)">Copy Code</button></div>` + // Asigna el identificador único al botón
                 match +
                 "</div>"
               );
@@ -180,6 +186,7 @@ function enviarPregunta() {
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('boton').addEventListener('click', enviarPregunta);
     typebox = document.getElementById("type");
+    //textarea = document.getElementById("pregunta");
     //originalBottom = typebox.style.bottom;
     openailogo = document.getElementById('openai');
     prompt_one = document.getElementById('pone');
@@ -193,22 +200,25 @@ document.addEventListener('DOMContentLoaded', () => {
     var infoBox = document.getElementById('infoBox');
 
     // Mostrar o ocultar la ventana al hacer clic en el botón 'About'
-    aboutButton.addEventListener('click', function(event) {
-        infoBox.style.display = infoBox.style.display === 'none' ? 'block' : 'none'; // Alternar la visibilidad del infoBox
-        event.stopPropagation(); // Evitar que el clic se propague al documento
-    });
+    //aboutButton.addEventListener('click', function(event) {
+    //    infoBox.style.display = infoBox.style.display === 'none' ? 'block' : 'none'; // Alternar la visibilidad del infoBox
+    //    event.stopPropagation(); // Evitar que el clic se propague al documento
+    //});
+//
+    //// Ocultar la ventana al hacer clic fuera de ella
+    //document.addEventListener('click', function(event) {
+    //    if (!infoBox.contains(event.target) && event.target !== aboutButton) {
+    //        infoBox.style.display = 'none'; // Ocultar la ventana si el clic no fue dentro de infoBox ni en el botón 'About'
+    //    }
+    //});
 
-    // Ocultar la ventana al hacer clic fuera de ella
-    document.addEventListener('click', function(event) {
-        if (!infoBox.contains(event.target) && event.target !== aboutButton) {
-            infoBox.style.display = 'none'; // Ocultar la ventana si el clic no fue dentro de infoBox ni en el botón 'About'
-        }
-    });
 
-
-    textarea.style.height = (parseInt(originalHeight) - 100) + "px";
-    textarea.style.top = (parseInt(originalTop) - 40) + "px";
-    textarea.style.color = 'whitesmoke';
+    //textarea.style.height = (parseInt(originalHeight) - 0) + "px";
+    //textarea.style.top = 'auto';
+    //textarea.style.top = (parseInt(originalTop) - 1000) + "px";
+    //textarea.style.color = 'whitesmoke';
+    
+    document.getElementById('pregunta').addEventListener('keydown', handleBackspace);
 });
 
 function decodeEntities(encodedString) {
@@ -217,33 +227,48 @@ function decodeEntities(encodedString) {
     return txtarea.value;
 }
 
-function copiarCodigo() {
-    // Encuentra el elemento 'pre' relacionado con el botón
-    console.log("Funcion de Copiar Codigo")
-    var code = document.querySelector('.code-wrapper pre').textContent;
-
-    // Crea un elemento textarea temporal y copia el texto
-    var tempTextArea = document.createElement('textarea');
-    tempTextArea.value = code;
-    document.body.appendChild(tempTextArea);
-    tempTextArea.select();
-    document.execCommand('copy');
-    document.body.removeChild(tempTextArea);
+function handleBackspace(event) {
+    // Verificar si se presionó la tecla Backspace
+    if (event.key === 'Backspace') {
+        // Aquí colocas el código que quieres ejecutar cuando se presiona Backspace
+        //console.log('Se presionó Backspace');
+        //newTop = newTop - heightDifference; // Ejemplo de ajuste de posición
+    }
 }
 
-var textarea = document.getElementById("pregunta");
+
+textarea = document.getElementById("pregunta");
+let prevTextareaHeight = textarea.clientHeight;
 originalHeight = textarea.clientHeight;
 originalTop = textarea.clientTop;
-originalBottom = textarea.clientHeight - textarea.clientTop;
-console.log("Original Height:", originalHeight, "Original Top:", originalTop, "Original Bottom:", originalBottom);
+originalBottom = textarea.clientHeight - 40;// - textarea.clientTop;
+newTop = originalTop;
+
+var containerHeight = textarea.parentElement.clientHeight;
+
+// Obtener la posición del textarea respecto al borde superior del contenedor
+var textareaTop = textarea.offsetTop;
+
+// Calcular el valor de 'bottom' en relación con el contenedor
+var bottomValue = containerHeight - (textareaTop + textarea.clientHeight);
+
+//console.log('Bottom:', bottomValue);
+//console.log("Original Height:", originalHeight, "Original Top:", originalTop, "Original Bottom:", originalBottom);
 textarea.style.color = '#808080';
+textarea.style.height = 'auto';
+textarea.style.height = (parseInt(originalHeight) - 0) + "px";
+//textarea.style.bottom = 'auto';
+
+textarea.style.top = 'auto';
+textarea.style.top = (parseInt(originalTop)-8) + "px";
+//textarea.style.color = 'whitesmoke';
 var imagen = document.getElementById("boton");
 
 
 // Función para verificar el contenido del textarea y cambiar la imagen
 function verificarContenido() {
     var texto = textarea.value.trim(); // Obtener el contenido del textarea y eliminar espacios en blanco al inicio y al final
-    console.log("Mensaje Principal", texto);
+    //console.log("Mensaje Principal", texto);
     if (texto.length > 0 && texto !== "Mensaje") {
         imagen.src = "./resources/images/chatbot/SendArrow.png";
     } else {
@@ -259,40 +284,106 @@ textarea.addEventListener('focus', function() {
     // Borrar el texto inicial cuando se activa el foco
     if (textarea.value === "Mensaje"){
         textarea.value = '';
+        textarea.style.height = (parseInt(originalHeight) - 0) + "px";
     }
-    console.log("Original Height2:", originalHeight);
-    console.log("TextArea:", textarea.style.height);
-    textarea.style.height = (parseInt(originalHeight) - 100) + "px";
-    textarea.style.top = (parseInt(originalTop) - 40) + "px";
+    //else if (textarea.value === ""){
+    //    console.log("Original Height2:", originalHeight);
+    //    console.log("TextArea:", textarea.style.height);
+    //    textarea.style.height = (parseInt(originalHeight) - 0) + "px";
+    //    textarea.style.top = (parseInt(originalTop) - 40) + "px";
+    //    textarea.style.color = 'whitesmoke';
+    //}
     textarea.style.color = 'whitesmoke';
 });
 
 textarea.addEventListener('blur', function() {
     // Borrar el texto inicial cuando se activa el foco
-    console.log("Original Height2:", originalHeight);
-    console.log("TextArea:", textarea.style.height);
-    textarea.style.height = (parseInt(originalHeight) - 100) + "px";
-    textarea.style.top = (parseInt(originalTop) - 15) + "px";
+    //console.log("Original Height2:", originalHeight);
+    //console.log("TextArea:", textarea.style.height);
+    var cursorPosition = textarea.selectionStart;
+
+    // Verificar si el cursor está en la posición 0,0
+    if (cursorPosition === 0) {
+        textarea.style.height = (parseInt(originalHeight) - 0) + "px";
+        textarea.style.top = (parseInt(originalTop)-8) + "px";
+        newTop = 0;
+    }
+    //textarea.style.height = (parseInt(originalHeight) - 0) + "px";
+    //textarea.style.bottom = (parseInt(originalBottom)) + "px";
     window.scrollTo(0, 0);
 });
 
 document.getElementById('pregunta').addEventListener('input', function() {
     verificarContenido();
-    // Restablecer la altura a automático
-    if (this.scrollHeight > this.clientHeight) { 
-        this.style.height = 'auto'; // Restablecer la altura a 'auto' para calcular la altura real
-        var newHeight = this.scrollHeight > 30 ? 30 : this.scrollHeight; // Limitar la altura a 180px si es mayor
-        this.style.height = newHeight + 'px'; // Establecer la nueva altura
 
-        // Calcular la diferencia de altura y ajustar la posición superior
-        console.log("Before Top", this.style.top);
-        var heightDifference = newHeight - this.clientHeight;
-        this.style.top = '-' + parseInt((heightDifference) - 100) + 'px'; // Ajustar la posición superior
+    
+    // Guardar la altura original
+    var originalHeight = this.clientHeight;
 
-        console.log("New Height:", newHeight, "Height Difference:", heightDifference);
-        console.log("New Top:", this.style.top);
+    // Establecer la altura a 'auto' para calcular la altura real
+   
+    var currentHeight = parseInt(this.style.height) || this.clientHeight;
+    // Calcular la nueva altura basada en el contenido actual
+    var newHeight = Math.min(70, this.scrollHeight); // Limitar la altura a 100px como máximo
+    console.log("NewHeight", newHeight, "StyleHeight", currentHeight);
+    if (newHeight > currentHeight) {
+    //    // Establecer la nueva altura solo si es mayor que la anterior
+        this.style.height = newHeight + 'px';
     }
+    //this.style.height = 'auto';
+    // Calcular la diferencia de altura
+    heightDifference = newHeight - originalHeight;
+    console.log("OriginalHeight:", originalHeight, "PrevTextHeight", prevTextareaHeight);
+    //console.log("NewHeight Method", newHeight, "NewHeightDifference", heightDifference, "originalheight", originalHeight, "originalTop",originalTop);
+    // Mover el textarea hacia arriba para mantenerlo en su posición original
+    //if (newHeight == 70){
+        //if (this.scrollHeight > this.clientHeight) { 
+        //    if (newHeight < 100){
+        //        if (newTop < -25){
+        //            newTop = -25;
+        //        } else {
+        //            if (newTop >= 0){
+        //                newTop = -1;
+        //            } else {
+        //                document.onkeydown = function(event) {
+        //                    event = event || window.event; // Para compatibilidad con navegadores antiguos
+        //                    if (event.key === "Enter" && event.shiftKey) {
+        //                        console.log("Enter + Shift presionado");
+        //                        newTop = newTop - heightDifference + 10;
+        //                        this.style.top = newTop + 'px';
+        //                        // Aquí colocas el código que deseas ejecutar cuando se presiona Enter y Shift
+        //                    } else {
+        //                        console.log("Otra tecla presionada");
+        //                        // Aquí puedes manejar otras teclas o realizar otras acciones
+        //                    }
+        //                };
+        //                //adjustNewTop();
+        //                
+        //                console.log("Textarea se hace grande", newTop);
+        //            }
+        //        }
+        //    } else {
+        //        newTop = -25;
+        //    }
+        //} else if (originalHeight < prevTextareaHeight) {
+        //    //newTop = newTop - heightDifference - 11;
+        //    //console.log('El textarea se está haciendo más pequeño', newTop);
+        //}
+
+    //this.style.top = newTop + 'px';
+    //console.log("OrigialTop", originalTop, "newTop", this.style.top);
+    // Actualizar la altura anterior con la altura actual para futuras comparaciones
+    prevTextareaHeight = originalHeight;
+    //}
+    //else if (newHeight == 85){
+    //    this.style.bottom = parseInt(originalBottom + 10) + 'px';
+    //}
+    //else if (newHeight == 100){
+    //    this.style.bottom = parseInt(originalBottom + 25) + 'px';
+    //}
 });
+
+
 
 if (!typewriter){
         console.log("Typewriter created!");
@@ -328,19 +419,19 @@ function typeText(newText) {
         }, duration);
         typewriter.typeString(newText).start();
         htmlContent.scrollTop = htmlContent.scrollHeight;
-        setTimeout(function() {
-            // Obtener el botón "Copy Code" después de que Typewriter termine de escribir
-            var copyButton = document.getElementById('copy-code');
-            if (copyButton !== null) {
-              // Si el botón existe, agregar el controlador de eventos
-              copyButton.addEventListener('click', function() {
-                // Aquí puedes realizar la acción que deseas al hacer clic en "Copy Code"
-                console.log('Hiciste clic en Copy Code');
-                copiarCodigo();
-                // Por ejemplo, copiar el código al portapapeles
-              });
-            }
-          }, 10000);
+        //setTimeout(function() {
+        //  // Obtener el botón "Copy Code" después de que Typewriter termine de escribir
+        //  var copyButton = document.getElementById('copy-code');
+        //  if (copyButton !== null) {
+        //    // Si el botón existe, agregar el controlador de eventos
+        //    copyButton.addEventListener('click', function() {
+        //      // Aquí puedes realizar la acción que deseas al hacer clic en "Copy Code"
+        //      console.log('Hiciste clic en Copy Code');
+        //      copiarCodigo();
+        //      // Por ejemplo, copiar el código al portapapeles
+        //    });
+        //  }
+        //}, 10000);
     }
 }
 
@@ -413,13 +504,16 @@ document.addEventListener('highlightDone', (event) => {
 });
 
 var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-console.log("Is Mobile:", isMobile);
+console.log("Is Mobile:", isMobile);//
 
 document.addEventListener('keydown', function(event) {
     if (event.key === "Enter" && !event.shiftKey && !isMobile) {
       // Aquí colocas el código que quieres ejecutar cuando se presione Enter sin Shift
       console.log('Enter presionado sin Shift');
+      event.preventDefault();
       enviarPregunta()
+      textarea.value = '';
+      textarea.setSelectionRange(0, 0);
     }
 });
 
@@ -458,3 +552,32 @@ function quitarBloqueoPantalla() {
     console.warn('No se encontró un bloqueo de pantalla activo.');
   }
 }
+
+
+// Define una función para manejar el ajuste de newTop
+function adjustNewTop() {
+    //console.log("Nuevos Tops");
+    //document.addEventListener('keydown', function(event) {
+    //    if (event.key === "Enter" && event.shiftKey) {
+    //        console.log("NEW NEW NEW");
+    //        //newTop = newTop - heightDifference + 10;
+    //    } else if (event.key === 'Backspace') {
+    //        // Aquí colocas el código que quieres ejecutar cuando se presiona Backspace
+    //        //newTop = newTop + heightDifference;
+    //        //console.log("BackspaceTop", newTop);
+    //    }
+    //});
+}
+
+let prevWidth = window.innerWidth;
+let prevHeight = window.innerHeight;
+
+window.addEventListener('resize', function() {
+    if (window.innerWidth < prevWidth || window.innerHeight < prevHeight) {
+        console.log('La ventana se está haciendo más pequeña');
+    }
+
+    // Actualizar los valores previos con los nuevos valores
+    prevWidth = window.innerWidth;
+    prevHeight = window.innerHeight;
+});

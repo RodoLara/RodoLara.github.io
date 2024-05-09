@@ -58,17 +58,19 @@ a {
 
 #pregunta {
     flex: 0 0 69%;
-    /*position: absolute;*/
+    position: relative;
     resize: none;
     background-color: #232323;
     color: whitesmoke;
     width: 40%;
     padding: 2%;
-    height: 30%;
+    height: auto;
+    /*height: 30%;*/
     /*min-height: 10vh;*/
     max-height: 100px;
-    margin-top: -2vh;
+    /*margin-top: -2vh;*/
     /*margin-left: 1vw;*/
+    top: auto;
     overflow-y: auto;
     border: 1px solid whitesmoke;
     border-radius: 15px;
@@ -116,7 +118,7 @@ a {
     /*line-height: 1.1em;*/
     font-family: "Roboto", sans-serif;
     width: 100%;
-    height: 100%;
+    height: 88%;
     padding: 3%;
     overflow-y: auto;
     overflow-x: hidden;
@@ -458,7 +460,7 @@ pre {
 @media only screen and (max-width: 369px) {
     #pregunta {
         z-index: 9999;
-        margin-top: -9vh;
+        margin-top: -8vh;
         /*margin-left: 1vw;*/
     }
 
@@ -699,7 +701,7 @@ pre {
     #pregunta {
         flex: 0 0 50%;
         z-index: 9999;
-        margin-top: -29vh;
+        margin-top: -28.7vh;
         margin-left: 15vw;
     }
 
@@ -773,7 +775,7 @@ pre {
     #pregunta {
         flex: 0 0 50%;
         z-index: 9999;
-        margin-top: -29vh;
+        margin-top: -31vh;
         margin-left: 15vw;
     }
 

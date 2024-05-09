@@ -74,3 +74,14 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+function copiarCodigo(botonClickado) {
+    var code = botonClickado.parentElement.nextElementSibling.querySelector('pre code').textContent;
+
+    var tempTextArea = document.createElement('textarea');
+    tempTextArea.value = code;
+    document.body.appendChild(tempTextArea);
+    tempTextArea.select();
+    document.execCommand('copy');
+    document.body.removeChild(tempTextArea);
+}
