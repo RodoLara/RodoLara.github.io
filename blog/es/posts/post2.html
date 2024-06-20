@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/blog-styles.css">
+    <title>Palpador Digital para CNC | Blog de Automatización</title>
+    <meta name="description" content="Un artículo que explica el mapeo en PLCs y su importancia en la automatización industrial.">
+    <link rel="alternate" hreflang="en" href="post2-en.html">
+</head>
+<body>
+    <header>
+        <h1>Palpador Digital para CNC</h1>
+        <nav>
+            <a href="../index.html">Volver al Blog</a>
+            <a href="../../en/posts/post2.html" id="language-switch" class="language-switch">English</a>
+        </nav>
+    </header>
+    <main class="content-wrapper">
+        <article class="post" data-categories="mapeo,plc,automatizacion">
+            <p class="post-meta">
+                Publicado el <time datetime="2024-06-11">11 de junio de 2024</time> por <span class="author">Rodolfo Lara</span> | Tiempo de lectura: 1 min
+            </p>
+
+            <p>Recientemente, estuve haciendo un estudio de Repetibilidad y Reproducibilidad (R&R) utilizando IA para una máquina de CNC. </p>
+
+            <p>Para hacer mi estudio, definí obtener 30 mediciones en 3 distancias a 3 velocidades diferentes por cada eje X,Y,Z. En total 810 mediciones, la herramienta que tenía a la mano para obtener las mediciones era un indicador (palpador) analógico. Supe que hacer las mediciones manual requeriría que estuviese pegado a la máquina viendo el palpador y haciendo entradas en Excel en cada 30s.</p>
+
+            <img src="/blog/images/post1/palpador_analogico.jpg" alt="Palpador analógico" />
+            
+            <p>Por lo que decidí automatizar ese proceso.</p>
+
+            <p>Compré un <a href="https://www.amazon.com.mx/dp/B092278DRT?psc=1&ref=ppx_yo2ov_dt_b_product_details">indicador (palpador) digital de marca Autoutlet</a>.</p>
+            
+            <img src="/blog/images/post1/palpador_digital.jpg" alt="Palpador digital" />
+
+            <p>Este producto tiene salidas de datos de forma serial para interpretar desde un microcontrolador como Arduino. El palpador se vende bajo diversas marcas chinas. Estoy casi seguro de que lo deben de fabricar en el mismo lugar y cada quien le pone su marca. De hecho, es una de las razones por las que quiero hacer estos posts, debido a que probablemente la salida de datos serial funcione igual para diversas marcas y lo que aquí hablaremos puede que le sirva a más de uno.</p>
+
+            <p>Desarmé el palpador. El producto tiene 4 terminales en el puerto de datos serial. En el manual del producto, no venía información del pinout, ni tampoco información sobre la estructura de los datos. Venía un correo de contacto en el manual, no me respondieron. Busqué la página y encontré otro contacto y tampoco me respondieron. Buscando en internet, no encontré mucha información que aplicara directamente a mi caso.</p>
+
+            <img src="/blog/images/post1/palpador_desarmado.jpg" alt="Palpador digital" />
+
+            <p>Se le soldó un conector jst y se procedió a armar el palpador de vuelta.</p>
+
+            <div class="flex-container">
+                <img src="/blog/images/post1/palpador_conector1.jpg" alt="Palpador con conector vista lateral" />
+                <img src="/blog/images/post1/palpador_conector2.jpg" alt="Palpador con conector vista frontal" />
+            </div>
+            
+            <p>Decidido a extraer los datos del palpador, diseñé un circuito básico con transistores. Pero de esto se hablará en el siguiente post...</p>
+
+            <!-- Hashtags -->
+            <p class="hashtags">
+                <a href="#" class="hashtag">#PLC</a>
+                <a href="#" class="hashtag">#Mapeo</a>
+                <a href="#" class="hashtag">#Automatización</a>
+                <a href="#" class="hashtag">#Ingeniería</a>
+            </p>
+
+            <!-- Sección de Contenido Relacionado -->
+            <section id="related-content">
+                <h2>Contenido Relacionado</h2>
+                <ul>
+                    <li><a href="post1.html">Introducción a los PLC</a></li>
+                    <li><a href="post3.html">Instrucción MOVE</a></li>
+                    <li><a href="post5.html">Timers en PLC</a></li>
+                </ul>
+            </section>
+        </article>
+    </main>
+    <script src="../../js/search.js"></script>
+</body>
+</html>

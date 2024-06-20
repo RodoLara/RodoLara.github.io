@@ -1040,3 +1040,12 @@ nav ul li a {
     left: 66vw;
   }
 }
+
+
+.programacion-hmi a {
+  color: rgb(246, 246, 250); /* Color del texto del hipervínculo */
+  text-decoration: underline; /* Subraya el texto */
+}
+.programacion-hmi a:hover {
+  color: rgb(89, 245, 54); /* Color del texto al pasar el mouse por encima */
+}

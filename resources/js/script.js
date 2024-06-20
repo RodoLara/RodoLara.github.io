@@ -50,12 +50,17 @@ changeLanguage(currentLanguage);
 document.addEventListener('DOMContentLoaded', function() {
     var imgPower = document.getElementById('power');
 
-    // Agregar un evento de click a la imagen
-    imgPower.addEventListener('click', function() {
-        // Redirigir al index.html al hacer clic en la imagen
-        console.log("Power Clicked!");
-        window.location.href = 'index.html';
-    });
+    // Verificar si el elemento existe
+    if (imgPower) {
+        // Agregar un evento de click a la imagen
+        imgPower.addEventListener('click', function() {
+            // Redirigir al index.html al hacer clic en la imagen
+            console.log("Power Clicked!");
+            window.location.href = 'index.html';
+        });
+    } else {
+        console.log("Element with ID 'power' does not exist.");
+    }
     const enlaces = document.querySelectorAll('.mLanguage'); // Selecciona los enlaces con la clase mLanguage
 
     enlaces.forEach(function(enlace) {
@@ -85,3 +90,29 @@ function copiarCodigo(botonClickado) {
     document.execCommand('copy');
     document.body.removeChild(tempTextArea);
 }
+
+
+const downloadLinks = {
+    tServices11: 'https://drive.google.com/uc?export=download&id=1FT56Wa-awr75KqKKsgmb0m3nVGixVpqo',
+    tServices12: 'https://drive.google.com/uc?export=download&id=1wQSAZK7X28D54R6rZVBCMMpQRGETVKQu',
+    tServices13: 'https://drive.google.com/uc?export=download&id=1BDQlYbJgn3FRh0NSbi9k2pD4VXwGHJDv',
+    tServices14: 'https://drive.google.com/uc?export=download&id=1bn7DvBlca8kFHWPtzmFEx3odP_bk7Myy'
+};
+
+// Obtén todos los elementos a dentro del div con la clase "programacion-hmi"
+const aElements = document.querySelectorAll('.programacion-hmi a');
+
+// Itera sobre cada elemento a y agrega el enlace de descarga basado en el atributo data-translate
+aElements.forEach((element) => {
+    const translateKey = element.getAttribute('data-translate');
+    const downloadLink = downloadLinks[translateKey];
+
+    if (downloadLink) {
+        // Establece el enlace de descarga en el atributo href
+        element.setAttribute('href', downloadLink);
+        element.setAttribute('download', '');
+
+        // Opcional: Cambiar el cursor a pointer para indicar que es un enlace
+        element.style.cursor = 'pointer';
+    }
+});
