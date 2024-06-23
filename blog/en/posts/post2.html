@@ -4,43 +4,132 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/blog-styles.css">
-    <title>PLC Mapping | Automation Blog</title>
-    <meta name="description" content="An article explaining PLC mapping and its importance in industrial automation.">
-    <link rel="alternate" hreflang="es" href="post2.html">
+    <title>Digital Probe for CNC | Automation Blog</title>
+    <meta name="description" content="Exploring the automation of CNC measurements using a digital probe, including insights on data interpretation, circuit design, and related topics in digital electronics, Arduino, AI, and automation.">
+    <link rel="alternate" hreflang="es" href="post2-es.html">
 </head>
 <body>
     <header>
-        <h1>PLC Mapping</h1>
+        <nav class="content3" id="whitecont">        
+            <ul class="navbar-nav">
+                <li><a href="../../../index.html">Rodolfo Lara, Automation Engineer</a></li>
+                <li class="nav-item c"><a href="#" class="item-link" title="Abrir menú">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    </a>
+                    <div id="drop-down">
+                        <a href="../../../expertise.html" class="mExpertise clinks">ABOUT ME</a>
+                        <a href="../../../services.html" class="mServices clinks">SERVICES</a>
+                        <a href="../../../clients.html" class="mClients clinks">CASES</a>
+                        <a href="../index.html" class="mBlog clinks">BLOG</a>
+                        <a href="../../../contact.html" class="mContact clinks">CONTACT</a>      
+                        <!--a data-translate="tExpertise" href="../../expertise.html" class="mExpertise clinks">Expertise</a>
+                        <a data-translate="tServices" href="../../services.html" class="mServices clinks">Services</a>
+                        <a data-translate="tClients" href="../../clients.html" class="mClients clinks">Clients</a>
+                        <a data-translate="tContact" href="../../contact.html" class="mContact clinks">Contact</a-->
+                        <!--a data-translate="tLanguage" href="" class="mLanguage clinks">Español</a-->
+                    </div>
+                </li>
+            </ul>             
+        </nav>
+    </header>
+    <div id="tituloPost">   
+        <h1>Digital Probe for CNC</h1>
         <nav>
             <a href="../index.html">Back to Blog</a>
             <a href="../../es/posts/post2.html" id="language-switch" class="language-switch">Español</a>
         </nav>
-    </header>
-    <main>
-        <article class="post" data-categories="mapping,plc,automation">
-            <p>PLC mapping refers to the assignment of memory addresses to input and output variables. This allows the PLC to read and control physical hardware.</p>
-            <!-- Add an image about PLC mapping here -->
-            <img src="../../resources/images/plc-mapping.jpg" alt="PLC Mapping" />
+    </div>
+    <main class="content-wrapper">
+        <article class="post" data-categories="cnc,digital electronics,arduino,ai,automation">
+            <p class="post-meta">
+                Published on <time datetime="2024-06-11">June 11, 2024</time> by <span class="author">Rodolfo Lara</span> | Reading Time: 4 min
+            </p>
+
+            <p>I recently conducted a Repeatability and Reproducibility (R&R) study using AI for a CNC machine.</p>
+
+            <p>To conduct my study, I defined obtaining 30 measurements at 3 distances at 3 different speeds for each X, Y, Z axis. In total, 810 measurements, the tool I had on hand to take the measurements was an analog probe. I knew that taking manual measurements would require me to be close to the machine watching the probe and entering data into Excel every 30s.</p>
+
+            <img src="/blog/images/post2/palpador_analogico.jpg" alt="Analog Probe" />
+            
+            <p>So I decided to automate that process.</p>
+
+            <p>I bought a <a href="https://www.amazon.com.mx/dp/B092278DRT?psc=1&ref=ppx_yo2ov_dt_b_product_details">digital probe from Autoutlet brand</a>.</p>
+            
+            <img src="/blog/images/post2/palpador_digital.jpg" alt="Digital Probe" />
+
+            <p>This product has serial data outputs for interpretation from a microcontroller like Arduino. The probe is sold under various Chinese brands. I'm almost certain they must manufacture it in the same place and each one puts their brand on it. In fact, that's one of the reasons I want to make these posts, because the serial data output probably works the same for various brands and what we discuss here may benefit more than one person.</p>
+            
+            <p>I disassembled the probe. The product has 4 terminals in the serial data port. The product manual didn't have pinout information, nor did it have information about the data structure. There was a contact email in the manual, they didn't respond. I searched the website and found another contact and they didn't respond either. Searching on the internet, I found a pinout that I used as a starting point, but I couldn't find the serial data structure.</p>
+
+            <p>The pinout of my probe is as follows:</p>
+
+            <img src="/blog/images/post2/palpador_desarmado.jpg" alt="Digital Probe" />
+
+            <p>A JST connector was soldered to it and the probe was assembled back together.</p>
+
+            <div class="flex-container">
+                <img src="/blog/images/post2/palpador_conector1.jpg" alt="Probe with connector side view" />
+                <img src="/blog/images/post2/palpador_conector2.jpg" alt="Probe with connector front view" />
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Pin</th>
+                        <th>Color</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="vcc">VCC</td>
+                        <td class="rojo">Red</td>
+                    </tr>
+                    <tr>
+                        <td class="clk">CLK</td>
+                        <td class="negro">Black</td>
+                    </tr>
+                    <tr>
+                        <td class="data">DATA</td>
+                        <td class="amarillo">Yellow</td>
+                    </tr>
+                    <tr>
+                        <td class="gnd">GND</td>
+                        <td class="blanco">White</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <p>Determined to extract data from the probe, I designed a basic circuit with transistors. But that will be discussed in the next post...</p>
 
             <!-- Hashtags -->
             <p class="hashtags">
-                <a href="#" class="hashtag">#PLC</a>
-                <a href="#" class="hashtag">#Mapping</a>
+                <a href="#" class="hashtag">#CNC</a>
+                <a href="#" class="hashtag">#DigitalElectronics</a>
+                <a href="#" class="hashtag">#Arduino</a>
+                <a href="#" class="hashtag">#AI</a>
                 <a href="#" class="hashtag">#Automation</a>
-                <a href="#" class="hashtag">#Engineering</a>
+                <a href="#" class="hashtag">#R&RStudy</a>
             </p>
 
             <!-- Related Content Section -->
             <section id="related-content">
                 <h2>Related Content</h2>
                 <ul>
-                    <li><a href="post1.html">Introduction to PLCs</a></li>
-                    <li><a href="post3.html">MOVE Instruction</a></li>
-                    <li><a href="post5.html">Timers in PLC</a></li>
+                    <li><a href="post1.html">Hello World!</a></li>
+                    <!--li><a href="post3.html">MOVE Instruction</a></li>
+                    <li><a href="post5.html">PLC Timers</a></li-->
                 </ul>
             </section>
         </article>
     </main>
+    <!-- Footer -->
+    <footer class="footerBlog">
+        <p data-translate="tFooter1" class="copyright">© 2024 RL, All Rights Reserved</p>
+        <p data-translate="tFooter2" class="location">Designed in My House</p>
+        <p data-translate="tFooter3" class="designer">&lt; &gt; with &#10084</p>
+    </footer>
     <script src="../../js/search.js"></script>
 </body>
 </html>

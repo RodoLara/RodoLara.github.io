@@ -28,6 +28,9 @@
         "tDesign1": "I also design the electrical schematics of machinery, complying to NFPA79 & IEC standards",
         "tOther": "Other Languages",
         "tOther1": "I like to explore different programming languages and frameworks to have a better understanding on how coding works, in order to produce better code for PLCs and robots, but also to see how can I use those tools in my work, for example, to improve processes by collecting and analyzing data of the machines",
+        "tBeyond": "Beyond",
+        "tBeyond1": "I love innovation, so I'm exploring and developing several very promising AI ideas to integrate into factories: Processes, production, control, quality, metrology, etc.",
+        "tBeyond2": "If you're interested in integrating AI into your factory or automation company, you can ask me for more information to send you presentations and videos. With the right collaborations, we could speed up the process, revolutionize the industry, make a significant impact, and change the game.",
         "tFooter1": "© 2024 , All Rights Reserved",
         "tFooter2": "Designed in My House",
         "tFooter3": "< > with \u2665",
@@ -46,7 +49,7 @@
         "tServices13": "Vision Systems",
         "tServices14": "Turnkey Projects",
         "tClients1": "Cases",
-        "tClients2": "I work with and for big companies, and systems integrators",
+        "tClients2": "I have collaborated on engineering projects in various plants and system integrators. Below are some of the places where you can find my work. I am always open to new opportunities and challenges.",
         "tContact1": "Contact",
         "tContact2": "Have an interesting project in mind? Let's get in touch and start collaborating"
     },
@@ -79,6 +82,9 @@
         "tDesign1": "También diseño los diagramas eléctricos de maquinaria, cumpliendo con los estándares NFPA79 & IEC",
         "tOther": "Otros Lenguajes",
         "tOther1": "Me gusta explorar diferentes lenguajes de programación y frameworks para entender mejor como funciona la codificación, a fin de producir mejor código para PLCs y robots, pero también para ver cómo puedo usar esas herramientas en mi trabajo, por ejemplo, para mejorar procesos al recolectar y analizar datos de las máquinas",
+        "tBeyond": "Más allá",
+        "tBeyond1": "Me gusta la innovación, por lo que estoy explorando y desarrollando varias ideas muy prometedoras de IA con el fin de meterlas a las fábricas: Procesos, producción, control, calidad, metrología, etc.",        
+        "tBeyond2": "Si estás interesado en meter la IA a tu fábrica o empresa de automatización, puedes pedirme más información para enviarte presentaciones y videos. Con las colaboraciones adecuadas, podríamos acelerar el proceso, revolucionar la industria, generar un impacto significativo y cambiar el juego.",
         "tFooter1": "© 2024 , Todos los Derechos Reservados",
         "tFooter2": "Diseñado en Mi Casa ",
         "tFooter3": "< > con \u2764",
@@ -97,7 +103,7 @@
         "tServices13": "Sistemas de Visión",
         "tServices14": "Proyectos Llave en Mano",
         "tClients1": "Casos",
-        "tClients2": "Trabajo con y para compañías grandes, e integradoras de sistemas",
+        "tClients2": "He colaborado en proyectos de ingeniería en diversas plantas e integradoras de sistemas. A continuación, algunos de los lugares donde puedes encontrar mi trabajo. Siempre estoy abierto a nuevas oportunidades y desafíos.",
         "tContact1": "Contacto",
         "tContact2": "¿Tienes algún proyecto interesante en mente? Pongámonos en contacto y empecemos a colaborar"
     }

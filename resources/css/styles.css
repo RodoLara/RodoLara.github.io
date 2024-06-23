@@ -20,7 +20,7 @@
   --clr-español: #2aa39f;
   --clr-services: #5385c7;
   --clr-clients: #8c55c6;
-  --clr-pink: #cb51a8;
+  --clr-blog: #cb51a8;
   
   --clr-mint: #51e6e1;
   --clr-fondo: #47ff31;
@@ -290,6 +290,9 @@ header {
   }
   .mContact:hover{
     color: var(--clr-contact);
+  }
+  .mBlog:hover{
+    color: var(--clr-blog);
   }
   .mLanguage:hover{
     color: var(--clr-español);
@@ -1049,3 +1052,381 @@ nav ul li a {
 .programacion-hmi a:hover {
   color: rgb(89, 245, 54); /* Color del texto al pasar el mouse por encima */
 }
+
+/*body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #000;
+  color: whitesmoke;
+}
+header {
+  background-color: #222;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}*/
+/*#blog-title {
+  color: #fff;
+  text-decoration: none;
+}
+#blog-title:hover {
+  text-decoration: underline;
+}
+#search-bar {
+  width: 80%;
+  padding: 0.5rem;
+  margin-top: 1rem;
+}
+#search-button {
+  padding: 0.5rem;
+  margin-top: 1rem;
+  color: #000;
+}
+#year-filter, #month-filter {
+  padding: 0.5rem;
+  margin-top: 1rem;
+}
+#post-list {
+  padding: 2rem;
+}
+.post {
+  margin: 2rem;
+  background-color: #000;
+  width: 90%;
+  padding: 0px;
+}
+.main {
+  border-bottom: 2px solid whitesmoke;
+}
+.post a {
+  color: #008cff;
+  text-decoration: none;
+}
+.post a:hover {
+  text-decoration: underline;
+}
+nav a {
+  color: #007bff;
+  text-decoration: none;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  margin: 1rem 0;
+}
+#no-results {
+  color: whitesmoke;
+  text-align: center;
+}
+.hashtags {
+  color: #555;
+  font-size: 0.9rem;
+}
+.hashtags a {
+  color: #2ddcff;
+  text-decoration: none;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.hashtags a:hover {
+  text-decoration: underline;
+}
+
+/* Estilos generales */
+/*#content {
+  display: flex;
+}
+
+#sidebar {
+  width: 20%;
+  padding: 20px;
+  background-color: #333;
+  color: whitesmoke;
+}
+
+#post-list {
+  width: 80%;
+  padding: 20px;
+}
+
+#archive h2, #categories h2 {
+  margin-top: 0;
+}
+
+#archive ul, #categories ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#archive li, #categories li {
+  margin-bottom: 10px;
+}
+
+#archive a, #categories a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+#archive a:hover, #categories a:hover {
+  text-decoration: underline;
+}
+
+/* Estilos para móviles */
+/*@media (max-width: 768px) {
+  #content {
+      flex-direction: column;
+  }
+
+  #sidebar {
+      width: 100%;
+      display: none;
+      padding: 10px;
+  }
+
+  #post-list {
+      width: 100%;
+  }
+
+  .menu-toggle {
+      display: block;
+      margin: 10px;
+      padding: 10px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+  }
+
+  .menu-toggle:hover {
+      background-color: #555;
+  }
+
+  #sidebar.active {
+      display: block;
+  }
+}
+
+/* Ocultar el botón de menú en pantallas grandes */
+/*@media (min-width: 769px) {
+  .menu-toggle {
+      display: none;
+  }
+}
+
+/* Estilos para Contenido Relacionado */
+/*#related-content {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #222;
+  border: 1px solid #555;
+}
+
+#related-content h2 {
+  margin-top: 0;
+}
+
+#related-content ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#related-content li {
+  margin-bottom: 10px;
+}
+
+#related-content a {
+  text-decoration: none;
+  color: #009dff;
+}
+
+#related-content a:hover {
+  text-decoration: underline;
+}
+
+/* Estilos para Hashtags */
+/*.hashtags {
+  margin-top: 20px;
+}
+
+.hashtag {
+  display: inline-block;
+  margin-right: 10px;
+  color: #00ddff;
+  text-decoration: none;
+}
+
+.hashtag:hover {
+  text-decoration: underline;
+}
+
+.language-switch {
+  margin-left: 20px;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.language-switch:hover {
+  background-color: #555;
+}
+
+/* Asegúrate de que estos estilos estén presentes y sean correctos */
+/*input[type="search"] {
+  color: #000; /* Color del texto en negro */
+/*  background-color: #fff; /* Fondo blanco */
+/*}
+
+input[type="search"]:focus {
+  color: #000; /* Color del texto en negro */
+/*  background-color: #fff; /* Fondo blanco */
+/*}
+
+.post-meta {
+  font-size: 0.9em;
+  color: #5eff87;
+  margin-bottom: 1em;
+}
+
+.author {
+  font-weight: bold;
+}
+
+#progress-bar {
+  transition: width 0.1s ease-out;
+}
+
+.content-wrapper {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.post img {
+  max-width: 70%;
+  height: auto;
+  display: block;
+  margin: 10px auto;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.flex-container img {
+  max-width: 48%;
+}
+
+@media (max-width: 768px) {
+  .flex-container img {
+      max-width: 70%;
+  }
+}
+
+
+table {
+  width: 40%;
+  border-collapse: collapse;
+  margin: 10px auto;
+  color: #000;
+}
+
+th, td {
+  border: 2px solid rgb(196, 185, 185);
+  padding: 4px;
+  text-align: left;
+  font-size: 0.9em; /* Ajusta el tamaño del texto aquí */
+/*}
+
+th {
+  background-color: #c2fffa;
+  font-size: 1.08em; /* Tamaño de texto específico para los encabezados */
+/*}
+
+/*tbody tr:nth-child(odd) {
+  background-color: #ffffff; /* Color blanco para filas impares */
+/*}
+
+tbody tr:nth-child(even) {
+  background-color: #f2f2f2; /* Color gris claro para filas pares */
+/*}*/
+
+/*.vcc {
+  background-color: rgb(255, 120, 120); /* Rojo suave */
+/*}
+
+.rojo {
+  background-color: rgb(255, 120, 120); /* Rojo suave */
+/*}
+
+.clk {
+  background-color: rgb(118, 117, 117); /* Negro suave */
+/*}
+
+.negro {
+  background-color: rgba(118, 117, 117); /* Negro suave */
+/*}
+
+.data {
+  background-color: rgb(255, 255, 164); /* Amarillo suave */
+/*}
+
+.amarillo {
+  background-color: rgba(255, 255, 164); /* Amarillo suave */
+/*}
+
+.gnd {
+  background-color: rgb(255, 255, 255); /* Blanco suave */
+/*}
+
+.blanco {
+  background-color: rgba(255, 255, 255); /* Blanco suave */
+/*}
+
+.fb-comments {
+  background-color: white;
+  border: 2px solid #888;
+}
+
+#pagination-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+#pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* Espacio entre los botones y el span */
+/*}
+
+button {
+  padding: 4px 5px;
+  font-size: 1em;
+  cursor: pointer;
+  color: whitesmoke;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.menu-language-container {
+  display: flex;
+  justify-content: space-between; /* Distribuye los elementos de manera equitativa */
+/*  align-items: center; /* Para alinear verticalmente los elementos */
+/*}
+
+/*.menu-toggle {
+  /* Puedes ajustar el estilo según sea necesario
+}*/

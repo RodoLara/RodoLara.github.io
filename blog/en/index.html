@@ -8,14 +8,41 @@
     <meta name="description" content="Explore articles on PLCs, industrial automation, and more on our blog. Find detailed information, tutorials, and practical examples.">
     <link rel="alternate" hreflang="es" href="../es/index.html">
 </head>
-<body>
+<body class="bodyBlog">
     <header>
+        <nav class="content3" id="whitecont">        
+            <ul class="navbar-nav">
+                <li><a href="../../index.html">Rodolfo Lara, Automation Engineer</a></li>
+                <li class="nav-item c"><a href="#" class="item-link" title="Abrir menú">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    </a>
+                    <div id="drop-down">
+                        <a href="../../expertise.html" class="mExpertise clinks">ABOUT ME</a>
+                        <a href="../../services.html" class="mServices clinks">SERVICES</a>
+                        <a href="../../clients.html" class="mClients clinks">CASES</a>
+                        <a href="index.html" class="mBlog clinks">BLOG</a>
+                        <a href="../../contact.html" class="mContact clinks">CONTACT</a>      
+                        <!--a data-translate="tExpertise" href="../../expertise.html" class="mExpertise clinks">Expertise</a>
+                        <a data-translate="tServices" href="../../services.html" class="mServices clinks">Services</a>
+                        <a data-translate="tClients" href="../../clients.html" class="mClients clinks">Clients</a>
+                        <a data-translate="tContact" href="../../contact.html" class="mContact clinks">Contact</a-->
+                        <!--a data-translate="tLanguage" href="" class="mLanguage clinks">Español</a-->
+                    </div>
+                </li>
+            </ul>             
+        </nav>
+    </header>
+    <div id="tituloBlog">
         <h1><a href="index.html" id="blog-title">Automation Blog</a></h1>
         <input type="text" autocomplete="off" id="search-bar" placeholder="Search...">
         <button id="search-button">Search</button>
-        <button id="menu-toggle" class="menu-toggle">☰ Archives/Categories</button>
-        <a href="../es/index.html" id="language-switch" class="language-switch">Español</a> <!-- Botón de cambio de idioma -->
-    </header>
+        <div class="menu-language-container">
+            <button id="menu-toggle" class="menu-toggle">☰ Archives/Categories</button>
+            <a href="../es/index.html" id="language-switch" class="language-switch">Español</a> <!-- Botón de cambio de idioma -->
+        </div>
+    </div>
     <div id="content">
         <aside id="sidebar">
             <nav id="sidebar-nav">
@@ -24,28 +51,40 @@
                 <div id="archive" class="sidebar-section">
                     <h2>Archives</h2>
                     <ul>
-                        <li><a href="#" class="archive-link" data-year="2023" data-month="06">June 2023</a></li>
-                        <li><a href="#" class="archive-link" data-year="2023" data-month="07">July 2023</a></li>
+                        <li><a href="#" class="archive-link" data-year="2024" data-month="06">June 2024</a></li>
+                        <!--li><a href="#" class="archive-link" data-year="2023" data-month="07">July 2023</a></li>
                         <li><a href="#" class="archive-link" data-year="2023" data-month="08">August 2023</a></li>
                         <li><a href="#" class="archive-link" data-year="2023" data-month="09">September 2023</a></li>
-                        <li><a href="#" class="archive-link" data-year="2023" data-month="10">October 2023</a></li>
+                        <li><a href="#" class="archive-link" data-year="2023" data-month="10">October 2023</a></li-->
                     </ul>
                 </div>
                 <div id="categories" class="sidebar-section">
                     <h2>Categories</h2>
                     <ul>
-                        <li><a href="#" class="category-link" data-category="programming">Programming</a></li>
-                        <li><a href="#" class="category-link" data-category="studio5000">Studio5000</a></li>
-                        <li><a href="#" class="category-link" data-category="control">Control</a></li>
                         <li><a href="#" class="category-link" data-category="automation">Automation</a></li>
+                        <li><a href="#" class="category-link" data-category="ai">AI</a></li>
+                        <li><a href="#" class="category-link" data-category="arduino">Arduino</a></li>
+                        <li><a href="#" class="category-link" data-category="cnc">CNC</a></li>
                     </ul>
                 </div>
             </nav>            
         </aside>
         <main id="post-list">
-            <article class="post" data-year="2023" data-month="06" data-hashtags="PLC,Automation,Control,Engineering" data-categories="automation,control,engineering">
-                <h2><a href="posts/post1.html">Introduction to PLCs</a></h2>
-                <p>Summary: A brief introduction to Programmable Logic Controllers (PLC)...</p>
+            <article class="post main" data-year="2024" data-month="06" data-hashtags="CNC,DigitalElectronics,Arduino,AI,Automation,R&RStudy" data-categories="cnc,digitalelectronics,arduino,ai,automation">
+                <h2><a href="posts/post2.html">Digital Probe for CNC (1/4)</a></h2>
+                <p>Summary: I bought a digital probe to automate measurements on a CNC machine, to evaluate the Repeatability and Reproducibility of the Axes using AI...</p>
+                <p class="hashtags">
+                    <a href="#" class="hashtag">#CNC</a>
+                    <a href="#" class="hashtag">#DigitalElectronics</a>
+                    <a href="#" class="hashtag">#Arduino</a>
+                    <a href="#" class="hashtag">#AI</a>
+                    <a href="#" class="hashtag">#Automation</a>
+                    <a href="#" class="hashtag">#R&RStudy</a>
+                </p>
+            </article>
+            <article class="post main" data-year="2024" data-month="06" data-hashtags="PLC,Automation,Control,Engineering" data-categories="automation,control,engineering">
+                <h2><a href="posts/post1.html">Hello World!</a></h2>
+                <p>Summary: First post of the blog</p>
                 <p class="hashtags">
                     <a href="#" class="hashtag">#PLC</a>
                     <a href="#" class="hashtag">#Automation</a>
@@ -53,17 +92,9 @@
                     <a href="#" class="hashtag">#Engineering</a>
                 </p>
             </article>
-            <article class="post" data-year="2023" data-month="06" data-hashtags="PLC,Mapping,Automation,Engineering" data-categories="automation,control,engineering">
-                <h2><a href="posts/post2.html">PLC Mapping</a></h2>
-                <p>Summary: Understanding PLC mapping and its importance in automation...</p>
-                <p class="hashtags">
-                    <a href="#" class="hashtag">#PLC</a>
-                    <a href="#" class="hashtag">#Mapping</a>
-                    <a href="#" class="hashtag">#Automation</a>
-                    <a href="#" class="hashtag">#Engineering</a>
-                </p>
-            </article>
-            <article class="post" data-year="2023" data-month="07" data-hashtags="PLC,Move,Instruction,Automation" data-categories="programming,automation,engineering">
+            
+            
+            <!--article class="post" data-year="2023" data-month="07" data-hashtags="PLC,Move,Instruction,Automation" data-categories="programming,automation,engineering">
                 <h2><a href="posts/post3.html">MOVE Instruction</a></h2>
                 <p>Summary: Use and application of the MOVE instruction in PLC...</p>
                 <p class="hashtags">
@@ -142,15 +173,23 @@
                     <a href="#" class="hashtag">#Logical</a>
                     <a href="#" class="hashtag">#Automation</a>
                 </p>
-            </article>            
+            </article-->            
             <p id="no-results" style="display: none;">No content found.</p>
         </main>
+    </div>
+    <div id="pagination-container">
         <div id="pagination">
             <button id="prev-page" disabled>&laquo; Previous</button>
             <span id="page-numbers"></span>
             <button id="next-page">Next &raquo;</button>
         </div>
     </div>
+    <!-- Footer -->
+    <footer class="footerBlog">
+        <p data-translate="tFooter1" class="copyright">© 2024 RL, All Rights Reserved</p>
+        <p data-translate="tFooter2" class="location">Designed in My House</p>
+        <p data-translate="tFooter3" class="designer">&lt; &gt; with &#10084</p>
+    </footer>
     <script src="../js/search.js"></script>
     <!--script src="../js/pagination.js"></script-->
 </body>
