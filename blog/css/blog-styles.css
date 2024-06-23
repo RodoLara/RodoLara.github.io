@@ -466,9 +466,16 @@ tbody tr:nth-child(even) {
     background-color: rgba(255, 255, 255); /* Blanco suave */
 }
 
-.fb-comments {
-    background-color: white;
-    border: 2px solid #888;
+
+
+#fb-comments {
+    background-color: rgb(255, 255, 255) !important;
+    border: 2px solid #888 !important;
+    position: relative;
+}
+
+#fb-comments iframe {
+    background-color: rgb(255, 255, 255) !important;
 }
 
 #pagination-container {
@@ -608,4 +615,40 @@ nav ul li a {
   padding: 0.5em;
   font-weight: bold;
   color: var(--clr-white);
+}
+
+@media (forced-colors: active) {
+    #fb-comments {
+        background-color: rgb(255, 255, 255) !important;
+        border: 2px solid #888 !important;
+        position: relative;
+    }
+    
+    #fb-comments iframe {
+        background-color: rgb(255, 255, 255) !important;
+    }
+}
+
+@media (forced-colors: active) and (prefers-color-scheme: light) {
+    #fb-comments {
+        background-color: rgb(255, 255, 255) !important;
+        border: 2px solid #888 !important;
+        position: relative;
+    }
+    
+    #fb-comments iframe {
+        background-color: rgb(255, 255, 255) !important;
+    }
+}
+  
+@media (forced-colors: active) and (prefers-color-scheme: dark) {
+    #fb-comments {
+        background-color: rgb(255, 255, 255) !important;
+        border: 2px solid #888 !important;
+        position: relative;
+    }
+    
+    #fb-comments iframe {
+        background-color: rgb(255, 255, 255) !important;
+    }
 }
