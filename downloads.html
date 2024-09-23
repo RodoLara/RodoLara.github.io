@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./resources/images/robot-favicon.ico" type="image/x-icon">
+    <!--link rel="icon" href="./resources/images/robot-favicon.ico" type="image/x-icon"-->
+    <!--link rel="stylesheet" href="./resources/css/reset.css"-->
+    <link rel="stylesheet" href="/resources/css/stylesD.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Rodolfo's Portfolio</title>
+    <link rel="icon" href="./resources/images/favicon.ico" type="image/x-icon">
+</head>
+<body class="downloadbody">
+    <div class="download">
+
+    
+    <!-- Header -->
+    <header>
+        <nav class="content3" id="whitecont">        
+            <ul class="navbar-nav">
+                <li><a data-translate="tName" href="index.html">Rodolfo Lara, Automation Engineer</a></li>
+                <li class="nav-item c"><a href="#" class="item-link" title="Abrir menú">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    </a>
+                    <div id="drop-down">
+                        <a data-translate="tExpertise" href="expertise.html" class="mExpertise clinks">Expertise</a>
+                        <a data-translate="tServices" href="services.html" class="mServices clinks">Services</a>
+                        <a data-translate="tClients" href="clients.html" class="mClients clinks">Clients</a>
+                        <a data-translate="tDownloads" href="downloads.html" class="mDownloads clinks">Downloads</a>
+                        <a href="/blog/index.html" class="mBlog clinks">BLOG</a>
+                        <a data-translate="tContact" href="contact.html" class="mContact clinks">Contact</a>
+                        <a data-translate="tLanguage" href="" class="mLanguage clinks">Español</a>
+                    </div>
+                </li>
+            </ul>             
+        </nav>
+    </header>
+    <div class="container">
+        <h1 data-translate="tDownloads1">DESCARGAS</h1>
+        <br>
+        <form id="project-form" onsubmit="return buscarProyecto()">
+            <label for="project-number" data-translate="tDownloads2" >Ingrese <strong>Número de Proyecto</strong> para acceder a la documentación y descargas disponibles:</label>
+            <input type="text" data-translate="tDownloads3" id="project-number" required>
+            <button type="submit" data-translate="tDownloads4">Buscar</button>
+        </form>
+        <div id="result" class="result"></div>
+    </div>
+</div>
+    <!-- Footer -->
+    <footer class="footer6">
+        <p data-translate="tFooter1" class="copyright">© 2024 , All Rights Reserved</p>
+        <p data-translate="tFooter2" class="location">Designed in My House</p>
+        <p data-translate="tFooter3" class="designer">&lt; &gt; with &#10084</p>
+    </footer>
+
+    <script src="resources/js/script.js".js"></script>
+    <script src="resources/js/scriptDownloads.js".js"></script>
+</body>
+</html>

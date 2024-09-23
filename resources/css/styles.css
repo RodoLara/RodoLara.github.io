@@ -16,13 +16,13 @@
   --clr-primary: #00218a;
   /*--clr-español: #e34545;*/
   --clr-expertise: #40bc52;
-  --clr-contact: #db813c;
+  --clr-contact: #e88543;
   --clr-español: #32b6b1;
   --clr-services: #598dd1;
   --clr-clients: #9158cf;
   --clr-blog: #cb51a8;
   
-  --clr-mint: #51e6e1;
+  --clr-downloads: #e2598b;
   --clr-fondo: #51e240;
   --clr-black: #474747;
   --clr-font: #f8f7f7;
@@ -214,6 +214,7 @@ body {
   padding-bottom: 5em;
 }
 
+
 header {
   background-color: #000;
   color: #fff;
@@ -290,6 +291,9 @@ header {
   }
   .mContact:hover{
     color: var(--clr-contact);
+  }
+  .mDownloads:hover{
+    color: var(--clr-downloads);
   }
   .mBlog:hover{
     color: var(--clr-blog);

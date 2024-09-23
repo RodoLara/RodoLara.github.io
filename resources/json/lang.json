@@ -52,7 +52,13 @@
         "tClients1": "Cases",
         "tClients2": "I have collaborated on engineering projects in various plants and system integrators. Below are some of the places where you can find my work. I am always open to new opportunities and challenges.",
         "tContact1": "Contact",
-        "tContact2": "Have an interesting project in mind? Let's get in touch and start collaborating"
+        "tContact2": "Have an interesting project in mind? Let's get in touch and start collaborating",
+        "tDownloads": "Downloads",
+        "tDownloads1": "DOWNLOADS",
+        "tDownloads2": "Enter Project Number to access the available documentation and downloads:",
+        "tDownloads3": "Project Number",
+        "tDownloads4": "Search"
+
     },
     "es": {
         "tName": "Rodolfo Lara, Ingeniero de Automatización",
@@ -107,6 +113,11 @@
         "tClients1": "Casos",
         "tClients2": "He colaborado en proyectos de ingeniería en diversas plantas e integradoras de sistemas. A continuación, algunos de los lugares donde puedes encontrar mi trabajo. Siempre estoy abierto a nuevas oportunidades y desafíos.",
         "tContact1": "Contacto",
-        "tContact2": "¿Tienes algún proyecto interesante en mente? Pongámonos en contacto y empecemos a colaborar"
+        "tContact2": "¿Tienes algún proyecto interesante en mente? Pongámonos en contacto y empecemos a colaborar",
+        "tDownloads": "Descargas",
+        "tDownloads1": "DESCARGAS",
+        "tDownloads2": "Ingrese Número de Proyecto para acceder a la documentación y descargas disponibles:",
+        "tDownloads3": "Número de Proyecto",
+        "tDownloads4": "Buscar"
     }
 }
