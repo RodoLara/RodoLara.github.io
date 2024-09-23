@@ -116,3 +116,33 @@ aElements.forEach((element) => {
         element.style.cursor = 'pointer';
     }
 });
+
+function buscarProyecto() {
+    const projectNumber = document.getElementById("project-number").value;
+    const resultDiv = document.getElementById("result");
+
+    // Verifica si el número de proyecto tiene exactamente 10 dígitos
+    if (projectNumber.length === 10) {
+        // Si el número de proyecto tiene 10 dígitos, muestra un enlace de 
+        if(currentLanguage == "es"){
+            resultDiv.innerHTML = `<p>Documentación de proyecto "<Strong>${projectNumber}</Strong>" en proceso de subida. Por favor, vuelva más tarde.</p>`;
+        }
+        if(currentLanguage == "en"){
+            resultDiv.innerHTML = `<p>Project documentation "<strong>${projectNumber}</strong>" is currently being uploaded. Please check back later.</p>`;
+        }
+        
+        //resultDiv.innerHTML = `<p>Resultados para el proyecto: ${projectNumber}</p>
+                               //<a href="descarga-${projectNumber}.pdf" download>Descargar información</a>`;
+    } else {
+        // Si no tiene 10 dígitos, muestra un mensaje de error
+        if(currentLanguage == "es"){
+            resultDiv.innerHTML = `<p>No se encontró información para el número de proyecto: <Strong>${projectNumber}</Strong></p>`;
+        }
+        if(currentLanguage == "en"){
+            resultDiv.innerHTML = `<p>No information found for project number: <strong>${projectNumber}</strong></p>`;
+        }
+        
+    }
+
+    return false;  // Evita que la página se recargue
+}
