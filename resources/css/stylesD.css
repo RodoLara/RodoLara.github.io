@@ -256,6 +256,12 @@ nav ul li a {
   color: var(--clr-white);
 }
 
+.enlace-blanco {
+  color: whitesmoke;
+  text-decoration: underline; /* Si no quieres el subrayado */
+}
 
-  
-
+.enlace-blanco:hover {
+  color: rgb(51, 252, 64);
+  text-decoration: underline; /* Subrayado al pasar el ratón, si lo deseas */
+}
