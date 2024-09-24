@@ -34,7 +34,15 @@ function changeLanguage(lang) {
                 // Obtener el texto correspondiente al idioma seleccionado
                 const text = data[lang][key];
                 // Asignar el texto al elemento
-                element.textContent = text;
+                
+
+                if (text === "Project Number" || text === "Número de Proyecto") {
+                    // Asignar el texto en negritas
+                    element.innerHTML = `<strong>${text}</strong>`;
+                } else {
+                    // Asignar el texto normalmente
+                    element.textContent = text;
+                }
                 //textContainer.style.overflow = 'hidden';
                 //textContainer.style.overflowWrap = 'break-word';
                 //textContainer.style.whiteSpace = 'normal';
@@ -93,10 +101,10 @@ function copiarCodigo(botonClickado) {
 
 
 const downloadLinks = {
-    tServices11: 'https://drive.google.com/uc?export=download&id=1FT56Wa-awr75KqKKsgmb0m3nVGixVpqo',
-    tServices12: 'https://drive.google.com/uc?export=download&id=1wQSAZK7X28D54R6rZVBCMMpQRGETVKQu',
-    tServices13: 'https://drive.google.com/uc?export=download&id=1BDQlYbJgn3FRh0NSbi9k2pD4VXwGHJDv',
-    tServices14: 'https://drive.google.com/uc?export=download&id=1bn7DvBlca8kFHWPtzmFEx3odP_bk7Myy'
+    tServices11: 'https://drive.google.com/uc?export=download&id=1W6-it09XuEPraNBb3UkvUykE-nzfoE-X',
+    tServices12: 'https://drive.google.com/uc?export=download&id=1VZiuwxz6S-OmeIUqZE1oVu8zZKTfdpzH',
+    tServices13: 'https://drive.google.com/uc?export=download&id=1S0vJthoBGhmdkI0mHCXVLINRI0BI253B',
+    tServices14: 'https://drive.google.com/uc?export=download&id=1P7LGzUlSdQ1JuF3wLFFI0A_pbhMtutIE'
 };
 
 // Obtén todos los elementos a dentro del div con la clase "programacion-hmi"
