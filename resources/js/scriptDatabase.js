@@ -77,11 +77,6 @@ document.getElementById('programmerForm').addEventListener('submit', async funct
     toggleCheckboxes('estandares');
     toggleCheckboxes('diseno_electrico');
     mostrarCampos();
-    /*var campoEmpleo = document.getElementById("campo_empleo");
-    var campoProyecto = document.getElementById("campo_proyecto");
-    campoEmpleo.style.display = "none";
-    campoProyecto.style.display = "none";*/
-
 
     //Erorr
   } catch (err) {
@@ -172,3 +167,15 @@ phoneInput.addEventListener('blur', function() {
         // Puedes mostrar un mensaje de error o realizar alguna acción adicional
     }
 });
+
+// Para cada checkbox dentro de un <label>
+  document.querySelectorAll('label > input[type="checkbox"]').forEach(chk => {
+    // encuentra el <input type="text"> del mismo label
+    const txt = chk.parentElement.querySelector('input[type="text"]');
+    if (!txt) return;                         // no hay campo de texto, salta
+
+    chk.addEventListener('change', () => {
+      txt.disabled = !chk.checked;            // habilita / deshabilita
+      if (txt.disabled) txt.value = '';       // limpia al desmarcar
+    });
+  });
