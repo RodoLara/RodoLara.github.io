@@ -64,8 +64,8 @@ document.getElementById('programmerForm').addEventListener('submit', async funct
 
     alert(
       '✅ Formulario enviado correctamente 🎉\n\n' +
-      'Recuerda que si necesitas modificar o eliminar tus datos, ' +
-      'puedes escribirme a support@rodolfolara.com'
+      '📝 Recuerda que si necesitas modificar o eliminar tus datos, ' +
+      'puedes escribirme a support@rodolfolara.com 📨'
     );
 
     // Limpieza de Formulario
@@ -106,7 +106,7 @@ document.getElementById('programmerForm').addEventListener('submit', async funct
     campoEmpleo.style.display = "none";
     campoProyecto.style.display = "none";
 
-    
+
     //Erorr
   } catch (err) {
     if (err.message !== 'Falta CV') {    // no repitas alerta si ya se mostró
