@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"-->
+    <link rel="shortcut icon" href="./resources/images/robot-favicon.ico" type="image/x-icon">
+    <!--link rel="icon" href="./resources/images/robot-favicon.ico" type="image/x-icon"-->
+    <link rel="stylesheet" href="./resources/css/reset.css">
+    <link rel="stylesheet" href="./resources/css/stylesDatabase.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Rodolfo's Portfolio</title>
+    <link rel="icon" href="./resources/images/favicon.ico" type="image/x-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+
+</head>
+<body class="servicesbody">
+    <div class="machines">
+        <!-- Header -->
+        <header>
+            <nav class="content3" id="whitecont">        
+                <ul class="navbar-nav">
+                    <li><a data-translate="tName" href="index.html">Rodolfo Lara, Automation Engineer</a></li>
+                    <li class="nav-item c"><a href="#" class="item-link" title="Abrir menú">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        </a>
+                        <div id="drop-down">
+                            <a data-translate="tExpertise" href="expertise.html" class="mExpertise clinks">Expertise</a>
+                            <a data-translate="tServices" href="services.html" class="mServices clinks">Services</a>
+                            <a data-translate="tClients" href="clients.html" class="mClients clinks">Clients</a>
+                            <a data-translate="tDownloads" href="downloads.html" class="mDownloads clinks">Downloads</a>
+                            <a href="/blog/index.html" class="mBlog clinks">BLOG</a>
+                            <a data-translate="tContact" href="contact.html" class="mContact clinks">Contact</a>
+                            <a data-translate="tLanguage" href="" class="mLanguage clinks">Español</a>
+                        </div>
+                    </li>
+                </ul>             
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <form id="programmerForm" method="POST">
+        <section class="introduction">
+            <p>A lo largo de mi carrera, he conectado a distintos ingenieros de control con empresas que buscan talento. En los últimos años, me han pedido ayuda para encontrar decenas de especialistas, tanto para vacantes como para proyectos grandes de freelance.</p>
+            <p>Yo no me dedico a reclutar. Soy programador como tú. Pero ante tanta demanda, decidí armar una base de datos de ingenieros de automatización en México.</p>
+            <p>¿Para qué?<br>Para conocer colegas de todo el país, ampliar la red de expertos, compartir herramientas y recursos útiles, y también para colaborar en proyectos.</p>
+            <p>Si le sabes a los PLCs, robots industriales, visión artificial o diagramas eléctricos, me gustaría saber de ti.</p>
+            <p>Quizá a mí me están pidiendo justo lo que tú haces. Y quizá a ti te están pidiendo justo lo que yo hago.</p>
+            <p>Nos vemos a pie de máquina.<br><b>Buenos códigos &lt;3 </b></p>
+            <p><em>Rodolfo Lara</em></p>
+        </section>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required><br>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+        
+        <div id="phone-input" style="display: flex; align-items: center;">
+            <label for="country">Teléfono:</label>
+            <select id="country" name="country" style="width: 90px;">
+                <option value="MX">MX +52</option>
+                <option value="US">USA +1</option>
+            </select>
+            <input type="tel" id="phone" name="phone" placeholder="Formato: 9 o 10 dígitos" style="flex: 1;">
+        </div>
+        
+        <label for="estado">Estado de Residencia:</label>
+        <select id="estado" name="estado" required>
+            <option value="" disabled selected>Selecciona tu estado</option>
+            <option value="Aguascalientes">Aguascalientes</option>
+            <option value="Baja California">Baja California</option>
+            <option value="Baja California Sur">Baja California Sur</option>
+            <option value="Campeche">Campeche</option>
+            <option value="Chiapas">Chiapas</option>
+            <option value="Chihuahua">Chihuahua</option>
+            <option value="Ciudad de México">Ciudad de México</option>
+            <option value="Coahuila">Coahuila</option>
+            <option value="Colima">Colima</option>
+            <option value="Durango">Durango</option>
+            <option value="Estado de México">Estado de México</option>
+            <option value="Guanajuato">Guanajuato</option>
+            <option value="Guerrero">Guerrero</option>
+            <option value="Hidalgo">Hidalgo</option>
+            <option value="Jalisco">Jalisco</option>
+            <option value="Michoacán">Michoacán</option>
+            <option value="Morelos">Morelos</option>
+            <option value="Nayarit">Nayarit</option>
+            <option value="Nuevo León">Nuevo León</option>
+            <option value="Oaxaca">Oaxaca</option>
+            <option value="Puebla">Puebla</option>
+            <option value="Querétaro">Querétaro</option>
+            <option value="Quintana Roo">Quintana Roo</option>
+            <option value="San Luis Potosí">San Luis Potosí</option>
+            <option value="Sinaloa">Sinaloa</option>
+            <option value="Sonora">Sonora</option>
+            <option value="Tabasco">Tabasco</option>
+            <option value="Tamaulipas">Tamaulipas</option>
+            <option value="Tlaxcala">Tlaxcala</option>
+            <option value="Veracruz">Veracruz</option>
+            <option value="Yucatán">Yucatán</option>
+            <option value="Zacatecas">Zacatecas</option>
+        </select><br>
+
+        <label for="municipio">Municipio de Residencia:</label>
+        <input type="text" id="municipio" name="municipio" required><br>
+
+
+        <label for="experiencia">Años de Experiencia:</label>
+        <input type="number" id="experiencia" name="experiencia" required><br>
+        
+        <label for="plc_select">Marcas de PLC:</label>
+        <select id="plc_select" name="plc_select" onchange="toggleCheckboxes('plc')">
+            <option value="no">No</option>
+            <option value="si">Sí</option>
+        </select>
+        <div id="plc_checkboxes" class="checkbox-group hidden">
+            <label><input type="checkbox" name="plc_marcas[]" value="Allen Bradley"> Allen Bradley</label>
+            <label><input type="checkbox" name="plc_marcas[]" value="Siemens"> Siemens</label>
+            <label><input type="checkbox" name="plc_marcas[]" value="General Electric"> General Electric</label>
+            <label><input type="checkbox" name="plc_marcas[]" value="Omron"> Omron</label>
+            <label><input type="checkbox" name="plc_marcas[]" value="Schneider Electric"> Schneider Electric</label>
+            <label><input type="checkbox" name="plc_marcas[]" value="Mitsubishi"> Mitsubishi</label>
+            <label><input type="checkbox" name="plc_marcas[]" value="Automation Direct"> Automation Direct</label>
+            <label><input type="checkbox"> Otros:<input type="text" name="plc_marcas_otros"></label>
+        </div>
+
+        <label for="hmi_scada_select">Marcas de HMI/SCADA:</label>
+        <select id="hmi_scada_select" name="hmi_scada_select" onchange="toggleCheckboxes('hmi_scada')">
+            <option value="no">No</option>
+            <option value="si">Sí</option>
+        </select>
+        <div id="hmi_scada_checkboxes" class="checkbox-group hidden">
+            <label><input type="checkbox" name="hmi_scada_marcas[]" value="FactoryTalk"> FactoryTalk</label>
+            <label><input type="checkbox" name="hmi_scada_marcas[]" value="WinCC"> WinCC</label>
+            <label><input type="checkbox" name="hmi_scada_marcas[]" value="Proface"> Proface</label>
+            <label><input type="checkbox" name="hmi_scada_marcas[]" value="Wonderware"> Wonderware</label>
+            <label><input type="checkbox" name="hmi_scada_marcas[]" value="Ignition"> Ignition</label>
+            <label><input type="checkbox"> Otros:<input type="text" name="hmi_scada_marcas_otros"></label>
+        </div>
+
+        <label for="robot_select">Marcas de Robots:</label>
+        <select id="robot_select" name="robot_select" onchange="toggleCheckboxes('robot')">
+            <option value="no">No</option>
+            <option value="si">Sí</option>
+        </select>
+        <div id="robot_checkboxes" class="checkbox-group hidden">
+            <label><input type="checkbox" name="robot_marcas[]" value="ABB"> ABB</label>
+            <label><input type="checkbox" name="robot_marcas[]" value="Fanuc"> Fanuc</label>
+            <label><input type="checkbox" name="robot_marcas[]" value="Yaskawa"> Yaskawa</label>
+            <label><input type="checkbox" name="robot_marcas[]" value="Stäubli"> Stäubli</label>
+            <label><input type="checkbox" name="robot_marcas[]" value="Kuka"> Kuka</label>
+            <label><input type="checkbox" name="robot_marcas[]" value="Epson"> Epson</label>
+            <label><input type="checkbox"> Otros:<input type="text" name="robot_marcas_otros"></label>
+        </div>
+
+        <label for="vision_select">Marcas de Sistemas de Visión y Perfilómetros:</label>
+        <select id="vision_select" name="vision_select" onchange="toggleCheckboxes('vision')">
+            <option value="no">No</option>
+            <option value="si">Sí</option>
+        </select>
+        <div id="vision_checkboxes" class="checkbox-group hidden">
+            <label><input type="checkbox" name="vision_marcas[]" value="Cognex"> Cognex</label>
+            <label><input type="checkbox" name="vision_marcas[]" value="Keyence"> Keyence</label>
+            <label><input type="checkbox" name="vision_marcas[]" value="Infaimon"> Infaimon</label>
+            <label><input type="checkbox" name="vision_marcas[]" value="Teledyne Dalsa"> Teledyne Dalsa</label>
+            <label><input type="checkbox" name="vision_marcas[]" value="LMI Technologies"> LMI Technologies</label>
+            <label><input type="checkbox" name="vision_marcas[]" value="MicroEpsilon"> MicroEpsilon</label>
+            <label><input type="checkbox"> Otros:<input type="text" name="vision_marcas_otros"></label>
+        </div>
+        
+        <label for="estandares_select">Estándares de programación:</label>
+        <select id="estandares_select" name="estandares_select" onchange="toggleCheckboxes('estandares')">
+            <option value="no">No</option>
+            <option value="si">Sí</option>
+        </select>
+        <div id="estandares_checkboxes" class="checkbox-group hidden">
+            <label><input type="checkbox" name="estandares[]" value="GCCS-2"> GCCS-2</label>
+            <label><input type="checkbox" name="estandares[]" value="TMO-V3"> TMO-V3</label>
+            <label><input type="checkbox" name="estandares[]" value="TKB V8.x"> TKB V8.x</label>
+            <label><input type="checkbox" name="estandares[]" value="VASS 6"> VASS 6</label>
+            <label><input type="checkbox" name="estandares[]" value="Ford Fast v3.7"> Ford Fast v3.7</label>
+            <label><input type="checkbox"> Otros:<input type="text" name="estandares_otros"></label>
+        </div>
+
+        <label for="diseno_electrico_select">Diseño Eléctrico:</label>
+        <select id="diseno_electrico_select" name="diseno_electrico_select" onchange="toggleCheckboxes('diseno_electrico')">
+            <option value="no">No</option>
+            <option value="si">Sí</option>
+        </select>
+        <div id="diseno_electrico_checkboxes" class="checkbox-group hidden">
+            <label><input type="checkbox" name="diseno_electrico[]" value="AutocadElectrical"> AutoCAD Electrical</label>
+            <label><input type="checkbox" name="diseno_electrico[]" value="ePlan"> ePlan</label>
+            <label><input type="checkbox"> Otros: <input type="text" name="diseno_electrico_otros"></label>
+        </div>
+
+        <label for="ingles">Nivel de ingles:</label>
+        <div class="english-proficiency">
+            
+            <div class="radio-group">
+                <input type="radio" id="basico" name="ingles" value="basico">
+                <label for="basico">Basic</label>
+                
+                <input type="radio" id="medio" name="ingles" value="medio">
+                <label for="medio">Intermediate</label>
+                
+                <input type="radio" id="avanzado" name="ingles" value="avanzado">
+                <label for="avanzado">Advanced</label>
+                
+                <input type="radio" id="conversacional_tecnico" name="ingles" value="conversacional_tecnico">
+                <label for="conversacional_tecnico">Technical Conversational</label>
+            </div>
+        </div>
+        
+        <label for="tipo_preferencia">¿Está buscando empleo o proyecto?</label>
+        <select id="tipo_preferencia" name="tipo_preferencia" onchange="mostrarCampos()">
+            <option value="">Seleccione una opción</option>
+            <option value="empleo">Empleo</option>
+            <option value="proyecto">Proyecto</option>
+        </select>
+
+        <div id="campo_empleo" style="display: none;">
+            <label for="expectativa_salarial">Expectativa salarial mensual bruta (MXN):</label>
+            <div class="salary-input">
+                <span>$</span>
+                <input type="number" id="expectativa_salarial" name="expectativa_salarial" step="0.01" min="0">
+            </div>
+        </div>
+
+        <div id="campo_proyecto" style="display: none;">
+            <label>Preferencia de Proyecto:</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="preferencia_proyecto[]" value="corto"> Corto (1-2 Meses)</label>
+                <label><input type="checkbox" name="preferencia_proyecto[]" value="mediano"> Mediano (3-6 Meses)</label>
+                <label><input type="checkbox" name="preferencia_proyecto[]" value="largo"> Largo (7 - 12 Meses)</label>        
+            </div>
+
+            <label>Preferencia de Ubicación:</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="preferencia_ubicacion[]" value="mexico"> México</label>
+                <label><input type="checkbox" name="preferencia_ubicacion[]" value="usa"> USA</label>
+            </div>
+
+            <label for="rate">Tarifa en USD:</label>
+            <div class="rate-input">
+                <span>$</span>
+                <input type="number" id="rate" name="rate" step="0.01" min="0">
+            </div>
+        </div>
+        <label for="cv">Subir CV:</label>
+        <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx">
+
+        <label for="informacion_adicional">Información Adicional:</label>
+        <p>De todo lo anterior, ¿cuáles son tus 3 mayores fuertes?, ¿Eres principalmente PLCero, Robotero, o Diseño Eléctrico? Ayúdame a entender bien tu perfil, escribe sobre algun proyecto interesante o sobre en qué áreas se ha enfocado la mayor parte de tu carrera.</p>
+        <textarea id="informacion_adicional" name="informacion_adicional" rows="4" cols="50" maxlength="2500"></textarea>
+        <div id="charCounter">0/2500</div><br>
+        
+        <input type="submit" value="Enviar">
+
+        <!-- Política de Privacidad -->
+        <div class="politica">
+            <h3>Política de Privacidad</h3>
+            <p>Su privacidad es importante para nosotros. Esta Política de Privacidad explica cómo recopilamos, utilizamos y protegemos la información personal que usted proporciona a través de nuestro Formulario de Registro para Ingenieros.</p>
+
+            <h4>Información que Recopilamos</h4>
+            <p>Recopilamos información personal como su nombre, correo electrónico, ubicación, años de experiencia y habilidades técnicas relacionadas con la automatización industrial.</p>
+
+            <h4>Uso y Compartición de su Información</h4>
+            <p>Utilizamos esta información para mantener una base de datos de ingenieros especializados y facilitar conexiones con empresas y proyectos que puedan beneficiarse de sus habilidades y experiencia. Nos reservamos el derecho de compartir información básica y relevante de su perfil con empresas interesadas en colaboraciones laborales o proyectos que coincidan con su experiencia, habilidades y expectativas profesionales. Este intercambio se realiza exclusivamente para facilitar conexiones laborales y profesionales, y no se divulgará ni se venderá para marketing u otros fines diferentes.</p>
+
+            <h4>Seguridad de los Datos</h4>
+            <p>Implementamos medidas de seguridad para proteger su información personal contra accesos no autorizados o uso indebido.</p>
+
+            <h4>Su Consentimiento</h4>
+            <p>Al utilizar nuestro formulario, usted consiente el procesamiento de su información de acuerdo con esta Política de Privacidad.</p>
+
+            <h4>Cambios en Esta Política de Privacidad</h4>
+            <p>Podemos actualizar esta Política de Privacidad ocasionalmente. Los cambios serán publicados en nuestro sitio web. Le recomendamos revisar esta página periódicamente para estar al tanto de cualquier actualización.</p>
+
+            <p>Si tiene preguntas sobre nuestra Política de Privacidad, por favor contáctenos.</p>
+        </div>
+    </form>
+
+    <!-- Footer -->
+    <footer class="footer3">
+        <p data-translate="tFooter1" class="copyright">© 2025 , All Rights Reserved</p>
+        <p data-translate="tFooter2" class="location">Designed in My House</p>
+        <p data-translate="tFooter3" class="designer">&lt; &gt; with &#10084</p>
+    </footer>
+    <script src="./resources/js/scriptDatabase.js"></script>
+</body>
+</html>
