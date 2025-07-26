@@ -76,6 +76,7 @@ document.getElementById('programmerForm').addEventListener('submit', async funct
     //if (selectElement.value === 'si') {
         checkboxesElement.classList.add('hidden');
     //}
+    toggleCheckboxes('plc');
 
     selectElement = document.getElementById('hmi_scada_select');
     checkboxesElement = document.getElementById('hmi_scada_checkboxes');
