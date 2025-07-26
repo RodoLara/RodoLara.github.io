@@ -74,7 +74,7 @@ document.getElementById('programmerForm').addEventListener('submit', async funct
     var selectElement = document.getElementById('plc_select');
     var checkboxesElement = document.getElementById('plc_checkboxes');
     //if (selectElement.value === 'si') {
-        checkboxesElement.classList.remove('hidden');
+        checkboxesElement.classList.add('hidden');
     //}
 
     selectElement = document.getElementById('hmi_scada_select');
@@ -82,6 +82,7 @@ document.getElementById('programmerForm').addEventListener('submit', async funct
     if (selectElement.value === 'si') {
         checkboxesElement.classList.remove('hidden');
     }
+    toggleCheckboxes('hmi_scada');
 
     selectElement = document.getElementById('robot_select');
     checkboxesElement = document.getElementById('robot_checkboxes');
