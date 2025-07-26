@@ -70,47 +70,17 @@ document.getElementById('programmerForm').addEventListener('submit', async funct
 
     // Limpieza de Formulario
     this.reset();
-
-    var selectElement = document.getElementById('plc_select');
-    var checkboxesElement = document.getElementById('plc_checkboxes');
-    //if (selectElement.value === 'si') {
-    //    checkboxesElement.classList.add('hidden');
-    //}
     toggleCheckboxes('plc');
-
-    selectElement = document.getElementById('hmi_scada_select');
-    checkboxesElement = document.getElementById('hmi_scada_checkboxes');
-    //if (selectElement.value === 'si') {
-    //    checkboxesElement.classList.remove('hidden');
-    //}
     toggleCheckboxes('hmi_scada');
-
-    selectElement = document.getElementById('robot_select');
-    checkboxesElement = document.getElementById('robot_checkboxes');
-    if (selectElement.value === 'si') {
-        checkboxesElement.classList.remove('hidden');
-    }
     toggleCheckboxes('robot');
     toggleCheckboxes('vision');
     toggleCheckboxes('estandares');
     toggleCheckboxes('diseno_electrico');
-
-    /*selectElement = document.getElementById('vision_select');
-    checkboxesElement = document.getElementById('vision_checkboxes');
-    if (selectElement.value === 'si') {
-        checkboxesElement.classList.remove('hidden');
-    }
-
-    selectElement = document.getElementById('estandares_select');
-    checkboxesElement = document.getElementById('estandares_checkboxes');
-    if (selectElement.value === 'si') {
-        checkboxesElement.classList.remove('hidden');
-    }*/
-
-    var campoEmpleo = document.getElementById("campo_empleo");
+    mostrarCampos();
+    /*var campoEmpleo = document.getElementById("campo_empleo");
     var campoProyecto = document.getElementById("campo_proyecto");
     campoEmpleo.style.display = "none";
-    campoProyecto.style.display = "none";
+    campoProyecto.style.display = "none";*/
 
 
     //Erorr
