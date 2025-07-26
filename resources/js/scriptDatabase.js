@@ -68,9 +68,46 @@ document.getElementById('programmerForm').addEventListener('submit', async funct
       'puedes escribirme a support@rodolfolara.com'
     );
 
-    // Si quieres limpiar el formulario:
+    // Limpieza de Formulario
     this.reset();
 
+    var selectElement = document.getElementById('plc_select');
+    var checkboxesElement = document.getElementById('plc_checkboxes');
+    if (selectElement.value === 'si') {
+        checkboxesElement.classList.remove('hidden');
+    }
+
+    selectElement = document.getElementById('hmi_scada_select');
+    checkboxesElement = document.getElementById('hmi_scada_checkboxes');
+    if (selectElement.value === 'si') {
+        checkboxesElement.classList.remove('hidden');
+    }
+
+    selectElement = document.getElementById('robot_select');
+    checkboxesElement = document.getElementById('robot_checkboxes');
+    if (selectElement.value === 'si') {
+        checkboxesElement.classList.remove('hidden');
+    }
+
+    selectElement = document.getElementById('vision_select');
+    checkboxesElement = document.getElementById('vision_checkboxes');
+    if (selectElement.value === 'si') {
+        checkboxesElement.classList.remove('hidden');
+    }
+
+    selectElement = document.getElementById('estandares_select');
+    checkboxesElement = document.getElementById('estandares_checkboxes');
+    if (selectElement.value === 'si') {
+        checkboxesElement.classList.remove('hidden');
+    }
+
+    var campoEmpleo = document.getElementById("campo_empleo");
+    var campoProyecto = document.getElementById("campo_proyecto");
+    campoEmpleo.style.display = "none";
+    campoProyecto.style.display = "none";
+
+    
+    //Erorr
   } catch (err) {
     if (err.message !== 'Falta CV') {    // no repitas alerta si ya se mostró
       console.error('❌ Error al enviar:', err);
