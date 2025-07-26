@@ -1,30 +1,87 @@
-document.getElementById('programmerForm').addEventListener('submit', function(event) {
-    event.preventDefault();
+//document.getElementById('programmerForm').addEventListener('submit', function(event) {
+//    event.preventDefault();
+//
+//    const formData = new FormData(this);
+//
+//    // Verifica que se haya subido un archivo CV
+//    const cvInput = document.getElementById('cv');
+//    if (cvInput && cvInput.files.length > 0) {
+//        formData.append('cv', cvInput.files[0]);
+//    } else {
+//        alert("⚠️ Por favor, sube tu CV antes de enviar.");
+//        return;
+//    }
+//
+//    fetch("https://backendrl-db-a5hygcb4fpfdf8as.southcentralus-01.azurewebsites.net/api/webpage_db", {
+//        method: "POST",
+//        body: formData
+//    })
+//    .then(res => res.text())
+//    .then(msg => {
+//        console.log("✅ Servidor respondió:", msg);
+//        alert(
+//            "✅ Formulario enviado correctamente 🎉\n\n" +
+//            "Recuerda que si necesitas modificar o eliminar tus datos, puedes escribirme a support@rodolfolara.com"
+//        );
+//    })
+//    .catch(err => {
+//        console.error("❌ Error al enviar:", err);
+//        alert("Ocurrió un error al enviar el formulario. Intenta más tarde.");
+//    });
+//});
 
+
+document.getElementById('programmerForm').addEventListener('submit', async function (event) {
+  event.preventDefault();
+
+  const submitBtn   = document.getElementById('submitBtn');
+  const btnText     = submitBtn.querySelector('.btn-text');
+  const spinner     = submitBtn.querySelector('.spinner');
+
+  // -----  Desactiva y muestra spinner  -----
+  submitBtn.disabled = true;
+  btnText.textContent = 'Enviando…';
+  spinner.classList.remove('hidden');
+
+  try {
     const formData = new FormData(this);
 
-    // Verifica que se haya subido un archivo CV
+    // Valida CV
     const cvInput = document.getElementById('cv');
-    if (cvInput && cvInput.files.length > 0) {
-        formData.append('cv', cvInput.files[0]);
-    } else {
-        alert("⚠️ Por favor, sube tu CV antes de enviar.");
-        return;
+    if (!(cvInput && cvInput.files.length)) {
+      alert('⚠️ Por favor, sube tu CV antes de enviar.');
+      throw new Error('Falta CV');
     }
+    formData.append('cv', cvInput.files[0]);
 
-    fetch("https://backendrl-db-a5hygcb4fpfdf8as.southcentralus-01.azurewebsites.net/api/webpage_db", {
-        method: "POST",
-        body: formData
-    })
-    .then(res => res.text())
-    .then(msg => {
-        console.log("✅ Servidor respondió:", msg);
-        alert("Formulario enviado correctamente 🎉");
-    })
-    .catch(err => {
-        console.error("❌ Error al enviar:", err);
-        alert("Ocurrió un error al enviar el formulario. Intenta más tarde.");
-    });
+    // --- Llamada al backend ---
+    const resp = await fetch(
+      'https://backendrl-db-a5hygcb4fpfdf8as.southcentralus-01.azurewebsites.net/api/webpage_db',
+      { method: 'POST', body: formData }
+    );
+    const msg  = await resp.text();
+    console.log('✅ Servidor respondió:', msg);
+
+    alert(
+      '✅ Formulario enviado correctamente 🎉\n\n' +
+      'Recuerda que si necesitas modificar o eliminar tus datos, ' +
+      'puedes escribirme a support@rodolfolara.com'
+    );
+
+    // Si quieres limpiar el formulario:
+    this.reset();
+
+  } catch (err) {
+    if (err.message !== 'Falta CV') {    // no repitas alerta si ya se mostró
+      console.error('❌ Error al enviar:', err);
+      alert('Ocurrió un error al enviar el formulario. Intenta más tarde.');
+    }
+  } finally {
+    // -----  Restablece botón  -----
+    submitBtn.disabled = false;
+    btnText.textContent = 'Enviar';
+    spinner.classList.add('hidden');
+  }
 });
 
 

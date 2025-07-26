@@ -46,10 +46,12 @@
         <!-- Main Content -->
         <form id="programmerForm" method="POST">
         <section class="introduction">
-            <p>A lo largo de mi carrera, he conectado a distintos ingenieros de control con empresas que buscan talento. En los últimos años, me han pedido ayuda para encontrar decenas de especialistas, tanto para vacantes como para proyectos grandes de freelance.</p>
+            <h1>Red de Ingenieros de Control/Automatización</h1>
+            <br>
+            <!-- p>A lo largo de mi carrera, he conectado a distintos ingenieros de control con empresas que buscan talento. En los últimos años, me han pedido ayuda para encontrar decenas de especialistas, tanto para vacantes como para proyectos grandes de freelance.</p>
             <p>Yo no me dedico a reclutar. Soy programador como tú. Pero ante tanta demanda, decidí armar una base de datos de ingenieros de automatización en México.</p>
-            <p>¿Para qué?<br>Para conocer colegas de todo el país, ampliar la red de expertos, compartir herramientas y recursos útiles, y también para colaborar en proyectos.</p>
-            <p>Si le sabes a los PLCs, robots industriales, visión artificial o diagramas eléctricos, me gustaría saber de ti.</p>
+            <p>¿Para qué?<br>Para conocer colegas de todo el país, ampliar la red de expertos, compartir herramientas y recursos útiles, y también para colaborar en proyectos.</p-->
+            <p>Si le sabes a los PLCs, robots industriales, visión artificial o diagramas eléctricos, me gustaría conocerte.</p>
             <p>Quizá a mí me están pidiendo justo lo que tú haces. Y quizá a ti te están pidiendo justo lo que yo hago.</p>
             <p>Nos vemos a pie de máquina.<br><b>Buenos códigos &lt;3 </b></p>
             <p><em>Rodolfo Lara</em></p>
@@ -66,7 +68,7 @@
                 <option value="MX">MX +52</option>
                 <option value="US">USA +1</option>
             </select>
-            <input type="tel" id="phone" name="phone" placeholder="Formato: 9 o 10 dígitos" style="flex: 1;">
+            <input type="tel" id="phone" name="phone" placeholder="9-10 dígitos" style="flex: 1;">
         </div>
         
         <label for="estado">Estado de Residencia:</label>
@@ -259,30 +261,38 @@
         <textarea id="informacion_adicional" name="informacion_adicional" rows="4" cols="50" maxlength="2500"></textarea>
         <div id="charCounter">0/2500</div><br>
         
-        <input type="submit" value="Enviar">
+        <!-- Botón de envío con spinner interno -->
+        <button id="submitBtn" type="submit" class="btn">
+          <span class="btn-text">Enviar</span>
+          <span class="spinner hidden" aria-hidden="true"></span>
+        </button>
 
         <!-- Política de Privacidad -->
         <div class="politica">
             <h3>Política de Privacidad</h3>
             <p>Su privacidad es importante para nosotros. Esta Política de Privacidad explica cómo recopilamos, utilizamos y protegemos la información personal que usted proporciona a través de nuestro Formulario de Registro para Ingenieros.</p>
-
+        
             <h4>Información que Recopilamos</h4>
             <p>Recopilamos información personal como su nombre, correo electrónico, ubicación, años de experiencia y habilidades técnicas relacionadas con la automatización industrial.</p>
-
+        
             <h4>Uso y Compartición de su Información</h4>
             <p>Utilizamos esta información para mantener una base de datos de ingenieros especializados y facilitar conexiones con empresas y proyectos que puedan beneficiarse de sus habilidades y experiencia. Nos reservamos el derecho de compartir información básica y relevante de su perfil con empresas interesadas en colaboraciones laborales o proyectos que coincidan con su experiencia, habilidades y expectativas profesionales. Este intercambio se realiza exclusivamente para facilitar conexiones laborales y profesionales, y no se divulgará ni se venderá para marketing u otros fines diferentes.</p>
-
+        
             <h4>Seguridad de los Datos</h4>
-            <p>Implementamos medidas de seguridad para proteger su información personal contra accesos no autorizados o uso indebido.</p>
-
+            <p>Implementamos medidas de seguridad para proteger su información personal contra accesos no autorizados o uso indebido. Como parte de estas medidas, las claves de acceso y credenciales de nuestros sistemas se rotan de forma periódica para reforzar la protección.</p>
+        
+            <h4>Modificación o Eliminación de Datos</h4>
+            <p>Puede solicitar en cualquier momento la actualización, corrección o eliminación de sus datos personales escribiendo a <b><a href="mailto:support@rodolfolara.com">support@rodolfolara.com</a></b>.</p>
+        
             <h4>Su Consentimiento</h4>
             <p>Al utilizar nuestro formulario, usted consiente el procesamiento de su información de acuerdo con esta Política de Privacidad.</p>
-
+        
             <h4>Cambios en Esta Política de Privacidad</h4>
             <p>Podemos actualizar esta Política de Privacidad ocasionalmente. Los cambios serán publicados en nuestro sitio web. Le recomendamos revisar esta página periódicamente para estar al tanto de cualquier actualización.</p>
-
+        
             <p>Si tiene preguntas sobre nuestra Política de Privacidad, por favor contáctenos.</p>
         </div>
+
     </form>
 
     <!-- Footer -->
