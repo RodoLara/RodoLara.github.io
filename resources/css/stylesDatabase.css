@@ -80,7 +80,7 @@ form {
     background-color: #621cee;
     padding: 20px;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(224, 30, 30, 0.1);
+    /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);*/
     max-width: 800px; /* Ancho máximo del formulario */
     margin: 0 auto; /* Centrar el formulario horizontalmente */
 }
@@ -236,12 +236,12 @@ header h1 {
 }
 
 section {
-    width: 80%;
-    margin: 2rem auto;
+    width: 95%;
+    margin: 0.5rem auto;
     background-color: #fff;
     padding: 1rem;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(5, 0, 0, 0.151);
 }
 
 .introduction p {
@@ -350,9 +350,9 @@ input[type="tel"] {
 .hidden { display: none; }            /* utilitario */
 
 
-.footerform {
+.footer-form {
     width: 100vw;
-    background-color:#111;
+    background-color:#621cee;
     color:whitesmoke;
     display: flex;
     justify-content: space-around;

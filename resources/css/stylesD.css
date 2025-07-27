@@ -152,7 +152,7 @@ button:hover {
 
 .footer6 {
     width: 100vw;
-    var(--clr-downloads);
+    /*var(--clr-downloads);*/
     color:whitesmoke;
     display: flex;
     justify-content: space-around;
