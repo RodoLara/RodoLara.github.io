@@ -130,7 +130,7 @@ function buscarProyecto() {
     const resultDiv = document.getElementById("result");
 
     function enviarCodigo(codigo) {
-        const url = 'https://backendrl-db-a5hygcb4fpfdf8as.southcentralus-01.azurewebsites.net/api/webpage_backend';
+        const url = 'https://backendrl-db-a5hygcb4fpfdf8as.southcentralus-01.azurewebsites.net/api/webpage_downloads?';
         //const url = 'https://app-backendrl.azurewebsites.net/api/webpage_backend?code=OTnBZhRJJDqdZUtYBbc1SDq1TjFvCoZLDJCKopNLX1EtAzFuQuim2A%3D%3D';
         let data = "Download" + currentLanguage + ":" + codigo; // El código que se enviará en el cuerpo
         message = [];
