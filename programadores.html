@@ -128,7 +128,7 @@
             <label><input type="checkbox" name="plc_marcas[]" value="Schneider Electric"> Schneider Electric</label>
             <label><input type="checkbox" name="plc_marcas[]" value="Mitsubishi"> Mitsubishi</label>
             <label><input type="checkbox" name="plc_marcas[]" value="Automation Direct"> Automation Direct</label>
-            <label><input type="checkbox"> Otros:<input type="text" name="plc_marcas_otros" disabled></label>
+            <label class="otros"><input type="checkbox"> Otros:<input type="text" name="plc_marcas_otros" disabled></label>
         </div>
 
         <label for="hmi_scada_select">Marcas de HMI/SCADA:</label>
@@ -142,7 +142,7 @@
             <label><input type="checkbox" name="hmi_scada_marcas[]" value="Proface"> Proface</label>
             <label><input type="checkbox" name="hmi_scada_marcas[]" value="Wonderware"> Wonderware</label>
             <label><input type="checkbox" name="hmi_scada_marcas[]" value="Ignition"> Ignition</label>
-            <label><input type="checkbox"> Otros:<input type="text" name="hmi_scada_marcas_otros" disabled></label>
+            <label class="otros"><input type="checkbox"> Otros:<input type="text" name="hmi_scada_marcas_otros" disabled></label>
         </div>
 
         <label for="robot_select">Marcas de Robots:</label>
@@ -157,7 +157,7 @@
             <label><input type="checkbox" name="robot_marcas[]" value="Stäubli"> Stäubli</label>
             <label><input type="checkbox" name="robot_marcas[]" value="Kuka"> Kuka</label>
             <label><input type="checkbox" name="robot_marcas[]" value="Epson"> Epson</label>
-            <label><input type="checkbox"> Otros:<input type="text" name="robot_marcas_otros" disabled></label>
+            <label class="otros"><input type="checkbox"> Otros:<input type="text" name="robot_marcas_otros" disabled></label>
         </div>
 
         <label for="vision_select">Marcas de Sistemas de Visión y Perfilómetros:</label>
@@ -172,7 +172,7 @@
             <label><input type="checkbox" name="vision_marcas[]" value="Teledyne Dalsa"> Teledyne Dalsa</label>
             <label><input type="checkbox" name="vision_marcas[]" value="LMI Technologies"> LMI Technologies</label>
             <label><input type="checkbox" name="vision_marcas[]" value="MicroEpsilon"> MicroEpsilon</label>
-            <label><input type="checkbox"> Otros:<input type="text" name="vision_marcas_otros" disabled></label>
+            <label class="otros"><input type="checkbox"> Otros:<input type="text" name="vision_marcas_otros" disabled></label>
         </div>
         
         <label for="estandares_select">Estándares de programación:</label>
@@ -186,7 +186,7 @@
             <label><input type="checkbox" name="estandares[]" value="TKB V8.x"> TKB V8.x</label>
             <label><input type="checkbox" name="estandares[]" value="VASS 6"> VASS 6</label>
             <label><input type="checkbox" name="estandares[]" value="Ford Fast v3.7"> Ford Fast v3.7</label>
-            <label><input type="checkbox"> Otros:<input type="text" name="estandares_otros" disabled></label>
+            <label class="otros"><input type="checkbox"> Otros:<input type="text" name="estandares_otros" disabled></label>
         </div>
 
         <label for="diseno_electrico_select">Diseño Eléctrico:</label>
@@ -197,24 +197,28 @@
         <div id="diseno_electrico_checkboxes" class="checkbox-group hidden">
             <label><input type="checkbox" name="diseno_electrico[]" value="AutocadElectrical"> AutoCAD Electrical</label>
             <label><input type="checkbox" name="diseno_electrico[]" value="ePlan"> ePlan</label>
-            <label><input type="checkbox"> Otros: <input type="text" name="diseno_electrico_otros" disabled></label>
+            <label class="otros"><input type="checkbox"> Otros: <input type="text" name="diseno_electrico_otros" disabled></label>
         </div>
 
         <label for="ingles">Nivel de ingles:</label>
         <div class="english-proficiency">
-            
             <div class="radio-group">
-                <input type="radio" id="basico" name="ingles" value="basico">
-                <label for="basico">Basic</label>
-                
-                <input type="radio" id="medio" name="ingles" value="medio">
-                <label for="medio">Intermediate</label>
-                
-                <input type="radio" id="avanzado" name="ingles" value="avanzado">
-                <label for="avanzado">Advanced</label>
-                
-                <input type="radio" id="conversacional_tecnico" name="ingles" value="conversacional_tecnico">
-                <label for="conversacional_tecnico">Technical Conversational</label>
+              <label class="option">
+                <input type="radio" name="ingles" value="basico"> Basic
+              </label>
+          
+              <label class="option">
+                <input type="radio" name="ingles" value="medio"> Intermediate
+              </label>
+          
+              <label class="option">
+                <input type="radio" name="ingles" value="avanzado"> Advanced
+              </label>
+          
+              <label class="option">
+                <input type="radio" name="ingles" value="conversacional_tecnico">
+                Technical Conversational
+              </label>
             </div>
         </div>
         
@@ -228,7 +232,7 @@
         <div id="campo_empleo" style="display: none;">
             <label for="expectativa_salarial">Expectativa salarial mensual bruta (MXN):</label>
             <div class="salary-input">
-                <span>$</span>
+                <span class="moneysign">$</span>
                 <input type="number" id="expectativa_salarial" name="expectativa_salarial" step="0.01" min="0">
             </div>
         </div>
@@ -249,7 +253,7 @@
 
             <label for="rate">Tarifa en USD:</label>
             <div class="rate-input">
-                <span>$</span>
+                <span class="moneysign">$</span>
                 <input type="number" id="rate" name="rate" step="0.01" min="0">
             </div>
         </div>

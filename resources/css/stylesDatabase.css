@@ -58,6 +58,10 @@ p{
     color: #fff;
 }
 
+.moneysign{
+    color: #fff;
+}
+
 .bold{
   font-weight:700;
 }
@@ -104,27 +108,36 @@ input, select {
     box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
 }
 
-/* Estilos mejorados para los checkboxes */
-.checkbox-group {
-    display: flex;
-    flex-wrap: wrap; /* Para que los elementos se envuelvan si no caben en una línea */
-    align-items: center; /* Alinear los elementos al inicio de cada línea */
+/* contenedor general (sin cambios, sólo de contexto) */
+.checkbox-group{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px 18px;          /* h‑gap | v‑gap */
 }
 
-.checkbox-group label {
-    display: flex;
-    align-items: center;
-    margin-right: 15px; /* Espacio entre los checkboxes */
-    margin-bottom: 10px; /* Espacio entre las líneas */
-    font-size: 14px; /* Tamaño del texto */
-    flex-grow: 1; /* Para que cada elemento ocupe el mismo espacio */
-    
+/* todos los ítems regulares */
+.checkbox-group label{
+  display:inline-flex;
+  align-items:center;
+  white-space:nowrap;    /* NO romper palabras en los normales tampoco  */
+  font-size: 14px;
 }
 
-.checkbox-group input[type="checkbox"] {
-    margin-right: 5px; /* Espacio entre el checkbox y el texto */
-    transform: translateY(1px); /* Ajuste fino para alinear verticalmente */
+/* ——— REGLA ESPECÍFICA PARA “OTROS” ——— */
+.checkbox-group label.otros{
+  flex:0 1 auto;         /* ⇦ ❶ NO se estira al 100 %, se comporta
+                                   como un ítem normal               */
+  white-space:nowrap;    /* ⇦ ❷ todo el texto + input deben ir pegados */
+  gap:0px;               /* espacio entre caja, texto y input          */
 }
+
+/* ancho fijo (o máximo) del cuadro de texto */
+.checkbox-group label.otros input[type="text"]{
+  flex:0 0 140px;        /* ❸ mide ~140 px y no se expande      */
+  max-width:100%;        /* no se desborda en pantallas pequeñas */
+}
+
+
 
 #robot_otros_text{
     margin-left: 10px;
@@ -294,35 +307,28 @@ input[type="tel"] {
     box-sizing: border-box; /* Asegura que el padding y border estén incluidos en el ancho total */
 }
 
-.english-proficiency {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    overflow-wrap: break-word;
+.english-proficiency{
+  display:flex;
+  flex-wrap:wrap;
 }
 
-.radio-group {
-    display: flex;
-    gap: 10px; /* Espacio entre los elementos radio y labels */
-    align-items: center;
-    overflow-wrap: break-word;
-    flex-wrap: wrap;
+.radio-group{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px 14px;                 /* h‑gap | v‑gap */
 }
 
-.radio-group input[type="radio"] {
-    /* Ajusta el tamaño de los círculos de los radios */
-    width: 12px;
-    height: 12px;
-    margin: 0;
+.option{                          /* todo el par es UN ítem flex */
+  display:inline-flex;
+  align-items:center;
+  white-space:nowrap;             /* evita cortar “Technical
+                                     Conversational” */
 }
 
-.radio-group label {
-    margin-right: 5px; /* Margen entre radio y label */
-}
-
-/* Añade un poco de espacio entre las líneas de radio */
-.radio-group > * {
-    margin-bottom: 5px;
+.option input[type="radio"]{
+  width:12px;
+  height:12px;
+  margin:0 4px 0 0;               /* espacio antes del texto */
 }
 
 /* Estilo básico del botón (ajusta a tu paleta) */
