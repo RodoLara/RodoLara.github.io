@@ -66,7 +66,7 @@ function enviarPregunta() {
     }
     htmlContent.scrollTop = htmlContent.scrollHeight;
     verificarContenido()
-    const url = 'https://app-backendrl.azurewebsites.net/api/webpage_backend?code=OTnBZhRJJDqdZUtYBbc1SDq1TjFvCoZLDJCKopNLX1EtAzFuQuim2A%3D%3D';
+    const url = 'https://backendrl-db-a5hygcb4fpfdf8as.southcentralus-01.azurewebsites.net/api/webpage_backend?';
     var preguntaElemento = document.getElementById('pregunta');
     const respuestaElemento = document.getElementById('respuesta');
     
