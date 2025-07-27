@@ -62,6 +62,10 @@ p{
   font-weight:700;
 }
 
+.infoad{
+  font-weight:700;
+}
+
 section.introduction b,
 section.introduction strong{
   font-weight:700;      /* 700 = bold en la mayoría de fuentes */
