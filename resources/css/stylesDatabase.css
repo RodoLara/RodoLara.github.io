@@ -1,20 +1,86 @@
 /* Estilos generales */
+* {
+    box-sizing: border-box;
+    box-style: border-box;
+}
+
+:root {
+    /*--clr-background: #9d72ff;
+    --clr-white: #ffffff;
+    --clr-primary: #01ffff;
+    --clr-expertise: #01ffc3;
+    --clr-fondo: #ffb3fd;
+    --clr-black: #000000;
+    --clr-background: #232323;*/
+    --clr-background: #131313;
+    --clr-white: #fff;
+    --clr-primary: #00218a;
+    /*--clr-español: #e34545;*/
+    --clr-expertise: #38ac49;
+    --clr-contact: #d17a44;
+    --clr-español: #2aa39f;
+    --clr-services: #5385c7;
+    --clr-clients: #8c55c6;
+    --clr-blog: #cb51a8;
+    --clr-db-contrast: #fb00ff;
+    --clr-downloads: #e2598b;
+    --clr-fondo: #47ff31;
+    --clr-black: #474747;
+    --clr-font: #f8f7f7;
+    --font-size: 16px;
+    --border-radius:0.2em;
+}
+
+html {
+    margin: 0;
+    padding-right: 0px;
+    overflow-x: hidden; /* Evita el desplazamiento horizontal */
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 20px;
-    background-color: #f2f2f2;
+    padding: 0px;
+    background-color: #621cee;
 }
 
-h2 {
-    color: #333;
+h2, h3, h4 {
+    color: #fff;
+    font-weight:700;
+}
+
+h1{
+    color: #fff;
+    font-weight:700;
+}
+
+p{
+    color: #fff;
+}
+
+.bold{
+  font-weight:700;
+}
+
+section.introduction b,
+section.introduction strong{
+  font-weight:700;      /* 700 = bold en la mayoría de fuentes */
+}
+
+.introduction{
+    background-color: #621cee;
+}
+
+section.introduction em{
+  color:#ffffff !important;  /* rompe cualquier override */
+  font-style:italic;         /* opcional: ya viene por default */
 }
 
 form {
-    background-color: #fff;
+    background-color: #621cee;
     padding: 20px;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(224, 30, 30, 0.1);
     max-width: 800px; /* Ancho máximo del formulario */
     margin: 0 auto; /* Centrar el formulario horizontalmente */
 }
@@ -22,13 +88,14 @@ form {
 label {
     display: block;
     margin-top: 10px;
+    color: #fff;
 }
 
 input, select {
     width: calc(100% - 16px); /* Ancho del 100% menos el padding */
     padding: 8px;
     margin-top: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid #000000;
     border-radius: 3px;
     box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
 }
@@ -80,7 +147,7 @@ input, select {
     width: calc(100% - 16px); /* Ancho del 100% menos el padding */
     padding: 8px;
     margin-top: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid #000000;
     border-radius: 3px;
     box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
     resize: none;
@@ -88,7 +155,7 @@ input, select {
 
 #charCounter {
     font-size: 12px;
-    color: grey;
+    color:whitesmoke;
 }
 
 #informacion_adicional:focus {
@@ -100,7 +167,7 @@ input, select {
 input[type="file"] {
     margin-top: 5px;
     padding: 8px;
-    border: 1px solid #ccc;
+    border: 1px solid #ffffff;
     border-radius: 3px;
     box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
     width: calc(100% - 16px); /* Ancho del 100% menos el padding */
@@ -136,9 +203,9 @@ input[type="submit"]:hover {
 
 .politica {
     margin-top: 20px;
-    border: 1px solid #ccc;
+    border: 2px solid #ffffff;
     padding: 20px;
-    background-color: #f9f9f9;
+    background-color: #621cee;
 }
 
 .politica h3 {
@@ -157,10 +224,11 @@ input[type="submit"]:hover {
 }
 
 header {
-    background-color: #333;
+    background-color: #621cee;
     color: #fff;
     text-align: center;
-    padding: 1rem 0;
+    /*padding: 1rem 0;*/
+    width: 100vw;
 }
 
 header h1 {
@@ -255,7 +323,7 @@ input[type="tel"] {
 
 /* Estilo básico del botón (ajusta a tu paleta) */
 .btn {
-  background: #0059ff;
+  background: var(--clr-db-contrast);;
   color: #fff;
   border: none;
   padding: .6rem 1.2rem;
@@ -280,3 +348,142 @@ input[type="tel"] {
 }
 @keyframes spin { to { transform: rotate(360deg); } }
 .hidden { display: none; }            /* utilitario */
+
+
+.footerform {
+    width: 100vw;
+    background-color:#111;
+    color:whitesmoke;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    height: auto;
+    padding: 1em;
+    /*position: absolute;
+    bottom: 0;
+    left: 0*/;
+}
+
+  
+  
+.line {
+  width: 35px;
+  height: 5px;
+  background-color: var(--clr-font);
+  margin: 6px 0;
+}
+
+.c {
+  z-index: 3;
+}
+
+.c:hover #drop-down {
+  display: flex;
+}
+  
+.c:focus-within #drop-down {
+  display: flex;
+}
+  
+.c #drop-down {
+  position: absolute;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: none;
+  flex-direction: column;
+  top: 60px;
+  background-color: var(--clr-background);
+  padding: 30px 0;
+  border-radius: 5px;
+  text-align: left;
+  box-shadow: 0 0 10px var(--clr-black);
+  transform: translateX(-10%);
+  font-size: 0.85em;
+  z-index: 3;
+  margin-left: -110px;
+  margin-top: -10px;
+}
+  
+.c #drop-down .clinks {
+  display: flex;
+  padding: 5px 0;
+  text-decoration: none;
+  padding: 10px 50px 10px 20px;
+  text-transform: uppercase;
+  z-index: 3;
+}
+  
+.c #drop-down{
+  .mExpertise:hover{
+    color: var(--clr-expertise);
+  }
+  .mServices:hover{
+    color: var(--clr-services);
+  }
+  .mClients:hover{
+    color: var(--clr-clients);
+  }
+  .mContact:hover{
+    color: var(--clr-contact);
+  }
+  .mDownloads:hover{
+    color: var(--clr-downloads);
+  }
+  .mBlog:hover{
+    color: var(--clr-blog);
+  }
+  .mLanguage:hover{
+    color: var(--clr-español);
+  }
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0;
+  height: 3em;
+  padding: 0;
+  color: var(--clr-white);
+}
+
+nav ul li a {
+  padding: 0.5em;
+  font-weight: bold;
+  color: var(--clr-white);
+}
+
+/* texto “No file chosen” + nombre del archivo */
+input[type="file"]{
+  color:#fff;                 /* blanco */
+}
+
+/* botón “Choose File” (es opcional, sólo si también quieres personalizarlo) */
+input[type="file"]::file-selector-button{
+  background:#fff;            /* fondo blanco */
+  color: var(--clr-db-contrast);              /* texto morado que haga contraste */
+  border:0;
+  padding:0.35em 1em;
+  cursor:pointer;
+}
+
+/* equivalente legacy para Safari ≤ 14 y Chrome antiguos */
+input[type="file"]::-webkit-file-upload-button{
+  background:#fff;
+  color: var(--clr-db-contrast);
+  border:0;
+  padding:0.35em 1em;
+  cursor:pointer;
+}
+
+/* en tu hoja de estilos */
+.link‑soporte{
+  color: var(--clr-db-contrast);          /* amarillo, cámbialo a tu gusto */
+  text-decoration:none;   /* quita subrayado (opcional)  */
+}
+.link‑soporte:hover{
+  text-decoration:underline; /* efecto al pasar el mouse */
+}

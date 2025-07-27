@@ -846,7 +846,7 @@ pre {
 @media not all and (min-resolution: .001dpcm) {
     /* Necesitas especificar un selector para aplicar el estilo */
     #type {
-        background-color: red;
+        background-color: #131313;
     }
 
     #pregunta {
@@ -854,6 +854,6 @@ pre {
         z-index: 9999;
         margin-top: -16vh;
         /*margin-left: 1vw;*/
-        background-color: blue;
+        background-color: #131313;
     }
 }
