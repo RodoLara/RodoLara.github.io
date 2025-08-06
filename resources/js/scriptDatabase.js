@@ -10,6 +10,8 @@ document.getElementById('programmerForm').addEventListener('submit', async funct
   btnText.textContent = 'Enviando…';
   spinner.classList.remove('hidden');
 
+  document.getElementById('submitNotice').style.display = 'block';
+
   try {
     const formData = new FormData(this);
 
@@ -63,6 +65,7 @@ document.getElementById('programmerForm').addEventListener('submit', async funct
     submitBtn.disabled = false;
     btnText.textContent = 'Enviar';
     spinner.classList.add('hidden');
+    submitNotice.style.display = 'none';  // ⬅️ Aquí se oculta de nuevo el aviso
   }
 });
 
