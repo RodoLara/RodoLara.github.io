@@ -490,10 +490,10 @@ input[type="file"]::-webkit-file-upload-button{
 }
 
 /* en tu hoja de estilos */
-.link‑soporte{
+.link-soporte{
   color: var(--clr-db-contrast);          /* amarillo, cámbialo a tu gusto */
   text-decoration:none;   /* quita subrayado (opcional)  */
 }
-.link‑soporte:hover{
+.link-soporte:hover{
   text-decoration:underline; /* efecto al pasar el mouse */
 }
