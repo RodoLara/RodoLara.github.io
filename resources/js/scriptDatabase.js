@@ -52,7 +52,16 @@ document.getElementById('programmerForm').addEventListener('submit', async funct
     } else {
       // Si no es 200, trato como error
       console.error('❌ Error del servidor:', resp.status, msg);
-      alert('❌ Ocurrió un error al enviar el formulario. Inténtalo de nuevo.');
+      if (resp.status === 502) {
+        alert(
+          '❌ No se pudo enviar el correo de confirmación.\n\n' +
+          '📩 Por favor, revisa que tu correo esté correctamente escrito.\n' +
+          'Si el problema persiste, escríbeme directamente a support@rodolfolara.com 📨'
+        );
+      } else {
+        alert('❌ Ocurrió un error al enviar el formulario. Inténtalo de nuevo.');
+      }
+    
     }
 
   } catch (err) {
