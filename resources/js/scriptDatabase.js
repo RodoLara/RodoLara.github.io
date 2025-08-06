@@ -21,7 +21,17 @@ document.getElementById('programmerForm').addEventListener('submit', async funct
       alert('⚠️ Por favor, sube tu CV antes de enviar.');
       throw new Error('Falta CV');
     }
-    formData.append('cv', cvInput.files[0]);
+
+    const file = cvInput.files[0];
+    const maxSizeMB = 5;
+    const fileSizeMB = file.size / (1024 * 1024);
+
+    if (fileSizeMB > maxSizeMB) {
+      alert(`⚠️ El archivo excede el tamaño máximo permitido de ${maxSizeMB}MB.`);
+      throw new Error('Archivo demasiado grande');
+    }
+
+    formData.append('cv', file);
 
     // --- Llamada al backend ---
     const resp = await fetch(
