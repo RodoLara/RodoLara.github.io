@@ -297,7 +297,7 @@ section {
 #phone {
     flex: 1; /* El input de teléfono ocupará todo el espacio restante */
     margin-left: 0px; /* Espacio a la izquierda del input de teléfono */
-    padding: 5px; /* Espacio interno del input de teléfono */
+    /*padding: 8px; /* Espacio interno del input de teléfono */
 }
 
 
