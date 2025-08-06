@@ -1,35 +1,3 @@
-//document.getElementById('programmerForm').addEventListener('submit', function(event) {
-//    event.preventDefault();
-//
-//    const formData = new FormData(this);
-//
-//    // Verifica que se haya subido un archivo CV
-//    const cvInput = document.getElementById('cv');
-//    if (cvInput && cvInput.files.length > 0) {
-//        formData.append('cv', cvInput.files[0]);
-//    } else {
-//        alert("⚠️ Por favor, sube tu CV antes de enviar.");
-//        return;
-//    }
-//
-//    fetch("https://backendrl-db-a5hygcb4fpfdf8as.southcentralus-01.azurewebsites.net/api/webpage_db", {
-//        method: "POST",
-//        body: formData
-//    })
-//    .then(res => res.text())
-//    .then(msg => {
-//        console.log("✅ Servidor respondió:", msg);
-//        alert(
-//            "✅ Formulario enviado correctamente 🎉\n\n" +
-//            "Recuerda que si necesitas modificar o eliminar tus datos, puedes escribirme a support@rodolfolara.com"
-//        );
-//    })
-//    .catch(err => {
-//        console.error("❌ Error al enviar:", err);
-//        alert("Ocurrió un error al enviar el formulario. Intenta más tarde.");
-//    });
-//});
-
 document.getElementById('programmerForm').addEventListener('submit', async function (event) {
   event.preventDefault();
 
