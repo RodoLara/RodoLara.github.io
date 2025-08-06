@@ -30,13 +30,12 @@
 //    });
 //});
 
-
 document.getElementById('programmerForm').addEventListener('submit', async function (event) {
   event.preventDefault();
 
-  const submitBtn   = document.getElementById('submitBtn');
-  const btnText     = submitBtn.querySelector('.btn-text');
-  const spinner     = submitBtn.querySelector('.spinner');
+  const submitBtn = document.getElementById('submitBtn');
+  const btnText   = submitBtn.querySelector('.btn-text');
+  const spinner   = submitBtn.querySelector('.spinner');
 
   // -----  Desactiva y muestra spinner  -----
   submitBtn.disabled = true;
@@ -59,30 +58,36 @@ document.getElementById('programmerForm').addEventListener('submit', async funct
       'https://backendrl-db-a5hygcb4fpfdf8as.southcentralus-01.azurewebsites.net/api/webpage_db',
       { method: 'POST', body: formData }
     );
-    const msg  = await resp.text();
-    console.log('✅ Servidor respondió:', msg);
+    const msg = await resp.text();
 
-    alert(
-      '✅ Formulario enviado correctamente 🎉\n\n' +
-      '📝 Recuerda que si necesitas modificar o eliminar tus datos, ' +
-      'puedes escribirme a support@rodolfolara.com 📨'
-    );
+    if (resp.status === 200) {
+      // Éxito solo si es 200
+      console.log('✅ Servidor respondió:', msg);
+      alert(
+        '✅ Formulario enviado correctamente 🎉\n\n' +
+        '📝 Recuerda que si necesitas modificar o eliminar tus datos, ' +
+        'puedes escribirme a support@rodolfolara.com 📨'
+      );
 
-    // Limpieza de Formulario
-    this.reset();
-    toggleCheckboxes('plc');
-    toggleCheckboxes('hmi_scada');
-    toggleCheckboxes('robot');
-    toggleCheckboxes('vision');
-    toggleCheckboxes('estandares');
-    toggleCheckboxes('diseno_electrico');
-    mostrarCampos();
+      // Limpieza de Formulario
+      this.reset();
+      toggleCheckboxes('plc');
+      toggleCheckboxes('hmi_scada');
+      toggleCheckboxes('robot');
+      toggleCheckboxes('vision');
+      toggleCheckboxes('estandares');
+      toggleCheckboxes('diseno_electrico');
+      mostrarCampos();
+    } else {
+      // Si no es 200, trato como error
+      console.error('❌ Error del servidor:', resp.status, msg);
+      alert('❌ Ocurrió un error al enviar el formulario. Inténtalo de nuevo.');
+    }
 
-    //Erorr
   } catch (err) {
-    if (err.message !== 'Falta CV') {    // no repitas alerta si ya se mostró
+    if (err.message !== 'Falta CV') {  // no volver a mostrar alerta de CV faltante
       console.error('❌ Error al enviar:', err);
-      alert('Ocurrió un error al enviar el formulario. Intenta más tarde.');
+      alert('⚠️ Ocurrió un error al enviar el formulario. Intenta más tarde.');
     }
   } finally {
     // -----  Restablece botón  -----
