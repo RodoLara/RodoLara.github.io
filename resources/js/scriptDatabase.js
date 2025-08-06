@@ -65,7 +65,7 @@ document.getElementById('programmerForm').addEventListener('submit', async funct
       console.log('✅ Servidor respondió:', msg);
       alert(
         '✅ Formulario enviado correctamente 🎉\n\n' +
-        '📩 Te hemos enviado un correo con tu enlace de descarga. ' +
+        '📩 Te he enviado un correo con tu enlace de descarga. ' +
         'Si no lo ves en tu bandeja principal, revisa la carpeta de spam o correo no deseado.\n\n' +
         '📝 Si necesitas modificar o eliminar tus datos, puedes escribirme a support@rodolfolara.com 📨'
       );
