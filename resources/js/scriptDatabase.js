@@ -15,30 +15,44 @@ document.getElementById('programmerForm').addEventListener('submit', async funct
   try {
     const formData = new FormData(this);
 
-    // Valida CV
-    const cvInput = document.getElementById('cv');
-    if (!(cvInput && cvInput.files.length)) {
-      alert('⚠️ Por favor, sube tu CV antes de enviar.');
-      throw new Error('Falta CV');
+    // Obtener valor de la selección de CV
+    const cvSelect = document.getElementById('cv_select');
+    const cvInput  = document.getElementById('cv');
+    let file;
+      
+    if (cvSelect && cvSelect.value === "no") {
+      console.log("📄 El usuario NO subió un CV. Usando el placeholder.");
+    
+      const response = await fetch("./resources/docs/CV_Placeholder.pdf");
+      const blob     = await response.blob();
+    
+      file = new File([blob], "CV_Placeholder.pdf", { type: "application/pdf" });
+    } else {
+      if (!(cvInput && cvInput.files.length)) {
+        alert('⚠️ Por favor, sube tu CV antes de enviar.');
+        throw new Error('Falta CV');
+      }
+    
+      file = cvInput.files[0];
+      const maxSizeMB   = 5;
+      const fileSizeMB  = file.size / (1024 * 1024);
+    
+      if (fileSizeMB > maxSizeMB) {
+        alert(`⚠️ El archivo excede el tamaño máximo permitido de ${maxSizeMB}MB.`);
+        throw new Error('Archivo demasiado grande');
+      }
     }
-
-    const file = cvInput.files[0];
-    const maxSizeMB = 5;
-    const fileSizeMB = file.size / (1024 * 1024);
-
-    if (fileSizeMB > maxSizeMB) {
-      alert(`⚠️ El archivo excede el tamaño máximo permitido de ${maxSizeMB}MB.`);
-      throw new Error('Archivo demasiado grande');
-    }
-
-    formData.append('cv', file);
+    
+    // ✅ Este log se ejecuta en ambos casos
+    console.log("📄 CV real subido por el usuario:", file.name);
+    formData.append("cv", file);
 
     // --- Llamada al backend ---
-    const resp = await fetch(
-      'https://backendrl-db-a5hygcb4fpfdf8as.southcentralus-01.azurewebsites.net/api/webpage_db',
-      { method: 'POST', body: formData }
-    );
-    const msg = await resp.text();
+    //const resp = await fetch(
+    //  'https://backendrl-db-a5hygcb4fpfdf8as.southcentralus-01.azurewebsites.net/api/webpage_db',
+    //  { method: 'POST', body: formData }
+    //);
+    //const msg = await resp.text();
 
     if (resp.status === 200) {
       // Éxito solo si es 200
