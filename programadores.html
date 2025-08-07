@@ -244,6 +244,7 @@
             <option value="">Seleccione una opción</option>
             <option value="empleo">Empleo</option>
             <option value="proyecto">Proyecto</option>
+            <option value="ninguna">Ninguna</option>
         </select>
 
         <div id="campo_empleo" style="display: none;">
@@ -268,7 +269,7 @@
                 <label><input type="checkbox" name="preferencia_ubicacion[]" value="usa"> USA</label>
             </div>
 
-            <label for="rate">Tarifa por hora en USD (asume viáticos aparte):</label>
+            <label for="rate">Tarifa por hora en USD <small style="font-size: 0.8em;">(puedes no responder, esto es meramente informativo para ubicar más rápido los perfiles. Asume viaticos aparte)</small>:</label>
             <div class="rate-input">
                 <span class="moneysign">$</span>
                 <input type="number" id="rate" name="rate" step="0.01" min="0" max="999999.99">
