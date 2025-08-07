@@ -19,7 +19,7 @@ document.getElementById('programmerForm').addEventListener('submit', async funct
     const cvSelect = document.getElementById('cv_select');
     const cvInput  = document.getElementById('cv');
     let file;
-      
+
     if (cvSelect && cvSelect.value === "no") {
       console.log("📄 El usuario NO subió un CV. Usando el placeholder.");
     
@@ -42,17 +42,17 @@ document.getElementById('programmerForm').addEventListener('submit', async funct
         throw new Error('Archivo demasiado grande');
       }
     }
-    
+
     // ✅ Este log se ejecuta en ambos casos
     console.log("📄 CV real subido por el usuario:", file.name);
     formData.append("cv", file);
 
     // --- Llamada al backend ---
-    //const resp = await fetch(
-    //  'https://backendrl-db-a5hygcb4fpfdf8as.southcentralus-01.azurewebsites.net/api/webpage_db',
-    //  { method: 'POST', body: formData }
-    //);
-    //const msg = await resp.text();
+    const resp = await fetch(
+      'https://backendrl-db-a5hygcb4fpfdf8as.southcentralus-01.azurewebsites.net/api/webpage_db',
+      { method: 'POST', body: formData }
+    );
+    const msg = await resp.text();
 
     if (resp.status === 200) {
       // Éxito solo si es 200
