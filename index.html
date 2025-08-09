@@ -8,16 +8,102 @@
     <!-- Open Graph -->
     <meta property="og:title" content="Rodolfo Lara · Automation Engineer in Saltillo">
     <meta property="og:description" content="Engineer specialized in PLCs, robots, vision systems, and AI. Explore FactoryAI — a smart assistant for automation.">
-    <meta property="og:image" content="https://www.rodolfolara.com/resources/images/chatbot/factoryAI.png">
-    <meta property="og:url" content="https://www.rodolfolara.com/">
+    <meta property="og:image" content="https://rodolfolara.com/resources/images/chatbot/factoryAI.png">
+    <meta property="og:url" content="https://rodolfolara.com/">
     <meta property="og:type" content="website">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Rodolfo Lara · Automation Engineer in Saltillo">
     <meta name="twitter:description" content="Automation engineer using PLCs, robots, vision, and AI. Meet FactoryAI, your smart industrial assistant.">
-    <meta name="twitter:image" content="https://www.rodolfolara.com/resources/images/chatbot/factoryAI.png">
-    
+    <meta name="twitter:image" content="https://rodolfolara.com/resources/images/chatbot/factoryAI.png">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://rodolfolara.com/">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://rodolfolara.com/#website",
+          "url": "https://rodolfolara.com/",
+          "name": "Rodolfo Lara — Automation Engineer",
+          "description": "Automation engineer based in Mexico. Controls, robotics, vision, and electrical design. Programming, integration, and turnkey controls.",
+          "inLanguage": ["en", "es-MX"],
+          "publisher": { "@id": "https://rodolfolara.com/#person" },
+          "hasPart": [
+            { "@type": "WebPage", "@id": "https://rodolfolara.com/services", "name": "Services" },
+            { "@type": "WebPage", "@id": "https://rodolfolara.com/expertise", "name": "Expertise" }
+          ]
+        },
+        {
+          "@type": "Person",
+          "@id": "https://rodolfolara.com/#person",
+          "name": "Rodolfo Lara",
+          "jobTitle": "Automation Engineer",
+          "url": "https://rodolfolara.com/",
+          "email": "mailto:support@rodolfolara.com",
+          "knowsLanguage": ["es-MX", "en"],
+          "knowsAbout": [
+            "Industrial automation",
+            "PLC programming",
+            "Industrial robotics",
+            "Machine vision",
+            "Electrical design"
+          ],
+          "workLocation": {
+            "@type": "Place",
+            "address": { "@type": "Country", "name": "Mexico" }
+          },
+          "areaServed": [
+            { "@type": "Country", "name": "Mexico" },
+            { "@type": "Place", "name": "Worldwide" }
+          ],
+          "potentialAction": [
+            {
+              "@type": "ContactAction",
+              "name": "Contact Rodolfo",
+              "target": "mailto:support@rodolfolara.com"
+            }
+          ]
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://rodolfolara.com/#webpage",
+          "url": "https://rodolfolara.com/",
+          "name": "Home",
+          "isPartOf": { "@id": "https://rodolfolara.com/#website" },
+          "about": { "@id": "https://rodolfolara.com/#person" },
+          "description": "Home page of Rodolfo Lara, automation engineer. Learn about services, expertise, and turnkey control solutions.",
+          "inLanguage": ["en", "es-MX"],
+          "publisher": { "@id": "https://rodolfolara.com/#person" }
+        },
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://rodolfolara.com/#service",
+          "name": "Automation Engineering Services",
+          "provider": { "@id": "https://rodolfolara.com/#person" },
+          "areaServed": [
+            { "@type": "Country", "name": "Mexico" },
+            { "@type": "Place", "name": "Worldwide" }
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Core Services",
+            "itemListElement": [
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "PLC programming & HMI" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Industrial robot integration" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Machine vision systems" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Electrical design (NFPA 79 / IEC)" } }
+            ]
+          }
+        }
+      ]
+    }
+    </script>
+
     <!--link rel="stylesheet" href="./resources/css/reset.css"-->
     <link rel="stylesheet" href="./resources/css/styles.css">
     <link rel="stylesheet" href="./resources/css/stylesChatbot.css">
@@ -31,6 +117,7 @@
     <script src="https://cdn.jsdelivr.net/npm/autosize@4.0.2/dist/autosize.min.js"></script>
     <script src="https://d3js.org/d3.v7.min.js"></script>
 </head>
+
  
 <body class="indexbody">
     <div class="index">
