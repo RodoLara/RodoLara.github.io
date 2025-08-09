@@ -21,97 +21,90 @@
     <!-- Canonical -->
     <link rel="canonical" href="https://rodolfolara.com/">
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
+    <script type="application/ld+json">
     {
-      "@type": "WebSite",
-      "@id": "https://rodolfolara.com/#website",
-      "url": "https://rodolfolara.com/",
-      "name": "Rodolfo Lara — Automation Engineer",
-      "description": "Automation engineer based in Mexico. Controls, robotics, vision, and electrical design. Programming, integration, and turnkey controls.",
-      "inLanguage": ["en", "es-MX"],
-      "publisher": { "@id": "https://rodolfolara.com/#person" },
-      "hasPart": [
-        { "@type": "WebPage", "@id": "https://rodolfolara.com/services", "name": "Services" },
-        { "@type": "WebPage", "@id": "https://rodolfolara.com/expertise", "name": "Expertise" }
-      ]
-    },
-    {
-      "@type": "Person",
-      "@id": "https://rodolfolara.com/#person",
-      "name": "Rodolfo Lara",
-      "jobTitle": "Automation Engineer",
-      "url": "https://rodolfolara.com/",
-      "email": "mailto:support@rodolfolara.com",
-      "knowsLanguage": ["es-MX", "en"],
-      "knowsAbout": [
-        "Industrial automation",
-        "PLC programming",
-        "Industrial robotics",
-        "Machine vision",
-        "Electrical design"
-      ],
-      "workLocation": {
-        "@type": "Place",
-        "address": { "@type": "Country", "name": "Mexico" }
-      },
-      "areaServed": [
-        { "@type": "Country", "name": "Mexico" },
-        { "@type": "Place", "name": "Worldwide" }
-      ],
-      "potentialAction": [
+      "@context": "https://schema.org",
+      "@graph": [
         {
-          "@type": "ContactAction",
-          "name": "Contact Rodolfo",
-          "target": "mailto:support@rodolfolara.com"
+          "@type": "WebSite",
+          "@id": "https://rodolfolara.com/#website",
+          "url": "https://rodolfolara.com/",
+          "name": "Rodolfo Lara — Automation Engineer",
+          "description": "Automation engineer based in Mexico. Controls, robotics, vision, and electrical design. Programming, integration, and turnkey controls.",
+          "inLanguage": ["en","es-MX"],
+          "publisher": { "@id": "https://rodolfolara.com/#person" },
+          "hasPart": [
+            { "@type": "WebPage", "@id": "https://rodolfolara.com/services", "name": "Services" },
+            { "@type": "WebPage", "@id": "https://rodolfolara.com/expertise", "name": "Expertise" }
+          ]
+        },
+        {
+          "@type": "Person",
+          "@id": "https://rodolfolara.com/#person",
+          "name": "Rodolfo Lara",
+          "jobTitle": "Automation Engineer",
+          "url": "https://rodolfolara.com/",
+          "email": "mailto:support@rodolfolara.com",
+          "knowsLanguage": ["es-MX","en"],
+          "knowsAbout": [
+            "Industrial automation",
+            "PLC programming",
+            "Industrial robotics",
+            "Machine vision",
+            "Electrical design"
+          ],
+          "workLocation": {
+            "@type": "Place",
+            "address": {
+              "@type": "PostalAddress",
+              "addressCountry": "MX"
+            }
+          }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://rodolfolara.com/#webpage",
+          "url": "https://rodolfolara.com/",
+          "name": "Home",
+          "isPartOf": { "@id": "https://rodolfolara.com/#website" },
+          "about": { "@id": "https://rodolfolara.com/#person" },
+          "description": "Home page of Rodolfo Lara, automation engineer. Learn about services, expertise, and turnkey control solutions.",
+          "inLanguage": ["en","es-MX"],
+          "publisher": { "@id": "https://rodolfolara.com/#person" }
+        },
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://rodolfolara.com/#service",
+          "name": "Automation Engineering Services",
+          "url": "https://rodolfolara.com/services.html",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Saltillo",
+            "addressRegion": "Coahuila",
+            "addressCountry": "MX"
+          },
+          "telephone": "+528442815555",
+          "image": "https://rodolfolara.com/resources/images/chatbot/factoryAI.png",
+          "priceRange": "$$ - $$$",
+          "areaServed": [
+            { "@type": "Country", "name": "Mexico" },
+            { "@type": "Place", "name": "Worldwide" }
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Core Services",
+            "itemListElement": [
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "PLC programming & HMI" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Industrial robot integration" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Machine vision systems" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Electrical design (NFPA 79 / IEC)" } }
+            ]
+          }
         }
       ]
-    },
-    {
-      "@type": "WebPage",
-      "@id": "https://rodolfolara.com/#webpage",
-      "url": "https://rodolfolara.com/",
-      "name": "Home",
-      "isPartOf": { "@id": "https://rodolfolara.com/#website" },
-      "about": { "@id": "https://rodolfolara.com/#person" },
-      "description": "Home page of Rodolfo Lara, automation engineer. Learn about services, expertise, and turnkey control solutions.",
-      "inLanguage": ["en", "es-MX"],
-      "publisher": { "@id": "https://rodolfolara.com/#person" }
-    },
-    {
-      "@type": "ProfessionalService",
-      "@id": "https://rodolfolara.com/#service",
-      "name": "Automation Engineering Services",
-      "provider": { "@id": "https://rodolfolara.com/#person" },
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Saltillo",
-        "addressRegion": "Coahuila",
-        "addressCountry": "MX"
-      },
-      "telephone": "+528442815555",
-      "image": "https://rodolfolara.com/resources/images/chatbot/factoryAI.png",
-      "priceRange": "$$ - $$$",
-      "areaServed": [
-        { "@type": "Country", "name": "Mexico" },
-        { "@type": "Place", "name": "Worldwide" }
-      ],
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Core Services",
-        "itemListElement": [
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "PLC programming & HMI" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Industrial robot integration" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Machine vision systems" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Electrical design (NFPA 79 / IEC)" } }
-        ]
-      }
     }
-  ]
-}
-</script>
+    </script>
+
 
 
     <!--link rel="stylesheet" href="./resources/css/reset.css"-->
