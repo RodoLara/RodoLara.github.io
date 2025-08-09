@@ -45,11 +45,20 @@
         "about": { "@id": "https://rodolfolara.com/#person" },
         "inLanguage": ["en", "es-MX"],
         "description": "Access downloadable files, documents, and PLC project archives shared by Rodolfo Lara for clients and collaborators.",
+        "mainEntity": { "@id": "https://rodolfolara.com/downloads.html#catalog" },
         "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://rodolfolara.com/downloads.html?project={projectNumber}",
-          "query-input": "required name=projectNumber"
+          "@type": "FindAction",
+          "name": "Open project downloads form",
+          "target": "https://rodolfolara.com/downloads.html#project-form"
         }
+      },
+      {
+        "@type": "DataCatalog",
+        "@id": "https://rodolfolara.com/downloads.html#catalog",
+        "name": "Project Downloads",
+        "description": "Documentation and files per project. Access requires a valid project number.",
+        "creator": { "@id": "https://rodolfolara.com/#person" },
+        "isAccessibleForFree": true
       },
       {
         "@type": "BreadcrumbList",
@@ -74,6 +83,7 @@
     ]
   }
   </script>
+
 </head>
 
 <body class="downloadbody">
