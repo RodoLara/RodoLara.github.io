@@ -82,7 +82,7 @@ body.servicesbody::before {
     40px 80px,    /* capa 2 -> mitad de 120 */
     80px 120px,       /* capa 3 -> mitad solo en X (o 0 60px si prefieres) */
     120px 120px;
-  opacity: 0.4;
+  opacity: 0.2;
 }
 
 
