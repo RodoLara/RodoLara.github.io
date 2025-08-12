@@ -220,7 +220,7 @@ body {
     80px 120px,
     120px 120px;
 
-  opacity: 0.2;
+  opacity: 0.1;
 }
 
 /* Asegura que el contenido vaya por encima del patrón */
@@ -283,7 +283,7 @@ body {
     80px 120px,
     120px 120px;
 
-  opacity: 0.3;
+  opacity: 0.1;
 }
 
 /* Asegura que el contenido vaya por encima del patrón */
@@ -322,7 +322,7 @@ header {
 .main-contentcontact{
   max-width: 800px;
   margin: 0 auto;
-  background-color: #e8854384;
+  background-color: #e88543;
 }
 
 .main-contentcontact::before {
@@ -349,6 +349,11 @@ header {
     120px 120px;
 
   opacity: 0.1;
+}
+
+.main-contentcontact > * {
+  position: relative;
+  padding-bottom: 0.5em;
 }
 
 
@@ -652,7 +657,7 @@ nav ul li a {
 
 .programacion-contacto {
   margin: 2em 2em;
-  background-color: #e8854383;
+  background-color: #e8854393;
 }
 
 .programacion-clients {
