@@ -44,6 +44,50 @@ body {
     background-color: #621cee;
 }
 
+/* Añade posición relativa al cuerpo o al contenedor para que ::before se ubique bien */
+body.servicesbody {
+  position: relative;
+  /* conservas el color púrpura como fondo base */
+}
+
+/* Monograma repetido e intercalado en segundo plano */
+body.servicesbody::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+
+  background-image:
+    url("../images/chatbot/factoryAI120_2.png"),   /* capa 1 */
+    url("../images/chatbot/factoryAI120_7.png"),      /* capa 2 */
+    url("../images/chatbot/factoryAI120_4.png"),  /* capa 3 */
+    url("../images/chatbot/factoryAI120_8.png");  /* capa 3 */
+
+  background-size:
+    80px 80px,
+    80px 80px,
+    80px 80px,
+    80px 80px;
+
+  background-repeat:
+    repeat,
+    repeat,
+    repeat,
+    repeat;
+
+  /* half-drop: medias celdas */
+  background-position:
+    0 0,          /* capa 1 */
+    40px 80px,    /* capa 2 -> mitad de 120 */
+    80px 120px,       /* capa 3 -> mitad solo en X (o 0 60px si prefieres) */
+    120px 120px;
+  opacity: 0.4;
+}
+
+
+
+
 h2, h3, h4 {
     color: #fff;
     font-weight:700;
@@ -76,7 +120,8 @@ section.introduction strong{
 }
 
 .introduction{
-    background-color: #621cee;
+    background-color: #621cee72;
+    
 }
 
 section.introduction em{
@@ -85,13 +130,17 @@ section.introduction em{
 }
 
 form {
-    background-color: #621cee;
+    background-color: #621ceebb;
+    /*opacity: 0.9; */
     padding: 20px;
     border-radius: 5px;
     /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);*/
     max-width: 800px; /* Ancho máximo del formulario */
     margin: 0 auto; /* Centrar el formulario horizontalmente */
-}
+    /*position: relative;*/
+  }
+
+
 
 label {
     display: block;
@@ -222,7 +271,7 @@ input[type="submit"]:hover {
     margin-top: 20px;
     border: 2px solid #ffffff;
     padding: 20px;
-    background-color: #621cee;
+    background-color: #621cee84;
 }
 
 .politica h3 {

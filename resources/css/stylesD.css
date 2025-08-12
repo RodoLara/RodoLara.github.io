@@ -54,11 +54,14 @@ header {
     letter-spacing: 0.05em;
     color: var(--clr-font);
     background-color: var(--clr-downloads);
-    /*position: relative;*/
     min-height: 100vh;
     padding-bottom: 4em;
     overflow: hidden auto;
+    position: relative;
   }
+
+
+
 
 body {
     background-color: var(--clr-downloads);
@@ -101,8 +104,8 @@ body {
     overflow: hidden auto;
   }
 
-  .container {
-    /*background-color: #d33bce;*/
+.container {
+    background-color: #e2598b95;
     /*color: #333;*/
     color: whitesmoke;
     padding: 20px;
@@ -112,6 +115,41 @@ body {
     width: 100%;
     max-width: 400px;
     margin: 0 auto; /* Esto centrará horizontalmente */
+    
+
+    
+}
+
+.download::before {
+  content: "";
+  position: absolute;        /* que ocupe todo el .plc */
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+
+  background-image:
+    url("../images/chatbot/factoryAI120_2.png"),
+    url("../images/chatbot/factoryAI120_7.png"),
+    url("../images/chatbot/factoryAI120_4.png"),
+    url("../images/chatbot/factoryAI120_8.png");
+
+  background-size: 80px 80px, 80px 80px, 80px 80px, 80px 80px;
+  background-repeat: repeat, repeat, repeat, repeat;
+
+  /* medio desplazamiento para el efecto half-drop */
+  background-position:
+    0 0,
+    40px 80px,
+    80px 120px,
+    120px 120px;
+
+  opacity: 0.1;
+}
+
+/* Asegura que el contenido vaya por encima del patrón */
+.download > * {
+  position: relative;
+  padding-bottom: 0.5em;
 }
 
 h1 {

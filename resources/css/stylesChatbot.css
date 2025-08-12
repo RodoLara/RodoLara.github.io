@@ -23,7 +23,7 @@ a {
     margin: 0 auto;
     /*border: 1px solid #5e13a5;*/
     width: 100%;
-    max-width: 100%;
+    max-width: 800px;
     height: 97vh;
     /*height: 97vh; /* Igualar la altura del wrapper al 100% de la ventana */
     box-sizing: border-box; /* Incluir el padding y borde en el tamaño total */
@@ -373,26 +373,38 @@ pre {
     align-items:center; 
 }
 
-#About{
+#About {
     cursor: pointer;
     border: 1px solid whitesmoke;
+    position: relative;
     border-radius: 4px;
-    padding: 1px;
+    padding: 1px 8px;
     font-size: 13px;
+    margin-left: 2em; /* Esto lo empuja a la derecha aunque esté antes en el HTML */
+}
+
+#aboutContainer{
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  flex: 0 0 auto;              /* <- evita que se estire en el flex padre */
+  width: fit-content;          /* opcional, asegura ancho al contenido */
 }
 
 #infoBox {
-    display: none;
-    position: absolute;
-    top: 11%;
-    left: 70%;
-    transform: translate(-50%, -50%);
-    z-index: 9999;
-    border: 0px solid #ccc;
-    border-radius: 4px;
-    padding: 5px;
-    background-color: #232323;
-    font-size: 13px;
+  display: none;
+  position: absolute;
+  top: 50%  !important;                 /* centra verticalmente */
+  left: 100%;               /* justo al borde derecho del botón */
+  margin-left: 80px;   
+  margin-top: 40px;     /* separación horizontal */
+  transform: translateY(-50%);
+  z-index: 9999;
+  border-radius: 4px;
+  padding: 5px 8px;
+  background: #232323;
+  font-size: 13px;
+  white-space: wrap;
 }
 
 #power{

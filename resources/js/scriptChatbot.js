@@ -200,17 +200,18 @@ document.addEventListener('DOMContentLoaded', () => {
     var infoBox = document.getElementById('infoBox');
 
     // Mostrar o ocultar la ventana al hacer clic en el botón 'About'
-    //aboutButton.addEventListener('click', function(event) {
-    //    infoBox.style.display = infoBox.style.display === 'none' ? 'block' : 'none'; // Alternar la visibilidad del infoBox
-    //    event.stopPropagation(); // Evitar que el clic se propague al documento
-    //});
-//
-    //// Ocultar la ventana al hacer clic fuera de ella
-    //document.addEventListener('click', function(event) {
-    //    if (!infoBox.contains(event.target) && event.target !== aboutButton) {
-    //        infoBox.style.display = 'none'; // Ocultar la ventana si el clic no fue dentro de infoBox ni en el botón 'About'
-    //    }
-    //});
+    aboutButton.addEventListener('click', function (event) {
+        const isHidden = window.getComputedStyle(infoBox).display === 'none';
+        infoBox.style.display = isHidden ? 'block' : 'none';
+        event.stopPropagation();
+    });
+
+    // Ocultar la ventana al hacer clic fuera de ella
+    document.addEventListener('click', function(event) {
+        if (!infoBox.contains(event.target) && event.target !== aboutButton) {
+            infoBox.style.display = 'none'; // Ocultar la ventana si el clic no fue dentro de infoBox ni en el botón 'About'
+        }
+    });
 
 
     //textarea.style.height = (parseInt(originalHeight) - 0) + "px";

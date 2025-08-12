@@ -15,7 +15,7 @@
   --clr-white: #fff;
   --clr-primary: #00218a;
   /*--clr-español: #e34545;*/
-  --clr-expertise: #40bc52;
+  --clr-expertise: #40bc53;
   --clr-contact: #e88543;
   --clr-español: #32b6b1;
   --clr-services: #598dd1;
@@ -103,6 +103,8 @@ body {
   padding-top: calc(2vh + env(safe-area-inset-top));
 }
 
+
+
 .indexbody{
   margin: 0;
   padding: 0;
@@ -130,6 +132,9 @@ body {
   overflow: hidden auto;
 }
   
+
+
+
 .subtitulo{
   font-family: "Roboto", sans-serif;
   font-size: var(--font-size);
@@ -152,6 +157,7 @@ body {
 }
 
 .plc {
+  position: relative; 
   margin: 0;
   font-family: "Roboto", sans-serif;
   font-size: var(--font-size);
@@ -163,6 +169,7 @@ body {
   padding-bottom: 4em;
   overflow: hidden auto;
 }
+
 
 
 
@@ -185,9 +192,41 @@ body {
   letter-spacing: 0.05em;
   color: var(--clr-font);
   background-color: var(--clr-services);
-  /*position: relative;*/
+  position: relative;
   min-height: 100vh;
   padding-bottom: 5em;
+}
+
+.machines::before {
+  content: "";
+  position: absolute;        /* que ocupe todo el .plc */
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+
+  background-image:
+    url("../images/chatbot/factoryAI120_2.png"),
+    url("../images/chatbot/factoryAI120_7.png"),
+    url("../images/chatbot/factoryAI120_4.png"),
+    url("../images/chatbot/factoryAI120_8.png");
+
+  background-size: 80px 80px, 80px 80px, 80px 80px, 80px 80px;
+  background-repeat: repeat, repeat, repeat, repeat;
+
+  /* medio desplazamiento para el efecto half-drop */
+  background-position:
+    0 0,
+    40px 80px,
+    80px 120px,
+    120px 120px;
+
+  opacity: 0.2;
+}
+
+/* Asegura que el contenido vaya por encima del patrón */
+.machines > * {
+  position: relative;
+  padding-bottom: 0.5em;
 }
 
 .contact {
@@ -214,6 +253,45 @@ body {
   padding-bottom: 5em;
 }
 
+/* Fondo estampado para la página de Expertise */
+.plc {
+  position: relative;        /* crea el contexto para ::before */
+  background-color: var(--clr-expertise);
+  overflow: hidden;
+}
+
+.plc::before {
+  content: "";
+  position: absolute;        /* que ocupe todo el .plc */
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+
+  background-image:
+    url("../images/chatbot/factoryAI120_2.png"),
+    url("../images/chatbot/factoryAI120_7.png"),
+    url("../images/chatbot/factoryAI120_4.png"),
+    url("../images/chatbot/factoryAI120_8.png");
+
+  background-size: 80px 80px, 80px 80px, 80px 80px, 80px 80px;
+  background-repeat: repeat, repeat, repeat, repeat;
+
+  /* medio desplazamiento para el efecto half-drop */
+  background-position:
+    0 0,
+    40px 80px,
+    80px 120px,
+    120px 120px;
+
+  opacity: 0.3;
+}
+
+/* Asegura que el contenido vaya por encima del patrón */
+.plc > * {
+  position: relative;
+  padding-bottom: 0.5em;
+}
+
 
 header {
   background-color: #000;
@@ -226,10 +304,102 @@ header {
   box-sizing: border-box;
 }
 
+.main-content{
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+
+
+
+
+.main-contentexpertise{
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #40bc53ae;
+}
+
+.main-contentcontact{
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #e8854384;
+}
+
+.main-contentcontact::before {
+  content: "";
+  position: absolute;        /* que ocupe todo el .plc */
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+
+  background-image:
+    url("../images/chatbot/factoryAI120_2.png"),
+    url("../images/chatbot/factoryAI120_7.png"),
+    url("../images/chatbot/factoryAI120_4.png"),
+    url("../images/chatbot/factoryAI120_8.png");
+
+  background-size: 80px 80px, 80px 80px, 80px 80px, 80px 80px;
+  background-repeat: repeat, repeat, repeat, repeat;
+
+  /* medio desplazamiento para el efecto half-drop */
+  background-position:
+    0 0,
+    40px 80px,
+    80px 120px,
+    120px 120px;
+
+  opacity: 0.1;
+}
+
+
+.main-contentclients{
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  padding-bottom: 0.5em;
+}
+
+.clientes::before {
+  content: "";
+  position: absolute;        /* que ocupe todo el .plc */
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+
+  background-image:
+    url("../images/chatbot/factoryAI120_2.png"),
+    url("../images/chatbot/factoryAI120_7.png"),
+    url("../images/chatbot/factoryAI120_4.png"),
+    url("../images/chatbot/factoryAI120_8.png");
+
+  background-size: 80px 80px, 80px 80px, 80px 80px, 80px 80px;
+  background-repeat: repeat, repeat, repeat, repeat;
+
+  /* medio desplazamiento para el efecto half-drop */
+  background-position:
+    0 0,
+    40px 80px,
+    80px 120px,
+    120px 120px;
+
+  opacity: 0.1;
+}
+
+/* Asegura que el contenido vaya por encima del patrón */
+.clientes > * {
+  position: relative;
+  padding-bottom: 0.5em;
+}
+
 #canvasContainer {
   position: relative;
   display: block; 
   background-color: #f0f0f0; 
+}
+
+.servicios{
+ 
+  background-color: #598dd1a4; 
 }
 
 .line {
@@ -463,16 +633,39 @@ nav ul li a {
 }
 
 .programacion-hmi {
-  margin: 2em;
+  margin: 2em 2em;
+  display: flex;
+  flex-direction: column;
+  align-items:center;     /* Centra el bloque horizontalmente */
+  justify-content: left; /* Si quieres también centrarlo verticalmente */
+     /* Para ocupar la altura completa */
 }
 
+.programacion-hmi > * {
+    text-align: left !important; /* Alinea el contenido interno a la izquierda */
+    max-width: 800px; /* Controla el ancho para que no se vea tan estirado */
+}
+
+.programacion-expertise {
+  margin: 2em 2em;
+}
+
+.programacion-contacto {
+  margin: 2em 2em;
+  background-color: #e8854383;
+}
+
+.programacion-clients {
+  margin: 2em 2em;
+  background-color: #9258cf81;
+}
 
 .logos-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 columnas */
   gap: 0px; /* Espacio entre los logos */
   grid-auto-rows: 15vh;
-  /*background-color: #e34545;*/
+  background-color: #9258cfa6;
   margin: 1vh 2vw;
 }
 
@@ -481,7 +674,7 @@ nav ul li a {
   align-items: center; /* Centra verticalmente */
   width: 80%; /* Ancho deseado para cada logo */
   height: 80%; /* Alto deseado para cada logo */
-  /*background-color: #47ff31;*/
+
   margin: auto;
 }
 
