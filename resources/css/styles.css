@@ -658,11 +658,13 @@ nav ul li a {
 .programacion-contacto {
   margin: 2em 2em;
   background-color: #e8854393;
+  padding-bottom: 2em;
 }
 
 .programacion-clients {
   margin: 2em 2em;
   background-color: #9258cf81;
+  padding-bottom: 1em;
 }
 
 .logos-grid {
