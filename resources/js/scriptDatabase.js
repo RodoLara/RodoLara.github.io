@@ -23,7 +23,7 @@ document.getElementById('programmerForm').addEventListener('submit', async funct
     if (cvSelect && cvSelect.value === "no") {
       console.log("📄 El usuario NO subió un CV. Usando el placeholder.");
     
-      const response = await fetch("./resources/docs/CV_Placeholder.pdf");
+      const response = await fetch("/resources/docs/CV_Placeholder.pdf");
       const blob     = await response.blob();
     
       file = new File([blob], "CV_Placeholder.pdf", { type: "application/pdf" });

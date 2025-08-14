@@ -27,7 +27,7 @@ let prompts;
 // Función para cargar y asignar los valores de los prompts
 async function cargarPrompts() {
   // Obtener los datos del archivo JSON usando fetch
-  const response = await fetch('./resources/json/prompts.json');
+  const response = await fetch('/resources/json/prompts.json');
   prompts = await response.json();
   console.log('Longitud de prompts:', prompts.length);
   // Asignar los valores de los prompts según lo requerido
@@ -271,9 +271,9 @@ function verificarContenido() {
     var texto = textarea.value.trim(); // Obtener el contenido del textarea y eliminar espacios en blanco al inicio y al final
     //console.log("Mensaje Principal", texto);
     if (texto.length > 0 && texto !== "Mensaje") {
-        imagen.src = "./resources/images/chatbot/SendArrow.png";
+        imagen.src = "/resources/images/chatbot/SendArrow.png";
     } else {
-        imagen.src = "./resources/images/chatbot/SendArrowGray.png";
+        imagen.src = "/resources/images/chatbot/SendArrowGray.png";
     }
 }
 verificarContenido();
