@@ -1,15 +1,109 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/blog-styles.css">
-    <link rel="icon" href="./resources/images/favicon.ico" type="image/x-icon">
-    <title>Palpador Digital para CNC | Blog de Automatización</title>
-    <meta name="description" content="Explorando la automatización de mediciones en CNC utilizando un palpador digital, incluyendo información sobre interpretación de datos, diseño de circuitos y temas relacionados en electrónica digital, Arduino, IA y automatización.">
-    <link rel="alternate" hreflang="en" href="/blog/en/posts/post2.html">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Palpador Digital para CNC | Blog de Automatización · Rodolfo Lara</title>
+  <meta name="description" content="Automatización de mediciones en CNC con un palpador digital: interpretación de datos, diseño de circuitos y temas relacionados en electrónica digital, Arduino, IA y automatización.">
+  <meta name="robots" content="index, follow">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../../css/blog-styles.css">
+
+  <!-- Canonical & Hreflang -->
+  <link rel="canonical" href="https://rodolfolara.com/blog/es/posts/post2.html">
+  <link rel="alternate" hreflang="es-MX" href="https://rodolfolara.com/blog/es/posts/post2.html">
+  <link rel="alternate" hreflang="es" href="https://rodolfolara.com/blog/es/posts/post2.html">
+  <link rel="alternate" hreflang="en" href="https://rodolfolara.com/blog/en/posts/post2.html">
+  <link rel="alternate" hreflang="x-default" href="https://rodolfolara.com/blog/en/posts/post2.html">
+
+  <!-- Favicons (root) -->
+  <link rel="icon" href="https://rodolfolara.com/favicon.ico" type="image/x-icon">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://rodolfolara.com/favicon-16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://rodolfolara.com/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="https://rodolfolara.com/favicon-48.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="https://rodolfolara.com/favicon-512.png">
+  <link rel="apple-touch-icon" href="https://rodolfolara.com/apple-touch-icon.png">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Palpador Digital para CNC | Blog de Automatización · Rodolfo Lara">
+  <meta property="og:description" content="Automatización de mediciones en CNC con un palpador digital: interpretación de datos, diseño de circuitos, Arduino, IA y más.">
+  <meta property="og:image" content="https://rodolfolara.com/blog/images/post2/palpador_digital.jpg">
+  <meta property="og:url" content="https://rodolfolara.com/blog/es/posts/post2.html">
+  <meta property="og:type" content="article">
+  <meta property="article:author" content="Rodolfo Lara">
+  <meta property="article:tag" content="CNC, Electrónica Digital, Arduino, IA, Automatización">
+  <meta property="article:published_time" content="2025-xx-xx">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Palpador Digital para CNC | Blog de Automatización · Rodolfo Lara">
+  <meta name="twitter:description" content="Automatización de mediciones en CNC con un palpador digital: interpretación de datos, diseño de circuitos, Arduino, IA y más.">
+  <meta name="twitter:image" content="https://rodolfolara.com/blog/images/post2/palpador_digital.jpg">
+
+  <!-- Fonts (preconnect) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Schema (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"BlogPosting",
+        "@id":"https://rodolfolara.com/blog/es/posts/post2.html#blogposting",
+        "headline":"Palpador Digital para CNC",
+        "description":"Automatización de mediciones en CNC con un palpador digital: interpretación de datos, diseño de circuitos y temas relacionados en electrónica digital, Arduino, IA y automatización.",
+        "image":"https://rodolfolara.com/blog/images/post2/palpador_digital.jpg",
+        "author":{"@id":"https://rodolfolara.com/#person"},
+        "publisher":{"@id":"https://rodolfolara.com/#person"},
+        "datePublished":"2025-xx-xx",
+        "dateModified":"2025-xx-xx",
+        "inLanguage":"es-MX",
+        "keywords":["CNC","Electrónica Digital","Arduino","IA","Automatización"],
+        "mainEntityOfPage":{"@id":"https://rodolfolara.com/blog/es/posts/post2.html#webpage"}
+      },
+      {
+        "@type":"WebPage",
+        "@id":"https://rodolfolara.com/blog/es/posts/post2.html#webpage",
+        "url":"https://rodolfolara.com/blog/es/posts/post2.html",
+        "name":"Palpador Digital para CNC | Blog de Automatización · Rodolfo Lara",
+        "isPartOf":{"@id":"https://rodolfolara.com/#website"},
+        "about":{"@id":"https://rodolfolara.com/#person"},
+        "inLanguage":"es-MX",
+        "description":"Automatización de mediciones en CNC con un palpador digital: interpretación de datos, diseño de circuitos y temas relacionados en electrónica digital, Arduino, IA y automatización."
+      },
+      {
+        "@type":"BreadcrumbList",
+        "@id":"https://rodolfolara.com/blog/es/posts/post2.html#breadcrumb",
+        "itemListElement":[
+          {"@type":"ListItem","position":1,"name":"Inicio","item":"https://rodolfolara.com/"},
+          {"@type":"ListItem","position":2,"name":"Blog","item":"https://rodolfolara.com/blog/es/index.html"},
+          {"@type":"ListItem","position":3,"name":"Palpador Digital para CNC","item":"https://rodolfolara.com/blog/es/posts/post2.html"}
+        ]
+      },
+      {
+        "@type":"WebSite",
+        "@id":"https://rodolfolara.com/#website",
+        "url":"https://rodolfolara.com/",
+        "name":"Rodolfo Lara — Automation Engineer"
+      },
+      {
+        "@type":"Person",
+        "@id":"https://rodolfolara.com/#person",
+        "name":"Rodolfo Lara",
+        "jobTitle":"Automation Engineer",
+        "url":"https://rodolfolara.com/",
+        "knowsLanguage":["es-MX","en"]
+      }
+    ]
+  }
+  </script>
 </head>
+
 <body class="bodyBlog">
     <header>
         <nav class="content3" id="whitecont">        
