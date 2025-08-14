@@ -1,92 +1,31 @@
-let currentLanguage = "en";
-currentLanguage = sessionStorage.getItem('currentLanguage') || 'en';
-//const textContainer = document.getElementById('textContainer'); // Acceder al contenedor de texto globalmente
+let currentLanguage; // Variable global accesible desde cualquier otro script
 
-function changeLanguage(lang) {
-    fetch('./resources/json/lang.json')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            //console.log('JSON response:', response);
-            //console.log(data);
-            return response.json();
-        })
-        .then(data => {
-            if (!data) {
-                throw new Error('JSON data is undefined');
-            }
-            // Verificar si la clave 'lang' existe en el objeto data
-            if (!data[lang]) {
-                throw new Error(`Language '${lang}' not found in JSON`);
-            }
-            // Obtener todos los elementos con atributo data-translate
-            const elements = document.querySelectorAll('[data-translate]');
-            // Iterar sobre los elementos
-            elements.forEach(element => {
-                // Obtener la clave del elemento
-                const key = element.getAttribute('data-translate');
-                // Verificar si la clave 'key' existe en el objeto data[lang]
-                if (!data[lang][key]) {
-                    console.error(`Key '${key}' or language '${lang}' not found in JSON`);
-                    return; // Salir de la iteración actual si la clave no existe
-                }
-                // Obtener el texto correspondiente al idioma seleccionado
-                const text = data[lang][key];
-                // Asignar el texto al elemento
-                
+(function () {
+  var link = document.querySelector('.mLanguage');
+  if (!link) return;
 
-                if (text === "Project Number" || text === "Número de Proyecto") {
-                    // Asignar el texto en negritas
-                    element.innerHTML = `<strong>${text}</strong>`;
-                } else {
-                    // Asignar el texto normalmente
-                    element.textContent = text;
-                }
-                //textContainer.style.overflow = 'hidden';
-                //textContainer.style.overflowWrap = 'break-word';
-                //textContainer.style.whiteSpace = 'normal';
-            });
-        })
-        .catch(error => console.error('Error fetching or parsing JSON:', error));
-}
+  var path = location.pathname; // ej. /en/services.html
+  var isEn = path.startsWith('/en/');
+  var isEs = path.startsWith('/es/');
 
+  // Detectar idioma actual
+  if (isEn) {
+    currentLanguage = "en";
+  } else if (isEs) {
+    currentLanguage = "es";
+  } else {
+    currentLanguage = "en"; // fallback si no hay carpeta
+  }
 
-// Cargar lenguaje
-changeLanguage(currentLanguage);
+  // Ajustar enlace y texto
+  var target = isEn ? path.replace(/^\/en\//, '/es/') :
+               isEs ? path.replace(/^\/es\//, '/en/') :
+               '/en/';
 
-document.addEventListener('DOMContentLoaded', function() {
-    var imgPower = document.getElementById('power');
-
-    // Verificar si el elemento existe
-    if (imgPower) {
-        // Agregar un evento de click a la imagen
-        imgPower.addEventListener('click', function() {
-            // Redirigir al index.html al hacer clic en la imagen
-            console.log("Power Clicked!");
-            window.location.href = 'index.html';
-        });
-    } else {
-        console.log("Element with ID 'power' does not exist.");
-    }
-    const enlaces = document.querySelectorAll('.mLanguage'); // Selecciona los enlaces con la clase mLanguage
-
-    enlaces.forEach(function(enlace) {
-        enlace.addEventListener('click', function(event) {
-            event.preventDefault(); // Evita que el enlace redirija a la página
-            //console.log('¡Se ha presionado el enlace!');
-            
-            // Cambiar el idioma
-            if (currentLanguage === "en"){
-                currentLanguage = "es";
-            } else if (currentLanguage === "es"){
-                currentLanguage = "en";
-            }
-            changeLanguage(currentLanguage);
-            sessionStorage.setItem('currentLanguage', currentLanguage);
-        });
-    });
-});
+  link.href = target;
+  link.textContent = isEn ? 'ESPAÑOL' : 'ENGLISH';
+  link.setAttribute('hreflang', isEn ? 'es' : 'en');
+})();
 
 function copiarCodigo(botonClickado) {
     var code = botonClickado.parentElement.nextElementSibling.querySelector('pre code').textContent;

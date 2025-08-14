@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Access downloadable files, documents, and PLC project archives shared by Rodolfo Lara for clients and collaborators.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Downloads · Rodolfo Lara | Client Portal">
+  <meta property="og:description" content="Access downloadable project files and documentation shared by automation engineer Rodolfo Lara.">
+  <meta property="og:image" content="https://rodolfolara.com/favicon-512.png">
+  <meta property="og:url" content="https://rodolfolara.com/downloads.html">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Downloads · Rodolfo Lara | Client Portal">
+  <meta name="twitter:description" content="Access downloadable PLC project files, documents and more.">
+  <meta name="twitter:image" content="https://rodolfolara.com/favicon-512.png">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://rodolfolara.com/downloads.html">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/resources/css/reset.css">
+  <link rel="stylesheet" href="/resources/css/stylesD.css">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+  <title>Downloads · Rodolfo Lara | Client Project Files</title>
+
+  <!-- Favicons -->
+  <link rel="icon" href="https://rodolfolara.com/favicon.ico" type="image/x-icon">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://rodolfolara.com/favicon-16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://rodolfolara.com/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="https://rodolfolara.com/favicon-48.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="https://rodolfolara.com/favicon-512.png">
+  <link rel="apple-touch-icon" href="https://rodolfolara.com/apple-touch-icon.png">
+
+  <!-- Schema (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://rodolfolara.com/downloads.html#webpage",
+        "url": "https://rodolfolara.com/downloads.html",
+        "name": "Downloads · Rodolfo Lara | Client Portal",
+        "isPartOf": { "@id": "https://rodolfolara.com/#website" },
+        "about": { "@id": "https://rodolfolara.com/#person" },
+        "inLanguage": ["en", "es-MX"],
+        "description": "Access downloadable files, documents, and PLC project archives shared by Rodolfo Lara for clients and collaborators.",
+        "mainEntity": { "@id": "https://rodolfolara.com/downloads.html#catalog" },
+        "potentialAction": {
+          "@type": "FindAction",
+          "name": "Open project downloads form",
+          "target": "https://rodolfolara.com/downloads.html#project-form"
+        }
+      },
+      {
+        "@type": "DataCatalog",
+        "@id": "https://rodolfolara.com/downloads.html#catalog",
+        "name": "Project Downloads",
+        "description": "Documentation and files per project. Access requires a valid project number.",
+        "creator": { "@id": "https://rodolfolara.com/#person" },
+        "isAccessibleForFree": true
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://rodolfolara.com/downloads.html#breadcrumb",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://rodolfolara.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Downloads", "item": "https://rodolfolara.com/downloads.html" }
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://rodolfolara.com/#website",
+        "url": "https://rodolfolara.com/",
+        "name": "Rodolfo Lara — Automation Engineer"
+      },
+      {
+        "@type": "Person",
+        "@id": "https://rodolfolara.com/#person",
+        "name": "Rodolfo Lara",
+        "url": "https://rodolfolara.com/"
+      }
+    ]
+  }
+  </script>
+</head>
+
+
+<body class="downloadbody">
+  <!-- Header -->
+  <header>
+    <nav class="content3" id="whitecont">        
+      <ul class="navbar-nav">
+        <li><a href="index.html">Rodolfo Lara, Automation Engineer</a></li>
+        <li class="nav-item c">
+          <a href="#" class="item-link" title="Open menu">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </a>
+          <div id="drop-down">
+            <a href="expertise.html" class="mExpertise clinks">ABOUT ME</a>
+            <a href="services.html" class="mServices clinks">SERVICES</a>
+            <a href="clients.html" class="mClients clinks">CASES</a>
+            <a href="downloads.html" class="mDownloads clinks">DOWNLOADS</a>
+            <a href="/blog/index.html" class="mBlog clinks">BLOG</a>
+            <a href="contact.html" class="mContact clinks">CONTACT</a>
+            <a href="" class="mLanguage clinks">ESPAÑOL</a>
+          </div>
+        </li>
+      </ul>             
+    </nav>
+  </header>
+
+  <div class="download">
+    <div class="container">
+      <h1>Downloads</h1>
+      <br>
+      <form id="project-form" onsubmit="return buscarProyecto()">
+        <label for="project-number">
+          Enter <strong>Project Number</strong> to access the available documentation and downloads:
+        </label>
+        <input type="text" id="project-number" placeholder="Project Number" required>
+        <button type="submit">Search</button>
+      </form>
+      <div id="result" class="result"></div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer6">
+    <p class="copyright">© 2025 RL, All Rights Reserved</p>
+    <p class="location">Designed in Saltillo, Mx</p>
+    <p class="designer">&lt; &gt; with &#10084;</p>
+  </footer>
+
+  <script src="resources/js/script.js"></script>
+</body>
+
+</html>
