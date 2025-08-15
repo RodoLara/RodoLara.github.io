@@ -189,3 +189,13 @@ phoneInput.addEventListener('blur', function() {
       if (txt.disabled) txt.value = '';       // limpia al desmarcar
     });
   });
+
+  // Detecta el scroll y ajusta la posición del gradiente
+document.addEventListener("scroll", () => {
+    const scrollTop = window.scrollY;  
+    const docHeight = document.body.scrollHeight - window.innerHeight;
+    const scrollPercent = scrollTop / docHeight;
+
+    // Ajusta el ángulo o posición de colores
+    document.body.style.backgroundPosition = `0% ${scrollPercent * 100}%`;
+});

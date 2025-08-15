@@ -29,19 +29,6 @@
     --clr-font: #f8f7f7;
     --font-size: 16px;
     --border-radius:0.2em;
-
-   /*--brand-purple: #1c46ee;
-    --brand-purple-rgb: 28, 70, 238;*/
-
-    /* Gradiente vertical mejorado */
-    --bg-gradient: linear-gradient(
-    180deg,
-     #000000 0%,
-  #0d47a1 20%,
-  #455a64 40%,
-  #575a5c 100%
-   /* Azul medio grisáceo */  /* Azul grisáceo medio para cierre */
-);
 }
 
 html {
@@ -53,31 +40,17 @@ html {
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
-    background: var(--bg-gradient);
-    background-size: 400% 400%;
-    transition: background 0.7s ease-out; /* suaviza el cambio */
-    background-color: #0b0616;   /* fallback sólido */
-    min-height: 100dvh;
-}
-
-/* Micro-ruido anti-banding (muy sutil) */
-body::after{
-  content:"";
-  position:fixed; inset:0; pointer-events:none; z-index:-1;
-  background:
-    repeating-linear-gradient(0deg,
-      rgba(255,255,255,.003) 0px, rgba(255,255,255,.003) 1px,
-      rgba(0,0,0,.003) 1px, rgba(0,0,0,.003) 2px);
-  mix-blend-mode: soft-light;
+    padding: 0px;
+    background-color: #621cee;
 }
 
 /* Añade posición relativa al cuerpo o al contenedor para que ::before se ubique bien */
 body.servicesbody {
   position: relative;
+  /* conservas el color púrpura como fondo base */
 }
 
-/* Monograma repetido e intercalado en segundo plano (lo mantienes comentado si no lo usas ahora) */
+/* Monograma repetido e intercalado en segundo plano */
 body.servicesbody::before {
   content: "";
   position: fixed;
@@ -85,11 +58,11 @@ body.servicesbody::before {
   pointer-events: none;
   z-index: -1;
 
-  /*background-image:
-    url("../images/chatbot/factoryAI120_2.png"),
-    url("../images/chatbot/factoryAI120_7.png"),
-    url("../images/chatbot/factoryAI120_4.png"),
-    url("../images/chatbot/factoryAI120_8.png");
+  background-image:
+    url("../images/chatbot/factoryAI120_2.png"),   /* capa 1 */
+    url("../images/chatbot/factoryAI120_7.png"),      /* capa 2 */
+    url("../images/chatbot/factoryAI120_4.png"),  /* capa 3 */
+    url("../images/chatbot/factoryAI120_8.png");  /* capa 3 */
 
   background-size:
     80px 80px,
@@ -103,13 +76,17 @@ body.servicesbody::before {
     repeat,
     repeat;
 
+  /* half-drop: medias celdas */
   background-position:
-    0 0,
-    40px 80px,
-    80px 120px,
+    0 0,          /* capa 1 */
+    40px 80px,    /* capa 2 -> mitad de 120 */
+    80px 120px,       /* capa 3 -> mitad solo en X (o 0 60px si prefieres) */
     120px 120px;
-  opacity: 0.4;*/
+  opacity: 0.4;
 }
+
+
+
 
 h2, h3, h4 {
     color: #fff;
@@ -143,33 +120,27 @@ section.introduction strong{
 }
 
 .introduction{
-    background: none;/* #892be2c8;*/
-    border:1px solid rgba(255,255,255,.06);   /* separa del fondo cambiante */
-    box-shadow: 0 8px 28px rgba(0,0,0,.25);
-    border-radius: 5px;
-}
-
-.formato{
-    background: none; /*#863fc8b9;*/
-    border:1px solid rgba(255,255,255,.06);   /* separa del fondo cambiante */
-    box-shadow: 0 8px 28px rgba(0,0,0,.25);
-    border-radius: 5px;
+    background-color: #621cee72;
+    
 }
 
 section.introduction em{
-  color:#ffffff !important;
-  font-style:italic;
+  color:#ffffff !important;  /* rompe cualquier override */
+  font-style:italic;         /* opcional: ya viene por default */
 }
 
 form {
-    
+    background-color: #621ceebb;
+    /*opacity: 0.9; */
     padding: 20px;
     border-radius: 5px;
-    max-width: 800px;
-    margin: 0 auto;
-    border: none;/*border:1px solid rgba(255,255,255,.06);   /* sutil */
-    /*box-shadow: 0 10px 36px rgba(0,0,0,.28);  /* mejor lectura encima del gradiente */
-}
+    /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);*/
+    max-width: 800px; /* Ancho máximo del formulario */
+    margin: 0 auto; /* Centrar el formulario horizontalmente */
+    /*position: relative;*/
+  }
+
+
 
 label {
     display: block;
@@ -178,56 +149,73 @@ label {
 }
 
 input, select {
-    width: calc(100% - 16px);
+    width: calc(100% - 16px); /* Ancho del 100% menos el padding */
     padding: 8px;
     margin-top: 5px;
     border: 1px solid #000000;
     border-radius: 3px;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
 }
 
 /* contenedor general (sin cambios, sólo de contexto) */
 .checkbox-group{
   display:flex;
   flex-wrap:wrap;
-  gap:8px 18px;
+  gap:8px 18px;          /* h‑gap | v‑gap */
 }
 
 /* todos los ítems regulares */
 .checkbox-group label{
   display:inline-flex;
   align-items:center;
-  white-space:nowrap;
+  white-space:nowrap;    /* NO romper palabras en los normales tampoco  */
   font-size: 14px;
 }
 
 /* ——— REGLA ESPECÍFICA PARA “OTROS” ——— */
 .checkbox-group label.otros{
-  flex:0 1 auto;
-  white-space:nowrap;
-  gap:0px;
+  flex:0 1 auto;         /* ⇦ ❶ NO se estira al 100 %, se comporta
+                                   como un ítem normal               */
+  white-space:nowrap;    /* ⇦ ❷ todo el texto + input deben ir pegados */
+  gap:0px;               /* espacio entre caja, texto y input          */
 }
 
 /* ancho fijo (o máximo) del cuadro de texto */
 .checkbox-group label.otros input[type="text"]{
-  flex:0 0 140px;
-  max-width:100%;
+  flex:0 0 140px;        /* ❸ mide ~140 px y no se expande      */
+  max-width:100%;        /* no se desborda en pantallas pequeñas */
 }
 
-#robot_otros_text{ margin-left: 10px; }
-#plc_otros_text{ margin-left: 10px; }
-#vision_otros_text{ margin-left: 10px; }
-#estandar_otros_text{ margin-left: 10px; }
-#hmi_scada_otros_text{ margin-left: 10px; }
+
+
+#robot_otros_text{
+    margin-left: 10px;
+}
+
+#plc_otros_text{
+    margin-left: 10px;
+}
+
+#vision_otros_text{
+    margin-left: 10px;
+}
+
+#estandar_otros_text{
+    margin-left: 10px;
+}
+
+#hmi_scada_otros_text{
+    margin-left: 10px;
+}
 
 /* Estilos para el campo de información adicional */
 #informacion_adicional {
-    width: calc(100% - 16px);
+    width: calc(100% - 16px); /* Ancho del 100% menos el padding */
     padding: 8px;
     margin-top: 5px;
     border: 1px solid #000000;
     border-radius: 3px;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
     resize: none;
 }
 
@@ -236,11 +224,14 @@ input, select {
   overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; border:0;
 }
 
-#charCounter { font-size: 12px; color:whitesmoke; }
+#charCounter {
+    font-size: 12px;
+    color:whitesmoke;
+}
 
 #informacion_adicional:focus {
-    border-color: #4CAF50;
-    outline: none;
+    border-color: #4CAF50; /* Cambia el borde al enfocar */
+    outline: none; /* Quita el outline predeterminado */
 }
 
 /* Estilos para el campo de archivo */
@@ -249,8 +240,8 @@ input[type="file"] {
     padding: 8px;
     border: 1px solid #ffffff;
     border-radius: 3px;
-    box-sizing: border-box;
-    width: calc(100% - 16px);
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+    width: calc(100% - 16px); /* Ancho del 100% menos el padding */
 }
 
 /* Estilos para el botón de submit */
@@ -264,36 +255,56 @@ input[type="submit"] {
     cursor: pointer;
 }
 
-input[type="submit"]:hover { background-color: #45a049; }
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
 
-.rate-input { display: flex; align-items: center; }
-.rate-input span { margin-right: 5px; }
+.rate-input {
+    display: flex;
+    align-items: center;
+}
 
-.hidden { display: none; }
+.rate-input span {
+    margin-right: 5px;
+}
+
+.hidden {
+    display: none;
+}
 
 .politica {
     margin-top: 20px;
-    /*border: 2px solid #ffffff;*/
+    border: 2px solid #ffffff;
     padding: 20px;
-    /*background: #4de952c3;*/
-    background: none;
-    border:1px solid rgba(255,255,255,.08);
-    box-shadow: 0 8px 28px rgba(0,0,0,.22);
-    border-radius: 5px;*
+    background-color: #621cee84;
 }
 
-.politica h3 { font-size: 24px; margin-bottom: 10px; }
-.politica h4 { font-size: 18px; margin-top: 20px; margin-bottom: 10px; }
-.politica p { line-height: 1.6; }
+.politica h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.politica h4 {
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.politica p {
+    line-height: 1.6;
+}
 
 header {
-    background: var(--p-100);
+    background-color: #621cee;
     color: #fff;
     text-align: center;
+    /*padding: 1rem 0;*/
     width: 100vw;
 }
 
-header h1 { margin: 0; }
+header h1 {
+    margin: 0;
+}
 
 section {
     width: 95%;
@@ -304,7 +315,9 @@ section {
     box-shadow: 0 0 10px rgba(5, 0, 0, 0.151);
 }
 
-.introduction p { margin-bottom: 1rem; }
+.introduction p {
+    margin-bottom: 1rem;
+}
 
 .introduction p em {
     font-style: italic;
@@ -317,7 +330,10 @@ section {
     margin-bottom: 15px;
 }
 
-.rate-input span, .salary-input span { margin-right: 5px; }
+.rate-input span, .salary-input span {
+    margin-right: 5px;
+}
+
 .rate-input input, .salary-input input {
     width: 100%;
     padding: 5px;
@@ -328,44 +344,50 @@ section {
 #phone-input {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 10px; /* Espacio entre elementos */
     width: 80%;
 }
 
 #phone {
-    flex: 1;
-    margin-left: 0px;
+    flex: 1; /* El input de teléfono ocupará todo el espacio restante */
+    margin-left: 0px; /* Espacio a la izquierda del input de teléfono */
+    /*padding: 8px; /* Espacio interno del input de teléfono */
 }
+
 
 input[type="tel"] {
     max-width: 100%;
     width: 100%;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Asegura que el padding y border estén incluidos en el ancho total */
 }
 
-.english-proficiency{ display:flex; flex-wrap:wrap; }
+.english-proficiency{
+  display:flex;
+  flex-wrap:wrap;
+}
 
 .radio-group{
   display:flex;
   flex-wrap:wrap;
-  gap:10px 14px;
+  gap:10px 14px;                 /* h‑gap | v‑gap */
 }
 
-.option{
+.option{                          /* todo el par es UN ítem flex */
   display:inline-flex;
   align-items:center;
-  white-space:nowrap;
+  white-space:nowrap;             /* evita cortar “Technical
+                                     Conversational” */
 }
 
 .option input[type="radio"]{
   width:12px;
   height:12px;
-  margin:0 4px 0 0;
+  margin:0 4px 0 0;               /* espacio antes del texto */
 }
 
 /* Estilo básico del botón (ajusta a tu paleta) */
 .btn {
-  background: var(--clr-db-contrast);
+  background: var(--clr-db-contrast);;
   color: #fff;
   border: none;
   padding: .6rem 1.2rem;
@@ -391,9 +413,10 @@ input[type="tel"] {
 @keyframes spin { to { transform: rotate(360deg); } }
 .hidden { display: none; }            /* utilitario */
 
+
 .footer-form {
     width: 100vw;
-    background: var(--p-100);
+    background-color:#621cee;
     color:whitesmoke;
     display: flex;
     justify-content: space-around;
@@ -402,14 +425,32 @@ input[type="tel"] {
     margin: 0;
     height: auto;
     padding: 1em;
+    /*position: absolute;
+    bottom: 0;
+    left: 0*/;
 }
 
-.line { width: 35px; height: 5px; background-color: var(--clr-font); margin: 6px 0; }
+  
+  
+.line {
+  width: 35px;
+  height: 5px;
+  background-color: var(--clr-font);
+  margin: 6px 0;
+}
 
-.c { z-index: 3; }
-.c:hover #drop-down { display: flex; }
-.c:focus-within #drop-down { display: flex; }
+.c {
+  z-index: 3;
+}
 
+.c:hover #drop-down {
+  display: flex;
+}
+  
+.c:focus-within #drop-down {
+  display: flex;
+}
+  
 .c #drop-down {
   position: absolute;
   width: -moz-fit-content;
@@ -428,23 +469,38 @@ input[type="tel"] {
   margin-left: -110px;
   margin-top: -10px;
 }
-
+  
 .c #drop-down .clinks {
   display: flex;
+  padding: 5px 0;
   text-decoration: none;
   padding: 10px 50px 10px 20px;
   text-transform: uppercase;
   z-index: 3;
 }
-
+  
 .c #drop-down{
-  .mExpertise:hover{ color: var(--clr-expertise); }
-  .mServices:hover{ color: var(--clr-services); }
-  .mClients:hover{ color: var(--clr-clients); }
-  .mContact:hover{ color: var(--clr-contact); }
-  .mDownloads:hover{ color: var(--clr-downloads); }
-  .mBlog:hover{ color: var(--clr-blog); }
-  .mLanguage:hover{ color: var(--clr-español); }
+  .mExpertise:hover{
+    color: var(--clr-expertise);
+  }
+  .mServices:hover{
+    color: var(--clr-services);
+  }
+  .mClients:hover{
+    color: var(--clr-clients);
+  }
+  .mContact:hover{
+    color: var(--clr-contact);
+  }
+  .mDownloads:hover{
+    color: var(--clr-downloads);
+  }
+  .mBlog:hover{
+    color: var(--clr-blog);
+  }
+  .mLanguage:hover{
+    color: var(--clr-español);
+  }
 }
 
 nav ul {
@@ -465,18 +521,20 @@ nav ul li a {
 }
 
 /* texto “No file chosen” + nombre del archivo */
-input[type="file"]{ color:#fff; }
+input[type="file"]{
+  color:#fff;                 /* blanco */
+}
 
-/* botón “Choose File” */
+/* botón “Choose File” (es opcional, sólo si también quieres personalizarlo) */
 input[type="file"]::file-selector-button{
-  background:#fff;
-  color: var(--clr-db-contrast);
+  background:#fff;            /* fondo blanco */
+  color: var(--clr-db-contrast);              /* texto morado que haga contraste */
   border:0;
   padding:0.35em 1em;
   cursor:pointer;
 }
 
-/* equivalente legacy */
+/* equivalente legacy para Safari ≤ 14 y Chrome antiguos */
 input[type="file"]::-webkit-file-upload-button{
   background:#fff;
   color: var(--clr-db-contrast);
@@ -485,11 +543,11 @@ input[type="file"]::-webkit-file-upload-button{
   cursor:pointer;
 }
 
-/* links de soporte */
+/* en tu hoja de estilos */
 .link-soporte{
-  color: var(--clr-db-contrast);
-  text-decoration:none;
+  color: var(--clr-db-contrast);          /* amarillo, cámbialo a tu gusto */
+  text-decoration:none;   /* quita subrayado (opcional)  */
 }
 .link-soporte:hover{
-  text-decoration:underline;
+  text-decoration:underline; /* efecto al pasar el mouse */
 }
