@@ -239,6 +239,7 @@ document.addEventListener('DOMContentLoaded', async (event) => {
         return word.replace(/(ing|ed|ly|es|s)$/, '');
     }
 
+    //Fuzzy Match
     function fuzzyMatch(text, query) {
         const words = query.split(' ');
         return words.some(word => text.includes(word));
