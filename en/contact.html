@@ -109,7 +109,7 @@
         <ul class="navbar-nav">
           <li><a href="index.html">Rodolfo Lara, Automation Engineer</a></li>
           <li class="nav-item c">
-            <a href="#" class="item-link" title="Open menu">
+            <a href="#" class="item-link" title="Open menu" aria-controls="drop-down" aria-expanded="false">
               <div class="line"></div>
               <div class="line"></div>
               <div class="line"></div>
@@ -129,27 +129,32 @@
     </header>
 
     <!-- Main Content -->
-    <main class="main-contentcontact">
-      <!-- Greetings Section -->
-      <div class="greetings-section" id="one">
-        <!--Programación HMI-->
+    <main class="main-contentcontact" role="main">
+      <!-- Intro Section -->
+      <section class="greetings-section" id="one" aria-labelledby="page-title">
         <div class="programacion-contacto">
+          <h1 class="subtitulo" id="page-title">Contact</h1>
           <br>
-          <h1 class="subtitulo" id="">Contact</h1>
-          <br>
-          <h1 class="" id="">
-            Have an interesting project in mind? Let's get in touch and start collaborating
-          </h1>
+          <p>
+            Have an interesting project in mind? Let's get in touch and start collaborating.
+          </p>
+
           <div class="onlycontainer">
             <div class="html-code">
-              <!--img src="/resources/images/htmlcode2.png" alt="HTML-Coding"-->
+              <!--img src="/resources/images/htmlcode2.png" alt="HTML-Coding" loading="lazy" decoding="async"-->
             </div>
           </div>
-          <br>
-          <h3>support@rodolfolara.com</h3>
-          <h3>8442815555</h3>
+
+          <!-- Contact details -->
+          <section aria-labelledby="contact-details-heading">
+            <br>
+            <address class="contact-links">
+              <p><a href="mailto:support@rodolfolara.com">support@rodolfolara.com</a></p>
+              <p><a href="tel:+5218442815555">8442815555</a></p>
+            </address>
+          </section>
         </div>
-      </div>
+      </section>
     </main>
   </div>
 
@@ -162,5 +167,6 @@
 
   <script src="/resources/js/script.js"></script>
 </body>
+
 
 </html>

@@ -391,6 +391,7 @@ pre {
   width: fit-content;          /* opcional, asegura ancho al contenido */
 }
 
+
 #infoBox {
   display: none;
   position: absolute;

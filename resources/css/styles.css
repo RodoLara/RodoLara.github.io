@@ -717,6 +717,27 @@ nav ul li a {
   object-fit: contain;
 }
 
+/* Solo los links dentro del bloque de contacto */
+.programacion-contacto address a {
+  color: whitesmoke;
+  text-decoration: none; /* opcional */
+}
+
+.programacion-contacto address a:hover {
+  text-decoration: underline; /* o el efecto que quieras */
+}
+
+ul.custom-list {
+  list-style: none; /* Quita el bullet por defecto */
+  padding: 0;
+}
+
+ul.custom-list li::before {
+  content: "• "; /* Guion largo con espacio */
+  color: white; /* Cambia el color del guion */
+  font-weight: bold;
+}
+
 
 /* Grupo 1 */
 #layer1 {
