@@ -1,85 +1,126 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="https://www.rodolfolara.com/sitemap.xsl"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
   <!-- Home -->
   <url>
     <loc>https://www.rodolfolara.com/en/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.rodolfolara.com/en/index.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.rodolfolara.com/es/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rodolfolara.com/en/index.html"/>
     <lastmod>2025-08-07</lastmod>
   </url>
   <url>
     <loc>https://www.rodolfolara.com/es/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.rodolfolara.com/es/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.rodolfolara.com/en/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rodolfolara.com/en/index.html"/>
     <lastmod>2025-08-07</lastmod>
   </url>
 
   <!-- English Pages -->
   <url>
     <loc>https://www.rodolfolara.com/en/expertise.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.rodolfolara.com/en/expertise.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.rodolfolara.com/es/expertise.html"/>
     <lastmod>2025-08-07</lastmod>
   </url>
   <url>
     <loc>https://www.rodolfolara.com/en/services.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.rodolfolara.com/en/services.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.rodolfolara.com/es/services.html"/>
     <lastmod>2025-08-07</lastmod>
   </url>
   <url>
     <loc>https://www.rodolfolara.com/en/clients.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.rodolfolara.com/en/clients.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.rodolfolara.com/es/clients.html"/>
     <lastmod>2025-08-07</lastmod>
   </url>
   <url>
     <loc>https://www.rodolfolara.com/en/downloads.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.rodolfolara.com/en/downloads.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.rodolfolara.com/es/downloads.html"/>
     <lastmod>2025-08-07</lastmod>
   </url>
   <url>
     <loc>https://www.rodolfolara.com/en/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.rodolfolara.com/en/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.rodolfolara.com/es/contact.html"/>
     <lastmod>2025-08-07</lastmod>
   </url>
 
   <!-- Spanish Pages -->
   <url>
     <loc>https://www.rodolfolara.com/es/expertise.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.rodolfolara.com/es/expertise.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.rodolfolara.com/en/expertise.html"/>
     <lastmod>2025-08-07</lastmod>
   </url>
   <url>
     <loc>https://www.rodolfolara.com/es/services.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.rodolfolara.com/es/services.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.rodolfolara.com/en/services.html"/>
     <lastmod>2025-08-07</lastmod>
   </url>
   <url>
     <loc>https://www.rodolfolara.com/es/clients.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.rodolfolara.com/es/clients.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.rodolfolara.com/en/clients.html"/>
     <lastmod>2025-08-07</lastmod>
   </url>
   <url>
     <loc>https://www.rodolfolara.com/es/downloads.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.rodolfolara.com/es/downloads.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.rodolfolara.com/en/downloads.html"/>
     <lastmod>2025-08-07</lastmod>
   </url>
   <url>
     <loc>https://www.rodolfolara.com/es/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.rodolfolara.com/es/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.rodolfolara.com/en/contact.html"/>
     <lastmod>2025-08-07</lastmod>
   </url>
 
   <!-- Blog English -->
   <url>
     <loc>https://www.rodolfolara.com/en/blog/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.rodolfolara.com/en/blog/index.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.rodolfolara.com/es/blog/index.html"/>
     <lastmod>2025-08-07</lastmod>
   </url>
   <url>
     <loc>https://www.rodolfolara.com/en/blog/posts/post1.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.rodolfolara.com/en/blog/posts/post1.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.rodolfolara.com/es/blog/posts/post1.html"/>
     <lastmod>2025-08-07</lastmod>
   </url>
   <url>
     <loc>https://www.rodolfolara.com/en/blog/posts/post2.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.rodolfolara.com/en/blog/posts/post2.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.rodolfolara.com/es/blog/posts/post2.html"/>
     <lastmod>2025-08-07</lastmod>
   </url>
 
   <!-- Blog Spanish -->
   <url>
     <loc>https://www.rodolfolara.com/es/blog/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.rodolfolara.com/es/blog/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.rodolfolara.com/en/blog/index.html"/>
     <lastmod>2025-08-07</lastmod>
   </url>
   <url>
     <loc>https://www.rodolfolara.com/es/blog/posts/post1.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.rodolfolara.com/es/blog/posts/post1.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.rodolfolara.com/en/blog/posts/post1.html"/>
     <lastmod>2025-08-07</lastmod>
   </url>
   <url>
     <loc>https://www.rodolfolara.com/es/blog/posts/post2.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.rodolfolara.com/es/blog/posts/post2.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.rodolfolara.com/en/blog/posts/post2.html"/>
     <lastmod>2025-08-07</lastmod>
   </url>
+
 </urlset>
