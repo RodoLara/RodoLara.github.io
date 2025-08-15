@@ -206,7 +206,7 @@ document.addEventListener('DOMContentLoaded', async (event) => {
             event.preventDefault();
             activeHashtag = this.innerText.toLowerCase().substring(1);
             let currentLang = document.documentElement.lang; // Obtiene el idioma actual de la página
-            let indexPath = currentLang === 'en' ? '/blog/en/index.html' : '/blog/es/index.html';
+            let indexPath = currentLang === 'en' ? '/en/blog/index.html' : '/es/blog/index.html';
             const url = new URL(window.location);
             url.pathname = indexPath;
             url.searchParams.set('hashtag', activeHashtag);

@@ -95,47 +95,47 @@
   </script>
 </head>
 <body class="bodyBlog">
-    <header>
-            <nav class="content3" id="whitecont">        
-                <ul class="navbar-nav">
-                    <li><a href="/es/index.html">Rodolfo Lara, Ingeniero de Automatización</a></li>
-                    <li class="nav-item c"><a href="#" class="item-link" title="Abrir menú">
+    <header role="banner">
+        <nav class="content3" id="whitecont" role="navigation" aria-label="Navegación principal">
+            <ul class="navbar-nav">
+                <li><a href="/es/index.html">Rodolfo Lara, Ingeniero de Automatización</a></li>
+                <li class="nav-item c">
+                    <a href="#" class="item-link" title="Abrir menú" aria-controls="drop-down" aria-expanded="false">
                         <div class="line"></div>
                         <div class="line"></div>
                         <div class="line"></div>
-                        </a>
-                        <div id="drop-down">
-                            <a href="/es/expertise.html" class="mExpertise clinks">ACERCA DE MI</a>
-                            <a href="/es/services.html" class="mServices clinks">SERVICIOS</a>
-                            <a href="/es/clients.html" class="mClients clinks">CASOS</a>
-                            <a href="/es/downloads.html" class="mDownloads clinks">DESCARGAS</a>
-                            <a href="/es/blog/index.html" class="mBlog clinks">BLOG</a>
-                            <a href="/es/contact.html" class="mContact clinks">CONTACTO</a>      
-                            <!--a data-translate="tExpertise" href="../../expertise.html" class="mExpertise clinks">Expertise</a>
-                            <a data-translate="tServices" href="../../services.html" class="mServices clinks">Services</a>
-                            <a data-translate="tClients" href="../../clients.html" class="mClients clinks">Clients</a>
-                            <a data-translate="tContact" href="../../contact.html" class="mContact clinks">Contact</a-->
-                            <!--a data-translate="tLanguage" href="" class="mLanguage clinks">Español</a-->
-                        </div>
-                    </li>
-                </ul>             
-            </nav>
-        
+                    </a>
+                    <div id="drop-down" role="group" aria-label="Secciones del sitio">
+                        <a href="/es/expertise.html" class="mExpertise clinks">ACERCA DE MI</a>
+                        <a href="/es/services.html" class="mServices clinks">SERVICIOS</a>
+                        <a href="/es/clients.html" class="mClients clinks">CASOS</a>
+                        <a href="/es/downloads.html" class="mDownloads clinks">DESCARGAS</a>
+                        <a href="/es/blog/index.html" class="mBlog clinks">BLOG</a>
+                        <a href="/es/contact.html" class="mContact clinks">CONTACTO</a>      
+                        <!--a data-translate="tExpertise" href="../../expertise.html" class="mExpertise clinks">Expertise</a>
+                        <a data-translate="tServices" href="../../services.html" class="mServices clinks">Services</a>
+                        <a data-translate="tClients" href="../../clients.html" class="mClients clinks">Clients</a>
+                        <a data-translate="tContact" href="../../contact.html" class="mContact clinks">Contact</a-->
+                        <!--a data-translate="tLanguage" href="" class="mLanguage clinks">Español</a-->
+                    </div>
+                </li>
+            </ul>             
+        </nav>
     </header>
+
     <div id="tituloBlog">
         <h1><a href="index.html" id="blog-title">Blog de Automatización</a></h1>
-        <input type="text" autocomplete="off" id="search-bar" placeholder="Buscar...">
+        <input type="text" autocomplete="off" id="search-bar" placeholder="Buscar..." role="searchbox" aria-label="Buscar publicaciones del blog">
         <button id="search-button">Buscar</button>
         <div class="menu-language-container">
-            <button id="menu-toggle" class="menu-toggle">☰ Archivos/Categoría</button>
-            <a href="/en/blog/index.html" id="language-switch" class="language-switch">English</a>
+            <button id="menu-toggle" class="menu-toggle" aria-controls="sidebar-nav" aria-expanded="false">☰ Archivos/Categoría</button>
+            <a href="/en/blog/index.html" id="language-switch" class="language-switch" hreflang="en" rel="alternate">English</a>
         </div>
     </div>
+
     <div id="content">
-        <aside id="sidebar">
-            <nav id="sidebar-nav">
-                <!--button id="archive-toggle" class="menu-item">Archivos</button-->
-                <!--button id="categories-toggle" class="menu-item">Categorías</button-->
+        <aside id="sidebar" role="complementary">
+            <nav id="sidebar-nav" role="navigation" aria-label="Archivos y categorías del blog">
                 <div id="archive" class="sidebar-section">
                     <h2>Archivos</h2>
                     <ul>
@@ -157,125 +157,51 @@
                 </div>
             </nav>
         </aside>
-        <main id="post-list">
-            <article class="post main" data-year="xxxx" data-month="xx" data-hashtags="CNC,ElectrónicaDigital,Arduino,IA,Automatización,EstudioR&R" data-categories="cnc,electrónica digital,arduino,ia,automatización">
+
+        <main id="post-list" role="main">
+            <article class="post main" role="article" data-year="xxxx" data-month="xx" data-hashtags="CNC,ElectrónicaDigital,Arduino,IA,Automatización,EstudioR&R" data-categories="cnc,electrónica digital,arduino,ia,automatización">
                 <h2><a href="posts/post2.html">Palpador Digital Para CNC (1/4)</a></h2>
                 <p>Resumen: Compré un palpador digital para hacer capturas automatizadas de mediciones en un CNC, para evaluar la Repetibilidad y Reproducibilidad de los Ejes utilizando IA...</p>
-                <p class="hashtags">
-                    <a href="#" class="hashtag">#CNC</a>
-                    <a href="#" class="hashtag">#ElectrónicaDigital</a>
-                    <a href="#" class="hashtag">#Arduino</a>
-                    <a href="#" class="hashtag">#IA</a>
-                    <a href="#" class="hashtag">#Automatización</a>
-                    <a href="#" class="hashtag">#EstudioR&R</a>
+                <p class="hashtags" role="list" aria-label="Etiquetas del post">
+                    <a href="#" class="hashtag" role="listitem">#CNC</a>
+                    <a href="#" class="hashtag" role="listitem">#ElectrónicaDigital</a>
+                    <a href="#" class="hashtag" role="listitem">#Arduino</a>
+                    <a href="#" class="hashtag" role="listitem">#IA</a>
+                    <a href="#" class="hashtag" role="listitem">#Automatización</a>
+                    <a href="#" class="hashtag" role="listitem">#EstudioR&amp;R</a>
                 </p>
             </article>
-            <article class="post main" data-year="xxxx" data-month="xx" data-hashtags="PLC,Automatización,Control,Ingeniería" data-categories="automatización,control,ingenieria">
+
+            <article class="post main" role="article" data-year="xxxx" data-month="xx" data-hashtags="PLC,Automatización,Control,Ingeniería" data-categories="automatización,control,ingenieria">
                 <h2><a href="posts/post1.html">Hola Mundo!</a></h2>
                 <p>Resumen: Primer post del blog</p>
-                <p class="hashtags">
-                    <a href="#" class="hashtag">#PLC</a>
-                    <a href="#" class="hashtag">#Automatización</a>
-                    <a href="#" class="hashtag">#Control</a>
-                    <a href="#" class="hashtag">#Ingeniería</a>
+                <p class="hashtags" role="list" aria-label="Etiquetas del post">
+                    <a href="#" class="hashtag" role="listitem">#PLC</a>
+                    <a href="#" class="hashtag" role="listitem">#Automatización</a>
+                    <a href="#" class="hashtag" role="listitem">#Control</a>
+                    <a href="#" class="hashtag" role="listitem">#Ingeniería</a>
                 </p>
             </article>
-            <!--article class="post main" data-year="2023" data-month="07" data-hashtags="PLC,Move,Instrucción,Automatización" data-categories="programacion,automatizacion,ingenieria">
-                <h2><a href="posts/post3.html">Instrucción MOVE</a></h2>
-                <p>Resumen: Uso y aplicación de la instrucción MOVE en PLC...</p>
-                <p class="hashtags">
-                    <a href="#" class="hashtag">#PLC</a>
-                    <a href="#" class="hashtag">#Move</a>
-                    <a href="#" class="hashtag">#Instrucción</a>
-                    <a href="#" class="hashtag">#Automatización</a>
-                </p>
-            </article>
-            <article class="post main" data-year="2023" data-month="07" data-hashtags="PLC,Comparadores,Control,Ingeniería" data-categories="control,ingenieria">
-                <h2><a href="posts/post4.html">Comparadores en PLC</a></h2>
-                <p>Resumen: Cómo funcionan los comparadores en los PLC...</p>
-                <p class="hashtags">
-                    <a href="#" class="hashtag">#PLC</a>
-                    <a href="#" class="hashtag">#Comparadores</a>
-                    <a href="#" class="hashtag">#Control</a>
-                    <a href="#" class="hashtag">#Ingeniería</a>
-                </p>
-            </article>
-            <article class="post main" data-year="2023" data-month="08" data-hashtags="PLC,Timers,Tiempo,Automatización" data-categories="automatizacion,tiempo">
-                <h2><a href="posts/post5.html">Timers en PLC</a></h2>
-                <p>Resumen: Tipos y usos de timers en PLC...</p>
-                <p class="hashtags">
-                    <a href="#" class="hashtag">#PLC</a>
-                    <a href="#" class="hashtag">#Timers</a>
-                    <a href="#" class="hashtag">#Tiempo</a>
-                    <a href="#" class="hashtag">#Automatización</a>
-                </p>
-            </article>
-            <article class="post main" data-year="2023" data-month="08" data-hashtags="PLC,Operaciones,Aritméticas,Automatización" data-categories="programacion,aritmetica">
-                <h2><a href="posts/post6.html">Operaciones Aritméticas en PLC</a></h2>
-                <p>Resumen: Realizando operaciones aritméticas en PLC...</p>
-                <p class="hashtags">
-                    <a href="#" class="hashtag">#PLC</a>
-                    <a href="#" class="hashtag">#Operaciones</a>
-                    <a href="#" class="hashtag">#Aritméticas</a>
-                    <a href="#" class="hashtag">#Automatización</a>
-                </p>
-            </article>
-            <article class="post main" data-year="2023" data-month="09" data-hashtags="PLC,Contacto,Abierto,Automatización" data-categories="control,automatizacion">
-                <h2><a href="posts/post7.html">Contacto Abierto en PLC</a></h2>
-                <p>Resumen: Uso de contacto abierto en PLC...</p>
-                <p class="hashtags">
-                    <a href="#" class="hashtag">#PLC</a>
-                    <a href="#" class="hashtag">#Contacto</a>
-                    <a href="#" class="hashtag">#Abierto</a>
-                    <a href="#" class="hashtag">#Automatización</a>
-                </p>
-            </article>
-            <article class="post main" data-year="2023" data-month="09" data-hashtags="PLC,Contacto,Cerrado,Control" data-categories="control,automatizacion">
-                <h2><a href="posts/post8.html">Contacto Cerrado en PLC</a></h2>
-                <p>Resumen: Uso de contacto cerrado en PLC...</p>
-                <p class="hashtags">
-                    <a href="#" class="hashtag">#PLC</a>
-                    <a href="#" class="hashtag">#Contacto</a>
-                    <a href="#" class="hashtag">#Cerrado</a>
-                    <a href="#" class="hashtag">#Control</a>
-                </p>
-            </article>
-            <article class="post main" data-year="2023" data-month="10" data-hashtags="PLC,Mapeo,Salidas,Automatización" data-categories="automatizacion,control,ingenieria">
-                <h2><a href="posts/post9.html">Mapeo de Salidas en PLC</a></h2>
-                <p>Resumen: Cómo realizar el mapeo de salidas en PLC...</p>
-                <p class="hashtags">
-                    <a href="#" class="hashtag">#PLC</a>
-                    <a href="#" class="hashtag">#Mapeo</a>
-                    <a href="#" class="hashtag">#Salidas</a>
-                    <a href="#" class="hashtag">#Automatización</a>
-                </p>
-            </article>
-            <article class="post main" data-year="2023" data-month="10" data-hashtags="PLC,Secuencias,Lógicas,Automatización" data-categories="automatizacion,control,studio5000">
-                <h2><a href="posts/post10.html">Introducción a Secuencias Lógicas en PLC</a></h2>
-                <p>Resumen: Principios básicos de secuencias lógicas en PLC...</p>
-                <p class="hashtags">
-                    <a href="#" class="hashtag">#PLC</a>
-                    <a href="#" class="hashtag">#Secuencias</a>
-                    <a href="#" class="hashtag">#Lógicas</a>
-                    <a href="#" class="hashtag">#Automatización</a>
-                </p>
-            </article-->            
+
             <p id="no-results" style="display: none;">No se encontró contenido.</p>
         </main>
     </div>
+
     <div id="pagination-container">
-        <div id="pagination">
+        <div id="pagination" role="navigation" aria-label="Paginación">
             <button id="prev-page" disabled>&laquo; Anterior</button>
             <span id="page-numbers"></span>
             <button id="next-page">Siguiente &raquo;</button>
         </div>
     </div>
+
     <!-- Footer -->
-    <footer class="footerBlog">
+    <footer class="footerBlog" role="contentinfo">
         <p class="copyright">© 2025 RL, Todos los Derechos Reservados</p>
         <p class="location">Diseñado en Saltillo, Mx</p>
         <p class="designer">&lt; &gt; con &#10084;</p>
     </footer>
+
     <script src="/resources/blog/js/search.js"></script>
     <!--script src="../js/pagination.js"></script-->
 </body>
