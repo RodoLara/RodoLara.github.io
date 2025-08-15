@@ -279,7 +279,7 @@ input[type="submit"]:hover { background-color: #45a049; }
     background: none;
     border:1px solid rgba(255,255,255,.08);
     box-shadow: 0 8px 28px rgba(0,0,0,.22);
-    border-radius: 5px;*
+    border-radius: 5px;
 }
 
 .politica h3 { font-size: 24px; margin-bottom: 10px; }
