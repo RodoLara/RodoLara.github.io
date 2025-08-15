@@ -103,16 +103,18 @@
 <body class="bodyBlog">
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v20.0" nonce="qUB1Rlya"></script>
-    <header>
-        <nav class="content3" id="whitecont">        
+
+    <header role="banner">
+        <nav class="content3" id="whitecont" role="navigation" aria-label="Navegación principal">
             <ul class="navbar-nav">
                 <li><a href="/es/index.html">Rodolfo Lara, Ingeniero de Automatización</a></li>
-                <li class="nav-item c"><a href="#" class="item-link" title="Abrir menú">
-                    <div class="line"></div>
-                    <div class="line"></div>
-                    <div class="line"></div>
+                <li class="nav-item c">
+                    <a href="#" class="item-link" title="Abrir menú" aria-controls="drop-down" aria-expanded="false">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
                     </a>
-                    <div id="drop-down">
+                    <div id="drop-down" role="group" aria-label="Secciones del sitio">
                         <a href="/es/expertise.html" class="mExpertise clinks">ACERCA DE MI</a>
                         <a href="/es/services.html" class="mServices clinks">SERVICIOS</a>
                         <a href="/es/clients.html" class="mClients clinks">CASOS</a>
@@ -128,15 +130,17 @@
             </ul>             
         </nav>
     </header>
+
     <div id="tituloPost">    
-        <h1>Hola Mundo!</h1>
-        <nav class="menu-language-container">
+        <h1 id="post-title">Hola Mundo!</h1>
+        <nav class="menu-language-container" role="navigation" aria-label="Navegación del post">
             <a href="../index.html">Volver al Blog</a>
-            <a href="/en/blog/posts/post1.html" id="language-switch" class="language-switch">English</a>
+            <a href="/en/blog/posts/post1.html" id="language-switch" class="language-switch" hreflang="en" rel="alternate">English</a>
         </nav>
     </div>
-    <main class="content-wrapper">
-        <article class="post" data-categories="automatizacion,control,ingenieria">
+
+    <main class="content-wrapper" role="main">
+        <article class="post" role="article" aria-labelledby="post-title" data-categories="automatizacion,control,ingenieria">
             <p class="post-meta">
                 Publicado el <time datetime="xxxx-xx-xx">xx de xxxx de 2025</time> por <span class="author">Rodolfo Lara</span> | Tiempo de lectura: 1 min
             </p>
@@ -145,24 +149,28 @@
             <p>La idea es ofrecer información útil y accesible para quienes estén interesados en aprender sobre estas áreas.</p>
 
             <!-- Hashtags -->
-            <p class="hashtags">
-                <a href="#" class="hashtag">#PLC</a>
-                <a href="#" class="hashtag">#Automatización</a>
-                <a href="#" class="hashtag">#Control</a>
-                <a href="#" class="hashtag">#Ingeniería</a>
+            <p class="hashtags" role="list" aria-label="Etiquetas del post">
+                <a href="#" class="hashtag" role="listitem">#PLC</a>
+                <a href="#" class="hashtag" role="listitem">#Automatización</a>
+                <a href="#" class="hashtag" role="listitem">#Control</a>
+                <a href="#" class="hashtag" role="listitem">#Ingeniería</a>
             </p>
+
             <div id="comments">
                 <div id="fb-comments" class="fb-comments" data-href="https://rodolfolara.com/es/blog/post1.html" data-width="100%" data-numposts="5"></div>
             </div>
             <!-- Sección de Contenido Relacionado -->
         </article>
     </main>
+
     <!-- Footer -->
-    <footer class="footerBlog">
+    <footer class="footerBlog" role="contentinfo">
       <p class="copyright">© 2025 RL, Todos los Derechos Reservados</p>
       <p class="location">Diseñado en Saltillo, Mx</p>
       <p class="designer">&lt; &gt; con &#10084;</p>
     </footer>
+
     <script src="/resources/blog/js/search.js"></script>
 </body>
+
 </html>

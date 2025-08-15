@@ -103,18 +103,18 @@
   }
   </script>
 </head>
-
 <body class="bodyBlog">
-    <header>
-        <nav class="content3" id="whitecont">        
+    <header role="banner">
+        <nav class="content3" id="whitecont" role="navigation" aria-label="Navegación principal">
             <ul class="navbar-nav">
                 <li><a href="/es/index.html">Rodolfo Lara, Ingeniero de Automatización</a></li>
-                <li class="nav-item c"><a href="#" class="item-link" title="Abrir menú">
-                    <div class="line"></div>
-                    <div class="line"></div>
-                    <div class="line"></div>
+                <li class="nav-item c">
+                    <a href="#" class="item-link" title="Abrir menú" aria-controls="drop-down" aria-expanded="false">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
                     </a>
-                    <div id="drop-down">
+                    <div id="drop-down" role="group" aria-label="Secciones del sitio">
                         <a href="/es/expertise.html" class="mExpertise clinks">ACERCA DE MI</a>
                         <a href="/es/services.html" class="mServices clinks">SERVICIOS</a>
                         <a href="/es/clients.html" class="mClients clinks">CASOS</a>
@@ -129,33 +129,34 @@
                 </li>
             </ul>             
         </nav>
-        
     </header>
+
     <div id="tituloPost">      
-        <h1>Palpador Digital para CNC</h1>
-        <nav>
+        <h1 id="post-title">Palpador Digital para CNC</h1>
+        <nav role="navigation" aria-label="Navegación del post">
             <a href="../index.html">Volver al Blog</a>
-            <a href="/en/blog/posts/post2.html" id="language-switch" class="language-switch">English</a>
+            <a href="/en/blog/posts/post2.html" id="language-switch" class="language-switch" hreflang="en" rel="alternate">English</a>
         </nav>
     </div>
-    <main class="content-wrapper">
-        <article class="post" data-categories="cnc,electrónica digital,arduino,ia,automatización">
+
+    <main class="content-wrapper" role="main">
+        <article class="post" role="article" aria-labelledby="post-title" data-categories="cnc,electrónica digital,arduino,ia,automatización">
             <!--p class="post-meta">
                 Publicado el <time datetime="2024-06-11">11 de junio de 2024</time> por <span class="author">Rodolfo Lara</span> | Tiempo de lectura: 4 min
             </p-->
             <p class="post-meta">
                 Publicado el <time datetime="xxxx-xx-xx">xx de xxxx de xxxx</time> por <span class="author">Rodolfo Lara</span> | Tiempo de lectura: 4 min
             </p>
-            <p>Recientemente, estuve haciendo un estudio de Repetibilidad y Reproducibilidad (R&R) utilizando IA para una máquina de CNC. </p>
+            <p>Recientemente, estuve haciendo un estudio de Repetibilidad y Reproducibilidad (R&amp;R) utilizando IA para una máquina de CNC. </p>
 
             <p>Para hacer mi estudio, definí obtener 30 mediciones en 3 distancias a 3 velocidades diferentes por cada eje X,Y,Z. En total 810 mediciones, la herramienta que tenía a la mano para obtener las mediciones era un indicador (palpador) analógico. Supe que hacer las mediciones manual requeriría que estuviese pegado a la máquina viendo el palpador y haciendo entradas en Excel en cada 30s.</p>
 
             <img src="/resources/blog/images/post2/palpador_analogico.jpg" alt="Palpador analógico" />
-            
+
             <p>Por lo que decidí automatizar ese proceso.</p>
 
-            <p>Compré un <a href="https://www.amazon.com.mx/dp/B092278DRT?psc=1&ref=ppx_yo2ov_dt_b_product_details">indicador (palpador) digital de marca Autoutlet</a>.</p>
-            
+            <p>Compré un <a href="https://www.amazon.com.mx/dp/B092278DRT?psc=1&amp;ref=ppx_yo2ov_dt_b_product_details">indicador (palpador) digital de marca Autoutlet</a>.</p>
+
             <img src="/resources/blog/images/post2/palpador_digital.jpg" alt="Palpador digital" />
 
             <p>Este producto tiene salidas de datos de forma serial para interpretar desde un microcontrolador como Arduino. El palpador se vende bajo diversas marcas chinas. Estoy casi seguro de que lo deben de fabricar en el mismo lugar y cada quien le pone su marca. De hecho, es una de las razones por las que quiero hacer estos posts, debido a que probablemente la salida de datos serial funcione igual para diversas marcas y lo que aquí hablaremos puede que le sirva a más de uno.</p>
@@ -173,11 +174,11 @@
                 <img src="/resources/blog/images/post2/palpador_conector2.jpg" alt="Palpador con conector vista frontal" />
             </div>
 
-            <table>
+            <table role="table">
                 <thead>
                     <tr>
-                        <th>Pin</th>
-                        <th>Color</th>
+                        <th scope="col">Pin</th>
+                        <th scope="col">Color</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -199,22 +200,22 @@
                     </tr>
                 </tbody>
             </table>
-            
+
             <p>Decidido a extraer los datos del palpador, diseñé un circuito básico con transistores. Pero de esto se hablará en el siguiente post...</p>
 
             <!-- Hashtags -->
-            <p class="hashtags">
-                <a href="#" class="hashtag">#CNC</a>
-                <a href="#" class="hashtag">#ElectrónicaDigital</a>
-                <a href="#" class="hashtag">#Arduino</a>
-                <a href="#" class="hashtag">#IA</a>
-                <a href="#" class="hashtag">#Automatización</a>
-                <a href="#" class="hashtag">#EstudioR&R</a>
+            <p class="hashtags" role="list" aria-label="Etiquetas del post">
+                <a href="#" class="hashtag" role="listitem">#CNC</a>
+                <a href="#" class="hashtag" role="listitem">#ElectrónicaDigital</a>
+                <a href="#" class="hashtag" role="listitem">#Arduino</a>
+                <a href="#" class="hashtag" role="listitem">#IA</a>
+                <a href="#" class="hashtag" role="listitem">#Automatización</a>
+                <a href="#" class="hashtag" role="listitem">#EstudioR&amp;R</a>
             </p>
 
             <!-- Sección de Contenido Relacionado -->
-            <section id="related-content">
-                <h2>Contenido Relacionado</h2>
+            <section id="related-content" aria-labelledby="related-content-title">
+                <h2 id="related-content-title">Contenido Relacionado</h2>
                 <ul>
                     <li><a href="post1.html">Hola Mundo!</a></li>
                     <!--li><a href="post3.html">Instrucción MOVE</a></li>
@@ -223,12 +224,14 @@
             </section>
         </article>
     </main>
+
     <!-- Footer -->
-    <footer class="footerBlog">
+    <footer class="footerBlog" role="contentinfo">
         <p class="copyright">© 2025 RL, Todos los Derechos Reservados</p>
         <p class="location">Diseñado en Saltillo, Mx</p>
         <p class="designer">&lt; &gt; con &#10084;</p>
     </footer>
+
     <script src="/resources/blog/js/search.js"></script>
 </body>
 </html>

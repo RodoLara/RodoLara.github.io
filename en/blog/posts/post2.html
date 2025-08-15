@@ -101,18 +101,18 @@
   }
   </script>
 </head>
-
 <body>
-    <header>
-        <nav class="content3" id="whitecont">        
+    <header role="banner">
+        <nav class="content3" id="whitecont" role="navigation" aria-label="Primary navigation">
             <ul class="navbar-nav">
                 <li><a href="/en/index.html">Rodolfo Lara, Automation Engineer</a></li>
-                <li class="nav-item c"><a href="#" class="item-link" title="Abrir menú">
-                    <div class="line"></div>
-                    <div class="line"></div>
-                    <div class="line"></div>
+                <li class="nav-item c">
+                    <a href="#" class="item-link" title="Abrir menú" aria-controls="drop-down" aria-expanded="false">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
                     </a>
-                    <div id="drop-down">
+                    <div id="drop-down" role="group" aria-label="Site sections">
                         <a href="/en/expertise.html" class="mExpertise clinks">ABOUT ME</a>
                         <a href="/en/services.html" class="mServices clinks">SERVICES</a>
                         <a href="/en/clients.html" class="mClients clinks">CASES</a>
@@ -128,15 +128,17 @@
             </ul>             
         </nav>
     </header>
+
     <div id="tituloPost">   
-        <h1>Digital Probe for CNC</h1>
-        <nav>
+        <h1 id="post-title">Digital Probe for CNC</h1>
+        <nav role="navigation" aria-label="Post navigation">
             <a href="../index.html">Back to Blog</a>
-            <a href="/es/blog/posts/post2.html" id="language-switch" class="language-switch">Español</a>
+            <a href="/es/blog/posts/post2.html" id="language-switch" class="language-switch" hreflang="es" rel="alternate">Español</a>
         </nav>
     </div>
-    <main class="content-wrapper">
-        <article class="post" data-categories="cnc,digital electronics,arduino,ai,automation">
+
+    <main class="content-wrapper" role="main">
+        <article class="post" role="article" aria-labelledby="post-title" data-categories="cnc,digital electronics,arduino,ai,automation">
             <!--p class="post-meta">
                 Published on <time datetime="2024-06-11">June 11, 2024</time> by <span class="author">Rodolfo Lara</span> | Reading Time: 4 min
             </p-->
@@ -144,20 +146,20 @@
                 Published on <time datetime="xxxx-xx-xx">xxxx xx, xxxx</time> by <span class="author">Rodolfo Lara</span> | Reading Time: 4 min
             </p>
 
-            <p>I recently conducted a Repeatability and Reproducibility (R&R) study using AI for a CNC machine.</p>
+            <p>I recently conducted a Repeatability and Reproducibility (R&amp;R) study using AI for a CNC machine.</p>
 
             <p>To conduct my study, I defined obtaining 30 measurements at 3 distances at 3 different speeds for each X, Y, Z axis. In total, 810 measurements, the tool I had on hand to take the measurements was an analog probe. I knew that taking manual measurements would require me to be close to the machine watching the probe and entering data into Excel every 30s.</p>
 
             <img src="/resources/blog/images/post2/palpador_analogico.jpg" alt="Analog Probe" />
-            
+
             <p>So I decided to automate that process.</p>
 
-            <p>I bought a <a href="https://www.amazon.com.mx/dp/B092278DRT?psc=1&ref=ppx_yo2ov_dt_b_product_details">digital probe from Autoutlet brand</a>.</p>
-            
+            <p>I bought a <a href="https://www.amazon.com.mx/dp/B092278DRT?psc=1&amp;ref=ppx_yo2ov_dt_b_product_details">digital probe from Autoutlet brand</a>.</p>
+
             <img src="/resources/blog/images/post2/palpador_digital.jpg" alt="Digital Probe" />
 
             <p>This product has serial data outputs for interpretation from a microcontroller like Arduino. The probe is sold under various Chinese brands. I'm almost certain they must manufacture it in the same place and each one puts their brand on it. In fact, that's one of the reasons I want to make these posts, because the serial data output probably works the same for various brands and what we discuss here may benefit more than one person.</p>
-            
+
             <p>I disassembled the probe. The product has 4 terminals in the serial data port. The product manual didn't have pinout information, nor did it have information about the data structure. There was a contact email in the manual, they didn't respond. I searched the website and found another contact and they didn't respond either. Searching on the internet, I found a pinout that I used as a starting point, but I couldn't find the serial data structure.</p>
 
             <p>The pinout of my probe is as follows:</p>
@@ -171,11 +173,11 @@
                 <img src="/resources/blog/images/post2/palpador_conector2.jpg" alt="Probe with connector front view" />
             </div>
 
-            <table>
+            <table role="table">
                 <thead>
                     <tr>
-                        <th>Pin</th>
-                        <th>Color</th>
+                        <th scope="col">Pin</th>
+                        <th scope="col">Color</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -197,22 +199,22 @@
                     </tr>
                 </tbody>
             </table>
-            
+
             <p>Determined to extract data from the probe, I designed a basic circuit with transistors. But that will be discussed in the next post...</p>
 
             <!-- Hashtags -->
-            <p class="hashtags">
-                <a href="#" class="hashtag">#CNC</a>
-                <a href="#" class="hashtag">#DigitalElectronics</a>
-                <a href="#" class="hashtag">#Arduino</a>
-                <a href="#" class="hashtag">#AI</a>
-                <a href="#" class="hashtag">#Automation</a>
-                <a href="#" class="hashtag">#R&RStudy</a>
+            <p class="hashtags" role="list" aria-label="Post tags">
+                <a href="#" class="hashtag" role="listitem">#CNC</a>
+                <a href="#" class="hashtag" role="listitem">#DigitalElectronics</a>
+                <a href="#" class="hashtag" role="listitem">#Arduino</a>
+                <a href="#" class="hashtag" role="listitem">#AI</a>
+                <a href="#" class="hashtag" role="listitem">#Automation</a>
+                <a href="#" class="hashtag" role="listitem">#R&amp;RStudy</a>
             </p>
 
             <!-- Related Content Section -->
-            <section id="related-content">
-                <h2>Related Content</h2>
+            <section id="related-content" aria-labelledby="related-content-title">
+                <h2 id="related-content-title">Related Content</h2>
                 <ul>
                     <li><a href="post1.html">Hello World!</a></li>
                     <!--li><a href="post3.html">MOVE Instruction</a></li>
@@ -221,12 +223,15 @@
             </section>
         </article>
     </main>
+
     <!-- Footer -->
-    <footer class="footerBlog">
+    <footer class="footerBlog" role="contentinfo">
         <p class="copyright">© 2025 RL, All Rights Reserved</p>
         <p class="location">Designed in Saltillo, Mx</p>
         <p class="designer">&lt; &gt; with &#10084;</p>
     </footer>
+
     <script src="/resources/blog/js/search.js"></script>
 </body>
+
 </html>

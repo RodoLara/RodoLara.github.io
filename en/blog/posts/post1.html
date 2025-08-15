@@ -101,16 +101,16 @@
 </head>
 
 <body>
-    <header>
-        <nav class="content3" id="whitecont">        
+    <header role="banner">
+        <nav class="content3" id="whitecont" role="navigation" aria-label="Primary">        
             <ul class="navbar-nav">
                 <li><a href="/en/index.html">Rodolfo Lara, Automation Engineer</a></li>
-                <li class="nav-item c"><a href="#" class="item-link" title="Abrir menú">
+                <li class="nav-item c"><a href="#" class="item-link" title="Open Menu" aria-controls="drop-down" aria-expanded="false">
                     <div class="line"></div>
                     <div class="line"></div>
                     <div class="line"></div>
                     </a>
-                    <div id="drop-down">
+                    <div id="drop-down" role="group" aria-label="Site sections">
                         <a href="/en/expertise.html" class="mExpertise clinks">ABOUT ME</a>
                         <a href="/en/services.html" class="mServices clinks">SERVICES</a>
                         <a href="/en/clients.html" class="mClients clinks">CASES</a>
@@ -126,35 +126,36 @@
             </ul>             
         </nav>
     </header>
-    <div id="tituloPost">     
+    
+        <div id="tituloPost">     
         <h1>Hello World!</h1>
-        <nav>
+        <nav role="navigation" aria-label="Post navigation">
             <a href="../index.html">Back to Blog</a>
-            <a href="/es/blog/posts/post1.html" id="language-switch" class="language-switch">Español</a> <!-- Botón de cambio de idioma -->
+            <a href="/es/blog/posts/post1.html" id="language-switch" class="language-switch" hreflang="es" rel="alternate">Español</a>
         </nav>
     </div>
-    <main class="content-wrapper">
-        <article class="post" data-categories="automation,control,engineering">
+
+    <main class="content-wrapper" role="main">
+        <article class="post" role="article" aria-labelledby="post-title" data-categories="automation,control,engineering">
+            <h2 id="post-title" class="visually-hidden">Hello World!</h2>
             <p class="post-meta">
-                Published on <time datetime="xxxx-xx-xx">xxxx xxx, 2025</time> by <span class="author">Rodolfo Lara</span> | Reading time: 1 min
+                Published on <time datetime="xxxx-xx-xx">xxxx xxx, 2025</time> by 
+                <span class="author" itemprop="author">Rodolfo Lara</span> | Reading time: 1 min
             </p>
             <p>Ok, starting the blog...</p>
             <p>I am Rodolfo Lara, an electronic engineer and specialist in industrial automation. Here, I will share tips and simple, free resources about electronics, PLC and Robot programming, microcontroller programming, general programming languages, Artificial Intelligence, among other topics.</p>
             <p>The idea is to provide useful and accessible information for those interested in learning about these areas.</p>
 
-            <!-- Hashtags -->
-            <p class="hashtags">
-                <a href="#" class="hashtag">#PLC</a>
-                <a href="#" class="hashtag">#Automation</a>
-                <a href="#" class="hashtag">#Control</a>
-                <a href="#" class="hashtag">#Engineering</a>
+            <p class="hashtags" role="list" aria-label="Post tags">
+                <a href="#" class="hashtag" role="listitem">#PLC</a>
+                <a href="#" class="hashtag" role="listitem">#Automation</a>
+                <a href="#" class="hashtag" role="listitem">#Control</a>
+                <a href="#" class="hashtag" role="listitem">#Engineering</a>
             </p>
-
-            
         </article>
     </main>
-    <!-- Footer -->
-    <footer class="footerBlog">
+
+    <footer class="footerBlog" role="contentinfo">
         <p class="copyright">© 2025 RL, All Rights Reserved</p>
         <p class="location">Designed in Saltillo, Mx</p>
         <p class="designer">&lt; &gt; with &#10084;</p>
