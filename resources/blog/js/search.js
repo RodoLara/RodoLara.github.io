@@ -201,6 +201,7 @@ document.addEventListener('DOMContentLoaded', async (event) => {
         return params.get(param);
     }
 
+    //Aqui para cambiar el idioma
     document.querySelectorAll('.hashtag').forEach(hashtagElement => {
         hashtagElement.addEventListener('click', function(event) {
             event.preventDefault();
