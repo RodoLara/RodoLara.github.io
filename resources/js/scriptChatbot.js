@@ -26,32 +26,60 @@ let prompts;
 
 // Función para cargar y asignar los valores de los prompts
 async function cargarPrompts() {
-  // Obtener los datos del archivo JSON usando fetch
   const response = await fetch('/resources/json/prompts.json');
-  prompts = await response.json();
-  console.log('Longitud de prompts:', prompts.length);
-  // Asignar los valores de los prompts según lo requerido
-  prompt_one.textContent = prompts.prompt1;
+  const data = await response.json();
+
+  // Detectar idioma del documento (soporta es, es-MX, en, etc.)
+  const htmlLang = (document.documentElement.lang || 'en').toLowerCase();
+  const langKey = htmlLang.startsWith('es') ? 'es' : 'en';
+
+  // Soporte dual: JSON nuevo con {es, en} o JSON plano legacy con prompt1..promptN
+  const promptsData = (data && (data.es || data.en)) 
+    ? (data[langKey] || data.en || data.es) 
+    : data;
+
+  // Helper para obtener el mayor índice disponible (promptN) de forma robusta
+  const promptKeys = Object.keys(promptsData).filter(k => k.toLowerCase().startsWith('prompt'));
+  const maxIndex = promptKeys.length
+    ? Math.max(...promptKeys.map(k => Number(k.replace(/^\D+/,'')).valueOf()))
+    : 1;
+
+  // Asignar prompt 1
+  prompt_one.textContent = promptsData.prompt1 || '';
+
+  // Config aleatorios (mantiene tu lógica original con offset=2)
   const offset = 2;
-  const promptNo = Object.keys(prompts).length
-  // Obtener un número aleatorio entre 2 y 9 (ambos inclusive) para prompts 2, 3 y 4
-  const randomPrompt2 = Math.floor(Math.random() * (promptNo - 1)) + offset; // Random entre 2 y 9
-  let randomPrompt3, randomPrompt4;
-  do {
-    randomPrompt3 = Math.floor(Math.random() * (promptNo - 1)) + offset; // Random entre 2 y 9 (sin repetir el prompt 2)
-  } while (randomPrompt3 === randomPrompt2);
+  const upperBound = Math.max(offset, maxIndex); // evita rango inválido si hubiera pocos prompts
 
-  do {
-    randomPrompt4 = Math.floor(Math.random() * (promptNo - 1)) + offset; // Random entre 2 y 9 (sin repetir prompt 2 y 3)
-  } while (randomPrompt4 === randomPrompt2 || randomPrompt4 === randomPrompt3);
+  function randPrompt() {
+    // número entero en [offset, upperBound]
+    return Math.floor(Math.random() * (upperBound - offset + 1)) + offset;
+  }
 
-  // Asignar los valores de los prompts aleatorios
-  console.log("Random Prompt 2:", randomPrompt2);
-  console.log("Random Prompt 3:", randomPrompt3);
-  console.log("Random Prompt 4:", randomPrompt4);
-  prompt_two.textContent = prompts[`prompt${randomPrompt2}`];
-  prompt_three.textContent = prompts[`prompt${randomPrompt3}`];
-  prompt_four.textContent = prompts[`prompt${randomPrompt4}`];
+  // Selecciones únicas para 2, 3 y 4
+  const used = new Set();
+  let randomPrompt2 = randPrompt();
+  used.add(randomPrompt2);
+
+  let randomPrompt3;
+  do { randomPrompt3 = randPrompt(); } while (used.has(randomPrompt3));
+  used.add(randomPrompt3);
+
+  let randomPrompt4;
+  do { randomPrompt4 = randPrompt(); } while (used.has(randomPrompt4));
+  used.add(randomPrompt4);
+
+  // Logs
+  console.log('Idioma detectado:', langKey);
+  console.log('Prompts disponibles (máx índice):', maxIndex);
+  console.log('Random Prompt 2:', randomPrompt2);
+  console.log('Random Prompt 3:', randomPrompt3);
+  console.log('Random Prompt 4:', randomPrompt4);
+
+  // Asignar textos (fallback a cadena vacía si no existiera el índice)
+  prompt_two.textContent = promptsData[`prompt${randomPrompt2}`] || '';
+  prompt_three.textContent = promptsData[`prompt${randomPrompt3}`] || '';
+  prompt_four.textContent = promptsData[`prompt${randomPrompt4}`] || '';
 }
 
 
@@ -270,7 +298,7 @@ var imagen = document.getElementById("boton");
 function verificarContenido() {
     var texto = textarea.value.trim(); // Obtener el contenido del textarea y eliminar espacios en blanco al inicio y al final
     //console.log("Mensaje Principal", texto);
-    if (texto.length > 0 && texto !== "Mensaje") {
+    if (texto.length > 0 && texto !== "Mensaje" && texto !== "Message") {
         imagen.src = "/resources/images/chatbot/SendArrow.png";
     } else {
         imagen.src = "/resources/images/chatbot/SendArrowGray.png";
