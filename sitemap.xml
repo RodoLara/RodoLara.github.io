@@ -1,14 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="https://www.rodolfolara.com/sitemap.xsl"?>
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <sitemap>
-    <loc>https://www.rodolfolara.com/sitemaps/sitemap-en.xml</loc>
-  </sitemap>
-  <sitemap>
-    <loc>https://www.rodolfolara.com/sitemaps/sitemap-es.xml</loc>
-  </sitemap>
-</sitemapindex>
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Home -->
   <url>
     <loc>https://www.rodolfolara.com/en/index.html</loc>
@@ -90,5 +82,4 @@
     <loc>https://www.rodolfolara.com/es/blog/posts/post2.html</loc>
     <lastmod>2025-08-07</lastmod>
   </url>
-
 </urlset>
