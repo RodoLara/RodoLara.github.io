@@ -219,6 +219,11 @@
           <label><input type="checkbox" name="plc_marcas[]" value="Mitsubishi"> Mitsubishi</label>
           <label><input type="checkbox" name="plc_marcas[]" value="Automation Direct"> Automation Direct</label>
           <label class="otros"><input type="checkbox"> Others:<input type="text" name="plc_marcas_otros" disabled></label>
+          <!-- Nuevos -->
+          <label><input type="checkbox" name="plc_marcas[]" value="Keyence"> Keyence</label>
+          <label><input type="checkbox" name="plc_marcas[]" value="TwinCAT"> TwinCAT</label>
+          <label><input type="checkbox" name="plc_marcas[]" value="CODESYS"> CODESYS</label>
+          <label class="otros"><input type="checkbox"> Others:<input type="text" name="plc_marcas_otros" disabled></label>
         </div>
 
         <label for="hmi_scada_select">HMI/SCADA Brands:</label>
@@ -232,8 +237,15 @@
           <label><input type="checkbox" name="hmi_scada_marcas[]" value="Proface"> Proface</label>
           <label><input type="checkbox" name="hmi_scada_marcas[]" value="Wonderware"> Wonderware</label>
           <label><input type="checkbox" name="hmi_scada_marcas[]" value="Ignition"> Ignition</label>
+          <!-- Nuevos -->
+          <label><input type="checkbox" name="hmi_scada_marcas[]" value="Cimplicity"> Cimplicity</label> <!-- GE -->
+          <label><input type="checkbox" name="hmi_scada_marcas[]" value="NB Designer"> NB Designer</label> <!-- Omron -->
+          <label><input type="checkbox" name="hmi_scada_marcas[]" value="Vijeo Designer"> Vijeo Designer</label> <!-- Schneider -->
+          <label><input type="checkbox" name="hmi_scada_marcas[]" value="GT Designer3"> GT Designer</label> <!-- Mitsubishi -->
+          <label><input type="checkbox" name="hmi_scada_marcas[]" value="C-more"> C-more</label> <!-- Automation Direct -->
           <label class="otros"><input type="checkbox"> Others:<input type="text" name="hmi_scada_marcas_otros" disabled></label>
         </div>
+
 
         <label for="robot_select">Robot Brands:</label>
         <select id="robot_select" name="robot_select" onchange="toggleCheckboxes('robot')" aria-controls="robot_checkboxes" aria-expanded="false">
@@ -247,6 +259,14 @@
           <label><input type="checkbox" name="robot_marcas[]" value="Stäubli"> Stäubli</label>
           <label><input type="checkbox" name="robot_marcas[]" value="Kuka"> Kuka</label>
           <label><input type="checkbox" name="robot_marcas[]" value="Epson"> Epson</label>
+          <!-- Nuevos -->
+          <label><input type="checkbox" name="robot_marcas[]" value="Mitsubishi"> Mitsubishi</label>
+          <label><input type="checkbox" name="robot_marcas[]" value="Omron"> Omron</label>
+          <label><input type="checkbox" name="robot_marcas[]" value="Universal Robots"> Universal Robots</label>
+          <label><input type="checkbox" name="robot_marcas[]" value="Kawasaki"> Kawasaki</label>
+          <label><input type="checkbox" name="robot_marcas[]" value="Denso"> Denso</label>
+          <label><input type="checkbox" name="robot_marcas[]" value="Comau"> Comau</label>
+          <label><input type="checkbox" name="robot_marcas[]" value="Techman Robot"> Techman Robot</label>
           <label class="otros"><input type="checkbox"> Others:<input type="text" name="robot_marcas_otros" disabled></label>
         </div>
 
