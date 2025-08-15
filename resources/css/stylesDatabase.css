@@ -22,7 +22,7 @@
     --clr-services: #5385c7;
     --clr-clients: #8c55c6;
     --clr-blog: #cb51a8;
-    --clr-db-contrast: #fb00ff;
+    --clr-db-contrast: #1a2cd1;
     --clr-downloads: #e2598b;
     --clr-fondo: #47ff31;
     --clr-black: #474747;
@@ -36,9 +36,9 @@
     /* Gradiente vertical mejorado */
     --bg-gradient: linear-gradient(
     180deg,
-     #000000 0%,
-  #880e4f 15%,
-  #4a148c 40%,
+  #000000 0%,
+  #1d509d 20%,
+  #583287 40%,
   #575a5c 100%
    /* Azul medio grisáceo */  /* Azul grisáceo medio para cierre */
 );
@@ -487,7 +487,7 @@ input[type="file"]::-webkit-file-upload-button{
 
 /* links de soporte */
 .link-soporte{
-  color: var(--clr-db-contrast);
+  color: #35d442;
   text-decoration:none;
 }
 .link-soporte:hover{
