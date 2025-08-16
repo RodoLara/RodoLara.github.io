@@ -382,23 +382,57 @@ section {
     border-radius: 4px;
 }
 
-#phone-input {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    width: 80%;
+/* Que el grupo mida EXACTAMENTE lo mismo que los otros inputs */
+#phone-input{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  width: calc(100% - 16px);   /* antes: 100% */
+  margin-top:5px;
 }
 
-#phone {
-    flex: 1;
-    margin-left: 0px;
+/* Normaliza a la MISMA altura visual que el resto (sin height fijo) */
+#phone-input select,
+#phone-input input{
+  box-sizing: border-box;
+  /* height:40px;  <-- QUÍTALO */
+  height: auto;        /* igual que los demás */
+  padding: 8px;        /* mismo padding que tu regla global */
+  border: 1px solid #000;
+  border-radius: 3px;
+  width: auto;
+  font-size: inherit;  /* usa el mismo tamaño que el resto */
+  line-height: 1.2;    /* consistente */
+  font-size: 0.8rem;
 }
 
-input[type="tel"] {
-    max-width: 100%;
-    width: 100%;
-    box-sizing: border-box;
+/* Select con ancho fijo; input se estira */
+#country{
+  flex:0 0 110px;
+  width:110px;
 }
+
+#phone{
+  flex:1 1 auto;
+  min-width:0;
+  width:0;                     /* evita desbordes */
+  margin-left:0;
+}
+
+/* Evita que la regla global (input, select { width: calc(100% - 16px) })
+   rompa el layout dentro del grupo: */
+#phone-input input,
+#phone-input select{
+  width:auto !important;
+}
+
+
+/* Si tienes esta regla global, evita que afecte al tel dentro del grupo */
+input[type="tel"]{
+  max-width:100%;
+  /*width:100%;*/
+}
+
 
 .english-proficiency{ display:flex; flex-wrap:wrap; }
 
