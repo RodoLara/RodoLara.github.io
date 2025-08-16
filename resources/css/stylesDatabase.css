@@ -178,6 +178,10 @@ p{
   font-weight:700;
 }
 
+.autoeng{
+    color: rgb(194, 97, 255);
+}
+
 section.introduction b,
 section.introduction strong{
   font-weight:700;      /* 700 = bold en la mayoría de fuentes */

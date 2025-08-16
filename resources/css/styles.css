@@ -296,7 +296,7 @@ body {
 
 
 header {
-  background-color: #000;
+  /*background-color: #000;*/
   color: #fff;
   text-align: center;
   height: 3.7em;
@@ -513,45 +513,69 @@ nav ul li a {
 .content2{
   width: 100vw;
   border-radius: var(--border-radius);
-  background-color: var(--clr-expertise);
+  background: rgba(0,0,0,0.3);   /* más oscuro y más opaco */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px); /* por compatibilidad */
   padding: 0.5em 1em;
   margin: 0;
   position: fixed;
   top: 0;
-  z-index: 2;
+  z-index: 1000;
 }
 
 .content3{
   width: 100vw;
   border-radius: var(--border-radius);
-  background-color: var(--clr-services);
+  background: rgba(0,0,0,0.3);   /* más oscuro y más opaco */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px); /* por compatibilidad */
   padding: 0.5em 1em;
   margin: 0;
   position: fixed;
   top: 0;
-  z-index: 2;
+  z-index: 1000;
 }
 
 .content4{
   width: 100vw;
   border-radius: var(--border-radius);
-  background-color: var(--clr-clients);
+  background: rgba(0,0,0,0.3);   /* más oscuro y más opaco */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px); /* por compatibilidad */
   padding: 0.5em 1em;
   margin: 0;
   position: fixed;
   top: 0;
-  z-index: 2;
+  z-index: 1000;
 }
 
 .content5{
   width: 100vw;
   border-radius: var(--border-radius);
-  background-color: var(--clr-contact);
+  background: rgba(0,0,0,0.3);   /* más oscuro y más opaco */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px); /* por compatibilidad */
   padding: 0.5em 1em;
   margin: 0;
   position: fixed;
   top: 0;
-  z-index: 2;
+  z-index: 1000;
+}
+
+.autoeng-expertise{
+    color: rgb(97, 255, 118);
+}
+
+.autoeng-services{
+    color: rgb(100, 211, 255);
+}
+
+.autoeng-clients{
+    color: #b274f5;
+}
+
+.autoeng-contact{
+    color: #ff9853;
 }
 
 .footer1 {

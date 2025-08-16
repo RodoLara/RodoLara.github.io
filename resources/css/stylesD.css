@@ -304,12 +304,18 @@ nav ul li a {
 .content3{
   width: 100vw;
   border-radius: var(--border-radius);
-  background-color: var(--clr-downloads);
+  background: rgba(0,0,0,0.3);   /* más oscuro y más opaco */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px); /* por compatibilidad */
   padding: 0.5em 1em;
   margin: 0;
   position: fixed;
   top: 0;
-  z-index: 2;
+  z-index: 1000;
+}
+
+.autoeng-downloads{
+    color: #ff78ac;
 }
 
 .enlace-blanco {
