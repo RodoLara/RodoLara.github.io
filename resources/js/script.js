@@ -28,14 +28,20 @@ let currentLanguage; // Variable global accesible desde cualquier otro script
 })();
 
 function copiarCodigo(botonClickado) {
-    var code = botonClickado.parentElement.nextElementSibling.querySelector('pre code').textContent;
+    // Obtener el código del bloque correspondiente
+    var code = botonClickado.parentElement.nextElementSibling
+                 .querySelector('pre code').textContent;
 
-    var tempTextArea = document.createElement('textarea');
-    tempTextArea.value = code;
-    document.body.appendChild(tempTextArea);
-    tempTextArea.select();
-    document.execCommand('copy');
-    document.body.removeChild(tempTextArea);
+    // Copiar al portapapeles con la API moderna
+    navigator.clipboard.writeText(code)
+        .then(() => {
+            console.log("Código copiado al portapapeles!");
+            // Aquí puedes poner una notificación visual en el botón si quieres
+            // botonClickado.textContent = "¡Copiado!";
+        })
+        .catch(err => {
+            console.error("Error al copiar: ", err);
+        });
 }
 
 
@@ -70,7 +76,6 @@ function buscarProyecto() {
 
     function enviarCodigo(codigo) {
         const url = 'https://backendrl-db-a5hygcb4fpfdf8as.southcentralus-01.azurewebsites.net/api/webpage_downloads?';
-        //const url = 'https://app-backendrl.azurewebsites.net/api/webpage_backend?code=OTnBZhRJJDqdZUtYBbc1SDq1TjFvCoZLDJCKopNLX1EtAzFuQuim2A%3D%3D';
         let data = "Download" + currentLanguage + ":" + codigo; // El código que se enviará en el cuerpo
         message = [];
         message.push({ "role": "user", "content": data });
@@ -120,22 +125,7 @@ function buscarProyecto() {
         });
     }
     
-    // Ejemplo de uso:
-    const codigoProyecto = '1234567890';  // Código de 10 caracteres
     enviarCodigo(projectNumber);    
-    
-
-    // Verifica si el número de proyecto tiene exactamente 10 dígitos
-    if (projectNumber.length === 10) {
-        // Si el número de proyecto tiene 10 dígitos, muestra un enlace de 
-        
-        
-        //resultDiv.innerHTML = `<p>Resultados para el proyecto: ${projectNumber}</p>
-                               //<a href="descarga-${projectNumber}.pdf" download>Descargar información</a>`;
-    } else {
-        
-    }
-
     return false;  // Evita que la página se recargue
 }
 

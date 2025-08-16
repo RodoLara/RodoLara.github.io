@@ -301,6 +301,17 @@ nav ul li a {
   color: var(--clr-white);
 }
 
+.content3{
+  width: 100vw;
+  border-radius: var(--border-radius);
+  background-color: var(--clr-downloads);
+  padding: 0.5em 1em;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+}
+
 .enlace-blanco {
   color: whitesmoke;
   text-decoration: underline; /* Si no quieres el subrayado */

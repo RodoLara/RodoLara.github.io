@@ -63,6 +63,7 @@ body::after{
   mix-blend-mode: soft-light;
 }
 
+
 /* Añade posición relativa al cuerpo o al contenedor para que ::before se ubique bien */
 body.servicesbody {
   position: relative;
@@ -94,7 +95,7 @@ body.servicesbody {
     screen,
     normal;
 
-  filter: saturate(1.06) contrast(1.08);
+  /*filter: saturate(1.06) contrast(1.08);*/
 }
 
 /* --------- Haz dramático --------- */
@@ -536,6 +537,19 @@ nav ul li a {
   padding: 0.5em;
   font-weight: bold;
   color: var(--clr-white);
+}
+
+.content3{
+  width: 100vw;
+  border-radius: var(--border-radius);
+  background: rgba(0,0,0,0.3);   /* más oscuro y más opaco */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px); /* por compatibilidad */
+  padding: 0.5em 1em;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
 }
 
 /* texto “No file chosen” + nombre del archivo */
