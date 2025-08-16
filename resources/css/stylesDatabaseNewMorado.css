@@ -29,27 +29,13 @@
     --clr-font: #f8f7f7;
     --font-size: 16px;
     --border-radius:0.2em;
-    /* Colores base */
-  --pink:   #1b1b1b;   /* negro mate */
---violet: #3a0ca3;   /* violeta deep learning */
---blue:   #4361ee;   /* azul visión artificial */
-
-
-
-
 
    /*--brand-purple: #1c46ee;
     --brand-purple-rgb: 28, 70, 238;*/
-
-    /* Gradiente vertical mejorado */
-    /*--bg-gradient: linear-gradient(
-    180deg,
-  #000000 0%,
-  #1d509d 20%,
-  #583287 40%,
-  #575a5c 100%
-   /* Azul medio grisáceo */  /* Azul grisáceo medio para cierre 
-);*/
+     --lavender: #d2cfd5;  /* top */
+  --lilac:   #d9d3e2;  /* mid-high */
+  --purple:  #9b63f2;  /* mid */
+  --deep:    #7b35e8;
 }
 
 html {
@@ -62,10 +48,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    /*background: var(--bg-gradient);
-    background-size: 400% 400%;
-    transition: background 0.7s ease-out; /* suaviza el cambio */
-    /*background-color: #0b0616;   /* fallback sólido */
+       /* fallback sólido */
     min-height: 100dvh;
 }
 
@@ -81,105 +64,114 @@ body::after{
 }
 
 /* Añade posición relativa al cuerpo o al contenedor para que ::before se ubique bien */
-body.servicesbody {
-  position: relative;
-  min-height: 100vh;
-  margin:0;
-  overflow-x:hidden;
+/* ====================== Fondo con profundidad en body.servicesbody ====================== */
+body.servicesbody{
+  position:relative;
+  min-height:100dvh;
+  overflow:hidden;
 
-  /* ======== Gradiente Ultra Depth ======== */
   background-image:
-    radial-gradient(150% 135% at 50% 60%,
-      rgba(0,0,0,0) 56%, rgba(0,0,0,.28) 82%, rgba(0,0,0,.50) 100%),
-    linear-gradient(110deg,
-      rgba(0,0,0,.42) 0%,
-      rgba(0,0,0,.20) 22%,
-      rgba(0,0,0,0) 50%),
-    radial-gradient(75rem 65rem at 86% 8%,
-      rgba(120,140,255,0.45) 0%, rgba(120,140,255,0) 68%),
-    radial-gradient(80rem 70rem at 12% 92%,
-      rgba(255,205,185,.25) 0%, rgba(255,205,185,0) 70%),
-    radial-gradient(55rem 45rem at 58% 50%,
-      rgba(154,99,239,.40) 0%, rgba(154,99,239,0) 72%),
-    linear-gradient(135deg, var(--pink) 0%, var(--violet) 40%, var(--blue) 100%);
-  
-  background-blend-mode:
-    multiply,
-    multiply,
-    screen,
-    screen,
-    screen,
-    normal;
+    /* 1) Viñeta leve para encerrar la escena */
+    radial-gradient(140% 115% at 50% 55%,
+      rgba(0,0,0,0) 60%, rgba(0,0,0,.14) 85%, rgba(0,0,0,.22) 100%),
 
-  filter: saturate(1.06) contrast(1.08);
+    /* 2) Gradiente principal vertical */
+    linear-gradient(to top,
+      var(--deep) 0%, var(--purple) 60%, var(--lilac) 85%, var(--lavender) 90%),
+
+    /* 3) Haze/luz superior */
+    radial-gradient(120% 85% at 60% 0%,
+      rgba(255,255,255,.75) 0%, rgba(255,255,255,.32) 36%, rgba(255,255,255,0) 66%),
+
+    /* 4) Sombra central */
+    radial-gradient(70rem 48rem at 58% 46%,
+      rgba(0,0,0,.16) 0%, rgba(0,0,0,0) 70%),
+
+    /* 5) Blob profundo izquierdo */
+    radial-gradient(65rem 26rem at 10% 102%,
+      rgba(123,53,232,.88) 0%, rgba(123,53,232,0) 70%),
+
+    /* 6) Blob medio */
+    radial-gradient(78rem 28rem at 42% 106%,
+      rgba(139,99,242,.85) 0%, rgba(139,99,242,0) 72%),
+
+    /* 7) Blob alto derecho (ligero) */
+    radial-gradient(52rem 22rem at 92% 98%,
+      rgba(155,99,242,.55) 0%, rgba(155,99,242,0) 68%);
+
+  background-blend-mode:
+    multiply, normal, screen, multiply, normal, normal, normal;
+
+  filter: saturate(1.05) contrast(1.06);
 }
 
-/* --------- Haz dramático --------- */
+
+/* ---------- CONTORNOS / TRAZOS SUAVES ---------- */
 body.servicesbody::before{
   content:"";
   position:absolute; inset:0;
   pointer-events:none;
-  z-index:0;
 
   background-image:
-    conic-gradient(from 210deg at 68% 36%,
-      rgba(255,255,255,.22) 0 12%,
-      rgba(255,255,255,0) 36% 74%,
-      rgba(255,255,255,.18) 100%),
-    radial-gradient(38rem 28rem at 26% 18%,
-      rgba(0,0,0,.26) 0, rgba(0,0,0,0) 70%),
-    radial-gradient(32rem 26rem at 48% 58%,
-      rgba(0,0,0,.18) 0, rgba(0,0,0,0) 72%);
-  
-  background-blend-mode: soft-light, multiply, multiply;
-  filter: blur(1.5px);
+    radial-gradient(45rem 30rem at 86% 10%,
+      rgba(255,255,255,.38) 0, rgba(255,255,255,0) 70%),
+    conic-gradient(from 205deg at 55% 63%,
+      rgba(255,255,255,.20) 0 8%,
+      rgba(255,255,255,0) 26% 78%,
+      rgba(255,255,255,.16) 100%),
+    radial-gradient(34rem 20rem at 52% 70%,
+      rgba(0,0,0,.18) 0, rgba(0,0,0,0) 72%),
+    linear-gradient(100deg,
+      rgba(0,0,0,.26) 0%, rgba(0,0,0,0) 35%);
+
+  background-blend-mode: soft-light, soft-light, multiply, multiply;
+  filter: blur(1.2px);
   opacity:.95;
 }
 
-/* --------- Puntitos texturizados --------- */
+/* ---------- BORDES ESPECULARES + NEBLINA LOCAL ---------- */
 body.servicesbody::after{
   content:"";
-  position:absolute; inset:0;
-  pointer-events:none;
-  z-index:0;
-  mix-blend-mode:screen;
-  opacity:.35;
-  filter: blur(.25px) contrast(1.12);
+  position:absolute; inset:0; pointer-events:none;
 
-  background:
-    url("data:image/svg+xml;utf8,\
-      <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>\
-        <filter id='n1'>\
-          <feTurbulence type='fractalNoise' baseFrequency='0.86' numOctaves='2' seed='7'/>\
-          <feColorMatrix type='saturate' values='0'/>\
-          <feComponentTransfer><feFuncA type='linear' slope='3' intercept='-2'/></feComponentTransfer>\
-        </filter>\
-        <rect width='100%' height='100%' fill='white' filter='url(%23n1)'/>\
-      </svg>") repeat;
-  background-size: 260px 260px;
+  background-image:
+    radial-gradient(80rem 20rem at 50% 100%,
+      rgba(255,255,255,.14) 0, rgba(255,255,255,0) 70%),
+    radial-gradient(50rem 40rem at 40% 58%,
+      rgba(255,255,255,.10) 0, rgba(255,255,255,0) 70%);
 
-  -webkit-mask-image:
-    radial-gradient(130% 100% at 30% 20%, #000 60%, transparent 100%),
-    linear-gradient(#000,#000);
-  mask-image:
-    radial-gradient(130% 100% at 30% 20%, #000 60%, transparent 100%),
-    linear-gradient(#000,#000);
+  mix-blend-mode: overlay;
+  filter: blur(1px);
+  opacity:.9;
+}
+
+@media (max-width:480px){
+  body.servicesbody{
+    background-image:
+      radial-gradient(140% 120% at 50% 55%, rgba(0,0,0,0) 60%, rgba(0,0,0,.14) 85%, rgba(0,0,0,.22) 100%),
+      linear-gradient(to top, var(--deep) 0%, var(--purple) 42%, var(--lilac) 74%, var(--lavender) 100%),
+      radial-gradient(140% 95% at 60% 0%, rgba(255,255,255,.75) 0%, rgba(255,255,255,.32) 36%, rgba(255,255,255,0) 66%),
+      radial-gradient(56rem 40rem at 58% 46%, rgba(0,0,0,.16) 0%, rgba(0,0,0,0) 70%),
+      radial-gradient(46rem 18rem at 10% 102%, rgba(123,53,232,.88) 0%, rgba(123,53,232,0) 70%),
+      radial-gradient(58rem 20rem at 42% 106%, rgba(139,99,242,.85) 0%, rgba(139,99,242,0) 72%),
+      radial-gradient(44rem 16rem at 92% 98%, rgba(155,99,242,.55) 0%, rgba(155,99,242,0) 68%);
+  }
 }
 
 
 
 h2, h3, h4 {
-    color: #fff;
+    color: #000000;
     font-weight:700;
 }
 
 h1{
-    color: #fff;
+    color: #000000;
     font-weight:700;
 }
 
 p{
-    color: #fff;
+    color: #000000;
 }
 
 .moneysign{
@@ -296,7 +288,7 @@ input, select {
 #charCounter { font-size: 12px; color:whitesmoke; }
 
 #informacion_adicional:focus {
-    border-color: #4e4caf;
+    border-color: #4CAF50;
     outline: none;
 }
 
@@ -544,7 +536,7 @@ input[type="file"]::-webkit-file-upload-button{
 
 /* links de soporte */
 .link-soporte{
-  color: #00ff1a;
+  color: #35d442;
   text-decoration:none;
 }
 .link-soporte:hover{

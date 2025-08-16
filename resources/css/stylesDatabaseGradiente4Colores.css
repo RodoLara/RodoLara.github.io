@@ -29,27 +29,19 @@
     --clr-font: #f8f7f7;
     --font-size: 16px;
     --border-radius:0.2em;
-    /* Colores base */
-  --pink:   #1b1b1b;   /* negro mate */
---violet: #3a0ca3;   /* violeta deep learning */
---blue:   #4361ee;   /* azul visión artificial */
-
-
-
-
 
    /*--brand-purple: #1c46ee;
     --brand-purple-rgb: 28, 70, 238;*/
 
     /* Gradiente vertical mejorado */
-    /*--bg-gradient: linear-gradient(
+    --bg-gradient: linear-gradient(
     180deg,
   #000000 0%,
   #1d509d 20%,
   #583287 40%,
   #575a5c 100%
-   /* Azul medio grisáceo */  /* Azul grisáceo medio para cierre 
-);*/
+   /* Azul medio grisáceo */  /* Azul grisáceo medio para cierre */
+);
 }
 
 html {
@@ -62,10 +54,10 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    /*background: var(--bg-gradient);
+    background: var(--bg-gradient);
     background-size: 400% 400%;
     transition: background 0.7s ease-out; /* suaviza el cambio */
-    /*background-color: #0b0616;   /* fallback sólido */
+    background-color: #0b0616;   /* fallback sólido */
     min-height: 100dvh;
 }
 
@@ -83,90 +75,41 @@ body::after{
 /* Añade posición relativa al cuerpo o al contenedor para que ::before se ubique bien */
 body.servicesbody {
   position: relative;
-  min-height: 100vh;
-  margin:0;
-  overflow-x:hidden;
-
-  /* ======== Gradiente Ultra Depth ======== */
-  background-image:
-    radial-gradient(150% 135% at 50% 60%,
-      rgba(0,0,0,0) 56%, rgba(0,0,0,.28) 82%, rgba(0,0,0,.50) 100%),
-    linear-gradient(110deg,
-      rgba(0,0,0,.42) 0%,
-      rgba(0,0,0,.20) 22%,
-      rgba(0,0,0,0) 50%),
-    radial-gradient(75rem 65rem at 86% 8%,
-      rgba(120,140,255,0.45) 0%, rgba(120,140,255,0) 68%),
-    radial-gradient(80rem 70rem at 12% 92%,
-      rgba(255,205,185,.25) 0%, rgba(255,205,185,0) 70%),
-    radial-gradient(55rem 45rem at 58% 50%,
-      rgba(154,99,239,.40) 0%, rgba(154,99,239,0) 72%),
-    linear-gradient(135deg, var(--pink) 0%, var(--violet) 40%, var(--blue) 100%);
-  
-  background-blend-mode:
-    multiply,
-    multiply,
-    screen,
-    screen,
-    screen,
-    normal;
-
-  filter: saturate(1.06) contrast(1.08);
 }
 
-/* --------- Haz dramático --------- */
-body.servicesbody::before{
-  content:"";
-  position:absolute; inset:0;
-  pointer-events:none;
-  z-index:0;
+/* Monograma repetido e intercalado en segundo plano (lo mantienes comentado si no lo usas ahora) */
+body.servicesbody::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
 
-  background-image:
-    conic-gradient(from 210deg at 68% 36%,
-      rgba(255,255,255,.22) 0 12%,
-      rgba(255,255,255,0) 36% 74%,
-      rgba(255,255,255,.18) 100%),
-    radial-gradient(38rem 28rem at 26% 18%,
-      rgba(0,0,0,.26) 0, rgba(0,0,0,0) 70%),
-    radial-gradient(32rem 26rem at 48% 58%,
-      rgba(0,0,0,.18) 0, rgba(0,0,0,0) 72%);
-  
-  background-blend-mode: soft-light, multiply, multiply;
-  filter: blur(1.5px);
-  opacity:.95;
+  /*background-image:
+    url("../images/chatbot/factoryAI120_2.png"),
+    url("../images/chatbot/factoryAI120_7.png"),
+    url("../images/chatbot/factoryAI120_4.png"),
+    url("../images/chatbot/factoryAI120_8.png");
+
+  background-size:
+    80px 80px,
+    80px 80px,
+    80px 80px,
+    80px 80px;
+
+  background-repeat:
+    repeat,
+    repeat,
+    repeat,
+    repeat;
+
+  background-position:
+    0 0,
+    40px 80px,
+    80px 120px,
+    120px 120px;
+  opacity: 0.4;*/
 }
-
-/* --------- Puntitos texturizados --------- */
-body.servicesbody::after{
-  content:"";
-  position:absolute; inset:0;
-  pointer-events:none;
-  z-index:0;
-  mix-blend-mode:screen;
-  opacity:.35;
-  filter: blur(.25px) contrast(1.12);
-
-  background:
-    url("data:image/svg+xml;utf8,\
-      <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>\
-        <filter id='n1'>\
-          <feTurbulence type='fractalNoise' baseFrequency='0.86' numOctaves='2' seed='7'/>\
-          <feColorMatrix type='saturate' values='0'/>\
-          <feComponentTransfer><feFuncA type='linear' slope='3' intercept='-2'/></feComponentTransfer>\
-        </filter>\
-        <rect width='100%' height='100%' fill='white' filter='url(%23n1)'/>\
-      </svg>") repeat;
-  background-size: 260px 260px;
-
-  -webkit-mask-image:
-    radial-gradient(130% 100% at 30% 20%, #000 60%, transparent 100%),
-    linear-gradient(#000,#000);
-  mask-image:
-    radial-gradient(130% 100% at 30% 20%, #000 60%, transparent 100%),
-    linear-gradient(#000,#000);
-}
-
-
 
 h2, h3, h4 {
     color: #fff;
@@ -296,7 +239,7 @@ input, select {
 #charCounter { font-size: 12px; color:whitesmoke; }
 
 #informacion_adicional:focus {
-    border-color: #4e4caf;
+    border-color: #4CAF50;
     outline: none;
 }
 
@@ -544,7 +487,7 @@ input[type="file"]::-webkit-file-upload-button{
 
 /* links de soporte */
 .link-soporte{
-  color: #00ff1a;
+  color: #35d442;
   text-decoration:none;
 }
 .link-soporte:hover{
