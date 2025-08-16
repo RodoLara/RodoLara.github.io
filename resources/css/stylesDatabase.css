@@ -29,27 +29,10 @@
     --clr-font: #f8f7f7;
     --font-size: 16px;
     --border-radius:0.2em;
-    /* Colores base */
-  --pink:   #1b1b1b;   /* negro mate */
---violet: #3a0ca3;   /* violeta deep learning */
---blue:   #4361ee;   /* azul visión artificial */
-
-
-
-
-
-   /*--brand-purple: #1c46ee;
-    --brand-purple-rgb: 28, 70, 238;*/
-
-    /* Gradiente vertical mejorado */
-    /*--bg-gradient: linear-gradient(
-    180deg,
-  #000000 0%,
-  #1d509d 20%,
-  #583287 40%,
-  #575a5c 100%
-   /* Azul medio grisáceo */  /* Azul grisáceo medio para cierre 
-);*/
+    /* Colores base para gradiente*/
+    --pink:   #1b1b1b;   /* negro mate */
+    --violet: #3a0ca3;   /* violeta deep learning */
+    --blue:   #4361ee;   /* azul visión artificial */
 }
 
 html {
