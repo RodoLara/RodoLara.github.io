@@ -311,7 +311,7 @@ verificarContenido();
 
 textarea.addEventListener('focus', function() {
     // Borrar el texto inicial cuando se activa el foco
-    if (textarea.value === "Mensaje"){
+    if (textarea.value === "Mensaje" || textarea.value === "Message"){
         textarea.value = '';
         textarea.style.height = (parseInt(originalHeight) - 0) + "px";
     }
