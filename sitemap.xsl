@@ -44,7 +44,7 @@
         <div class="section">
           <h2>English (/en)</h2>
           <xsl:call-template name="url-table">
-            <xsl:with-param name="nodes" select="/s:urlset/s:url[starts-with(s:loc,'https://www.rodolfolara.com/en/')]"/>
+            <xsl:with-param name="nodes" select="/s:urlset/s:url[starts-with(s:loc,'https://rodolfolara.com/en/')]"/>
           </xsl:call-template>
         </div>
 
@@ -52,16 +52,16 @@
         <div class="section">
           <h2>Español (/es)</h2>
           <xsl:call-template name="url-table">
-            <xsl:with-param name="nodes" select="/s:urlset/s:url[starts-with(s:loc,'https://www.rodolfolara.com/es/')]"/>
+            <xsl:with-param name="nodes" select="/s:urlset/s:url[starts-with(s:loc,'https://rodolfolara.com/es/')]"/>
           </xsl:call-template>
         </div>
 
         <!-- Otras rutas (por si en el futuro hay algo fuera de /en o /es) -->
-        <xsl:if test="/s:urlset/s:url[not(starts-with(s:loc,'https://www.rodolfolara.com/en/')) and not(starts-with(s:loc,'https://www.rodolfolara.com/es/'))]">
+        <xsl:if test="/s:urlset/s:url[not(starts-with(s:loc,'https://rodolfolara.com/en/')) and not(starts-with(s:loc,'https://rodolfolara.com/es/'))]">
           <div class="section">
             <h2>Otros</h2>
             <xsl:call-template name="url-table">
-              <xsl:with-param name="nodes" select="/s:urlset/s:url[not(starts-with(s:loc,'https://www.rodolfolara.com/en/')) and not(starts-with(s:loc,'https://www.rodolfolara.com/es/'))]"/>
+              <xsl:with-param name="nodes" select="/s:urlset/s:url[not(starts-with(s:loc,'https://rodolfolara.com/en/')) and not(starts-with(s:loc,'https://rodolfolara.com/es/'))]"/>
             </xsl:call-template>
           </div>
         </xsl:if>
