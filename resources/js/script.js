@@ -46,10 +46,14 @@ function copiarCodigo(botonClickado) {
 
 
 const downloadLinks = {
-    tServices11: 'https://drive.google.com/uc?export=download&id=1W6-it09XuEPraNBb3UkvUykE-nzfoE-X',
-    tServices12: 'https://drive.google.com/uc?export=download&id=1VZiuwxz6S-OmeIUqZE1oVu8zZKTfdpzH',
-    tServices13: 'https://drive.google.com/uc?export=download&id=1S0vJthoBGhmdkI0mHCXVLINRI0BI253B',
-    tServices14: 'https://drive.google.com/uc?export=download&id=1P7LGzUlSdQ1JuF3wLFFI0A_pbhMtutIE'
+    //Diseño Electrico
+    tServices11: 'https://drive.google.com/uc?export=download&id=13UOhH14dV8z5SGnWQYpckOIHiSLi4k76',
+    //PLC & Robots
+    tServices12: 'https://drive.google.com/uc?export=download&id=1QnTdxnILRaNnOYu11bP30YQVIbsE_GWq',
+    //Sistemas de Visión
+    tServices13: 'https://drive.google.com/uc?export=download&id=18zksEzUxWJr-27Cp1YlkvsNcvoSqhxx-',
+    //Proyectos Llave en Mano
+    tServices14: 'https://drive.google.com/uc?export=download&id=17oJGAOCPhdnQnczZacmySzNY6mL-HBCv'
 };
 
 // Obtén todos los elementos a dentro del div con la clase "programacion-hmi"
