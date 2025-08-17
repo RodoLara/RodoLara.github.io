@@ -1,6 +1,6 @@
 import * as marked from 'https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js';
 
-localStorage.clear();
+sessionStorage.clear();
 var typewriter;
 var htmlContent;
 let originalHeight;
@@ -138,7 +138,7 @@ function enviarPregunta() {
     verificarContenido();
     htmlContent.scrollTop = htmlContent.scrollHeight;
 
-    historial = JSON.parse(localStorage.getItem('historial')) || [];
+    historial = JSON.parse(sessionStorage.getItem('historial')) || [];
     historial.push({ "role": "user", "content": query });
     console.log("Formato en PLC:", historial);
 
@@ -158,8 +158,8 @@ function enviarPregunta() {
     .then(data => {
         let text = data.response;
         historial.push({ role: "system", content: text });
-        localStorage.setItem('historial', JSON.stringify(historial));
-        historial = JSON.parse(localStorage.getItem('historial')) || [];
+        sessionStorage.setItem('historial', JSON.stringify(historial));
+        historial = JSON.parse(sessionStorage.getItem('historial')) || [];
 
         contenidoFormateado = "<strong>FactoryAI: </strong>" + marked.parse(text) + "<br>";
         console.log("Contenido Formateado antes del reemplazo:", contenidoFormateado);

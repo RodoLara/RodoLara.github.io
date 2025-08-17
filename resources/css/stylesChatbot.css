@@ -380,7 +380,8 @@ pre {
     border-radius: 4px;
     padding: 1px 8px;
     font-size: 13px;
-    margin-left: 2em; /* Esto lo empuja a la derecha aunque esté antes en el HTML */
+    margin-left: 2em;
+    height: 30px; /* Esto lo empuja a la derecha aunque esté antes en el HTML */
 }
 
 #aboutContainer{
@@ -388,7 +389,8 @@ pre {
   display: inline-flex;
   align-items: center;
   flex: 0 0 auto;              /* <- evita que se estire en el flex padre */
-  width: fit-content;          /* opcional, asegura ancho al contenido */
+  width: fit-content;  
+  overflow: visible;           /* opcional, asegura ancho al contenido */
 }
 
 
@@ -398,14 +400,20 @@ pre {
   top: 50%  !important;                 /* centra verticalmente */
   left: 100%;               /* justo al borde derecho del botón */
   margin-left: 80px;   
-  margin-top: 40px;     /* separación horizontal */
+  margin-top: 235px;     /* separación horizontal */
   transform: translateY(-50%);
   z-index: 9999;
   border-radius: 4px;
   padding: 5px 8px;
   background: #232323;
   font-size: 13px;
-  white-space: wrap;
+  width: 300px;
+  height: auto;
+  /* que el texto fluya bien */
+  white-space: normal;       /* <- reemplaza 'wrap' */
+  overflow-wrap: anywhere;   /* rompe palabras largas */
+  line-height: 1.4;
+  overflow: auto;   
 }
 
 #power{
