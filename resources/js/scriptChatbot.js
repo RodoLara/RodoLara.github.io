@@ -417,7 +417,7 @@ document.getElementById('pregunta').addEventListener('input', function() {
 if (!typewriter){
         console.log("Typewriter created!");
         htmlContent = document.getElementById('htmlContent');
-        typewriter = new typewriter(htmlContent, {
+        typewriter = new Typewriter(htmlContent, {
         loop: false,
         delay: 15,
         autoStart: false, // No iniciar automáticamente
