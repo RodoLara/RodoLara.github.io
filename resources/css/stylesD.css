@@ -30,13 +30,17 @@
     --clr-font: #f8f7f7;
     --font-size: 16px;
     --border-radius:0.2em;
+
+--pink:   #e2598b;  /* base */
+--violet: #b13c69;  /* magenta profundo */
+--blue:   #70263f;  /* vino oscuro */
 }
 
 html {
     margin: 0;
     padding-right: 10px;
     overflow-x: hidden; /* Evita el desplazamiento horizontal */
-    width: 80vw;
+    width: 100vw;
 }
 
 header {
@@ -53,7 +57,7 @@ header {
     font-size: var(--font-size);
     letter-spacing: 0.05em;
     color: var(--clr-font);
-    background-color: var(--clr-downloads);
+    /*background-color: var(--clr-downloads);*/
     min-height: 100vh;
     padding-bottom: 4em;
     overflow: hidden auto;
@@ -64,7 +68,7 @@ header {
 
 
 body {
-    background-color: var(--clr-downloads);
+    /*background-color: var(--clr-downloads);*/
     margin: 0;
     /*margin: 0 auto;*/
     padding: 0;
@@ -104,8 +108,106 @@ body {
     overflow: hidden auto;
   }
 
+  /* Micro-ruido anti-banding (muy sutil) */
+body::after{
+  content:"";
+  position:fixed; inset:0; pointer-events:none; z-index:-1;
+  background:
+    repeating-linear-gradient(0deg,
+      rgba(255,255,255,.003) 0px, rgba(255,255,255,.003) 1px,
+      rgba(0,0,0,.003) 1px, rgba(0,0,0,.003) 2px);
+  mix-blend-mode: soft-light;
+}
+
+
+/* Añade posición relativa al cuerpo o al contenedor para que ::before se ubique bien */
+body.downloadbody {
+  position: relative;
+  min-height: 100vh;
+  margin:0;
+  overflow-x:hidden;
+
+  /* ======== Gradiente Ultra Depth ======== */
+  background-image:
+    radial-gradient(150% 135% at 50% 60%,
+      rgba(0,0,0,0) 56%, rgba(0,0,0,.28) 82%, rgba(0,0,0,.50) 100%),
+    linear-gradient(110deg,
+      rgba(0,0,0,.42) 0%,
+      rgba(0,0,0,.20) 22%,
+      rgba(0,0,0,0) 50%),
+    radial-gradient(75rem 65rem at 86% 8%,
+      rgba(120,140,255,0.45) 0%, rgba(120,140,255,0) 68%),
+    radial-gradient(80rem 70rem at 12% 92%,
+      rgba(255,205,185,.25) 0%, rgba(255,205,185,0) 70%),
+    radial-gradient(55rem 45rem at 58% 50%,
+      rgba(154,99,239,.40) 0%, rgba(154,99,239,0) 72%),
+    linear-gradient(135deg, var(--pink) 0%, var(--violet) 40%, var(--blue) 100%);
+  
+  background-blend-mode:
+    multiply,
+    multiply,
+    screen,
+    screen,
+    screen,
+    normal;
+
+  /*filter: saturate(1.06) contrast(1.08);*/
+}
+
+/* --------- Haz dramático --------- */
+body.downloadbody::before{
+  content:"";
+  position:absolute; inset:0;
+  pointer-events:none;
+  z-index:0;
+
+  background-image:
+    conic-gradient(from 210deg at 68% 36%,
+      rgba(255,255,255,.22) 0 12%,
+      rgba(255,255,255,0) 36% 74%,
+      rgba(255,255,255,.18) 100%),
+    radial-gradient(38rem 28rem at 26% 18%,
+      rgba(0,0,0,.26) 0, rgba(0,0,0,0) 70%),
+    radial-gradient(32rem 26rem at 48% 58%,
+      rgba(0,0,0,.18) 0, rgba(0,0,0,0) 72%);
+  
+  background-blend-mode: soft-light, multiply, multiply;
+  filter: blur(1.5px);
+  opacity:.95;
+}
+
+/* --------- Puntitos texturizados --------- */
+body.downloadbody::after{
+  content:"";
+  position:absolute; inset:0;
+  pointer-events:none;
+  z-index:0;
+  mix-blend-mode:screen;
+  opacity:.35;
+  filter: blur(.25px) contrast(1.12);
+
+  background:
+    url("data:image/svg+xml;utf8,\
+      <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>\
+        <filter id='n1'>\
+          <feTurbulence type='fractalNoise' baseFrequency='0.86' numOctaves='2' seed='7'/>\
+          <feColorMatrix type='saturate' values='0'/>\
+          <feComponentTransfer><feFuncA type='linear' slope='3' intercept='-2'/></feComponentTransfer>\
+        </filter>\
+        <rect width='100%' height='100%' fill='white' filter='url(%23n1)'/>\
+      </svg>") repeat;
+  background-size: 260px 260px;
+
+  -webkit-mask-image:
+    radial-gradient(130% 100% at 30% 20%, #000 60%, transparent 100%),
+    linear-gradient(#000,#000);
+  mask-image:
+    radial-gradient(130% 100% at 30% 20%, #000 60%, transparent 100%),
+    linear-gradient(#000,#000);
+}
+
 .container {
-    background-color: #e2598b95;
+    /*background-color: #9f939795;*/
     /*color: #333;*/
     color: whitesmoke;
     padding: 20px;
@@ -127,7 +229,7 @@ body {
   pointer-events: none;
   z-index: 0;
 
-  background-image:
+  /*background-image:
     url("../images/chatbot/factoryAI120_2.png"),
     url("../images/chatbot/factoryAI120_7.png"),
     url("../images/chatbot/factoryAI120_4.png"),
@@ -136,14 +238,14 @@ body {
   background-size: 80px 80px, 80px 80px, 80px 80px, 80px 80px;
   background-repeat: repeat, repeat, repeat, repeat;
 
-  /* medio desplazamiento para el efecto half-drop */
+  medio desplazamiento para el efecto half-drop 
   background-position:
     0 0,
     40px 80px,
     80px 120px,
     120px 120px;
 
-  opacity: 0.1;
+  opacity: 0.1;*/
 }
 
 /* Asegura que el contenido vaya por encima del patrón */

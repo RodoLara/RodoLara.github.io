@@ -28,7 +28,22 @@
   --clr-font: #f8f7f7;
   --font-size: 16px;
   --border-radius:0.2em;
+  /* Colores base para gradiente*/
+  --blue1:   #2350a3;  /* azul marino */
+  --blue2: #3564a0;  /* azul base */
+  --blue3:   #5c87cd;  /* azul cielo suave */
 
+  --green1:   #52e468;  /* azul marino */
+  --green2: #22ba50;  /* azul base */
+  --green3:   #069150;  /* azul cielo suave */
+
+  --purple1:   #8c55c6;  /* azul marino */
+  --purple2: #723ea2;  /* azul base */
+  --purple3:   #c8a3f1;  /* azul cielo suave */
+
+  --orange1:   #fea163;  /* azul marino */
+  --orange2: #df723f;  /* azul base */
+  --orange3:   #d15e3e;  /* azul cielo suave */
 
 }
 
@@ -121,7 +136,7 @@ body {
   
 }
 
-.exptertisebody, .servicesbody, .clientsbody, .contactbody{
+.expertisebody, .servicesbody, .clientsbody, .contactbody{
   margin: 0;
   padding: 0;
   width: 100vw;
@@ -133,8 +148,274 @@ body {
   min-height: 100vh;
   overflow: hidden auto;
 }
-  
 
+/* Micro-ruido anti-banding (muy sutil) */
+body::after{
+  content:"";
+  position:fixed; inset:0; pointer-events:none; z-index:-1;
+  background:
+    repeating-linear-gradient(0deg,
+      rgba(255,255,255,.003) 0px, rgba(255,255,255,.003) 1px,
+      rgba(0,0,0,.003) 1px, rgba(0,0,0,.003) 2px);
+  mix-blend-mode: soft-light;
+}
+  
+/* Añade posición relativa al cuerpo o al contenedor para que ::before se ubique bien */
+body.servicesbody {
+  position: relative;
+  min-height: 100vh;
+  margin:0;
+  overflow-x:hidden;
+
+  /* ======== Gradiente Ultra Depth ======== */
+  background-image:
+    radial-gradient(150% 135% at 50% 60%,
+      rgba(74, 73, 73, 0) 56%, rgba(95, 93, 93, 0.28) 82%, rgba(0,0,0,.50) 100%),
+    linear-gradient(110deg,
+      rgba(0,0,0,.42) 0%,
+      rgba(120, 117, 117, 0.2) 22%,
+      rgba(110, 107, 107, 0) 50%),
+    radial-gradient(75rem 65rem at 86% 8%,
+      rgba(120,140,255,0.45) 0%, rgba(120,140,255,0) 68%),
+    radial-gradient(80rem 70rem at 12% 92%,
+      rgba(255,205,185,.25) 0%, rgba(255,205,185,0) 70%),
+    radial-gradient(55rem 45rem at 58% 50%,
+      rgba(154,99,239,.40) 0%, rgba(154,99,239,0) 72%),
+    linear-gradient(135deg, var(--blue1) 0%, var(--blue2) 40%, var(--blue3) 100%);
+  
+  background-blend-mode:
+    multiply,
+    multiply,
+    screen,
+    screen,
+    screen,
+    normal;
+
+  /*filter: saturate(1.06) contrast(1.08);*/
+}
+
+/* --------- Haz dramático --------- */
+body.servicesbody::before{
+  content:"";
+  position:absolute; inset:0;
+  pointer-events:none;
+  z-index:0;
+
+  background-image:
+    conic-gradient(from 210deg at 68% 36%,
+      rgba(255,255,255,.22) 0 12%,
+      rgba(255,255,255,0) 36% 74%,
+      rgba(255,255,255,.18) 100%),
+    radial-gradient(38rem 28rem at 26% 18%,
+      rgba(0,0,0,.26) 0, rgba(0,0,0,0) 70%),
+    radial-gradient(32rem 26rem at 48% 58%,
+      rgba(0,0,0,.18) 0, rgba(0,0,0,0) 72%);
+  
+  background-blend-mode: soft-light, multiply, multiply;
+  filter: blur(1.5px);
+  opacity:.95;
+}
+
+/* --------- Puntitos texturizados --------- */
+body.servicesbody::after{
+  content:"";
+  position:absolute; inset:0;
+  pointer-events:none;
+  z-index:0;
+  mix-blend-mode:screen;
+  opacity:.35;
+  filter: blur(.25px) contrast(1.12);
+
+  background:
+    url("data:image/svg+xml;utf8,\
+      <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>\
+        <filter id='n1'>\
+          <feTurbulence type='fractalNoise' baseFrequency='0.86' numOctaves='2' seed='7'/>\
+          <feColorMatrix type='saturate' values='0'/>\
+          <feComponentTransfer><feFuncA type='linear' slope='3' intercept='-2'/></feComponentTransfer>\
+        </filter>\
+        <rect width='100%' height='100%' fill='white' filter='url(%23n1)'/>\
+      </svg>") repeat;
+  background-size: 260px 260px;
+
+  -webkit-mask-image:
+    radial-gradient(130% 100% at 30% 20%, #000 60%, transparent 100%),
+    linear-gradient(#000,#000);
+  mask-image:
+    radial-gradient(130% 100% at 30% 20%, #000 60%, transparent 100%),
+    linear-gradient(#000,#000);
+}
+
+body.clientsbody {
+  position: relative;
+  min-height: 100vh;
+  margin:0;
+  overflow-x:hidden;
+
+  /* ======== Gradiente Ultra Depth ======== */
+  background-image:
+    radial-gradient(150% 135% at 50% 60%,
+      rgba(74, 73, 73, 0) 56%, rgba(95, 93, 93, 0.28) 82%, rgba(0,0,0,.50) 100%),
+    linear-gradient(110deg,
+      rgba(0,0,0,.42) 0%,
+      rgba(120, 117, 117, 0.2) 22%,
+      rgba(110, 107, 107, 0) 50%),
+    radial-gradient(75rem 65rem at 86% 8%,
+      rgba(120,140,255,0.45) 0%, rgba(120,140,255,0) 68%),
+    radial-gradient(80rem 70rem at 12% 92%,
+      rgba(255,205,185,.25) 0%, rgba(255,205,185,0) 70%),
+    radial-gradient(55rem 45rem at 58% 50%,
+      rgba(154,99,239,.40) 0%, rgba(154,99,239,0) 72%),
+    linear-gradient(135deg, var(--purple1) 0%, var(--purple2) 40%, var(--purple3) 100%);
+  
+  background-blend-mode:
+    multiply,
+    multiply,
+    screen,
+    screen,
+    screen,
+    normal;
+
+  /*filter: saturate(1.06) contrast(1.08);*/
+}
+
+/* --------- Haz dramático --------- */
+body.clientsbody::before{
+  content:"";
+  position:absolute; inset:0;
+  pointer-events:none;
+  z-index:0;
+
+  background-image:
+    conic-gradient(from 210deg at 68% 36%,
+      rgba(255,255,255,.22) 0 12%,
+      rgba(255,255,255,0) 36% 74%,
+      rgba(255,255,255,.18) 100%),
+    radial-gradient(38rem 28rem at 26% 18%,
+      rgba(0,0,0,.26) 0, rgba(0,0,0,0) 70%),
+    radial-gradient(32rem 26rem at 48% 58%,
+      rgba(0,0,0,.18) 0, rgba(0,0,0,0) 72%);
+  
+  background-blend-mode: soft-light, multiply, multiply;
+  filter: blur(1.5px);
+  opacity:.95;
+}
+
+/* --------- Puntitos texturizados --------- */
+body.clientsbody::after{
+  content:"";
+  position:absolute; inset:0;
+  pointer-events:none;
+  z-index:0;
+  mix-blend-mode:screen;
+  opacity:.35;
+  filter: blur(.25px) contrast(1.12);
+
+  background:
+    url("data:image/svg+xml;utf8,\
+      <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>\
+        <filter id='n1'>\
+          <feTurbulence type='fractalNoise' baseFrequency='0.86' numOctaves='2' seed='7'/>\
+          <feColorMatrix type='saturate' values='0'/>\
+          <feComponentTransfer><feFuncA type='linear' slope='3' intercept='-2'/></feComponentTransfer>\
+        </filter>\
+        <rect width='100%' height='100%' fill='white' filter='url(%23n1)'/>\
+      </svg>") repeat;
+  background-size: 260px 260px;
+
+  -webkit-mask-image:
+    radial-gradient(130% 100% at 30% 20%, #000 60%, transparent 100%),
+    linear-gradient(#000,#000);
+  mask-image:
+    radial-gradient(130% 100% at 30% 20%, #000 60%, transparent 100%),
+    linear-gradient(#000,#000);
+}
+
+/* Añade posición relativa al cuerpo o al contenedor para que ::before se ubique bien */
+body.contactbody {
+  position: relative;
+  min-height: 100vh;
+  margin:0;
+  overflow-x:hidden;
+
+  /* ======== Gradiente Ultra Depth ======== */
+  background-image:
+    radial-gradient(150% 135% at 50% 60%,
+      rgba(74, 73, 73, 0) 56%, rgba(95, 93, 93, 0.28) 82%, rgba(0,0,0,.50) 100%),
+    linear-gradient(110deg,
+      rgba(0,0,0,.42) 0%,
+      rgba(120, 117, 117, 0.2) 22%,
+      rgba(110, 107, 107, 0) 50%),
+    radial-gradient(75rem 65rem at 86% 8%,
+      rgba(120,140,255,0.45) 0%, rgba(120,140,255,0) 68%),
+    radial-gradient(80rem 70rem at 12% 92%,
+      rgba(255,205,185,.25) 0%, rgba(255,205,185,0) 70%),
+    radial-gradient(55rem 45rem at 58% 50%,
+      rgba(154,99,239,.40) 0%, rgba(154,99,239,0) 72%),
+    linear-gradient(135deg, var(--orange1) 0%, var(--orange2) 40%, var(--orange3) 100%);
+  
+  background-blend-mode:
+    multiply,
+    multiply,
+    screen,
+    screen,
+    screen,
+    normal;
+
+  /*filter: saturate(1.06) contrast(1.08);*/
+}
+
+/* --------- Haz dramático --------- */
+body.contactbody::before{
+  content:"";
+  position:absolute; inset:0;
+  pointer-events:none;
+  z-index:0;
+
+  background-image:
+    conic-gradient(from 210deg at 68% 36%,
+      rgba(255,255,255,.22) 0 12%,
+      rgba(255,255,255,0) 36% 74%,
+      rgba(255,255,255,.18) 100%),
+    radial-gradient(38rem 28rem at 26% 18%,
+      rgba(0,0,0,.26) 0, rgba(0,0,0,0) 70%),
+    radial-gradient(32rem 26rem at 48% 58%,
+      rgba(0,0,0,.18) 0, rgba(0,0,0,0) 72%);
+  
+  background-blend-mode: soft-light, multiply, multiply;
+  filter: blur(1.5px);
+  opacity:.95;
+}
+
+/* --------- Puntitos texturizados --------- */
+body.contactbody::after{
+  content:"";
+  position:absolute; inset:0;
+  pointer-events:none;
+  z-index:0;
+  mix-blend-mode:screen;
+  opacity:.35;
+  filter: blur(.25px) contrast(1.12);
+
+  background:
+    url("data:image/svg+xml;utf8,\
+      <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>\
+        <filter id='n1'>\
+          <feTurbulence type='fractalNoise' baseFrequency='0.86' numOctaves='2' seed='7'/>\
+          <feColorMatrix type='saturate' values='0'/>\
+          <feComponentTransfer><feFuncA type='linear' slope='3' intercept='-2'/></feComponentTransfer>\
+        </filter>\
+        <rect width='100%' height='100%' fill='white' filter='url(%23n1)'/>\
+      </svg>") repeat;
+  background-size: 260px 260px;
+
+  -webkit-mask-image:
+    radial-gradient(130% 100% at 30% 20%, #000 60%, transparent 100%),
+    linear-gradient(#000,#000);
+  mask-image:
+    radial-gradient(130% 100% at 30% 20%, #000 60%, transparent 100%),
+    linear-gradient(#000,#000);
+}
 
 
 .subtitulo{
@@ -165,14 +446,98 @@ body {
   font-size: var(--font-size);
   letter-spacing: 0.05em;
   color: var(--clr-font);
-  background-color: var(--clr-expertise);
+  /*background-color: var(--clr-expertise);*/
   /*position: relative;*/
   min-height: 100vh;
   padding-bottom: 4em;
   overflow: hidden auto;
 }
 
+/* Añade posición relativa al cuerpo o al contenedor para que ::before se ubique bien */
+body.expertisebody {
+  position: relative;
+  min-height: 100vh;
+  margin:0;
+  overflow-x:hidden;
 
+  /* ======== Gradiente Ultra Depth ======== */
+  background-image:
+    radial-gradient(150% 135% at 50% 60%,
+      rgba(74, 73, 73, 0) 56%, rgba(95, 93, 93, 0.28) 82%, rgba(0,0,0,.50) 100%),
+    linear-gradient(110deg,
+      rgba(0,0,0,.42) 0%,
+      rgba(120, 117, 117, 0.2) 22%,
+      rgba(110, 107, 107, 0) 50%),
+    radial-gradient(75rem 65rem at 86% 8%,
+      rgba(120,140,255,0.45) 0%, rgba(120,140,255,0) 68%),
+    radial-gradient(80rem 70rem at 12% 92%,
+      rgba(255,205,185,.25) 0%, rgba(255,205,185,0) 70%),
+    radial-gradient(55rem 45rem at 58% 50%,
+      rgba(154,99,239,.40) 0%, rgba(154,99,239,0) 72%),
+    linear-gradient(135deg, var(--green1) 0%, var(--blue2) 40%, var(--green3) 100%);
+  
+  background-blend-mode:
+    multiply,
+    multiply,
+    screen,
+    screen,
+    screen,
+    normal;
+
+  /*filter: saturate(1.06) contrast(1.08);*/
+}
+
+/* --------- Haz dramático --------- */
+body.expertisebody::before{
+  content:"";
+  position:absolute; inset:0;
+  pointer-events:none;
+  z-index:0;
+
+  background-image:
+    conic-gradient(from 210deg at 68% 36%,
+      rgba(255,255,255,.22) 0 12%,
+      rgba(255,255,255,0) 36% 74%,
+      rgba(255,255,255,.18) 100%),
+    radial-gradient(38rem 28rem at 26% 18%,
+      rgba(119, 119, 119, 0.26) 0, rgba(0,0,0,0) 70%),
+    radial-gradient(32rem 26rem at 48% 58%,
+      rgba(87, 87, 87, 0.18) 0, rgba(0,0,0,0) 72%);
+  
+  background-blend-mode: soft-light, multiply, multiply;
+  filter: blur(1.5px);
+  opacity:.95;
+}
+
+/* --------- Puntitos texturizados --------- */
+body.expertisebody::after{
+  content:"";
+  position:absolute; inset:0;
+  pointer-events:none;
+  z-index:0;
+  mix-blend-mode:screen;
+  opacity:.35;
+  filter: blur(.25px) contrast(1.12);
+
+  background:
+    url("data:image/svg+xml;utf8,\
+      <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>\
+        <filter id='n1'>\
+          <feTurbulence type='fractalNoise' baseFrequency='0.86' numOctaves='2' seed='7'/>\
+          <feColorMatrix type='saturate' values='0'/>\
+          <feComponentTransfer><feFuncA type='linear' slope='3' intercept='-2'/></feComponentTransfer>\
+        </filter>\
+        <rect width='100%' height='100%' fill='white' filter='url(%23n1)'/>\
+      </svg>") repeat;
+  background-size: 260px 260px;
+
+  -webkit-mask-image:
+    radial-gradient(130% 100% at 30% 20%, #000 60%, transparent 100%),
+    linear-gradient(#000,#000);
+  mask-image:
+    radial-gradient(130% 100% at 30% 20%, #000 60%, transparent 100%),
+    linear-gradient(#000,#000);
+}
 
 
 .design {
@@ -193,7 +558,7 @@ body {
   font-size: var(--font-size);
   letter-spacing: 0.05em;
   color: var(--clr-font);
-  background-color: var(--clr-services);
+  /*background-color: var(--clr-services);*/
   position: relative;
   min-height: 100vh;
   padding-bottom: 5em;
@@ -206,7 +571,7 @@ body {
   pointer-events: none;
   z-index: 0;
 
-  background-image:
+  /*background-image:
     url("../images/chatbot/factoryAI120_2.png"),
     url("../images/chatbot/factoryAI120_7.png"),
     url("../images/chatbot/factoryAI120_4.png"),
@@ -215,14 +580,13 @@ body {
   background-size: 80px 80px, 80px 80px, 80px 80px, 80px 80px;
   background-repeat: repeat, repeat, repeat, repeat;
 
-  /* medio desplazamiento para el efecto half-drop */
   background-position:
     0 0,
     40px 80px,
     80px 120px,
     120px 120px;
 
-  opacity: 0.1;
+  opacity: 0.1;*/
 }
 
 /* Asegura que el contenido vaya por encima del patrón */
@@ -237,7 +601,7 @@ body {
   font-size: var(--font-size);
   letter-spacing: 0.05em;
   color: var(--clr-font);
-  background-color: var(--clr-contact);
+  /*background-color: var(--clr-contact);*/
   /*position: relative;*/
   min-height: 100vh;
   padding-bottom: 5em;
@@ -249,7 +613,7 @@ body {
   font-size: var(--font-size);
   letter-spacing: 0.05em;
   color: var(--clr-font);
-  background-color: var(--clr-clients);
+  /*background-color: var(--clr-clients);*/
   /*position: relative;*/
   min-height: 100vh;
   padding-bottom: 5em;
@@ -258,7 +622,7 @@ body {
 /* Fondo estampado para la página de Expertise */
 .plc {
   position: relative;        /* crea el contexto para ::before */
-  background-color: var(--clr-expertise);
+  /*background-color: var(--clr-expertise);*/
   overflow: hidden;
 }
 
@@ -269,7 +633,7 @@ body {
   pointer-events: none;
   z-index: 0;
 
-  background-image:
+  /*background-image:
     url("../images/chatbot/factoryAI120_2.png"),
     url("../images/chatbot/factoryAI120_7.png"),
     url("../images/chatbot/factoryAI120_4.png"),
@@ -278,14 +642,13 @@ body {
   background-size: 80px 80px, 80px 80px, 80px 80px, 80px 80px;
   background-repeat: repeat, repeat, repeat, repeat;
 
-  /* medio desplazamiento para el efecto half-drop */
   background-position:
     0 0,
     40px 80px,
     80px 120px,
     120px 120px;
 
-  opacity: 0.1;
+  opacity: 0.1;*/
 }
 
 /* Asegura que el contenido vaya por encima del patrón */
@@ -318,13 +681,13 @@ header {
 .main-contentexpertise{
   max-width: 800px;
   margin: 0 auto;
-  background-color: #40bc53ae;
+  /*background-color: #40bc53ae;*/
 }
 
 .main-contentcontact{
   max-width: 800px;
   margin: 0 auto;
-  background-color: #e88543;
+  /*background-color: #e88543;*/
 }
 
 .main-contentcontact::before {
@@ -334,7 +697,7 @@ header {
   pointer-events: none;
   z-index: 0;
 
-  background-image:
+  /*background-image:
     url("../images/chatbot/factoryAI120_2.png"),
     url("../images/chatbot/factoryAI120_7.png"),
     url("../images/chatbot/factoryAI120_4.png"),
@@ -343,14 +706,13 @@ header {
   background-size: 80px 80px, 80px 80px, 80px 80px, 80px 80px;
   background-repeat: repeat, repeat, repeat, repeat;
 
-  /* medio desplazamiento para el efecto half-drop */
   background-position:
     0 0,
     40px 80px,
     80px 120px,
     120px 120px;
 
-  opacity: 0.1;
+  opacity: 0.1;*/
 }
 
 .main-contentcontact > * {
@@ -375,7 +737,7 @@ header {
   pointer-events: none;
   z-index: 0;
 
-  background-image:
+  /*background-image:
     url("../images/chatbot/factoryAI120_2.png"),
     url("../images/chatbot/factoryAI120_7.png"),
     url("../images/chatbot/factoryAI120_4.png"),
@@ -384,14 +746,14 @@ header {
   background-size: 80px 80px, 80px 80px, 80px 80px, 80px 80px;
   background-repeat: repeat, repeat, repeat, repeat;
 
-  /* medio desplazamiento para el efecto half-drop */
+
   background-position:
     0 0,
     40px 80px,
     80px 120px,
     120px 120px;
 
-  opacity: 0.1;
+  opacity: 0.1;*/
 }
 
 /* Asegura que el contenido vaya por encima del patrón */
@@ -408,11 +770,6 @@ header {
   position: relative;
   display: block; 
   background-color: #f0f0f0; 
-}
-
-.servicios{
- 
-  background-color: #598dd1a4; 
 }
 
 .line {
@@ -604,7 +961,7 @@ nav ul li a {
 .footer2 {
   width: 100vw;
   border-radius: var(--border-radius);
-  background-color: var(--clr-expertise);
+  /*background-color: 9cca40;*/
   color: var(--clr-white);
   display: flex;
   justify-content: space-around;
@@ -621,7 +978,7 @@ nav ul li a {
 .footer3 {
   width: 100vw;
   border-radius: var(--border-radius);
-  background-color: var(--clr-services);
+  /*background-color: 5c87cd;*/
   color: var(--clr-white);
   display: flex;
   justify-content: space-around;
@@ -638,7 +995,7 @@ nav ul li a {
 .footer4 {
   width: 100vw;
   border-radius: var(--border-radius);
-  background-color: var(--clr-clients);
+  /*background-color: c8a3f1;*/
   color: var(--clr-white);
   display: flex;
   justify-content: space-around;
@@ -655,7 +1012,7 @@ nav ul li a {
 .footer5 {
   width: 100vw;
   border-radius: var(--border-radius);
-  background-color: var(--clr-contact);
+  /*background-color: d15e3e;*/
   color: var(--clr-white);
   display: flex;
   justify-content: space-around;
@@ -689,13 +1046,13 @@ nav ul li a {
 
 .programacion-contacto {
   margin: 2em 2em;
-  background-color: #e8854393;
+  /*background-color: #e8854393;*/
   padding-bottom: 2em;
 }
 
 .programacion-clients {
   margin: 2em 2em;
-  background-color: #9258cf81;
+  /*background-color: #9258cf81;*/
   padding-bottom: 1em;
 }
 
