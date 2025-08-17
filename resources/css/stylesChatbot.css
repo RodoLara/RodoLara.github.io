@@ -400,7 +400,7 @@ pre {
   top: 50%  !important;                 /* centra verticalmente */
   left: 100%;               /* justo al borde derecho del botón */
   margin-left: 80px;   
-  margin-top: 235px;     /* separación horizontal */
+  margin-top: 250px;     /* separación horizontal */
   transform: translateY(-50%);
   z-index: 9999;
   border-radius: 4px;
