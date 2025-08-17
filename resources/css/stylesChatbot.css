@@ -381,7 +381,10 @@ pre {
     padding: 1px 8px;
     font-size: 13px;
     margin-left: 2em;
-    height: 30px; /* Esto lo empuja a la derecha aunque esté antes en el HTML */
+    height: 40px;
+    max-width: 100px;       /* límite de ancho */
+    white-space: normal;    /* permite saltos de línea */
+    word-wrap: break-word; /* Esto lo empuja a la derecha aunque esté antes en el HTML */
 }
 
 #aboutContainer{
@@ -400,7 +403,7 @@ pre {
   top: 50%  !important;                 /* centra verticalmente */
   left: 100%;               /* justo al borde derecho del botón */
   margin-left: 80px;   
-  margin-top: 250px;     /* separación horizontal */
+  margin-top: 260px;     /* separación horizontal */
   transform: translateY(-50%);
   z-index: 9999;
   border-radius: 4px;
