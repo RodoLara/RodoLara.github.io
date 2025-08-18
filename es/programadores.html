@@ -164,13 +164,12 @@
             id="phone"
             name="phone"
             placeholder="9-10 dígitos"
-            style="flex: 1;"
             maxlength="20"
             inputmode="tel"
             autocomplete="tel-national"
-            pattern="[0-9\s\-()+]{9,20}"
-            aria-describedby="phone-hint"
-          >
+            pattern="^[0-9()+\- ]{9,20}$"
+            title="9 a 20 caracteres: dígitos, +, (), -, espacio"
+          />
         </div>
         <span id="phone-hint" class="visually-hidden">Ingrese un número telefónico de 9 a 10 dígitos.</span>
         

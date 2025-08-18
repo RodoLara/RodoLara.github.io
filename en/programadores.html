@@ -161,13 +161,13 @@
             type="tel"
             id="phone"
             name="phone"
-            placeholder="9-10 digits"
+            placeholder="9–10 digits"
             maxlength="20"
             inputmode="tel"
             autocomplete="tel-national"
-            pattern="[0-9\s\-()+]{9,20}"
-            aria-describedby="phone-hint"
-          >
+            pattern="^[0-9()+\- ]{9,20}$"
+            title="9 to 20 characters: digits, +, (), -, space"
+          />
         </div>
         <span id="phone-hint" class="visually-hidden">Enter a 9 to 10 digit phone number.</span>
         
