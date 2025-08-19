@@ -47,7 +47,7 @@ document.getElementById('programmerForm').addEventListener('submit', async funct
     console.log("📄 CV real subido por el usuario:", file.name);
     console.log("Placeholder", file);
     //formData.append("cv", file);
-    formData.append("cv", blob, "CV_Placeholder.pdf");
+    formData.append("cv", file, "CV_Placeholder.pdf");
 
     console.log("Datos del FormData:");
     for (const pair of formData.entries()) {
