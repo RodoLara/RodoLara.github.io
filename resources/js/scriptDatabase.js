@@ -44,10 +44,10 @@ document.getElementById('programmerForm').addEventListener('submit', async funct
     }
 
     // ✅ Este log se ejecuta en ambos casos
-    console.log("📄 CV real subido por el usuario:", file.name);
-    console.log("Placeholder", file);
-    const fileURL = URL.createObjectURL(file);
-    window.open(fileURL, '_blank'); 
+    //console.log("📄 CV real subido por el usuario:", file.name);
+    //console.log("Placeholder", file);
+    //const fileURL = URL.createObjectURL(file);
+    //window.open(fileURL, '_blank'); 
     //formData.append("cv", file);
     formData.delete("cv");
     formData.append("cv", file);
