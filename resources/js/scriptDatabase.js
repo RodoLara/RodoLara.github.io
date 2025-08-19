@@ -48,6 +48,10 @@ document.getElementById('programmerForm').addEventListener('submit', async funct
     console.log("📄 CV real subido por el usuario:", file.name);
     console.log("Placeholder", file);
     formData.append("cv", file);
+    console.log("Datos del FormData:");
+    for (const pair of formData.entries()) {
+      console.log(`${pair[0]}: ${pair[1]}`);
+    }
 
     // --- Llamada al backend ---
     const resp = await fetch(
