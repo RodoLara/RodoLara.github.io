@@ -45,6 +45,7 @@ document.getElementById('programmerForm').addEventListener('submit', async funct
 
     // ✅ Este log se ejecuta en ambos casos
     console.log("📄 CV real subido por el usuario:", file.name);
+    console.log("Placeholder size:", blob.size);
     formData.append("cv", file);
 
     // --- Llamada al backend ---
