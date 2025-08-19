@@ -25,9 +25,8 @@ document.getElementById('programmerForm').addEventListener('submit', async funct
       console.log("📄 El usuario NO subió un CV. Usando el placeholder.");
     
       const response = await fetch("/resources/docs/CV_Placeholder.pdf");
-      blob     = await response.blob();
-    
-      file = new File([blob], "CV_Placeholder.pdf", { type: "application/pdf" });
+      const buffer = await response.arrayBuffer();
+      file = new File([new Uint8Array(buffer)], "CV_Placeholder.pdf", { type: "application/pdf" });
     } else {
       if (!(cvInput && cvInput.files.length)) {
         alert('⚠️ Por favor, sube tu CV antes de enviar.');
