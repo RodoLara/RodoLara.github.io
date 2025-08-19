@@ -19,12 +19,13 @@ document.getElementById('programmerForm').addEventListener('submit', async funct
     const cvSelect = document.getElementById('cv_select');
     const cvInput  = document.getElementById('cv');
     let file;
+    let blob;
 
     if (cvSelect && cvSelect.value === "no") {
       console.log("📄 El usuario NO subió un CV. Usando el placeholder.");
     
       const response = await fetch("/resources/docs/CV_Placeholder.pdf");
-      const blob     = await response.blob();
+      blob     = await response.blob();
     
       file = new File([blob], "CV_Placeholder.pdf", { type: "application/pdf" });
     } else {
@@ -45,7 +46,7 @@ document.getElementById('programmerForm').addEventListener('submit', async funct
 
     // ✅ Este log se ejecuta en ambos casos
     console.log("📄 CV real subido por el usuario:", file.name);
-    //console.log("Placeholder size:", blob.size);
+    console.log("Placeholder size:", blob.size);
     formData.append("cv", file);
 
     // --- Llamada al backend ---
