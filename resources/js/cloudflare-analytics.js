@@ -1,25 +1,24 @@
 (async () => {
-  const EU = new Set([
-    "AT","BE","BG","HR","CY","CZ","DK","EE","FI","FR","DE","GR","HU",
-    "IE","IT","LV","LT","LU","MT","NL","PL","PT","RO","SK","SI","ES","SE",
-    "IS","LI","NO" // estos 3 no son UE pero sí EEA
-  ]);
+  // (si usas filtro por país, déjalo arriba; esto es solo el inyectado)
+  const s = document.createElement('script');
+  s.defer = true;
+  s.src = 'https://static.cloudflareinsights.com/beacon.min.js';
+  s.setAttribute('data-cf-beacon', '{"token":"4ee1178f6110464781ab33507091aec3"}');
 
-  try {
-    const res = await fetch('/cdn-cgi/trace', { cache: 'no-store' });
-    const text = await res.text();
-    const match = text.match(/loc=([A-Z]{2})/);
-    const cc = match ? match[1] : null;
+  s.onload = () => console.log('[CF Analytics] ✅ Cargó beacon.min.js');
+  s.onerror = (e) => console.warn('[CF Analytics] ❌ onerror en beacon.min.js', e);
 
-    if (cc && !EU.has(cc)) {
-      const s = document.createElement('script');
-      s.defer = true;
-      s.src = 'https://static.cloudflareinsights.com/beacon.min.js';
-      s.setAttribute('data-cf-beacon', '{"token": "4ee1178f6110464781ab33507091aec3"}');
-      s.onerror = () => {}; // silencia si un ad-blocker lo bloquea
-      document.head.appendChild(s);
+  document.head.appendChild(s);
+
+  // Si en 3s no hubo load ni error, casi seguro lo bloqueó una extensión
+  setTimeout(() => {
+    if (!s.dataset._seen) {
+      console.warn('[CF Analytics] ⏱️ No hubo load/error en 3s. Probable bloqueo por extensión (ERR_BLOCKED_BY_CLIENT).');
     }
-  } catch (e) {
-    // si falla la geo, no inyectamos (fail-safe)
-  }
+  }, 3000);
+
+  // Marcar cuando ocurra alguno
+  const markSeen = () => s.dataset._seen = '1';
+  s.addEventListener('load', markSeen);
+  s.addEventListener('error', markSeen);
 })();
