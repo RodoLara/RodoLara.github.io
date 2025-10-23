@@ -1,6 +1,6 @@
 let currentLanguage; // Variable global accesible desde cualquier otro script
 
-(function () {
+/*(function () {
   var link = document.querySelector('.mLanguage');
   if (!link) return;
 
@@ -25,7 +25,93 @@ let currentLanguage; // Variable global accesible desde cualquier otro script
   link.href = target;
   link.textContent = isEn ? 'ESPAÑOL' : 'ENGLISH';
   link.setAttribute('hreflang', isEn ? 'es' : 'en');
+})();*/
+
+(function () {
+  var link = document.querySelector('.mLanguage');
+  if (!link) return;
+
+  var path = location.pathname; // ej. /en/services.html
+  // normalizar (quitar slash final)
+  var normPath = path.replace(/\/$/, '');
+
+  var isEn = normPath.startsWith('/en/');
+  var isEs = normPath.startsWith('/es/');
+
+  // detectar idioma actual
+  var currentLanguage;
+  if (isEn) {
+    currentLanguage = "en";
+  } else if (isEs) {
+    currentLanguage = "es";
+  } else {
+    currentLanguage = "en"; // fallback si no hay carpeta
+  }
+
+  /**
+   * Mapeo explícito de slugs que no son simétricos entre idiomas.
+   * Añade aquí pares "ruta_es" : "ruta_en". Las claves y valores deben
+   * ir sin slash final. Soporta variantes con y sin .html.
+   */
+  var specialMap = {
+    // español -> inglés
+    '/es/programacion-plc-mitsubishi-saltillo': '/en/mitsubishi-plc-programming-saltillo.html',
+    '/es/programacion-plc-mitsubishi-saltillo.html': '/en/mitsubishi-plc-programming-saltillo.html',
+
+    // inglés -> español (la inversa)
+    '/en/mitsubishi-plc-programming-saltillo': '/es/programacion-plc-mitsubishi-saltillo.html',
+    '/en/mitsubishi-plc-programming-saltillo.html': '/es/programacion-plc-mitsubishi-saltillo.html'
+  };
+
+  // función auxiliar para construir target manteniendo comportamiento previo
+  function defaultSwap(p) {
+    if (p.startsWith('/en/')) {
+      return p.replace(/^\/en\//, '/es/');
+    } else if (p.startsWith('/es/')) {
+      return p.replace(/^\/es\//, '/en/');
+    } else {
+      return '/en/';
+    }
+  }
+
+  // determinar target consultando el mapeo especial primero
+  var target = null;
+
+  // probar mapeo exacto con normPath
+  if (specialMap.hasOwnProperty(normPath)) {
+    target = specialMap[normPath];
+  } else {
+    // si no está en el mapeo, intentar construir un equivalente:
+    // 1) intentar swap de carpeta y, si existe, mantener el mismo filename
+    //    (esto mantiene la funcionalidad actual)
+    target = defaultSwap(normPath);
+
+    // 2) por seguridad, si el resultado no tiene extensión y el original sí,
+    //    intentar añadir .html (maneja casos donde un idioma usa .html)
+    var origHasHtml = /\.[a-zA-Z0-9]+$/.test(normPath);
+    var targHasHtml = /\.[a-zA-Z0-9]+$/.test(target);
+    if (origHasHtml && !targHasHtml) {
+      target = target + '.html';
+    }
+  }
+
+  // si por alguna razón target sigue siendo null, usar fallback
+  if (!target) {
+    target = defaultSwap(normPath);
+  }
+
+  // asignar href y atributos de idioma (texto visible)
+  link.href = target;
+  // si la página actual es inglesa, el botón debe ofrecer español y viceversa
+  if (currentLanguage === 'en') {
+    link.textContent = 'ESPAÑOL';
+    link.setAttribute('hreflang', 'es');
+  } else {
+    link.textContent = 'ENGLISH';
+    link.setAttribute('hreflang', 'en');
+  }
 })();
+
 
 function copiarCodigo(botonClickado) {
     // Obtener el código del bloque correspondiente

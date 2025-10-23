@@ -50,6 +50,12 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://rodolfolara.com/es/contact.html"/>
     <lastmod>2025-08-07</lastmod>
   </url>
+  <url>
+    <loc>https://rodolfolara.com/en/mitsubishi-plc-programming-saltillo.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rodolfolara.com/en/mitsubishi-plc-programming-saltillo.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://rodolfolara.com/es/programacion-plc-mitsubishi-saltillo.html"/>
+    <lastmod>2025-10-22</lastmod>
+  </url>
 
   <!-- Spanish Pages -->
   <url>
@@ -81,6 +87,12 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://rodolfolara.com/es/contact.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://rodolfolara.com/en/contact.html"/>
     <lastmod>2025-08-07</lastmod>
+  </url>
+  <url>
+    <loc>https://rodolfolara.com/es/programacion-plc-mitsubishi-saltillo.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://rodolfolara.com/es/programacion-plc-mitsubishi-saltillo.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rodolfolara.com/en/mitsubishi-plc-programming-saltillo.html"/>
+    <lastmod>2025-10-22</lastmod>
   </url>
 
   <!-- Blog English -->
