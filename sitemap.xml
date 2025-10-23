@@ -56,6 +56,12 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://rodolfolara.com/es/programacion-plc-mitsubishi-saltillo.html"/>
     <lastmod>2025-10-22</lastmod>
   </url>
+  <url>
+    <loc>https://rodolfolara.com/en/mitsubishi-plc-programming-monterrey.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rodolfolara.com/en/mitsubishi-plc-programming-monterrey.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://rodolfolara.com/es/programacion-plc-mitsubishi-monterrey.html"/>
+    <lastmod>2025-10-22</lastmod>
+  </url>
 
   <!-- Spanish Pages -->
   <url>
@@ -92,6 +98,12 @@
     <loc>https://rodolfolara.com/es/programacion-plc-mitsubishi-saltillo.html</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://rodolfolara.com/es/programacion-plc-mitsubishi-saltillo.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://rodolfolara.com/en/mitsubishi-plc-programming-saltillo.html"/>
+    <lastmod>2025-10-22</lastmod>
+  </url>
+  <url>
+    <loc>https://rodolfolara.com/es/programacion-plc-mitsubishi-monterrey.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://rodolfolara.com/es/programacion-plc-mitsubishi-monterrey.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rodolfolara.com/en/mitsubishi-plc-programming-monterrey.html"/>
     <lastmod>2025-10-22</lastmod>
   </url>
 
