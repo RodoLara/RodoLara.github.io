@@ -23,7 +23,7 @@ document.getElementById('consultForm').addEventListener('submit', async function
   btnText.textContent = 'Enviando…';
   spinner.classList.remove('hidden');
   notice.style.display = 'block';
-  notice.textContent = '⏳ Enviando tu solicitud...';
+  notice.textContent = '⏳ Espera un momento...';
 
   try {
     const formData = new FormData(form);
