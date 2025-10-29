@@ -1,6 +1,16 @@
 // scriptConsultoria.js
 const AZURE_FUNCTION_URL = "https://backendrl-db-a5hygcb4fpfdf8as.southcentralus-01.azurewebsites.net/api/webpage_consultoria?code=RJJuJBA-_GZSQaQuDhgI-a7GxWlhM1v6boyqzDVtpSfUAzFuR23C0w%3D%3D"; // <- reemplaza
 
+document.addEventListener("DOMContentLoaded", function() {
+    var textarea = document.getElementById('informacion_adicional');
+    var charCounter = document.getElementById('charCounter');
+
+    textarea.addEventListener('input', function() {
+        var currentLength = textarea.value.length;
+        charCounter.textContent = `${currentLength}/1000`;
+    });
+});
+
 document.getElementById('consultForm').addEventListener('submit', async function (event) {
   event.preventDefault();
   const form = this;
