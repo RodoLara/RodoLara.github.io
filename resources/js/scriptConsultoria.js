@@ -41,7 +41,7 @@ document.getElementById('consultForm').addEventListener('submit', async function
     const text = await resp.text();
 
     if (resp.ok) {
-      alert('✅ Solicitud enviada correctamente. Te contacto pronto por correo o teléfono.');
+      alert('✅ Solicitud enviada correctamente. En breve nos comunicaremos contigo por correo o teléfono.');
       form.reset();
       // actualizar contador si aplica
       const cc = document.getElementById('charCounter');
