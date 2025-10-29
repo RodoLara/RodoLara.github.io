@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Consultoría Gratuita | Rodolfo Lara</title>
+  <meta name="description" content="Solicita una consultoría o diagnóstico gratuito en PLC, robots, visión o problemas eléctricos y de integración.">
+  <meta name="author" content="Rodolfo Lara">
+  <meta name="robots" content="index, follow">
+  <meta name="keywords" content="consultoría gratuita, diagnóstico PLC, soporte robótica, automatización industrial, Rodolfo Lara">
+
+  <!-- Favicons -->
+  <link rel="icon" href="https://rodolfolara.com/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="https://rodolfolara.com/apple-touch-icon.png">
+
+  <!-- Preload fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Styles (mantengo mismas rutas para coherencia) -->
+  <link rel="stylesheet" href="/resources/css/reset.css">
+  <link rel="stylesheet" href="/resources/css/stylesDatabase.css">
+
+  <!-- Schema (JSON-LD) para servicio -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Consultoría Gratuita en Automatización",
+    "provider": {
+      "@type": "Person",
+      "name": "Rodolfo Lara",
+      "jobTitle": "Ingeniero de Automatización",
+      "url": "https://rodolfolara.com/"
+    },
+    "description": "Diagnóstico técnico gratuito para PLCs, robots, visión artificial, diseño eléctrico y bugs de programación."
+  }
+  </script>
+
+</head>
+<body class="servicesbody">
+  <div class="machines">
+    <!-- Header -->
+    <header>
+      <nav class="content3" id="whitecont" role="navigation" aria-label="Principal">        
+        <ul class="navbar-nav">
+          <li><a href="/es/index.html">Rodolfo Lara, <span class="autoeng">Ingeniero de Automatización</span></a></li>
+          <li class="nav-item c"><a href="#" class="item-link" title="Abrir menú" aria-controls="drop-down" aria-expanded="false">
+              <div class="line"></div><div class="line"></div><div class="line"></div>
+            </a>
+            <div id="drop-down">
+              <a href="expertise.html" class="mExpertise clinks">ACERCA DE MI</a>
+              <a href="services.html" class="mServices clinks">SERVICIOS</a>
+              <a href="clients.html" class="mClients clinks">CASOS</a>
+              <a href="downloads.html" class="mDownloads clinks">DESCARGAS</a>
+              <a href="/es/blog/index.html" class="mBlog clinks">BLOG</a>
+              <a href="contact.html" class="mContact clinks">CONTACTO</a>
+              <a href="" class="mLanguage clinks">ENGLISH</a>
+            </div>
+          </li>
+        </ul>             
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <form id="consultForm" method="POST" enctype="multipart/form-data" aria-describedby="consult-help" novalidate>
+        <main role="main" aria-labelledby="consult-title">
+            <br>
+            <br>
+            <br>
+            <br>
+          <section class="introduction" aria-labelledby="consult-title">
+            <h1 id="consult-title">Consultoría / Diagnóstico Gratuito a Fábricas</h1>
+            <br>
+            <p>Solicita una visita técnica gratuita (diagnóstico sin compromiso) para revisar tu PLC, robot, HMI, problema eléctrico o bug de programación. Esta consultoría está orientada a identificar la raíz del problema y las posibles soluciones prácticas.</p>
+            <p><strong>Duración típica:</strong> 30 minutos a 2 horas. No es una propuesta comercial: es un diagnóstico técnico para ayudarte a enfocar la solución.</p>
+          </section>
+      
+          <!-- Formulario simplificado -->
+          <!-- Añade 'action' si tienes endpoint para procesar el POST -->
+          
+            <section class="formato">
+              <p id="consult-help" class="visually-hidden">Rellena los campos para solicitar la consultoría gratuita.</p>
+            
+              <label for="nombre">Nombre completo*</label>
+              <input type="text" id="nombre" name="nombre" required maxlength="80" autocomplete="name"><br>
+            
+              <label for="empresa">Empresa*</label>
+              <input type="text" id="empresa" name="empresa" required maxlength="100" autocomplete="organization"><br>
+            
+              <label for="email">Correo electrónico*</label>
+              <input type="email" id="email" name="email" required maxlength="100" autocomplete="email"><br>
+            
+              <label for="country">Teléfono*</label>
+              <div id="phone-input" style="display: flex; align-items: center;">
+              
+                <select id="country" name="country" style="width: 95px;" autocomplete="country">
+                  <option value="MX">MX +52 1</option>
+                  <option value="US">USA +1</option>
+                </select>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="9-10 digitos"
+                  maxlength="20"
+                  inputmode="tel"
+                  autocomplete="tel-national"
+                  aria-invalid="false"
+                />
+              
+              </div>
+              <span id="phone-hint" class="visually-hidden">Ingrese un número telefónico de 9 a 10 dígitos.</span>
+            
+              <label for="tipo">Tipo de consulta*</label>
+              <select id="tipo" name="tipo" required>
+                <option value="" disabled selected>Selecciona una opción</option>
+                <option value="plc_hmi">PLC/HMI (Allen-Bradley, Siemens, Mitsubishi...)</option>
+                <option value="robot">Robot Industrial (Fanuc, Yaskawa, Stäubli, Epson, ABB...)</option>
+                <option value="vision">Visión Artificial / Perfilómetro (Cognex, Keyence...)</option>
+                <option value="electrico">Problema Eléctrico / Diseño</option>
+                <option value="bug_programacion">Bug de Programación / Lógica</option>
+                <option value="proceso">Tengo un Problema en mi Proceso</option>
+                <option value="otro">Otro</option>
+              </select><br>
+              
+              <label for="informacion_adicional" >Describe brevemente el problema o lo que quieres revisar* (máx. 1000 caracteres)</label>
+              <textarea id="informacion_adicional" name="informacion_adicional" rows="4" cols="50" required maxlength="1000"></textarea>
+              <div id="charCounter" aria-live="polite">0/1000</div>
+          
+              <!--div id="adjunto-checkbox" class="checkbox-group"-->
+                <label for="adjunto">Adjuntar archivo (opcional) <small style="font-size: 0.75em;"> Adjunta capturas, video, logs o backups de proyecto si lo deseas (máx. 10 MB).</small></label>
+                <input type="file" id="adjunto" name="adjunto" accept=".pdf,.txt,.csv,.xls,.xlsx,.zip,.mp4,.png,.jpg" aria-describedby="adjunto-help">
+              <!--/div-->
+              <br>
+              <br>
+          
+              <button id="submitBtn" type="submit" class="btn">
+                <span class="btn-text">Solicitar Diagnóstico Gratuito</span>
+                <span class="spinner hidden" aria-hidden="true"></span>
+              </button>
+          
+              <p id="submitNotice" style="display:none; color:whitesmoke; font-size:0.9em; margin-top:10px;" role="status" aria-live="polite">
+                ⏳ Enviando tu solicitud... te contacto en breve.
+              </p>
+          
+              <p style="margin-top:10px; font-size:0.9em;">* Campos obligatorios</p>
+            </section>
+        
+            <!-- Privacidad corta -->
+            <section class="politica">
+              <h3>Politica de Privacidad</h3>
+              <p>Tu información se usará únicamente para contactarte y coordinar la consultoría. No vendemos ni compartimos tus datos con terceros para marketing. Para solicitar eliminación o modificación, escribe a <a href="mailto:support@rodolfolara.com" class="link-soporte">support@rodolfolara.com</a>.</p>
+            </section>
+        </main>
+    </form>  
+    
+
+    <!-- Footer -->
+    <footer class="footer-form">
+      <p class="copyright">© 2025 RL, Todos los Derechos Reservados</p>
+      <p class="location">Diseñado en Saltillo, Mx</p>
+      <p class="designer">&lt; &gt; con &#10084;</p>
+    </footer>
+
+    <!-- Mantengo scripts de tu estructura; añade manejo de envío en /resources/js/script.js -->
+    <script src="/resources/js/scriptConsultoria.js"></script>
+    <script src="/resources/js/script.js"></script>
+
+    <!-- Pequeño script inline para mejorar UX sin depender de tus archivos (opcional) -->
+    <script>
+      (function() {
+        const form = document.getElementById('consultForm');
+        const btn = document.getElementById('submitBtn');
+        const notice = document.getElementById('submitNotice');
+
+        form.addEventListener('submit', function(e) {
+          // Previene envío real si no quieres endpoint aún.
+          // Quita el preventDefault si ya tienes backend para procesar.
+          e.preventDefault();
+
+          // Validación HTML5 automática se aplica; aquí solo UX
+          if (!form.checkValidity()) {
+            form.reportValidity();
+            return;
+          }
+
+          btn.querySelector('.btn-text').textContent = 'Enviando...';
+          btn.disabled = true;
+          notice.style.display = 'block';
+
+          // Aquí debes reemplazar con fetch() a tu endpoint real
+          // Simulación breve de envío:
+          setTimeout(() => {
+            btn.querySelector('.btn-text').textContent = 'Solicitud enviada';
+            notice.textContent = '✔️ Solicitud recibida. En breve te contacto por correo o teléfono para coordinar la consultoría.';
+            // Opcional: limpiar formulario
+            // form.reset();
+          }, 900);
+        });
+      })();
+    </script>
+
+  </div>
+</body>
+</html>
