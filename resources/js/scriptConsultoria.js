@@ -21,14 +21,15 @@ document.getElementById('consultForm').addEventListener('submit', async function
     // Validación simple del adjunto (si existe)
     const adjInput = document.getElementById('adjunto');
     if (adjInput && adjInput.files && adjInput.files.length) {
-      const file = adjInput.files[0];
       const maxMB = 10;
-      const sizeMB = file.size / (1024 * 1024);
-      if (sizeMB > maxMB) {
-        alert(`El archivo adjunto excede ${maxMB} MB. Reduce su tamaño o envia sin adjunto.`);
-        throw new Error('archivo_too_large');
-      }
-      // el FormData ya contiene el archivo por name="adjunto"
+      Array.from(adjInput.files).forEach((file) => {
+        const sizeMB = file.size / (1024 * 1024);
+        if (sizeMB > maxMB) {
+          alert(`El archivo ${file.name} excede ${maxMB} MB. Reduce su tamaño o envia sin adjunto.`);
+          throw new Error('archivo_too_large');
+        }
+        formData.append('adjunto', file); // agregamos todos los archivos
+      });
     }
 
     // Llamada al endpoint de Azure Function
