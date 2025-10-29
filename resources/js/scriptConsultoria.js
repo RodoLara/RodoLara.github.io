@@ -35,7 +35,7 @@ document.getElementById('consultForm').addEventListener('submit', async function
       Array.from(adjInput.files).forEach((file) => {
         const sizeMB = file.size / (1024 * 1024);
         if (sizeMB > maxMB) {
-          alert(`El archivo ${file.name} excede ${maxMB} MB. Reduce su tamaño o envia sin adjunto.`);
+          alert(`El archivo ${file.name} excede ${maxMB} MB. Reduce su tamaño o envia sin adjunto y espera a que te contacte.`);
           throw new Error('archivo_too_large');
         }
         formData.append('adjunto', file); // agregamos todos los archivos
@@ -58,7 +58,7 @@ document.getElementById('consultForm').addEventListener('submit', async function
       if (cc) cc.textContent = '0/1000';
     } else {
       console.error('Error del servidor:', resp.status, text);
-      alert('❌ Ocurrió un error al enviar. Revisa la consola para más detalles o escribe a support@rodolfolara.com');
+      alert('❌ Ocurrió un error al enviar. Escribe a support@rodolfolara.com');
     }
   } catch (err) {
     if (err.message !== 'archivo_too_large') {
