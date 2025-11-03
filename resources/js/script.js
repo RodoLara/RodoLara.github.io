@@ -59,12 +59,16 @@ let currentLanguage; // Variable global accesible desde cualquier otro script
     '/es/programacion-plc-mitsubishi-saltillo.html': '/en/mitsubishi-plc-programming-saltillo.html',
     '/es/programacion-plc-mitsubishi-monterrey': '/en/mitsubishi-plc-programming-monterrey.html',
     '/es/programacion-plc-mitsubishi-monterrey.html': '/en/mitsubishi-plc-programming-monterrey.html',
+    '/es/consultoria': '/en/consulting.html',
+    '/es/consultoria.html': '/en/consulting.html',
 
     // inglés -> español (la inversa)
     '/en/mitsubishi-plc-programming-saltillo': '/es/programacion-plc-mitsubishi-saltillo.html',
     '/en/mitsubishi-plc-programming-saltillo.html': '/es/programacion-plc-mitsubishi-saltillo.html',
     '/en/mitsubishi-plc-programming-monterrey': '/es/programacion-plc-mitsubishi-monterrey.html',
-    '/en/mitsubishi-plc-programming-monterrey.html': '/es/programacion-plc-mitsubishi-monterrey.html'
+    '/en/mitsubishi-plc-programming-monterrey.html': '/es/programacion-plc-mitsubishi-monterrey.html',
+    '/en/consulting': '/es/consultoria.html',
+    '/en/consulting.html': '/es/consultoria.html'
   };
 
   // función auxiliar para construir target manteniendo comportamiento previo

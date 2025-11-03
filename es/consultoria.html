@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <title>Consultoría Gratuita | Rodolfo Lara</title>
   <meta name="description" content="Solicita una consultoría o diagnóstico gratuito en PLC, robots, visión o problemas eléctricos y de integración.">
   <meta name="author" content="Rodolfo Lara">
@@ -24,6 +24,27 @@
   <link rel="stylesheet" href="/resources/css/reset.css">
   <link rel="stylesheet" href="/resources/css/stylesDatabase.css">
 
+  <!-- Open Graph (social sharing) -->
+  <meta property="og:title" content="Consultoría / Diagnóstico Gratuito · Rodolfo Lara">
+  <meta property="og:description" content="Visita técnica gratuita para diagnosticar PLCs, robots, visión artificial, tableros eléctricos o problemas de proceso. Incluye reporte técnico en PDF.">
+  <meta property="og:image" content="https://rodolfolara.com/favicon-512.png">
+  <meta property="og:url" content="https://rodolfolara.com/es/consultoria.html">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Consultoría / Diagnóstico Gratuito · Rodolfo Lara">
+  <meta name="twitter:description" content="Solicita una visita técnica para diagnosticar PLC, robot, visión, eléctricos o problemas de proceso. Incluye reporte técnico con recomendaciones.">
+  <meta name="twitter:image" content="https://rodolfolara.com/favicon-512.png">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://rodolfolara.com/es/consultoria.html">
+
+  <!-- Hreflang -->
+  <link rel="alternate" hreflang="en" href="https://rodolfolara.com/en/consulting.html">
+  <link rel="alternate" hreflang="es" href="https://rodolfolara.com/es/consultoria.html">
+  <link rel="alternate" hreflang="x-default" href="https://rodolfolara.com/en/consulting.html">
+
   <!-- Schema (JSON-LD) para servicio -->
   <script type="application/ld+json">
   {
@@ -36,7 +57,8 @@
       "jobTitle": "Ingeniero de Automatización",
       "url": "https://rodolfolara.com/"
     },
-    "description": "Diagnóstico técnico gratuito para PLCs, robots, visión artificial, diseño eléctrico y bugs de programación."
+    "description": "Diagnóstico técnico gratuito para PLCs, robots, visión artificial, diseño eléctrico y bugs de programación.",
+    "url": "https://rodolfolara.com/es/consultoria.html"
   }
   </script>
 
@@ -73,10 +95,13 @@
             <br>
             <br>
           <section class="introduction" aria-labelledby="consult-title">
-            <h1 id="consult-title">Consultoría / Diagnóstico Gratuito a Fábricas</h1>
+            <h1 id="consult-title">Diagnóstico Gratuito a Fábricas</h1>
             <br>
-            <p>Solicita una visita técnica gratuita (diagnóstico sin compromiso) para revisar tu PLC, robot, HMI, problema eléctrico o bug de programación. Esta consultoría está orientada a identificar la raíz del problema y las posibles soluciones prácticas.</p>
-            <p><strong>Duración típica:</strong> 30 minutos a 2 horas. No es una propuesta comercial: es un diagnóstico técnico para ayudarte a enfocar la solución.</p>
+            <p>¿Tienes scrap que no logras reducir? ¿Tu robot presenta ciclos de tiempo altos o fallas intermitentes? ¿Tu sistema de visión da falsos rechazos o tus tableros eléctricos se han vuelto difíciles de mantener?</p>
+            <p>Ofrezco una visita técnica gratuita para diagnosticar la causa raíz, ya sea en el PLC, robot, sistema de visión, HMI o proceso. El objetivo es ayudarte a enfocar la solución con una mirada técnica, práctica y sin compromiso comercial.</p>
+            <p>Incluye un reporte técnico en PDF con el diagnóstico y recomendaciones de acción.</p>
+            <p><strong>Duración típica:</strong> 30 minutos a 2 horas.</p>
+            <p class="nota-servicio">* Servicio disponible únicamente en Saltillo, Coahuila.</p>
           </section>
       
           <!-- Formulario simplificado -->
@@ -119,17 +144,17 @@
               </div>
               <span id="phone-hint" class="visually-hidden">Ingrese un número telefónico de 9 a 10 dígitos.</span>
             
-              <label for="tipo">Tipo de consulta*</label>
+              <label for="tipo">Tipo de diagnóstico solicitado*</label>
+              <!--small class="help-text">💡 Si no sabes cuál elegir, selecciona "Problemas de Proceso" u "Otro / No estoy seguro".</small-->
               <select id="tipo" name="tipo" required>
                 <option value="" disabled selected>Selecciona una opción</option>
-                <option value="plc_hmi">PLC/HMI (Allen-Bradley, Siemens, Mitsubishi...)</option>
-                <option value="robot">Robot Industrial (Fanuc, Yaskawa, Stäubli, Epson, ABB...)</option>
-                <option value="vision">Visión Artificial / Perfilómetro (Cognex, Keyence...)</option>
-                <option value="electrico">Problema Eléctrico / Diseño</option>
-                <option value="bug_programacion">Bug de Programación / Lógica</option>
-                <option value="proceso">Tengo un Problema en mi Proceso</option>
-                <option value="otro">Otro</option>
-              </select><br>
+                <option value="automatizacion">Control (PLC/HMI, Robot, Visión Artificial, Servos, Variadores..)</option>
+                <option value="electrico">Sistema Eléctrico / Tablero / Señales</option>
+                <option value="proceso">Problemas de Proceso (Scrap, Tiempos de Ciclo, Calidad, Variabilidad, OEE..)</option>
+                <option value="otro">Otro / No estoy seguro</option>
+              </select>
+              
+              <br>
               
               <label for="informacion_adicional" >Describe brevemente el problema o lo que quieres revisar* (máx. 1000 caracteres)</label>
               <textarea id="informacion_adicional" name="informacion_adicional" rows="4" cols="50" required maxlength="1000"></textarea>

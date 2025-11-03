@@ -231,6 +231,19 @@ input, select {
     box-sizing: border-box;
 }
 
+.help-text {
+  display: block;
+  color: #e7e7e7;
+  font-size: 0.85rem;
+  margin-top: 4px;
+}
+
+.nota-servicio {
+  font-size: 0.9em;
+  color: #ededed;
+  margin-top: -5px;
+}
+
 /* contenedor general (sin cambios, sólo de contexto) */
 .checkbox-group{
   display:flex;
